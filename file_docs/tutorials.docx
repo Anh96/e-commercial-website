@@ -1,0 +1,9 @@
+Install JSON
+st1: npm init -y;
+st2: npm i express
+
+push code github
+// update code
+    - git add.
+    -git commit -m "comment anthing"
+    - git push -m

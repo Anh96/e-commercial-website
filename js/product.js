@@ -1,10 +1,9 @@
-import products from '../data/product.json' assert {type: 'json'}
+//import products from '../data/product.json' assert {type: 'json'}
 $ = document.querySelector.bind(document)
+const data = require('../data/products.json')
 const tdsgtion = $('#tdsgtion-relative-product')
-var productAPI="http://localhost:3000/products"
-fetch(productAPI)
-    .then
-renderProduct_RelativeShopPage= (products)=>{
+console.log(data)
+/*renderProduct_Relative_ShopPage ((products)=>{
     products.forEach(prod => {
         let htmls= 
             `
@@ -118,6 +117,6 @@ renderProduct_RelativeShopPage= (products)=>{
         tdsgtion.insertAdjacentHTML("beforeend", htmls)
     })
     // tdsgtion.insertAdjacentHTML("beforeend", htmls)
-}
-renderProduct_RelativeShopPage(products)
+})
+renderProduct_Relative_ShopPage(products)*/
 //export {renderProduct_RelativeShopPage}
