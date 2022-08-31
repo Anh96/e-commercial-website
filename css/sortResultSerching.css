@@ -1,0 +1,275 @@
+.sOhome-ctn{
+    display: contents;
+}
+.sOhome-ctn .xCAO3k{
+    margin-top: 130px;
+}
+.lCAO{
+    width: 100%;
+}
+ul li{
+    list-style: none;
+}
+.active{
+    background-color: var(--primary-color)!important;
+}
+.block-catagories{
+    padding: 16px;
+}
+.right-sort,
+.left-sort{
+    height: 100%;
+}
+.left-sort{
+    margin-top: 19px;
+    width: 200px;
+}
+.right-sort{
+    width: 100%;
+}
+.right-sort .today-sggtion-wrapper{
+    margin-top: 0px;
+}
+.hdx .connect a img{
+    display: block;
+    width: 15px;
+    height: 15px;
+}
+.relative-shop-key-ctn{
+    height: 130px;
+    position: relative;
+    background-color: var(--white-color);
+    overflow: hidden;
+    transition: transform .1s cubic-bezier(0.4, 0, 0.6, 1), box-shadow .1s cubic-bezier(0.4, 0, .6, 1) ;
+}
+
+.relative-shop-key-ctn:hover{
+    -webkit-transform: (-.0525rem);
+    transform: translateY(-.0525rem);
+    box-shadow: 0px 3px 12px 3px rgba(0,0,0,.2);
+}
+.rlt0Sk{
+    width: 100%;
+    height: inherit;
+}
+.lft-rltSk{
+    width: 50%;
+}
+.ltf-img-ctn{
+    position:relative;
+}
+.ltf-img{
+    width: 80px;
+    height: 80px;
+}
+.ltf-img div{
+    height: inherit;
+    background-image: url("https://img.wattpad.com/5045c17fe931afc78ad247c9a0a2be37ae32d8dd/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f5353346a76384f396d6f4f706f773d3d2d313032323930333139372e313637386266666631663935623636363331303830363832383234372e6a7067");
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    border-radius: 50%;
+    border: 1px solid var(--line-color);
+}
+.fvr-shop{
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    background-color: var(--primary-color);
+    bottom: 0px;
+}
+.number-follow-data{
+    position: relative;
+}
+.number-follow-data::after{
+    display: block;
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: var(--footer-color-text);
+    right: -5px;
+}
+.rgt{
+   transform: translateY(8px);
+}
+.right-rltSk-ctn{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.right-rltSk-ctn ul{
+    width: 100%;
+}
+.xAB svg{
+    width: 20px;
+    height: 20px;
+}
+.sortBy-ctn{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(216, 215, 212, 0.7)
+}
+.sortBy{
+    height: 100%;
+    padding: 8px 0;
+}
+.sortBy-Left{
+    width: 80%;
+    height: 100%;
+}
+.bl1Sb-btn{
+    width: 100px;
+    background-color: var(--white-color);
+    margin: 0 4px;
+    border-radius: 2px;
+}
+.bl1Sb-btn button{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    background-color: inherit;
+    font-size: 16px;
+}
+.bl1Sb-btn svg{
+    width: 13px;
+    height: 13px;
+}
+.psTiOn{
+    width: 150px;
+}
+.sort-By-price{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sort-By-price:hover .hv-prcx{
+    display: block;
+}
+.pRCX{
+    width: 100%;
+    height: 100%;
+}
+.hv-prcx{
+    display: none;
+    height: 80px;
+    position: absolute;
+    width: 100%;
+    bottom:-33x;
+    background-color: var(--white-color);
+    z-index: 200;
+}
+.hv-prcx a{
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 8px;
+}
+.pre-next-btn{
+    width: auto;
+}
+.nbP,
+.prev-btn,
+.nExt-btn{
+    width: 30px;
+    border: 0px;
+    width: 50px;
+    height: 30px;
+    border-radius: 2px;
+    margin: 0 8px;
+    background-color: inherit;
+}
+.relative-wrapper{
+    position: relative;
+    min-height: 350px;
+}
+.relative-wrapper .hv-above{
+    display: block;
+}
+/* .relative-wrapper .b4etd{
+    width: 15.2%;
+} */
+.stkBr{
+    width: 100px;
+    border: 0.05px solid var(--primary-color);
+    margin: 0 4px;
+    overflow: hidden;
+}
+.txtBr{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.dell-price .currentcy,
+.dell-price .price-sggtion{
+    font-size:0.95rem !important;
+}
+.icon-arrow-down-small{
+    width: 12px;
+    fill: black;
+}
+.item-rating-star{
+    width: 16px;
+    height: 16px;
+}
+.item-rating-star svg{
+    width: 18px;
+}
+.icon-arrow-small{
+    width: 12px;
+    fill: var(--footer-color-text);
+}
+.sortBy_right .prev-btn,
+.sortBy_right .nExt-btn{
+    border: 0.05px solid var(--container-color);
+    background-color: var(--white-color);
+    margin: 0px;
+}
+.hvsPr{
+    height: 100%;
+}
+.hvsPr .hv-above{
+    width: 100%;
+    height: inherit;
+}
+.hvsPr a{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: var(--primary-color);
+    z-index: 50;
+}
+.hvsPr a>div{
+    text-align: center;
+    height: 100%;
+}
+.tdsgt-ftt-ctn{
+    width: 100%;
+    height: 50px;
+}
+.tdsgt-SortResult{
+    width: 100%;
+    height: 100%;
+}
+.pre-next-btn{
+    width: 330px;
+}
+.number-page{
+    overflow: hidden;
+    justify-content: flex-start;
+}
+.number-page button{
+    min-width: 25px;
+}
+.round-price{
+    padding: 8px 0px;
+}
+.round-price input{
+    width: 70px;
+}
+.round-btn{
+    width: 100%;
+}
+.round-btn button{
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+}

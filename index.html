@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FastBuy Việt Nam</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/login-form.css">
+        <link rel="stylesheet" href="../css/register-form.css">
+        <link rel="stylesheet" href="../css/sortResultSerching.css">
+        <link rel="stylesheet" href="../css/other.css">
+        <link rel="shortcut icon" href="./assets/imgs/logo/logoshop.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script type ="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    </head>
+    <body id="home-body">
+        <div id="main">
+            <header class="header hdx">
+                <div class="grid nav-bar-wrap-container header-home">
+                    <nav class="header-nav-bar flex-jtfspbt"></nav>
+                    <!-- search container -->
+                    <div id= "mainSctn" class="nav-header-container-with-search">
+                        <a href="index.html" class="header-logo">
+                            <div class="header-logo-wraper inlineFlex" href="#">
+                                <img src="./assets/imgs/logo/logoshop.png" alt="$logo-error" id="logo-img">
+                                <div id="shop-name">Fast Buy</div>
+                            </div>
+                        </a>     
+                        <div class="nav-header-with-search">
+                            <div class="box-search">
+                                <div class="box-search-input-icon">
+                                    <div class="container-input-history-search">
+                                        <input type="text" name="search" value="" autocomplete="off" class="nav-search-input" placeholder="">
+                                        <div class="history-search-container box_shadow">
+                                                <div class="history-search">
+                                                    <div id="historyDIV">
+                                                        <div id="sH" class="search_in-shope-ctn">
+                                                            <a href="#" class="shopee-searchbar-hints__history-prefill agency-saleOff  flex-jtfspbt" style="display:block">
+                                                                <span class="mgl-8 mgR-8 txt-UperCase">Tựu trường sale chất -50%</span>
+                                                                <img src="https://cf.shopee.vn/file/4fa96751e79f4d4d2de96f87d8a8dc85" height="24">
+                                                            </a>
+                                                            <a href="#" class="shopee-searchbar-hints__history-prefill search-shop-inShopee" style="display:none">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ee4d2d" class="bi bi-shop mgl-8" viewBox="0 0 16 16">
+                                                                    <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+                                                                </svg>
+                                                                <span class="mgl-8">Tìm Shop</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="keyWordHistory">
+                                                        <a href="#" class="list-history-search-link">
+                                                            <div class="shopee-searchbar-hints__history-entry__text">
+                                                                <span>lọ chiết serum</span>
+                                                            </div> 
+                                                        </a>
+                                                        <a href="#" class="list-history-search-link">
+                                                            <div class="shopee-searchbar-hints__history-entry__text">
+                                                                <span>Caldium frog of blended</span>
+                                                            </div> 
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <button class="search-btn flex">
+                                            <svg height="19" viewBox="0 0 19 19" width="19" class="shopee-svg-icon sBTN"><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z"></path></g></g></g></g></g></svg>
+                                    </button>
+                                </div>
+                                <div class="box-search-follow-data">
+                                    <ul class="top-list-data-search">
+                                        <li class="name-products">
+                                            <a href="" class="link-product">Váy</a>
+                                        </li>
+                                        <li class="name-products">
+                                            <a href="#" class="link-product">Kiếm phát sáng</a>
+                                        </li>
+                                        <li class="name-products">
+                                            <a href="#" class="link-product">Áo phông</a>
+                                        </li>
+                                        <li class="name-products">
+                                            <a href="#" class="link-product">Dép nữ</a>
+                                        </li>
+                                        <li class="name-products">
+                                            <a href="#" class="link-product"> Túi xách nữ</a>
+                                        </li>
+                                        <li class="name-products">
+                                            <a href="#" class="link-product">Áp croptop</a>
+                                        </li>
+                                        <li class="name-products">
+                                            <a href="#" class="link-product">Áo thun</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                        <div class="shopping-cart">
+                                <a href="#" class="shopping-cart-link">
+                                    <div>
+                                        <svg class="iicon-shopping-cart-2" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                            <div class="cart-view-notification box_shadow">
+                                <div class="shopping-cart-none-products">
+                                    <img src="./assets/imgs/notification/f716952b0acbc99590da.jpg" alt="" class="img-cart-view-none-product">
+                                    <p>Chưa có sản phẩm nào</p>
+                                </div>
+                                <div class="shopping-cart-has-product">
+                                    <ul class="ul-cart-bag">
+                                        <p class="ul-heading-txt">Sản phẩm mới thêm</p>
+                                        <li class="list-product-in-bag">
+                                            <a href="#" class="product-cart-detail-link">
+                                                <div class="div-img-product-cart-view">
+                                                    <img src="./assets/imgs/product_img/jacklyn-pr-1.jpg" alt="" class="product-img-cart">
+                                                </div>
+                                                <div class="div-txt">
+                                                    <p class="name-product">Cây con Jacklyn</p>
+                                                    <p class="price-product">đ14.0000</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <div class="footer-cart-notification">
+                                            <div class="count-number-other-product">3 sản phẩm thêm vào giỏ hàng</div>
+                                            <div class="btn-see-cart-view">
+                                                <button>Xem giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="div-container-home">
+                <div class="xCao3k N2AB">
+                    <div class="home-page">
+                        <!-- Home Banner -->
+                        <div class="home-banner-container">
+                            <div class="full-home-banner-wrapper">
+                                <div class="grid">
+                                    <div class="full-home-banner">
+                                        <div class="left-slider">
+                                            <div class="slide-show-ctn">
+                                                <ul class="letf-slider-img-list box_shadow none-padding flex">
+                                                    <li class="sld-img-item none-change-opacity"> 
+                                                        <img src="https://cf.shopee.vn/file/bb37fa0c31b5ee1a04d2737bfe25e435_xxhdpi " alt="" srcset="">
+                                                    </li>
+                                                    <li class="sld-img-item none-change-opacity"> 
+                                                        <img src="https://cf.shopee.vn/file/7916193bf55a497cdc58f367a98904e2_xxhdpi" alt="" srcset="">
+                                                    </li>
+                                                    <li class="sld-img-item none-change-opacity"> 
+                                                        <img src="https://cf.shopee.vn/file/f7ea085eb75581b0cb9ba7d5e8cd8385_xxhdpi" alt="" srcset="">
+                                                    </li>
+                                                    <li class="sld-img-item none-change-opacity"> 
+                                                        <img src="https://cf.shopee.vn/file/1d88e6f26bf7d7cecf9418c5a76a6770_xxhdpi" alt="" srcset="">
+                                                    </li>
+                                                    <li class="sld-img-item none-change-opacity"> 
+                                                        <img src="https://cf.shopee.vn/file/f9698341b8fed8c13987d91de350e472_xxhdpi" alt="" srcset="">
+                                                    </li>
+                                                </ul>                                           
+                                            </div>
+                                            <div>
+                                                <button class="left-slider-arrow left-btn left-homeBanner none-change-opacity">
+                                                    <svg enable-background="new 0 0 13 20" viewBox="0 0 13 20" role="img" class="stardust-icon stardust-icon-arrow-left-bold"><path stroke="none" d="m4.2 10l7.9-7.9-2.1-2.2-9 9-1.1 1.1 1.1 1 9 9 2.1-2.1z"></path></svg>
+                                                </button>
+                                                <button class="left-slider-arrow right-btn right-homeBanner none-change-opacity">
+                                                    <svg enable-background="new 0 0 13 21" viewBox="0 0 13 21" role="img" class="stardust-icon stardust-icon-arrow-right-bold"><path stroke="none" d="m11.1 9.9l-9-9-2.2 2.2 8 7.9-8 7.9 2.2 2.1 9-9 1-1z"></path></svg>
+                                                </button>
+                                            </div>
+                                            <div class="next-circle-animation flex">
+                                                <div class="list-next-circle-animation none-change-opacity active"></div>
+                                                <div class="list-next-circle-animation none-change-opacity"></div>
+                                                <div class="list-next-circle-animation none-change-opacity"></div>
+                                                <div class="list-next-circle-animation none-change-opacity"></div>
+                                                <div class="list-next-circle-animation none-change-opacity"></div>
+                                            </div>
+                                        </div>
+                                        <div class="right-slider">
+                                            <a class="right-slider-img box_shadow none-padding">
+                                                <div class="right-slider-img-bgr">
+                                                    <img src="" class="top-img"></img>
+                                                </div>
+                                            </a>
+                                            <a class="right-slider-img box_shadow none-padding">
+                                                <div class="right-slider-img-bgr">
+                                                    <div class="bottom-img"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-banner-container">                         
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src="https://cf.shopee.vn/file/46a2a2c810622f314d78455da5e5d926_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="z04tx-txt">Khung giờ săn sale</div>
+                                        </div>
+                                    </a>
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src="https://cf.shopee.vn/file/b3535d7e56c58c4ebe9a87672d38cc5e_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                            </div>
+                                            <div class="z04tx-txt">Gì cũng rẻ - Mua là Freeship</div>
+                                        </div>
+                                    </a>
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src= "https://cf.shopee.vn/file/a8d76bca057ba0b117dcf8e1ef068d16_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                            </div>
+                                            <div class="z04tx-txt">Miễn phí vận chuyển</div>
+                                        </div>
+                                    </a>
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src= "https://cf.shopee.vn/file/9da9a3acb5520d601f86a90434f455a5_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                            </div>
+                                            <div class="z04tx-txt">Xoàn xu 10% - Lên đến  200k</div>
+                                        </div>
+                                    </a>
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src="https://cf.shopee.vn/file/8d6d5ee795e7675fed39d31ba04c3b92_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                            </div>
+                                            <div class="z04tx-txt">Hàng hiệu giá tốt</div>
+                                        </div>
+                                    </a>
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src="https://cf.shopee.vn/file/a08ab28962514a626195ef0415411585_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                            </div>
+                                            <div class="z04tx-txt">Hàng quốc tế</div>
+                                        </div>
+                                    </a>
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src="https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                            </div>
+                                            <div class="z04tx-txt">Nạp thẻ, Hoá đơn & Phim</div>
+                                        </div>
+                                    </a>
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src="https://cf.shopee.vn/file/96385a65fa50800e096bb790fa5c1dba_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                            </div>
+                                            <div class="z04tx-txt">Deal sốc từ 1k</div>
+                                        </div>
+                                    </a>
+                                    <a>
+                                        <div class="Z04TX">
+                                            <div class="z04tx-div">
+                                                <div class="z04tx-div-ic">
+                                                    <img src="https://cf.shopee.vn/file/ed849a82e8c66bbff8ec0f2869c6fbb7_xhdpi" alt="" class="z04tx-icon"></img>
+                                                </div>
+                                            </div>
+                                            <div class="z04tx-txt">Chọn 5 số trúng tiền triệu</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>  
+                        </div>
+                        <!-- Section -->
+                        <div class="grid">
+                            <div class="container margin-tb32">
+                                <!-- Catagories -->
+                                <div class="home-body-section margin-tb32">
+                                    <div class="section-grid-layout-heading">
+                                        <div class="section-heading-title">Danh mục</div>
+                                    </div>
+                                    <div class="img-carousel scale-btn">
+                                        <div class="img-carousel_item_list_wrapper scale-btn">
+                                            <ul class="section-grid-layout-container">
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nữ</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item none-change-opacity">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item none-change-opacity border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item none-change-opacity">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item none-change-opacity border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item none-change-opacity">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item none-change-opacity border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item none-change-opacity">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item none-change-opacity border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item none-change-opacity">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item none-change-opacity border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item none-change-opacity">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item none-change-opacity border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item none-change-opacity">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item none-change-opacity border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="list-item-section">
+                                                    <div class="section-link-group none-border">
+                                                        <a class="section-grid-layout-item none-change-opacity">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                        <a class="section-grid-layout-item none-change-opacity border-top">
+                                                            <div class="section-z04-div">
+                                                                <div class="section-z04-img">
+                                                                    <div class="stc-im">
+                                                                        <div class="img-bgr-section"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="z04tx-txt">Thời trang nam</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="small-btn flex-jtfspbt">
+                                            <div class="arrow-btn-ctn left-arr">
+                                                <svg enable-background="new 0 0 13 20" viewBox="0 0 13 20" x="0" y="0" class="shopee-svg-icon icon-arrow-bold"><polygon points="4.2 10 12.1 2.1 10 -.1 1 8.9 -.1 10 1 11 10 20 12.1 17.9"></polygon></svg>
+                                            </div>
+                                            <div class="arrow-btn-ctn right-arr flex">
+                                                <svg enable-background="new 0 0 13 21" viewBox="0 0 13 21" x="0" y="0" class="shopee-svg-icon icon-arrow-bold"><polygon points="11.1 9.9 2.1 .9 -.1 3.1 7.9 11 -.1 18.9 2.1 21 11.1 12 12.1 11"></polygon></svg>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <!-- Flash Sale -->
+                                <div class="flash-sale-container margin-tb32">
+                                    <div class="header-flash-sale box_shadow">
+                                        <div class="left-header-flash-sale">
+                                            <div class="header-flash-sale-img"></div>
+                                            <div class="countdown-timer"></div>
+                                        </div>
+                                        <div class="right-header-flash-sale">
+                                            <div class="btn-ic-see-all">
+                                                <a class="see-all-flash-sale-btn font075 none-change-opacity">Xem tất cả </a>
+                                                <div class="flex">
+                                                    <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" x="0" y="0" class="shopee-svg-icon icon-arrow-right-see_more"><path d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z"></path></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flash scale-btn">
+                                        <div class="grid-over-flow">
+                                            <div class="grid-containter-flash-sale">
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src="https://cf.shopee.vn/file/d7e6cbb088e6ebe13a55794a2978ef44_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src="https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src="https://cf.shopee.vn/file/d7e6cbb088e6ebe13a55794a2978ef44_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src="https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src="https://cf.shopee.vn/file/d7e6cbb088e6ebe13a55794a2978ef44_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src="https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src="https://cf.shopee.vn/file/d7e6cbb088e6ebe13a55794a2978ef44_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src="https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src="https://cf.shopee.vn/file/d7e6cbb088e6ebe13a55794a2978ef44_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src="https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src="https://cf.shopee.vn/file/04967a62d9870832f4768e880d51d548_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src="https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/4acd08e4d25fc27fcd5ec330d1ad926c_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a> 
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/4acd08e4d25fc27fcd5ec330d1ad926c_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/4acd08e4d25fc27fcd5ec330d1ad926c_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/4acd08e4d25fc27fcd5ec330d1ad926c_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/4acd08e4d25fc27fcd5ec330d1ad926c_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/4acd08e4d25fc27fcd5ec330d1ad926c_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a> 
+                                                
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/d20fd46e09715fe310865d166867b521_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/d20fd46e09715fe310865d166867b521_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/d20fd46e09715fe310865d166867b521_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/301120e189064a2e871332e21f8eca2f_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <a href="#" id="item_Flash_sale" class="grid-item-link-product-saleoff">
+                                                    <div class="container-link-flash-sale">
+                                                        <div class="header-link-sale-off-container">
+                                                            <div class="header-block-sale-off">
+                                                                <span class="percent-sale-off">33%</span>
+                                                                <span class="sale-text">Giảm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="img-sale-off-container">
+                                                            <div class="product-img-body">
+                                                                <img src= "https://cf.shopee.vn/file/e7e777573f1787b134a7e281908f0da0_tn" class="img-body" alt="">
+                                                            </div>
+                                                            <div class="product-img-footer">
+                                                                <img src= "https://cf.shopee.vn/file/0588edd6621ee412a3cc873f35df8026_tn" class="img-footer">    
+                                                            </div>
+                                                        </div>
+                                                        <div class="footer-flash-sale-item">
+                                                            <div class="price-sale-off">
+                                                                <div class="number-price">
+                                                                    <span class="currentcy">đ</span>
+                                                                    139.000
+                                                                </div>
+                                                            </div>
+                                                            <div class="number-sold">
+                                                                <div class="nb-sold-child">
+                                                                    <div class="nbsc-background">
+                                                                        <div class="nbsc-text">Đã bán 23</div>
+                                                                        <div class="hot-sale"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="small-btn flex-jtfspbt">
+                                            <div class="arrow-btn-ctn left-arr leftArr_flashSale">
+                                                <svg enable-background="new 0 0 13 20" viewBox="0 0 13 20" x="0" y="0" class="shopee-svg-icon icon-arrow-bold"><polygon points="4.2 10 12.1 2.1 10 -.1 1 8.9 -.1 10 1 11 10 20 12.1 17.9"></polygon></svg>
+                                            </div>
+                                            <div class="arrow-btn-ctn right-arr rightArr_flashSale">
+                                                <svg enable-background="new 0 0 13 21" viewBox="0 0 13 21" x="0" y="0" class="shopee-svg-icon icon-arrow-bold"><polygon points="11.1 9.9 2.1 .9 -.1 3.1 7.9 11 -.1 18.9 2.1 21 11.1 12 12.1 11"></polygon></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Promotion -->
+                                <div class="promotion-container box_shadow margin-tb32">
+                                    <div class="prmo">
+                                        <img src="https://cf.shopee.vn/file/8d817934649ff972264d8511a2a661a9" alt="" class="img-banner">
+                                        <div class="item-promotion-link">
+                                            <a class="promotion-item-link link-1"></a>
+                                            <a class="promotion-item-link link 2"></a>
+                                            <a class="promotion-item-link link 3"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Shopee Mall -->
+                                <div class="shopee-mall-container">
+                                    <div class="sml-div-container">
+                                        <div class="header-smll-container flex-jtfspbt box_shadow">
+                                            <div class="left-header-smll-container">
+                                                <div class="heading-smll left-smll-item">
+                                                    <span class="header-item-vertical-line heading-span">Shopee Mall</span>
+                                                </div>
+                                                <div class="item-header-smll-container left-smll-item">
+                                                    <img class="a8XyX2" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/6c502a2641457578b0d5f5153b53dd5d.png">
+                                                    <span>7 ngày miễn phí trả hàng</span>
+                                                </div>
+                                                <div class="item-header-smll-container left-smll-item">
+                                                    <img class="a8XyX2" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/16ead7e0a68c3cff9f32910e4be08122.png">
+                                                    <span>Hàng chính hãng 100%</span>
+                                                </div>
+                                                <div class="item-header-smll-container left-smll-item">
+                                                    <img class="a8XyX2" src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/homepage/511aca04cc3ba9234ab0e4fcf20768a2.png">
+                                                    <span>Miễn phí vận chuyển</span>
+                                                </div>
+                                            </div>
+                                            <div class="right-header-smll-container">
+                                                <div class="right-header-flash-sale">
+                                                    <div class="btn-ic-see-all">
+                                                        <button class="see-all-flash-sale-btn none-change-opacity">Xem tất cả </button>
+                                                    <div class="flex">
+                                                        <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" x="0" y="0" class="shopee-svg-icon icon-arrow-right-see_more"><path d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z"></path></svg>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="shopeeMall-body-container flxC">
+                                            <div class="spM-left-body-ctn none-change-opacity mgl-8">
+                                                <ul class="spM_Slider flxC none-padding">
+                                                    <li class="slide-item-spM">
+                                                        <img class="banner-image" src="https://cf.shopee.vn/file/5199f2e952b29ac21494ed7ce93b5a6f">
+                                                    </li>
+                                                    <li class="slide-item-spM">
+                                                        <img class="banner-image" src="https://cf.shopee.vn/file/be47f76f6344736ffef2e87c9a06700b">
+                                                    </li>
+                                                    <li class="slide-item-spM">
+                                                        <img class="banner-image" src="https://cf.shopee.vn/file/d7437d1c73db64636ff4223fbb6ad651">
+                                                    </li>
+                                                    <li class="slide-item-spM">
+                                                        <img class="banner-image" src="https://cf.shopee.vn/file/d7437d1c73db64636ff4223fbb6ad651">
+                                                    </li>
+                                                </ul>
+                                                <div>
+                                                    <button class="left-slider-arrow left-btn left-shopeeMall none-change-opacity">
+                                                        <svg enable-background="new 0 0 13 20" viewBox="0 0 13 20" role="img" class="stardust-icon stardust-icon-arrow-left-bold"><path stroke="none" d="m4.2 10l7.9-7.9-2.1-2.2-9 9-1.1 1.1 1.1 1 9 9 2.1-2.1z"></path></svg>
+                                                    </button>
+                                                    <button class="left-slider-arrow right-btn right-shopeeMall none-change-opacity">
+                                                        <svg enable-background="new 0 0 13 21" viewBox="0 0 13 21" role="img" class="stardust-icon stardust-icon-arrow-right-bold"><path stroke="none" d="m11.1 9.9l-9-9-2.2 2.2 8 7.9-8 7.9 2.2 2.1 9-9 1-1z"></path></svg>
+                                                    </button>
+                                                </div>
+                                                <div class="next-circle-animation flex">
+                                                    <div class="list-next-circle-animation none-change-opacity dotShopeeMall active"></div>
+                                                    <div class="list-next-circle-animation none-change-opacity dotShopeeMall "></div>
+                                                    <div class="list-next-circle-animation none-change-opacity dotShopeeMall"></div>
+                                                    <div class="list-next-circle-animation none-change-opacity dotShopeeMall"></div>
+                                                </div>
+                                            </div>
+                                            <div class="spM-right-body-ctn">
+                                                <div class="spM-right-overflow">
+                                                    <ul class="spM-product-list flxC">
+                                                        <li class="spM-item-product">
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li class="spM-item-product">
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li class="spM-item-product">
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li class="spM-item-product">
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="spM-item-product">
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/c0d59502ec6d5b3a17d0f5e854a9fdd5_xhdpi" alt="">
+                                                            </a>
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li class="spM-item-product">
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                        </li>
+                                                        <li class="spM-item-product">
+                                                            <a href="#" class="spM-item-link-product none-change-opacity">
+                                                                <img src="https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi" alt="">
+                                                            </a>
+                                                            <a href="#" id ="spM_SeeMore" class="spM-item-link-productflex">
+                                                                <button class="shopeeMall_seeAll_Promotion none-change-opacity flex ">
+                                                                    <div>Xem tất cả </div>
+                                                                    <span class="flex mgl-8">
+                                                                        <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" x="0" y="0" class="shopee-svg-icon icon-arrow-right"><path d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z"></path></svg>
+                                                                    </span>
+                                                                </button>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="small-btn flex-jtfspbt">
+                                                    <div class="arrow-btn-ctn left-arr leftArr_shopeeMallProduct none-change-opacity">
+                                                        <svg enable-background="new 0 0 13 20" viewBox="0 0 13 20" x="0" y="0" class="shopee-svg-icon icon-arrow-bold"><polygon points="4.2 10 12.1 2.1 10 -.1 1 8.9 -.1 10 1 11 10 20 12.1 17.9"></polygon></svg>
+                                                    </div>
+                                                    <div class="arrow-btn-ctn right-arr rightArr_shopeeMallProduct none-change-opacity">
+                                                        <svg enable-background="new 0 0 13 21" viewBox="0 0 13 21" x="0" y="0" class="shopee-svg-icon icon-arrow-bold"><polygon points="11.1 9.9 2.1 .9 -.1 3.1 7.9 11 -.1 18.9 2.1 21 11.1 12 12.1 11"></polygon></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Trendding search -->
+                                <div class="container-trendding-search margin-tb32">
+                                    <div class="header-ctn-trendding-search">
+                                        <div class="header-ctn-text">Xu hướng tìm kiếm</div>
+                                        <div class="right-header-smll-container">
+                                            <div class="right-header-flash-sale">
+                                                <div class="btn-ic-see-all">
+                                                    <button class="see-all-flash-sale-btn none-change-opacity">Xem tất cả </button>
+                                                    <div class="none-change-opacity">
+                                                        <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" x="0" y="0" class="shopee-svg-icon icon-arrow-right-see_more"><path d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z"></path></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ctn-body-trendding">
+                                        <div class="grid-ctn-body-trendding">
+                                            <a href="#" class="grid-item-trendding">
+                                                <div class="grid-item-text">
+                                                    <div class="name-product-trendding">Dép</div>
+                                                    <div class="number-product-sold">4k+ sản phẩm</div>
+                                                </div>
+                                                <div class="bgr-item-trendding">
+                                                    <div class="img-bgr"></div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="grid-item-trendding">
+                                                <div class="grid-item-text">
+                                                    <div class="name-product-trendding">Dép</div>
+                                                    <div class="number-product-sold">4k+ sản phẩm</div>
+                                                </div>
+                                                <div class="bgr-item-trendding">
+                                                    <div class="img-bgr"></div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="grid-item-trendding">
+                                                <div class="grid-item-text">
+                                                    <div class="name-product-trendding">Dép</div>
+                                                    <div class="number-product-sold">4k+ sản phẩm</div>
+                                                </div>
+                                                <div class="bgr-item-trendding">
+                                                    <div class="img-bgr"></div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="grid-item-trendding">
+                                                <div class="grid-item-text">
+                                                    <div class="name-product-trendding">Dép</div>
+                                                    <div class="number-product-sold">4k+ sản phẩm</div>
+                                                </div>
+                                                <div class="bgr-item-trendding">
+                                                    <div class="img-bgr"></div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="grid-item-trendding">
+                                                <div class="grid-item-text">
+                                                    <div class="name-product-trendding">Dép</div>
+                                                    <div class="number-product-sold">4k+ sản phẩm</div>
+                                                </div>
+                                                <div class="bgr-item-trendding">
+                                                    <div class="img-bgr"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Top Searching -->
+                                <div class="flash-sale-container margin-tb32 ctn-top-search">
+                                    <div class="header-ctn-trendding-search box_shadow">
+                                        <div class="header-ctn-text txt-color-primary-color">Tìm kiếm hàng đầu</div>
+                                        <div class="right-header-smll-container">
+                                            <div class="right-header-flash-sale">
+                                                <div class="btn-ic-see-all">
+                                                    <button class="see-all-flash-sale-btn none-change-opacity">Xem tất cả </button>
+                                                    <div class="none-change-opacity">
+                                                        <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" x="0" y="0" class="shopee-svg-icon icon-arrow-right-see_more"><path d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z"></path></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ctn-grid scale-btn">
+                                        <div class="grid-containter-flash-sale top-search-overflow none-padding-top">
+                                            <div class="top-search-wrapper">
+                                                <div class="top_search_link_ctn flxC">
+                                                    <a href="#" class="grid-item-link-product-saleoff top-search-item-link  alpha-grid-item-link none-change-opacity">
+                                                        <div class="alpha-header">
+                                                            <div class="alpha-block">Top</div>
+                                                        </div>
+                                                        <div class="img-sale-off-container alpha-img">
+                                                            <div class="product-img-body prd-img-top-search alpha-img-div">
+                                                                <img src="https://cf.shopee.vn/file/07e91012d2d803706677f86d99f57ba0" class="img-body alpha-img-body" alt="">
+                                                            </div>
+                                                            <div class="number-sold-top alpha-sold-number">
+                                                                <div class="nbsc-top-text">Đã bán 54k+ / tháng</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alpha-footer">
+                                                            <div class="text">Sữa rửa mặt</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="grid-item-link-product-saleoff top-search-item-link  alpha-grid-item-link none-change-opacity">
+                                                        <div class="alpha-header">
+                                                            <div class="alpha-block">Top</div>
+                                                        </div>
+                                                        <div class="img-sale-off-container alpha-img">
+                                                            <div class="product-img-body prd-img-top-search alpha-img-div">
+                                                                <img src="https://cf.shopee.vn/file/07e91012d2d803706677f86d99f57ba0" class="img-body alpha-img-body" alt="">
+                                                            </div>
+                                                            <div class="number-sold-top alpha-sold-number">
+                                                                <div class="nbsc-top-text">Đã bán 54k+ / tháng</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alpha-footer">
+                                                            <div class="text">Sữa rửa mặt</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="grid-item-link-product-saleoff top-search-item-link  alpha-grid-item-link none-change-opacity">
+                                                        <div class="alpha-header">
+                                                            <div class="alpha-block">Top</div>
+                                                        </div>
+                                                        <div class="img-sale-off-container alpha-img">
+                                                            <div class="product-img-body prd-img-top-search alpha-img-div">
+                                                                <img src="https://cf.shopee.vn/file/07e91012d2d803706677f86d99f57ba0" class="img-body alpha-img-body" alt="">
+                                                            </div>
+                                                            <div class="number-sold-top alpha-sold-number">
+                                                                <div class="nbsc-top-text">Đã bán 54k+ / tháng</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alpha-footer">
+                                                            <div class="text">Sữa rửa mặt</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="grid-item-link-product-saleoff top-search-item-link  alpha-grid-item-link none-change-opacity">
+                                                        <div class="alpha-header">
+                                                            <div class="alpha-block">Top</div>
+                                                        </div>
+                                                        <div class="img-sale-off-container alpha-img">
+                                                            <div class="product-img-body prd-img-top-search alpha-img-div">
+                                                                <img src="https://cf.shopee.vn/file/07e91012d2d803706677f86d99f57ba0" class="img-body alpha-img-body" alt="">
+                                                            </div>
+                                                            <div class="number-sold-top alpha-sold-number">
+                                                                <div class="nbsc-top-text">Đã bán 54k+ / tháng</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alpha-footer">
+                                                            <div class="text">Sữa rửa mặt</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="grid-item-link-product-saleoff top-search-item-link  alpha-grid-item-link none-change-opacity">
+                                                        <div class="alpha-header">
+                                                            <div class="alpha-block">Top</div>
+                                                        </div>
+                                                        <div class="img-sale-off-container alpha-img">
+                                                            <div class="product-img-body prd-img-top-search alpha-img-div">
+                                                                <img src="https://cf.shopee.vn/file/07e91012d2d803706677f86d99f57ba0" class="img-body alpha-img-body" alt="">
+                                                            </div>
+                                                            <div class="number-sold-top alpha-sold-number">
+                                                                <div class="nbsc-top-text">Đã bán 54k+ / tháng</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alpha-footer">
+                                                            <div class="text">Sữa rửa mặt</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="grid-item-link-product-saleoff top-search-item-link  alpha-grid-item-link none-change-opacity">
+                                                        <div class="alpha-header">
+                                                            <div class="alpha-block">Top</div>
+                                                        </div>
+                                                        <div class="img-sale-off-container alpha-img">
+                                                            <div class="product-img-body prd-img-top-search alpha-img-div">
+                                                                <img src="https://cf.shopee.vn/file/36699bdc79d69f9c26469f7d940b5170" class="img-body alpha-img-body" alt="">
+                                                            </div>
+                                                            <div class="number-sold-top alpha-sold-number">
+                                                                <div class="nbsc-top-text">Đã bán 54k+ / tháng</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alpha-footer">
+                                                            <div class="text">Sữa rửa mặt</div>
+                                                        </div>
+                                                    </a>
+
+                                                    <a href="#" class="grid-item-link-product-saleoff top-search-item-link  alpha-grid-item-link none-change-opacity">
+                                                        <div class="alpha-header">
+                                                            <div class="alpha-block">Top</div>
+                                                        </div>
+                                                        <div class="img-sale-off-container alpha-img">
+                                                            <div class="product-img-body prd-img-top-search alpha-img-div">
+                                                                <img src="https://cf.shopee.vn/file/36699bdc79d69f9c26469f7d940b5170" class="img-body alpha-img-body" alt="">
+                                                            </div>
+                                                            <div class="number-sold-top alpha-sold-number">
+                                                                <div class="nbsc-top-text">Đã bán 54k+ / tháng</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alpha-footer">
+                                                            <div class="text">Sữa rửa mặt</div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#" class="grid-item-link-product-saleoff top-search-item-link  alpha-grid-item-link none-change-opacity">
+                                                        <div class="alpha-header">
+                                                            <div class="alpha-block">Top</div>
+                                                        </div>
+                                                        <div class="img-sale-off-container alpha-img">
+                                                            <div class="product-img-body prd-img-top-search alpha-img-div">
+                                                                <img src="https://cf.shopee.vn/file/07e91012d2d803706677f86d99f57ba0" class="img-body alpha-img-body" alt="">
+                                                            </div>
+                                                            <div class="number-sold-top alpha-sold-number">
+                                                                <div class="nbsc-top-text">Đã bán 54k+ / tháng</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="alpha-footer">
+                                                            <div class="text">Sữa rửa mặt</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-btn flex-jtfspbt">
+                                                <div class="arrow-btn-ctn left-arr prevBtn_topSearch flex" style="display: none">
+                                                    <svg enable-background="new 0 0 13 20" viewBox="0 0 13 20" x="0" y="0" class="shopee-svg-icon icon-arrow-bold"><polygon points="4.2 10 12.1 2.1 10 -.1 1 8.9 -.1 10 1 11 10 20 12.1 17.9"></polygon></svg>
+                                                </div>
+                                                <div class="arrow-btn-ctn right-arr nextBtn_topSearch flex" >
+                                                    <svg enable-background="new 0 0 13 21" viewBox="0 0 13 21" x="0" y="0" class="shopee-svg-icon icon-arrow-bold"><polygon points="11.1 9.9 2.1 .9 -.1 3.1 7.9 11 -.1 18.9 2.1 21 11.1 12 12.1 11"></polygon></svg>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <!-- Today Suggestion -->
+                                <div class="ctn-top-search sggtion-container">
+                                    <div class="today-sggtion-wrapper">
+                                        <nav class="header-ctn-trendding-search none-change-opacity">
+                                            <div class="header-suggestion">
+                                                <div class="header-ctn-text txt-color-primary-color center-text">
+                                                    <div class="hdct">Gợi ý hôm nay</div>
+                                                    <div class="border-bottom-sggt"></div>
+                                                </div>
+                                            </div>  
+                                        </nav>                       
+                                        <div class="grid-containter">
+                                            <div id="tdsgtion-relative-product" class="tdsgtion"></div>                    
+                                        </div>
+                                        <div class="footer-sggtion-see-more">
+                                            <div class="block-ft-btn">
+                                                <button class="ft-sggtion-btn none-change-opacity">Xem thêm</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <div class="footer"></div>
+        </div>
+        <!-- Modal layout -->
+        <div class="modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-body">
+                <div class="modal-inner">
+                    <!-- <div class="login-form">
+                        <div class="header-btn-login-register">
+                            <h3 id="login-btn">Đăng nhập</h3>
+                            <div class="QR-login">
+                                <div class="signin-withQRCODE-btn">Đăng nhập với mã QR</div>
+                            </div>
+                        </div>
+                        <div class="auth-form">
+                            <div class="auth-form-input-group">
+                                <form action="">
+                                    <div class="padding-bottom-10">
+                                        <input type="text" name="" id="" class="login-register-method" placeholder="Email/Số điện thoại/Tên đăng nhập">
+                                    </div>
+                                    <div class="padding-bottom-14">
+                                        <input type="password" name="" id="" class="password-input padding-14" placeholder="Mật khẩu">
+                                    </div>
+                                    <button class="login-btn" disabled>
+                                        ĐĂNG NHẬP
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="another-login">
+                                <a href="#" class="forgot-password">Quên mật khẩu</a>
+                                <a href="#" class="login-SMS">Đăng nhập bằng SMS</a>
+                            </div>
+                            <div class="line-or-line padding-bottom-14">
+                                <div class="vertical-line"></div>
+                                <span id="span-or">HOẶC</span>
+                                <div class="vertical-line"></div>
+                            </div>
+                            <div class="social-media">
+                                <button class="social-media-btn">
+                                    <a href="#" class="social-media-links">
+                                        <div class="icon-img">
+                                            <img src="./assets/imgs/logo/facebook.png" alt="">
+                                        </div>
+                                        <h5>Facebook</h5>
+                                    </a>
+                                </button>
+                                <button class="social-media-btn">
+                                    <a href="#" class="social-media-links">
+                                        <div class="icon-img">
+                                            <img src="./assets/imgs/logo/google.png" alt="">
+                                        </div>
+                                        <h5>Google</h5>
+                                    </a>
+                                </button>
+                                <button class="apple-btn social-media-btn">
+                                    <a class="social-media-links">
+                                        <div class="icon-img">
+                                            <img src="./assets/imgs/logo/apple.png" alt="">
+                                        </div>
+                                        <h5>Apple</h5>
+                                    </a>
+                                </button>
+                            </div>
+                            <footer class="auth-form-new-user">
+                                <p>Bạn mới biết đến Fast Buy?</p>
+                                <a href="#" class="sign-up-link">Đăng ký</a>
+                            </footer>
+                        </div>
+                    </div> -->
+                    <!-- <div class="register-form">
+                        <div class="header-btn-login-register">
+                            <h3 id="login-btn">Đăng ký</h3>
+                        </div>
+                        <div class="auth-form">
+                            <div class="auth-form-input-group">
+                                <form action="">
+                                    <div class="padding-bottom-14">
+                                        <input type="text" name="" id="" class="register-info padding-14" placeholder="Số điện thoại">
+                                    </div>
+                                    <button class="continue-btn" disabled>
+                                        Tiếp theo
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="line-or-line padding-bottom-14">
+                                <div class="vertical-line"></div>
+                                <span id="span-or">HOẶC</span>
+                                <div class="vertical-line"></div>
+                            </div>
+                            <div class="social-media">
+                                <button class="social-media-btn">
+                                    <a href="#" class="social-media-links">
+                                        <div class="icon-img">
+                                            <img src="./assets/imgs/logo/facebook.png" alt="">
+                                        </div>
+                                        <h5>Facebook</h5>
+                                    </a>
+                                </button>
+                                <button class="social-media-btn">
+                                    <a href="#" class="social-media-links">
+                                        <div class="icon-img">
+                                            <img src="./assets/imgs/logo/google.png" alt="">
+                                        </div>
+                                        <h5>Google</h5>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="policy">
+                                <p>Bằng việc đăng kí, bạn đã đồng ý với Fast Buy về</p> <br>
+                                    <a href="#">Điều khoản dịch vụ</a>
+                                    &
+                                    <a href="#">Chính sách bảo mật</a>
+                            </div>
+                            <footer class="auth-form-new-user">
+                                <p>Bạn đã có tài khoản?</p>
+                                <a href="#" class="sign-up-link">Đăng nhập</a>
+                            </footer>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>   
+    </body>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script src="./js/product.js"></script>
+</html>

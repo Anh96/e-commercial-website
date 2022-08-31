@@ -1,0 +1,151 @@
+.padding-bottom-10{
+    padding-bottom: 10px;
+}
+.padding-bottom-14{
+    padding-bottom: 14px;
+}
+
+h1{
+    color: var(--white-color);
+}
+.register-form a:hover{
+    opacity: 1;
+}
+.register-form{
+    padding: 32px;
+}
+.header-btn-login-register{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    height: 58px;
+}
+
+.signin-withQRCODE-btn{
+
+    background-color: #fefaec;
+    border: 2px solid;
+    border-color: #ffbf00 #fefaec #ffbf00 #ffbf00;
+    color: #ffbf00;
+    font-weight: 700;
+    position: relative;
+    
+}
+.auth-form-input-group{
+    display: block;
+}
+.auth-form-input-group input{
+    width: 100%;
+    height: 40px;
+    margin: 16px 0;
+}
+
+.continue-btn{
+    width: 100%;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    outline: none;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 15px;
+    color:var(--white-color);
+    padding: 0 10px ;
+    margin-bottom: 30px;
+}
+
+.line-or-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.vertical-line{
+    height: 0.5px;
+    width: 100%;
+    background:var(--line-color);
+}
+#span-or{
+    padding: 0 16px;
+    color: var(--line-color);
+}
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin: auto;
+}
+
+.social-media h5,
+.social-media div{
+    display: block;
+    align-items: center;
+    font-size: 15px;
+   
+
+}
+.social-media-btn{
+    display: inline-flex;
+    align-items: center;
+    width: 130px;
+    justify-content: center;
+    background-color: inherit;
+    border: 1px solid var(--line-color);
+    margin: 5px;
+    border-radius: 2px;
+}
+.social-media-btn:hover{
+    background: var(--hover-color);
+}
+.social-media h5{
+    padding-left: 8px;
+}
+.icon-img{
+    padding-top: 4px;
+    align-items: center;
+}
+.icon-img img{
+    width: 22px;
+    height: 22px;
+}
+.social-media-links{
+    display:flex;
+    color: var(--black-color);
+    height: 100%;
+    align-items: center;
+}
+.social-media-links:hover{
+    opacity: 1;
+}
+.policy{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0 25px;
+    margin: 25px 5px 0 0;
+    font-size: 13px;
+}
+.policy a{
+    color: var(--primary-color);
+    
+}
+.auth-form-new-user{
+    display: flex;
+    height: 40px;
+    padding-top: 16px ;
+    justify-content:center;
+    align-items: center;
+
+}
+.auth-form-new-user p{
+    color: var(--line-color);
+    font-size: 18px;
+
+}
+.auth-form-new-user .sign-up-link{
+    color: var(--primary-color);
+    font-size: 18px;
+    padding-left: 8px;
+}
+

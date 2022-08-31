@@ -1,0 +1,258 @@
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    /* overflow: visible; */
+}
+/* Text Transform */
+.txt-Capitalize{
+    text-transform: capitalize;
+}
+.txt-UperCase{
+    text-transform: uppercase;
+}
+/* Text Overflow */
+.descrp-txt-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Text Color */
+.txt-Black-color{
+    color: var(--text-color);
+}
+.color-primary-text{
+    color: #ee4d2d;
+}
+.color-gray{
+    color: var(--footer-color-text);
+}
+.txt-white-color{
+    color: var(--white-color);
+}
+/* font-weight */
+.font600{
+    font-weight: 600;
+}
+/* border */
+.bd-top{
+    border-top: 4px solid var(--primary-color);
+}
+.bdT{
+    border-top: 1px solid var(--footer-color-text);
+}
+.bdBT{
+    border-bottom: 1px solid var(--footer-color-text);
+}
+.bd-top-bttom{
+    border-top: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
+}
+.bd-right{
+    border-right: 1px solid var(--footer-color-text);
+}
+.bd-left{
+    border-left: 1px solid var(--footer-color-text);
+}
+/* None Border */
+.none-border{
+    border-left: 0px;
+    border-right: 0px;
+}
+.none-border-TB{
+    border-top: 0px;
+    border-bottom: 0px;
+}
+/* font-size */
+.font20{
+    font-size: 20px;
+}
+.font16{font-size: 16px;}
+.font-14{
+    font-size: 14px;
+}
+.font10{
+    font-size: 10px;
+}
+.font075{
+    font-size: 00.75rem;
+}
+/* margin */
+.margin-auto{
+    margin: auto;
+}
+.none-mgTop{
+    margin-top: 0px;
+}
+.margin-tb16{
+    margin: 16px 0;
+}
+.margin-tb32{
+    margin: 32px 0;
+}
+.mrBt32{
+    margin-bottom: 32px;
+}
+.mgTB-8{
+    margin: 8px 0;
+}
+.mgTB-4{
+    margin: 4px 0;
+}
+.mgT16{
+    margin-top: 16px;
+}
+.mgT32{
+    margin-top: 32px;
+}
+.mgl-16{
+    margin-left: 50px;
+}
+.mgr-16{
+    margin-right: 16px;
+}
+.mgl-8{
+    margin-left: 8px;
+}
+.mgR-8{
+    margin-right: 8px;
+}
+.mgLR-4{
+    margin: 0 4px;
+}
+.mgB-32{
+    margin-bottom: 32px;
+}
+.mgB-8{
+    margin-bottom: 8px;
+}
+/* Padding */
+.none-padding{
+    padding: 0;
+}
+.none-padding-top{
+    padding-top: 0;
+}
+.none-border-bottom{
+    border-bottom: 0px;
+}
+.pd-LR-4{
+    padding: 4px;
+}
+.pd-TBLR-4{
+    padding: 4px;
+}
+.pd-LR-8{
+    padding: 0 8px;
+}
+.pd-TBLR-16{
+    padding: 16px;
+}
+.pd-TBLR-32{
+    padding: 32px;
+}
+/* disable btn- active btn */
+:disabled{
+    opacity: 0.7 ;
+    cursor: not-allowed;
+}
+.dot_active,
+.active{
+    background-color: orangered;
+}
+
+/* opacity */
+/* box shadown */
+.box_shadow{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.09);
+    /* box-shadow:0 1px 1px 0 rgba(0,0,0,.05); */
+}
+ /* Modal Layout */
+ .modal{
+     display: none;
+     position: fixed;
+     top:0;
+     right:0;
+     bottom: 0;
+     left:0;
+ }
+ .modal-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.14);
+ }
+ .modal-body{
+    position:relative;
+    background: var(--white-color);
+    margin: auto;
+    z-index: 1;
+    border-radius: 5px;
+ }
+/* Flex */
+.flex-jtfspar{
+    display: flex;
+    justify-content: space-around;
+}
+.flex-jtfspbt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flexWrap{
+    flex-wrap: wrap;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flx{
+    display: flex;
+}
+.flxC{
+    display: flex;
+    align-items: center;
+}
+.flex-start{
+    display: flex;
+    justify-content: flex-start;
+}
+/* icon size */
+.ic-size10{
+    width: 10px;
+    height: 10px;
+}
+.shopee-svg-icon{
+    width: 13px;
+    fill: var(--white-color);
+}
+.icon-arrow-bold{
+    width: 0.75rem;
+    fill: var(--text-color);
+}
+.icon-arrow-right-see_more{
+    width: 0.75rem;
+    fill: var(--primary-color);
+}
+.icon-rating-solid{
+    fill: rgb(255, 213, 0);
+}
+.icon-bold{
+    width: 15px;
+    fill: var(--text-color)!important ;
+}
+.icon-shopee-logo{
+    width: 100px;
+    fill: var(--primary-color);
+}
+.stardust-icon{
+    fill: var(--white-color);
+    width: 15px;
+}
+/* Change color when hover */
+.change-color-hover{
+    color: var(--text-color);
+}
+.change-color-hover:hover{
+    color: var(--primary-color);
+}

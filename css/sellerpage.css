@@ -1,0 +1,259 @@
+a:hover{
+    opacity: 1;
+}
+.main-chanel{
+    background-color: var(--container-color);
+}
+.sll-header-ctn{
+    min-width: 1200px;
+    max-width: 100%;
+    height: 60px;
+    background-color: var(--white-color);
+}
+.sll-header{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.slla3a{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin: 0 8px;
+}
+.logo-header{
+    height: 100%;
+}
+.left-name-page{
+    display: flex;
+    width: 200px;
+    height: 100%;
+    margin-left: 4px;
+    transform: translateY(2px);
+}
+.left-header-text{
+    color: var(--text-color);
+}
+/* Right Header */
+.nav-header-link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.first{
+    width: 200px;
+    border-right: 2px solid var(--line-color);
+}
+.home-page-link{
+    color: var(--text-color);
+}
+.home-page-link:hover{
+    text-decoration: underline;
+}
+.above-new{
+    width: 30px;
+    height: 15px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transform: translateY(-8px);
+}
+.above-new span{
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #fff;
+}
+.inst,
+.fb{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.inst:hover, .fb:hover{
+    background-color: rgba(46, 40, 40,0.1);
+}
+.inst i,
+.fb i{
+    position: absolute;
+    top: 5.5px;
+    right: 6.5px;
+}
+.social>a{
+    position: relative;
+    display: block;
+    font-size: 17px;
+    margin: 0 10px;
+    color: black;
+}
+/* body-h2 */
+.sll-body{
+    display: contents;
+}
+.sl-body-ctn{
+    position: relative;
+    min-width: 1200px;
+    max-width: 100%;
+    height: 100%;
+}
+.right-body,
+.left-body{
+    width: 50%;
+}
+.body-h3 h3{
+    color: var(--footer-color-text);
+}
+.bdImg{
+    width: 500px;
+    height: 300px;
+    background-image: url("https://deo.shopeemobile.com/shopee/shopee-seller-live-sg/rootpages/static/modules/account/image/login-img.9347138.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* form */
+.right-body{
+    border: 0.5px solid var(--line-color);
+    background-color: var(--white-color);
+}
+.ctn-form{
+    width: 80%;
+}
+.ctn-form a{
+    color: rgb(11, 93, 215);
+}
+.ctn-form input,
+.btn-sbmit{
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+}
+.checkbox{
+    width: 30%;
+    position: relative;
+}
+.checkbox div{
+    position: absolute;
+    display: block;
+    left: 25px;
+}
+.btn-signIn{
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}
+.btn-signIn button{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    background-color: inherit;
+    font-size: 14px;
+}
+.btnFt{
+    background-color: var(--white-color);
+    border: 0.5px solid var(--line-color);
+    border-radius: 3px;
+}
+.btnFt a{
+    color: var(--text-color);
+}
+.vRtc-line{
+    width: 100%;
+    position: relative;
+}
+.vRtc-line::before{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 0.5px;
+    left: 0;
+    background-color: var(--line-color)
+}
+.vRtc-line::after{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 0.5px;
+    right: 0;
+    background-color: var(--line-color)
+}
+/* Become Seller Page */
+.N2AB{
+    overflow: hidden;
+    background-color: rgb(178, 32, 32); 
+    /* rgb(186, 15, 15); */
+}
+.ctn-padding{
+    padding: 0 200px;
+    overflow: hidden;
+    color: var(--white-color);
+    position: relative;
+}
+.ctn-padding a{
+    color: blue;
+}
+.ctn-padding ul{
+    list-style:disc;
+}
+.ctn-padding ul li{
+    line-height: 1.5rem;
+}
+.img1 img{
+    width: 100%;
+    height: auto;
+}
+.mdB5,
+.md-ctn{
+    width: 100%;
+    position: relative;
+}
+.md-link-ctn{
+    width: 100%;
+    height: 67px;
+    position: absolute;
+    bottom: 55px;
+    padding: 0 19px;
+}
+.md-link-ctn a{
+    display: block;
+    border-radius:0px 0px 25px 25px;
+    width: 31.5%;
+    height: 100%;
+}
+.mdB5 .md-link-ctn{
+    width: 100%;
+    height: 85%;
+    padding: 2px 88px;
+    bottom: 33.5px;
+}
+.mdB5 .md-link-ctn a{
+    width: 33%;
+    height: 100%;
+    border-radius: 20px;
+}
+.mdB6 .md-link-ctn{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    height: 63%;
+    padding: 0;
+}
+.mdB6 .md-link-ctn a{
+    border-radius: 0px;
+    width: 100%;
+    padding: 0px;
+}
+.ctn-padding i{
+    color: black;
+}
+/* Arrow Up To Top */
+.btn-go-top{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+.btn-go-top div{
+    width: 50px;
+    height: 50px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(46, 40, 40,0.4);
+    overflow: hidden;
+}

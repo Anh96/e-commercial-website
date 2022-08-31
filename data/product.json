@@ -1,0 +1,54 @@
+{
+    "products" :[
+        {
+            "id": 1,
+            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "price": "200",
+            "price_promotion": "130",
+            "body_img_url": "https://cf.shopee.vn/file/6cbf33b1074174ec070c722bf29f81c5_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": "4.8",
+            "quanlity_rating": "773",
+            "quanlity_sold": "332",
+            "category": "Thiết bị điện tử",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 2,
+            "title": "Armani Frok Ladies -  Imported Fork Blue",
+            "price": "210",
+            "body_img_url": "https://cf.shopee.vn/file/00b5201bc37a5368e7060af267a41dd0_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": "4.8",
+            "quanlity_rating": "773",
+            "quanlity_sold": "332",
+            "category": "Dresses",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 3,
+            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "price": "200",
+            "pricePromotion": "130",
+            "body_img_url": "https://cf.shopee.vn/file/6cbf33b1074174ec070c722bf29f81c5_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": "4.8",
+            "quanlity_rating": "773",
+            "quanlity_sold": "332",
+            "category": "Thiết bị điện tử",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 4,
+            "title": " Váy Cổ Yếm Bo Eo Che Bụng Cực Tiểu Thư - Váy Thắt Nơ Yếm Sang Chảnh",
+            "price": "210",
+            "body_img_url": "https://cf.shopee.vn/file/00b5201bc37a5368e7060af267a41dd0_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": "4.8",
+            "quanlity_rating": "773",
+            "quanlity-_sold": "332",
+            "category": "Dresses",
+            "shop_adress": "Ninh Bình"
+        }
+    ]
+}
