@@ -7,3 +7,17 @@ push code github
     - git add.
     -git commit -m "comment anthing"
     - git push -m
+// đồng bộ code từ git về máy
+    - git pull / git pull origin
+
+Create web server by express.js 
+- $ mkdir my-express-app
+- $ cd my-express-app
+- $ npm init -y
+- $ npm install express
+- $ code 
+- $ code index.js
+- $ code index.js
+Test server by node js
+ - test port: vào terminal 
+    + node .

@@ -794,20 +794,15 @@ h3{
     border-radius: 2px;
 }
 .right-slider-img:first-child{
-    /* overflow: hidden; */
     margin-bottom: 4px;
 }
 .right-slider-img-bgr{
     height: 100%;
     position: relative;
 }
-.top-img{
+.right-img{
+    width: 100%;
     height: 100%;
-    /* background-image: url("https://cf.shopee.vn/file/e9601aeda2bf12cedad2abeb6c7f730f_xhdpi"); */
-}
-.bottom-img{
-    height: 100%;
-    /* background-image: url("https://cf.shopee.vn/file/a291539a4e290270d0c0be961a11084b_xhdpi"); */
 }
 /* footer banner */
 .footer-banner-container{
@@ -898,7 +893,7 @@ h3{
 .list-item-section{
     display: block;
     box-sizing: border-box;
-    width: 120px;
+    width: 200px;
     height: 100%;
     font-size: 30px;
     text-align: center;
@@ -950,24 +945,9 @@ h3{
 }
 .img-bgr-section{
     height: inherit;
-    background-image: url("https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn");
     background-size: contain;
-    background-repeat: no-repeat no-repeat
-}
-.list-item-section:nth-child(2) .img-bgr-section{
-    background-image: url("https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn");
-}
-.list-item-section:nth-child(3) .img-bgr-section{
-    background-image: url("https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn");
-}
-.list-item-section:nth-child(4) .img-bgr-section{
-    background-image: url("https://cf.shopee.vn/file/c3f3edfaa9f6dafc4825b77d8449999d_tn")
-}
-.list-item-section:nth-child(10) .img-bgr-section{
-    background-image: url("https://cf.shopee.vn/file/3fb459e3449905545701b418e8220334_tn");
-}
-.list-item-section:nth-child(11) .img-bgr-section{
-    background-image: url("https://cf.shopee.vn/file/3fb459e3449905545701b418e8220334_tn");
+    background-repeat: no-repeat no-repeat;
+    background-color: antiquewhite;
 }
 /* Flash Sale */
 .flash-sale-container{
@@ -1267,18 +1247,20 @@ h3{
     height: 100%;
 }
 .spM-item-product{
+    position: relative;
     width: 202px;
-    height: fit-content;
+    height: 100%;
+    /* height: fit-content; */
     margin: 8px;
 }
 .spM-item-link-product{
-    display: block;
     width: 100%;
     margin-bottom: 16px;
 }
-.spM-item-link-product img{
+#spM_img{
     width: 100%;
     height: 250px;
+    background-color: antiquewhite;
 }
 #spM_SeeMore{
     display: block;
@@ -1360,7 +1342,7 @@ h3{
 .bgr-item-trendding{
     width: 120px;
     height: 120px;
-    background: url("https://cf.shopee.vn/file/d04040a34b1020fcbe1693870473a4aa") 0 no-repeat;
+    /* background: url("https://cf.shopee.vn/file/d04040a34b1020fcbe1693870473a4aa") 0 no-repeat; */
     background-size: cover;
     background-repeat: no-repeat;
     margin-right: 8px;

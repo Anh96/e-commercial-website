@@ -1,4 +1,6 @@
 // import {start} from "./product.js";
+import {renderProduct_Relative_HomePage} from "./product.js"
+import {handleProducts} from "./product.js"
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);   
 // handle box search
@@ -7,84 +9,12 @@ const get_headingTXT_agency = $('.agency-saleOff span');
 const agency = $('.agency-saleOff')
 const search_Shop = $('.search-shop-inShopee')
 
-// get variable homebanner
-var currentIndex = 0;
-const nextCircleAnimationHomeBanner = $$('.home-banner-container .list-next-circle-animation')
-const sliderContainer = $('.home-banner-container .slide-show-ctn')
-const  imgSliders = $$('.sld-img-item')
-const prev_btn = $('.left-homeBanner')
-const next_btn = $('.right-homeBanner')
-const top_img = $('.top-img')
-console.log()
-
 // handlde search history
 get_input_value.placeholder= get_headingTXT_agency.innerText;
 get_input_value.onkeydown = function(){
     agency.style.display = 'none'
     search_Shop.style.display ='block'
 }
-// handle Slider
-
-    // Automatic Slideshow
-    autoShowSlide()
-    function autoShowSlide(){
-        let i;
-        for(i=0;i<imgSliders.length;++i){
-            imgSliders[i].style.display ='none'
-        }
-        currentIndex++;
-        if(currentIndex>imgSliders.length){
-            currentIndex = 1;
-        }
-        for(i =0; i<nextCircleAnimationHomeBanner.length;++i){
-            nextCircleAnimationHomeBanner[i].classList.remove('active')
-        }
-        imgSliders[currentIndex-1].style.display ='block'
-        nextCircleAnimationHomeBanner[currentIndex-1].classList.add('active')
-        setTimeout(autoShowSlide,4000);
-
-    }
-    // handle for press button
-    show(currentIndex);
-    function plusSlide(n){
-        show(currentIndex+=n);
-    }
-    function currentSlide(n){
-        show(currentIndex=n);
-    }
-    function show(n){
-        let i;
-        if(n>imgSliders.length){
-            currentIndex = 1;
-        }
-        if(n<1){
-            currentIndex=imgSliders.length;
-        }
-        for(i =0;i<imgSliders.length ;++i){
-            imgSliders[i].style.display ='none';
-        }
-        for( i =0; i<nextCircleAnimationHomeBanner.length;++i){
-            nextCircleAnimationHomeBanner[i].classList.remove('active')
-        }
-        imgSliders[currentIndex-1].style.display = 'block'
-        nextCircleAnimationHomeBanner[currentIndex-1].classList.add('active')
-    }
-    // handle arrow button
-    prev_btn.onclick = function(){
-        plusSlide(-1);
-        imgSliders[currentIndex-1].style.animation = 'slideGoFromRight .2s forwards'
-    }
-    next_btn.onclick = function(){
-        plusSlide(1);
-        imgSliders[currentIndex-1].style.animation = 'slideGoFromLeft .2s forwards '
-    }
-    // handle circle animation
-    nextCircleAnimationHomeBanner.forEach((dot,index)=> {
-        dot.onclick = function(){
-            currentSlide(index+1)
-        }
-    });
-
 // Handlde Catagories
     // Get variable Catagories
     const sectionContainer = $('.section-grid-layout-container')
@@ -236,7 +166,7 @@ flash_leftArrow.onclick = function(){
             shopeeMallproductList.style.transform= 'translateX(0px)'
         }
         if(click_shopeeMall==1){
-            shopeeMallproductList.style.transform= 'translateX(-690px)'
+            shopeeMallproductList.style.transform= 'translateX(-907px)'
             prev__SPM_productBtn.style.display = 'block'
             next__SPM_productBtn.style.display = 'none'
         }
@@ -249,7 +179,7 @@ flash_leftArrow.onclick = function(){
             next__SPM_productBtn.style.display = 'block'
         }
         if(click_shopeeMall==1){
-            shopeeMallproductList.style.transform= 'translateX(690px)'
+            shopeeMallproductList.style.transform= 'translateX(907px)'
         }
     }
 
