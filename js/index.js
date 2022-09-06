@@ -1,6 +1,4 @@
-// import {start} from "./product.js";
 import {renderProduct_Relative_HomePage} from "./product.js"
-import {handleProducts} from "./product.js"
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);   
 // handle box search

@@ -1366,8 +1366,9 @@ h3{
 }
 .top_search_link_ctn{
     width: 1000%;
-    height: 100%;
+    height: fit-content;
 }
+
 .alpha-header{
     display: flex;
     position: absolute;

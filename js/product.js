@@ -1,6 +1,5 @@
 //import data from '../product.json' assert {type: 'json'};
 $ = document.querySelector.bind(document)
-const left_slide = $('.letf-slider-img-list')
 const top_search_link_ctn = $('.top_search_link_ctn')
 const spM_product_list = $('.spM-product-list')
 // const grid_layout_product =$('.grid_layout_product')
@@ -9,7 +8,7 @@ const section_grid_layout_container = $('.section-grid-layout-container')
 const trennding_linkCTN = $('.grid-ctn-body-trendding')
 const tdsgtion = $('#tdsgtion-relative-product');
 let htmls;
-export function handleProducts(){
+function handleProducts(){
     fetch(productsAPI)
         .then(res=>{
             return res.json()
@@ -23,7 +22,7 @@ export function handleProducts(){
             renderProduct_topSearch(data.products)
             renderProduct_Relative_HomePage(data.products);
         })
-}
+} 
 handleProducts()
 var imgSliders;
 var currentIndex =0;
@@ -38,9 +37,9 @@ function render_slide_leftSlide_homeBanner(sliders){
                     <img src="${slide.silde_img_link}" alt="">
                 </li>
             `
-        left_slide.insertAdjacentHTML('beforeend',htmls)
+            $('.letf-slider-img-list').insertAdjacentHTML('beforeend',htmls)
     })
-    imgSliders = left_slide.querySelectorAll('.sld-img-item');
+    imgSliders = $('.letf-slider-img-list').querySelectorAll('.sld-img-item');
     autoshow();
     function autoshow(){
         let i;
@@ -146,14 +145,6 @@ function render_Catagory_homePage(products){
             `
         section_grid_layout_container.insertAdjacentHTML('beforeend',htmls)
     }
-    const first_child = $$('#above')
-    for(let i =0; i<first_child.length;++i){
-        for(let j =0; j<products.length;++i){
-            if(j%2!=0){
-                //first_child.style.backgroundImage = "url('${products[j].catagory_img}')"
-            }
-        }
-    }
 }
 function renderProduct_ShopeeMall(products){
     products.forEach((prod,index)=>{
@@ -200,7 +191,7 @@ function renderProduct_TrenddingSearch(producs){
             <a href="#" class="grid-item-trendding">
                 <div class="grid-item-text">
                     <div class="name-product-trendding">Dép</div>
-                    <div class="number-product-sold">${prod.quanlity_sold} sản phẩm</div>
+                    <div class="number-product-sold">${prod.quantity_sold} sản phẩm</div>
                 </div>
                 <img class="bgr-item-trendding" src="${prod.body_img_url}"></div>
             </a>
@@ -222,7 +213,7 @@ function renderProduct_topSearch(products){
                     </div>
                     <div class="number-sold-top alpha-sold-number">
                         <div class="nbsc-top-text"> Đã bán 
-                        <span>${prod.quanlity_sold}</span>
+                        <span>${prod.quantity_sold}</span>
                             / tháng</div>
                     </div>
                 </div>
@@ -335,7 +326,7 @@ export function renderProduct_Relative_HomePage(products){
                                                 </div>
                                             </div>
                                             <div class="mgl-8">Đã bán
-                                                <span class="number-sld">${products[i].quanlity_sold}</span>
+                                                <span class="number-sld">${products[i].quantity_sold}</span>
                                             </div>
                                         </div>
                                         <div class="address-shop mgT16">
@@ -449,7 +440,7 @@ export function renderProduct_Relative_HomePage(products){
                                             </div>
                                         </div>
                                         <div class="mgl-8">Đã bán
-                                            <span class="number-sld">${products[i].quanlity_sold}</span>
+                                            <span class="number-sld">${products[i].quantity_sold}</span>
                                         </div>
                                     </div>
                                     <div class="address-shop mgT16">
