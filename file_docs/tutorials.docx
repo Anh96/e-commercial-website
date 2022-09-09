@@ -1,6 +1,6 @@
 Install JSON
-st1: npm init -y;
-st2: npm i express
+    st1: npm init -y;
+    st2: npm i express
 
 push code github
 // update code
@@ -10,14 +10,26 @@ push code github
 // đồng bộ code từ git về máy
     - git pull / git pull origin
 
-Create web server by express.js 
-- $ mkdir my-express-app
-- $ cd my-express-app
-- $ npm init -y
-- $ npm install express
-- $ code 
-- $ code index.js
-- $ code index.js
-Test server by node js
- - test port: vào terminal 
-    + node .
+//Create 1 web server by nodejs 
+    b1. cài đặt nodejs
+    b2. cài package json
+    b3 . cài express.js
+
+//Test server by node js
+    - test port: vào terminal 
+        + node .
+    - run node server : node tenfile.js
+
+//install json package cho moi du an su dung nodejs lam server va viet bang javascript
+- npm init
+//Create web server by express.js 
+    - $ mkdir my-express-app // tao file
+    - $ cd my-express-app   //di chuyen den file vua tao
+    - $ npm init -y //cai json
+    - $ npm install express // cai express
+    - $ code 
+    - $ code index.js
+    // cài chính xác express vào json và đúng version mong muốn
+        - npm install --save-exact express@4.17.1
+// Loại trừ file không muốn update lên github
+- vào file .gitignore viết tên file ko muốn upload vào
