@@ -1,16 +1,36 @@
+//Create 1 web server by nodejs 
+    b1. cài đặt nodejs
+    b2. cài package json
+    b3 . cài express.js
+
+//Test server by node js
+    - test port: vào terminal 
+        + node .
+    - run node server : node tenfile.js
+
 // Kiểm tra nơi lưu trữ nodejs trong máy
 chạy terminal run câu lệnh: which node
+
 //upgrade node js
-b1. brew cleanup
-b2. brew uninstall node hoặc brew uninstall --force node
-b3. removed all other node version:(dùng nếu cài nhiều version node, hoặc dùng nếu muốn loại triệt để các version)
-    rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,n‌​ode*,man1/node*}
-b3. Cài version gần nhất
-    Cách 1:brew install node hoặc lấy version cụ thể: brew install node@version
-    Cách 2 dùng nvm: nvm install node
+    b1. brew cleanup
+    b2. brew uninstall node hoặc brew uninstall --force node
+    b3. removed all other node version:(dùng nếu cài nhiều version node, hoặc dùng nếu muốn loại triệt để các version)
+        rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,n‌​ode*,man1/node*}
+    b3. Cài version gần nhất
+        Cách 1:brew install node hoặc lấy version cụ thể: brew install node@version
+        Cách 2 dùng nvm: nvm install node
+        
+//Create web server by express.js 
+    - $ mkdir my-express-app // tao file
+    - $ cd my-express-app   //di chuyen den file vua tao
+    - $ npm init -y //cai json
+    - $ npm install express // cai express
+    - $ code 
+    - $ code index.js
+    // cài chính xác express vào json và đúng version mong muốn
+        - npm install --save-exact express@4.17.1
 
 //How to uninstall node manually
-
 This one is the most challenging way to uninstall node, as you will have to track down lots of different files and remove them manually one by one.
 
 Click on the Finder icon in the Dock, choose the Go menu, and then Go to Folder.

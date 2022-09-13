@@ -4,33 +4,19 @@ Install JSON
 
 push code github
 // update code
-    - git add.
-    -git commit -m "comment anthing"
-    - git push -m
-// đồng bộ code từ git về máy
-    - git pull / git pull origin
+    b1. git add.
+    b2. git commit -m "comment anthing"
+    b3. git push origin main
 
-//Create 1 web server by nodejs 
-    b1. cài đặt nodejs
-    b2. cài package json
-    b3 . cài express.js
+// Đồng bộ code từ git về máy
+    - git pull / git pull <REMOTE> <name-of-branch>
 
-//Test server by node js
-    - test port: vào terminal 
-        + node .
-    - run node server : node tenfile.js
+// tao 1 branch
+    git checkout -b <name-of-branch>
 
 //install json package cho moi du an su dung nodejs lam server va viet bang javascript
-- npm init
-//Create web server by express.js 
-    - $ mkdir my-express-app // tao file
-    - $ cd my-express-app   //di chuyen den file vua tao
-    - $ npm init -y //cai json
-    - $ npm install express // cai express
-    - $ code 
-    - $ code index.js
-    // cài chính xác express vào json và đúng version mong muốn
-        - npm install --save-exact express@4.17.1
+    - npm initii
+
 // Loại trừ file không muốn update lên github
 - vào file .gitignore viết tên file ko muốn upload vào
 // trường hợp file đã lỡ up lên git thì giải thoát file đó ra khỏi git cache là xong, bằng 1 dòng lệnh:
