@@ -1,0 +1,41 @@
+// Kiểm tra nơi lưu trữ nodejs trong máy
+chạy terminal run câu lệnh: which node
+//upgrade node js
+b1. brew cleanup
+b2. brew uninstall node hoặc brew uninstall --force node
+b3. removed all other node version:(dùng nếu cài nhiều version node, hoặc dùng nếu muốn loại triệt để các version)
+    rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/{npm*,n‌​ode*,man1/node*}
+b3. Cài version gần nhất
+    Cách 1:brew install node hoặc lấy version cụ thể: brew install node@version
+    Cách 2 dùng nvm: nvm install node
+
+//How to uninstall node manually
+
+This one is the most challenging way to uninstall node, as you will have to track down lots of different files and remove them manually one by one.
+
+Click on the Finder icon in the Dock, choose the Go menu, and then Go to Folder.
+Paste the following directory path in the text box: /usr/local/lib
+Look for files with the name ‘node’ and move them to the Trash.
+Repeat step 4 for the following directories, pasting each path into the text box in Go to Folder and dragging the files with ‘node’ to the Trash.
+/usr/local/bin
+
+/usr/local/include
+
+/usr/local/share/man/man1/
+
+/usr/local/lib/dtrace/
+
+/opt/local/bin/
+
+/opt/local/include/
+
+/opt/local/include/
+
+/usr/local/share/doc/
+
+/usr/local/share/systemtap/tapset/
+6. Go to your Home folder and drag the files below to the Trash: .npm; .node-gyp; .nodereplhistory.
+7. Empty the Trash
+
+//link hướng dẫn cụ thể xoa node js
+https://www.youtube.com/watch?v=wA9zQQ0MH-U

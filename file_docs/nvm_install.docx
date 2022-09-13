@@ -1,0 +1,31 @@
+//Install nvm from brew
+b1. remove/uninstall previous node and it's dependencies
+    1. brew uninstall --ignore-dependencies node
+    2. brew uninstall --force node
+b2. install nvm 
+    brew intsall nvm
+b3. create a direction and a related file:
+    1. mkdir ~/.nvm
+    2. vim ~/.zprofile
+    check file run command line in terminal: ls --al
+b4. close the terminal, add below 2 lines in zpfile, the new created file   
+
+    1. export NVM_DIR=~/.nvm
+    2. source $(brew --prefix nvm)/nvm.sh
+or run this line in terminal to export nvm in .zshrc file, open .zshrc: nano .zshrc: 
+    1.# NVM
+    2. export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+//install vnm for mac m1
+b1. softwareupdate --install-rosetta
+b2. curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+b3. Close Terminal then reopen it, check nvm: nvm, it done and ready to use
+//Check list version installed: 
+    nvm list or nmv ls
+//move between versions
+    nvm use 17.6.0
+//set default a version
+    nvm alias default 17.5.0
+// delete a version
+    nvm uninstall v17.3.0

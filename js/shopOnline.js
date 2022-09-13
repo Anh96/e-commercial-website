@@ -49,7 +49,6 @@ fetch('../data/product.json')
         return res.json();
     })
     .then(data=>{
-        percent_promotion(data.products)
         suggestion_products_ShopOnline(data.products)
     })
 function suggestion_products_ShopOnline(products){
@@ -66,7 +65,14 @@ function suggestion_products_ShopOnline(products){
                                                 <span class="fvr-text">Yêu thích</span>
                                             </div>
                                         </div>
-                                        <div class="percent_promotion"></div>
+                                        <div id="percent_promotion" style="display:none">
+                                            <div class="header-link-sale-off-container">
+                                                <div class="header-block-sale-off">
+                                                    <span class="percent-sale-off">${products[index].percent_saleoff}%</span>
+                                                    <span class="sale-text">Giảm</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                         </div>
                                         <div class="product-img-body">
                                             <img src="${products[index].body_img_url}" class="img-body" alt="">
@@ -131,24 +137,16 @@ function suggestion_products_ShopOnline(products){
                         </div>
                     `
             $('.suggestion_products_ShopOnline').insertAdjacentHTML('beforeend',htmls)
+            percent_promotion(prod)
         }
     })
 }
-function percent_promotion(products){
-    products.forEach(prod=>{
-        if(products.percent_saleoff>0){
-            htmls = `
-            <div class="header-link-sale-off-container">
-                <div class="header-block-sale-off">
-                    <span class="percent-sale-off">${products[index].percent_saleoff}%</span>
-                    <span class="sale-text">Giảm</span>
-                </div>
-            </div>
-            `
-           $('.percent_promotion').insertAdjacentHTML('beforeend',htmls)
-        }
-        if(products.percent_saleoff==0){
-            return;
-        }
-    })
+function percent_promotion(product){
+    if(product.percent_saleoff>0){
+        $('#percent_promotion').style.display ="block"
+    }
+    if(product.percent_saleoff==0){
+        $('#percent_promotion').style.display ="none"
+        
+    }
 }

@@ -1,5 +1,5 @@
-$ = document.querySelector.bind(document)
-$$ = document.querySelectorAll.bind(document)
+$ = document.querySelector.bind(document);
+$$ = document.querySelectorAll.bind(document);
 fetch('../data/product.json')
     .then(res=>{
         return res.json()
@@ -7,7 +7,6 @@ fetch('../data/product.json')
     .then(data=>{
         render_info_shop_online(data.shop_onlines)
     })
-    
 let htmls;
 function render_info_shop_online(shop_onlines){
     shop_onlines.forEach((shop,index) => {

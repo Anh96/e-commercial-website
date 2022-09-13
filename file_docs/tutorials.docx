@@ -34,7 +34,8 @@ push code github
 // Loại trừ file không muốn update lên github
 - vào file .gitignore viết tên file ko muốn upload vào
 // trường hợp file đã lỡ up lên git thì giải thoát file đó ra khỏi git cache là xong, bằng 1 dòng lệnh:
- b1: git rm -r --cached /path/to/file_or_folder
+ b1: git rm -r --cached /path/to/file_or_folder 
+ => Ví dụ: git rm -r --cached node_module/
  b2: Từ bây giờ file đó không còn là của git cache nữa nên nó không thuộc quyền quản lý của git nữa và bây giờ .gitignore mới có tác dụng. 
  Theo lý thuyết là vậy nhưng nếu bạn cần reset lại hết project để .gitignore hoạt động đúng thì mình thường xóa bỏ hết file của git cache luôn?
     git rm -r --cached .
