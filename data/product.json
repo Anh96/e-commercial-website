@@ -632,14 +632,14 @@
         {
             "id": 2,
             "title": "Armani Frok Ladies -  Imported Fork Blue",
-            "price": 200000,
+            "price": 300000,
             "percent_saleoff": 30,
             "body_img_url": "https://cf.shopee.vn/file/1cba156175a5ef0b0d356b52451b4c42_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_available":20,
             "quantity_rating": 77,
-            "quantity_sold": 500,
+            "quantity_sold": 0,
             "category": "Dresses",
             "shop_adress": "Ninh Bình"
         },
@@ -660,7 +660,7 @@
         {
             "id": 4,
             "title": " Váy Cổ Yếm Bo Eo Che Bụng Cực Tiểu Thư - Váy Thắt Nơ Yếm Sang Chảnh",
-            "price": 300000,
+            "price": 450000,
             "percent_saleoff": 0,
             "body_img_url": "https://cf.shopee.vn/file/b107f2e6167adb250100ec4c8d028a57_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
@@ -681,7 +681,7 @@
             "rating": "4.8",
             "quantity_available": 10,
             "quantity_rating": 773,
-            "quantity_sold": 1000,
+            "quantity_sold": 100,
             "category": "Thiết bị điện tử",
             "shop_adress": "Ninh Bình"
         },
@@ -695,7 +695,7 @@
             "rating": "4.8",
             "quantity_available":10,
             "quantity_rating": 773,
-            "quantity_sold": 1000,
+            "quantity_sold": 100,
             "category": "Thiết bị điện tử",
             "shop_adress": "Ninh Bình"
         },
@@ -751,7 +751,7 @@
             "rating": "4.8",
             "quantity_available":10,
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
             "shop_adress": "Ninh Bình"
         },
@@ -807,7 +807,7 @@
             "rating": "4.8",
             "quantity_available":10,
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
             "shop_adress": "Ninh Bình"
         },
@@ -863,7 +863,7 @@
             "rating": "4.8",
             "quantity_available":10,
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
             "shop_adress": "Ninh Bình"
         }
