@@ -1,5 +1,6 @@
 /* Shop Page */
 @import url('./style.css');
+@import url('./sortResultSearching.css');
 #shop_online_main{
     background-color: var(--container-color);
 }
@@ -492,6 +493,10 @@
 .shop-page_banner .next-circle-animation{
     transform:  translateY(-47px);
 }
-.relative-wrapper .b4etd{
-    width: 162px;
+/* ALL Products in shop */
+#sort_result_search{
+    width: 196px;
+}
+.sortBy{
+    position: relative;
 }

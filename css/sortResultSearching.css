@@ -1,3 +1,4 @@
+@import "./style.css";
 .sOhome-ctn{
     display: contents;
 }
@@ -109,12 +110,17 @@ ul li{
     background-color: rgba(216, 215, 212, 0.7)
 }
 .sortBy{
+    position: relative;
     height: 100%;
     padding: 8px 0;
 }
 .sortBy-Left{
     width: 80%;
     height: 100%;
+}
+.bl1Sb{
+
+    width: 100px;
 }
 .bl1Sb-btn{
     width: 100px;
@@ -163,8 +169,19 @@ ul li{
     height: 50%;
     padding: 8px;
 }
+.sortBy_right{
+    position: relative;
+    width: 20%;
+    height: inherit;
+}
+.numberOfdata{
+    position: absolute;
+    right: 110px;
+}
 .pre-next-btn{
+    position: absolute;
     width: auto;
+   right: -110px;
 }
 .nbP,
 .prev-btn,
@@ -184,9 +201,7 @@ ul li{
 .relative-wrapper .hv-above{
     display: block;
 }
-/* .relative-wrapper .b4etd{
-    width: 15.2%;
-} */
+
 .stkBr{
     width: 100px;
     border: 0.05px solid var(--primary-color);
@@ -222,8 +237,17 @@ ul li{
     background-color: var(--white-color);
     margin: 0px;
 }
+#sort_result_search{
+    position: relative;
+    width: 191px;
+    height: 360px;
+}
+
 .hvsPr{
+    width: inherit;
     height: 100%;
+    position: absolute;
+    top: 0;
 }
 .hvsPr .hv-above{
     width: 100%;
@@ -231,9 +255,10 @@ ul li{
 }
 .hvsPr a{
     position: absolute;
+    bottom: -340px;
     width: 100%;
     height: 30px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color)!important;
     z-index: 50;
 }
 .hvsPr a>div{
