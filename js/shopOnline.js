@@ -7,6 +7,9 @@ var historySearchFollowMethod = $('.shopOnline-nav-search-ctn .shopOnline-inputC
 var getName = $('.shopOnline-nav-search-ctn .search_inshop .above .which-shop');
 var getNameMethod = $$('.shopOnline-nav-search-ctn .search_inshop .bellow-search_inshop .cekTXT')
 var checkBtn = $('.check-btn')
+//bannner var
+const next_circle = $$('.list-next-circle-animation')
+var current_index =0;
 getNameMethod.forEach((name,index)=>{
      name.onclick=  function(){
          const html = name.innerText;
@@ -51,6 +54,7 @@ fetch('../data/product.json')
         renderPromotionItem(data.shop_promotion_codes)
         check(data.shop_promotion_codes)
         suggestion_products_ShopOnline(data.products_inshop)
+        banner(data.banner_shop_online)
         topsales(data.products_inshop)
     }) 
 //Promotion CODE
@@ -69,7 +73,7 @@ fetch('../data/product.json')
             $('.right-arr').style.display="block"
         }
     }
-    function transform_promotion_code(promotion){
+    function getWidth_promotion_code(promotion){
         const getWidth = promotion.getBoundingClientRect().width;
         return getWidth;
     }
@@ -89,7 +93,7 @@ fetch('../data/product.json')
                     if(promot.max_off>0){
                         htmls=
                             `
-                                <div class="PMTcode margin-tb16 flx">
+                                <div class="PMTcode margin-tb16 flx id-${promot.id_code}">
                                     <div class="curve-PRM flex">
                                         <div class="cUVR">
                                             <div class="cPRm"></div>
@@ -124,7 +128,7 @@ fetch('../data/product.json')
                     if(promot.max_off==0){
                         htmls=
                             `
-                                <div class="PMTcode margin-tb16 flx">
+                                <div class="PMTcode margin-tb16 flx id-${promot.id_code}">
                                     <div class="curve-PRM flex">
                                         <div class="cUVR">
                                             <div class="cPRm"></div>
@@ -157,7 +161,7 @@ fetch('../data/product.json')
                     if(promot.used_quantity==0){
                         htmls=
                             `
-                                <div class="PMTcode margin-tb16 flx">
+                                <div class="PMTcode margin-tb16 flx id-${promot.id_code}">
                                     <div class="curve-PRM flex">
                                         <div class="cUVR">
                                             <div class="cPRm"></div>
@@ -190,17 +194,20 @@ fetch('../data/product.json')
         }
         const PMTcode = $$('.PMTcode')
         let count_click=0;
+        //console.log(PMTcode.length%2)
         PMTcode.forEach(ptmcode=>{
             $('.right-arr').onclick =()=>{
                 count_click++;
                 if(count_click>0){
                     $('.left-arr').style.display ="block"
-                    console.log(count_click*transform_promotion_code(ptmcode))
+                    if(count_click*2+1==PMTcode.length){
+                        $('.right-arr').style.display = "none"
+                    }
+                    if((count_click+1)*2==PMTcode.length){
+                        $('.right-arr').style.display = "none"
+                    }
                 }
-                if(PMTcode.length*transform_promotion_code(ptmcode)==count_click){
-                    $('.right-arr').style.display =="none"
-                }
-                $('.CDpmt-wrapper').scrollLeft +=transform_promotion_code(ptmcode);
+                $('.CDpmt-wrapper').scrollLeft +=getWidth_promotion_code(ptmcode);
             }
             $('.left-arr').onclick =()=>{
                 count_click--;
@@ -210,7 +217,7 @@ fetch('../data/product.json')
                 if(count_click<=0){
                     $('.left-arr').style.display ="none";
                 }
-                $('.CDpmt-wrapper').scrollLeft -=transform_promotion_code(ptmcode);
+                $('.CDpmt-wrapper').scrollLeft -=getWidth_promotion_code(ptmcode);
             }
         })
     }
@@ -455,7 +462,83 @@ fetch('../data/product.json')
             }
         })
     }
-
+//Banner shop online
+    //display img banner
+    function banner(banners){
+        banners.forEach(banner=>{
+            htmls = 
+            `
+                <li class="list-item-shopSld">
+                    <a href="${banner.banner_link}" class="lIt-link none-padding none-change-opacity">
+                        <div class="lIt-item-BGR">
+                            <div>
+                                <img width="invalid-value" height="invalid-value" class="LIRqnE _1KQ1MG" style="object-fit: contain" src="${banner.banner_img_link}">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            `
+            $('.ul-list-shopSld').insertAdjacentHTML('beforeend',htmls);
+        })
+        ///////////////hanndle slide banner
+        const imgs=$$('.list-item-shopSld');
+            ///////////auto show slide
+            autoshow();
+            function autoshow(){
+                let i;
+                for(i=0;i<imgs.length;++i){
+                    imgs[i].style.display ='none'
+                }
+                current_index++;
+                if(current_index>imgs.length){
+                    current_index = 1;
+                }
+                for(i =0; i<next_circle.length;++i){
+                    next_circle[i].classList.remove('active')
+                }
+                imgs[current_index-1].style.display ='block'
+                next_circle[current_index-1].classList.add('active')
+                setTimeout(autoshow,6000);
+            }
+            //////////handle click button
+            function currentSlide(n){
+                show(current_index=n);
+            }
+            function plusSlide(n){
+                show(current_index+=n);
+            }
+            show(current_index)
+            function show(n){
+                let i;
+                if(n>imgs.length){
+                    current_index = 1;
+                }
+                if(n<1){
+                    current_index=imgs.length;
+                }
+                for(i =0;i<imgs.length ;++i){
+                    imgs[i].style.display ='none';
+                }
+                for( i =0; i<next_circle.length;++i){
+                    next_circle[i].classList.remove('active')
+                }
+                imgs[current_index-1].style.display = 'block'
+                next_circle[current_index-1].classList.add('active')
+            }
+            //handle click circle
+            next_circle.forEach((dot,index)=>{
+                dot.onclick= ()=>{
+                    currentSlide(index+1)
+                }
+            })
+            //handle click next-prev-btn
+            $('.left-btn').onclick = ()=>{
+                plusSlide(-1);
+            }
+            $('.right-btn').onclick = ()=>{
+                plusSlide(1)
+            }
+    }   
 //Top Sales
     function topsales(products){
         let amount= [];
@@ -473,7 +556,7 @@ fetch('../data/product.json')
                     htmls = 
                     `
                         <div class="b4etd">
-                            <a href="#" class="grid-item-link-product box_shadow">
+                            <a href="../page/product_detail.html" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
                                         <div class="favorite-shop shopeeMall-tag">
@@ -574,7 +657,7 @@ fetch('../data/product.json')
                     htmls = 
                     `
                         <div class="b4etd">
-                            <a href="#" class="grid-item-link-product box_shadow">
+                            <a href="../page/product_detail.html" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
                                         <div class="favorite-shop shopeeMall-tag">
@@ -665,7 +748,7 @@ fetch('../data/product.json')
                     htmls = 
                     `
                         <div class="b4etd">
-                            <a href="#" class="grid-item-link-product box_shadow">
+                            <a href="../page/product_detail.html" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
                                         <div class="favorite-shop shopeeMall-tag">

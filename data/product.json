@@ -889,6 +889,7 @@
     "shop_promotion_codes":[
         {
             "id_shop":1,
+            "id_code":1,
             "percent_off_promotion_code": 8,
             "min_bill": 200000,
             "max_off":0,
@@ -897,6 +898,7 @@
         },
         {
             "id_shop":1,
+            "id_code":2,
             "percent_off_promotion_code": 10,
             "min_bill": 200000,
             "max_off": 1000,
@@ -905,6 +907,7 @@
         },
         {
             "id_shop":1,
+            "id_code":3,
             "percent_off_promotion_code": 60,
             "min_bill": 500000,
             "max_off": 3000,
@@ -913,6 +916,7 @@
         },
         {
             "id_shop":1,
+            "id_code":4,
             "percent_off_promotion_code": 60,
             "min_bill": 100000,
             "max_off": 5000,
@@ -921,6 +925,7 @@
         },
         {
             "id_shop":1,
+            "id_code":5,
             "percent_off_promotion_code": 10,
             "min_bill": 1000000,
             "max_off": 55000,
@@ -934,6 +939,23 @@
             "max_off": 5000,
             "code_exp": "03.12.2022",
             "used_quantity": 10
+        }
+    ],
+    "banner_shop_online":[
+        {
+            "id_shop":1,
+            "banner_img_link":"https://cf.shopee.vn/file/20e247343a2f88f39f55980fa6b52a97",
+            "banner_link":""
+        },
+        {
+            "id_shop":1,
+            "banner_img_link":"https://cf.shopee.vn/file/ff30217a7973d490677b5801f0d84a36",
+            "banner_link":""
+        },
+        {
+            "id_shop":1,
+            "banner_img_link":"https://cf.shopee.vn/file/c1573977606eb764c29cb32f5d927bd8",
+            "banner_link":""
         }
     ],
     "top_search":[

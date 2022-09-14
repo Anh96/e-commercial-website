@@ -1,4 +1,5 @@
 /* Shop Page */
+@import url('./style.css');
 #shop_online_main{
     background-color: var(--container-color);
 }
@@ -439,28 +440,42 @@
 }
 .shop-page_banner{
     width: 100%;
-    height: 1310px;
+    /* height: 1310px; */
+    height: auto;
 }
 .shop-page_banner .slide-show-ctn{
     height: inherit;
     position: relative;
     padding: 2px 0px;
-    border-radius: 11%;
     border: 10px solid rgb(1, 95, 75);
 }
 .shop-page_banner .slide-show{
     width: 100%;
-    height: 100%;
+    position: relative;
+}
+.slide-show-item{
+    width: 100%;
+    /* overflow-x:scroll; */
 }
 .ul-list-shopSld{
+    width: 300%;
     height: 100%;
-    overflow: hidden;
 }
 .list-item-shopSld{
     height: 90%;
 }
 .list-item-shopSld img{
-    min-width: 1180px;
+    width: 1180px;
+    border-radius: 8%;
+}
+.next-circle-animation{
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+}
+.list-next-circle-animation{
+    width: 20px;
+    height: 20px;
 }
 .btn-arrow{
     position: absolute;
