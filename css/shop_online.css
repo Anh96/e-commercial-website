@@ -324,8 +324,14 @@
 .CDpMT{
     position: relative;
 }
+#scroll_ctn{
+    overflow: hidden;
+}
 .CDpmt-wrapper{
-    overflow-x: hidden;
+    overflow-x: scroll;
+}
+.CDpmt-wrapper::-webkit-scrollbar{
+    display: none;
 }
 .PMTcode{
     position: relative;
