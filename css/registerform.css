@@ -1,0 +1,15 @@
+@import url('../css/style.css');
+@import url('../css/login_form_sellerPage.css');
+.header-form{
+    background-color: var(--white-color);
+    height: 90px;
+}
+.body-form{
+    height: 700px;
+    background-color: aqua;
+    background-image: url("https://cf.shopee.vn/file/5569eb9dc7e09e2dbed5315b8f2ea8ba");
+    background-size: contain;
+}
+.footer{
+    margin-top: 0px;
+}

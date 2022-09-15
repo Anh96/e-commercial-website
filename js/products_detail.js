@@ -18,7 +18,7 @@ function render_product_inshop(products){
     if(amount_prods_available % 6 == 0){
         total_item = amount_prods_available;
         for(let i =0;i<amount_prods_available;++i){
-            if(arr[i].price_promotion!=""){
+            if(arr[i].percent_saleoff>0){
                 htmls= 
                     `
                         <div class="b4etd">
@@ -101,7 +101,7 @@ function render_product_inshop(products){
                         </div>
                     `
             }
-            if(arr[i].price_promotion == ""){
+            if(arr[i].percent_saleoff==0){
                 htmls= 
                     `
                         <div class="b4etd">
@@ -188,7 +188,7 @@ function render_product_inshop(products){
     if(amount_prods_available % 6 > 0){
         total_item = amount_prods_available - (amount_prods_available%6);
         for(let i =0;i<arr.length-(arr.length%6);++i) {
-            if(arr[i].price_promotion!=""){
+            if(arr[i].percent_saleoff>0){
                 htmls= 
                     `
                         <div class="b4etd">
@@ -271,7 +271,7 @@ function render_product_inshop(products){
                         </div>
                     `
             }
-            if(arr[i].price_promotion == ""){
+            if(arr[i].percent_saleoff==0){
                 htmls= 
                     `
                         <div class="b4etd">
@@ -389,7 +389,7 @@ function renderProduct_Relative_HomePage(products){
     const loadmore = $('.ft-sggtion-btn');
     var maxResult = 6;
     for(let i =0; i<maxResult;++i) {
-        if(products[i].price_promotion != ""){
+        if(products[i].percent_saleoff>0){
             htmls= 
                 `
                     <div class="b4etd">
@@ -470,7 +470,7 @@ function renderProduct_Relative_HomePage(products){
                     </div>
                 `
         }
-        if(products[i].price_promotion == ""){
+        if(products[i].percent_saleoff==0){
             htmls= 
                 `
                     <div class="b4etd">
@@ -552,7 +552,7 @@ function renderProduct_Relative_HomePage(products){
     }
     loadmore.onclick = ()=>{
         for(let i =maxResult;i<maxResult+6;++i){
-            if(products[i].price_promotion != ""){
+            if(products[i].percent_saleoff>0){
                 htmls= 
                     `
                         <div class="b4etd">
@@ -633,7 +633,7 @@ function renderProduct_Relative_HomePage(products){
                         </div>
                     `
             }
-            if(products[i].price_promotion == ""){
+            if(products[i].percent_saleoff==0){
                 htmls= 
                     `
                         <div class="b4etd">

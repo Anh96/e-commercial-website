@@ -1,4 +1,4 @@
-import {renderProduct_Relative_HomePage} from "./product.js"
+import {renderProduct_Relative_HomePage} from "./home.js"
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);   
 // handle box search
@@ -7,12 +7,19 @@ const get_headingTXT_agency = $('.agency-saleOff span');
 const agency = $('.agency-saleOff')
 const search_Shop = $('.search-shop-inShopee')
 
-// handlde search history
+//Calculate The Promotion Price
+export function calculator_promotion_price(products){
+    return products.price - (products.price *products.percent_saleoff/100);
+}
+// handdle search history
 get_input_value.placeholder= get_headingTXT_agency.innerText;
 get_input_value.onkeydown = function(){
     agency.style.display = 'none'
     search_Shop.style.display ='block'
 }
+//Handle Home Banner
+
+
 // Handlde Catagories
     // Get variable Catagories
     const sectionContainer = $('.section-grid-layout-container')
@@ -31,69 +38,47 @@ get_input_value.onkeydown = function(){
         this.style.display ='none'
     }
 
-    // Method 2
-    /*listItemSection.forEach((item,index)=>{
-        rightArrowBtn.onclick = ()=>{
-            let x = item.getBoundingClientRect();
-            let y = x.width +'px';
-            item.style.scrollLeft += y
-        }
-    })*/
 // Handle Flash sale
 const gridContainerFlashSale = $('.grid-containter-flash-sale')
-const gridItemProduct = $$('#item_Flash_sale')
 const flash_leftArrow = $('.leftArr_flashSale')
 const flash_rightArrow = $('.rightArr_flashSale')
 let clickCounter =0;
 let l=0;
-flash_rightArrow.onclick = function(){
-    l++;
-    for(var i of gridItemProduct){
-        if(l==0){
-            i.style.left = '0px'
+export default function handleEvent_next_prevBtn(item_Flash_sale){ 
+    flash_rightArrow.onclick = function(){ 
+        l++;
+        for(var i of item_Flash_sale){
+            if(l==0){
+                i.style.left = '0px'
+            }
+            if(l==1){
+                i.style.left = '-1000px'
+                flash_leftArrow.style.display = 'block'
+                
+            }
+            if(l==2){
+                i.style.left = '-2000px'
+                flash_rightArrow.style.display ='none'
+            }
+            if(l>2){l=2}
         }
-        if(l==1){
-            i.style.left = '-1000px'
-            flash_leftArrow.style.display = 'block'
-            
+    }
+    flash_leftArrow.onclick = function(){
+        l--;
+        for(var i of item_Flash_sale){
+            if(l==0){
+                i.style.left = '0px'
+                flash_leftArrow.style.display= 'none'
+                flash_rightArrow.style.display = 'block'
+            }
+            if(l==1){
+                i.style.left = '-1000px'
+                
+            }
+            if(l<0){l=0}
         }
-        if(l==2){
-            i.style.left = '-2000px'
-            flash_rightArrow.style.display ='none'
-        }
-        if(l>2){l=2}
     }
 }
-flash_leftArrow.onclick = function(){
-    l--;
-    for(var i of gridItemProduct){
-        if(l==0){
-            i.style.left = '0px'
-            flash_leftArrow.style.display= 'none'
-            flash_rightArrow.style.display = 'block'
-        }
-        if(l==1){
-            i.style.left = '-1000px'
-            
-        }
-        if(l<0){l=0}
-    }
-}
-/*flash_rightArrow.onclick = function(){
-    x+=6;
-    clickCounter++;
-    if(x <= gridItemProduct.length){
-        var i;
-        for( i=0; i< x-1;i++){
-            gridItemProduct[i].style.display = 'none';
-            flash_leftArrow.style.display ='block';
-        }
-        if(clickCounter>2){
-            flash_rightArrow.style.display ='none'
-        }
-        console.log('next' + ' ' + x+ " " + 'next click' +' '+clickCounter)
-    }
-}*/
 
 // SHOPEE MALL
     // Shopee Mall Slider
@@ -164,7 +149,7 @@ flash_leftArrow.onclick = function(){
             shopeeMallproductList.style.transform= 'translateX(0px)'
         }
         if(click_shopeeMall==1){
-            shopeeMallproductList.style.transform= 'translateX(-907px)'
+            shopeeMallproductList.style.transform= 'translateX(-865px)'
             prev__SPM_productBtn.style.display = 'block'
             next__SPM_productBtn.style.display = 'none'
         }
@@ -177,7 +162,7 @@ flash_leftArrow.onclick = function(){
             next__SPM_productBtn.style.display = 'block'
         }
         if(click_shopeeMall==1){
-            shopeeMallproductList.style.transform= 'translateX(907px)'
+            shopeeMallproductList.style.transform= 'translateX(865px)'
         }
     }
 

@@ -224,9 +224,7 @@ fetch('../data/product.json')
     }
 
 //Suggesstion
-    function calculator_promotion_price(products){
-        return products.price - (products.price *products.percent_saleoff/100);
-    }
+    import {calculator_promotion_price} from "./handleEvent"
     function suggestion_products_ShopOnline(products){
         var x=0;
         products.forEach((prod,index)=>{
@@ -939,14 +937,6 @@ function allproducts_inshop(products){
                                 </div>
                             </div>
                         </a>
-                        <div class="hover-looking-same-product hvsPr">
-                            <div class="hv-above"></div>
-                            <a class="none-change-opacity none-padding txt-white-color">
-                                <div class="flex">
-                                    Tìm sản phẩm tương tự
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 `
         }
@@ -1046,14 +1036,6 @@ function allproducts_inshop(products){
                                 </div>
                             </div>
                         </a>
-                        <div class="hover-looking-same-product hvsPr">
-                            <div class="hv-above"></div>
-                            <a class="none-change-opacity none-padding txt-white-color">
-                                <div class="flex">
-                                    Tìm sản phẩm tương tự
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 `
         }
@@ -1142,14 +1124,6 @@ function allproducts_inshop(products){
                                 </div>
                             </div>
                         </a>
-                        <div class="hover-looking-same-product hvsPr">
-                            <div class="hv-above"></div>
-                            <a class="none-change-opacity none-padding txt-white-color">
-                                <div class="flex">
-                                    Tìm sản phẩm tương tự
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 `
         }

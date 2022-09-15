@@ -29,555 +29,582 @@
     ],
     "catagories":[
         {
+            "id_catagory":1,
             "catagory_link":"",
             "catagory_img":"https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn",
             "catagory_name": "Thời trang nam"
         },
         {
+            "id_catagory":2,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/75ea42f9eca124e9cb3cde744c060e4d_tn",
             "catagory_name": "Thời trang nữ"
         },
         {
+            "id_catagory":3,
             "catagory_link":"",
             "catagory_img":"https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn",
             "catagory_name": "Điện thoại & Phụ kiện"        },
         {
+            "id_catagory":4,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/099edde1ab31df35bc255912bab54a5e_tn",
             "catagory_name": "Mẹ và Bé"
         },
         {
+            "id_catagory":5,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn",
             "catagory_name": "Thiết bị điện tử"
         },
         {
+            "id_catagory":6,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/24b194a695ea59d384768b7b471d563f_tn",
             "catagory_name": "Nhà cửa đời sống"
         },
         {
+            "id_catagory":7,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/c3f3edfaa9f6dafc4825b77d8449999d_tn",
             "catagory_name": "Máy tính & Laptop"
         },
         {
+            "id_catagory":8,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/ef1f336ecc6f97b790d5aae9916dcb72_tn",
             "catagory_name": "Sắc đẹp"
         },
         {
+            "id_catagory":9,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/ec14dd4fc238e676e43be2a911414d4d_tn",
             "catagory_name": "Máy ảnh & Quay phim"
         },
         {
+            "id_catagory":10,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/49119e891a44fa135f5f6f5fd4cfc747_tn",
             "catagory_name": "Sức khoẻ"
         },
         {
+            "id_catagory":11,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/86c294aae72ca1db5f541790f7796260_tn",
             "catagory_name": "Đồng hồ"
         },
         {
+            "id_catagory":12,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/48630b7c76a7b62bc070c9e227097847_tn",
             "catagory_name": "Giày dép nữ"
         },
         {
+            "id_catagory":13,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/74ca517e1fa74dc4d974e5d03c3139de_tn",
             "catagory_name": "Giày dép nam"
         },
         {
+            "id_catagory":14,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/fa6ada2555e8e51f369718bbc92ccc52_tn",
             "catagory_name": "Túi ví nữ"
         },
         {
+            "id_catagory":15,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/7abfbfee3c4844652b4a8245e473d857_tn",
             "catagory_name": "Thiết bị điện gia dụng"
         },
         {
+            "id_catagory":16,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/8e71245b9659ea72c1b4e737be5cf42e_tn",
             "catagory_name": "Phụ kiện & Trang sức nữ"
         },
         {
+            "id_catagory":17,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/6cb7e633f8b63757463b676bd19a50e4_tn",
             "catagory_name": "Thể thao & du lịch"
         },
         {
+            "id_catagory":18,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/c432168ee788f903f1ea024487f2c889_tn",
             "catagory_name": "Bách hoá online"
         },
         {
+            "id_catagory":19,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/3fb459e3449905545701b418e8220334_tn",
             "catagory_name": "Ô tô & Xe máy & Xe đạp"
         },
         {
+            "id_catagory":20,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/36013311815c55d303b0e6c62d6a8139_tn",
             "catagory_name": "Nhà sách Online"
         },
         {
+            "id_catagory":21,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/18fd9d878ad946db2f1bf4e33760c86f_tn",
             "catagory_name": "Balo & Túi ví nam"
         },
         {
+            "id_catagory":22,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/4540f87aa3cbe99db739f9e8dd2cdaf0_tn",
             "catagory_name": "Thời trang trẻ em"
         },
         {
+            "id_catagory":23,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/ce8f8abc726cafff671d0e5311caa684_tn",
             "catagory_name": "Đồ chơi"
         },
         {
+            "id_catagory":24,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/cd8e0d2e6c14c4904058ae20821d0763_tn",
             "catagory_name": "Giặt giũ & chăm sóc nhà cửa"
         },
         {
+            "id_catagory":25,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/cdf21b1bf4bfff257efe29054ecea1ec_tn",
             "catagory_name": "Chăm sóc thú cưng"
         },
         {
+            "id_catagory":26,
             "catagory_link":"",
             "catagory_img": "https://cf.shopee.vn/file/b0f78c3136d2d78d49af71dd1c3f38c1_tn",
             "catagory_name": "Voucher & dịch vụ"
         }
     ],
-    "products" :[
+    "products" :
+    [
         {
             "id": 1,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "",
+            "start_price":10000,
+            "price": 200000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/6cbf33b1074174ec070c722bf29f81c5_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 2,
             "title": "Armani Frok Ladies -  Imported Fork Blue",
-            "price_promotion": "",
-            "price": "210.000",
+            "start_price":10000,
+            "price": 210000,
             "percent_saleoff": 0,
             "body_img_url": "https://cf.shopee.vn/file/00b5201bc37a5368e7060af267a41dd0_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Dresses",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 3,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 0,
             "body_img_url": "https://cf.shopee.vn/file/7874b58253173b78a45569529a9be832",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 4,
             "title": " Váy Cổ Yếm Bo Eo Che Bụng Cực Tiểu Thư - Váy Thắt Nơ Yếm Sang Chảnh",
-            "price": "210.000",
-            "price_promotion": "",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 0,
             "body_img_url": "https://cf.shopee.vn/file/f673e2a1df19bfbf406aca480669644f",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Dresses",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Dresses",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 5,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/a6fd62f920abf7ea2789d597196d290d",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 6,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/7cdef29c1e78ea95dba8ed43b7457196_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 7,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/82667a36b43bb8024076fe77d87375e5_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 8,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/8e8257c989fb805a90d4fcf2eb2b2796_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 9,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/34ab07e5d93204f3bccdf993f13242f7_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 10,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/ecf81bca518e23462c2c635b4a165ac0_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": "332",
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 11,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/cbca659678c33bd5cad358ea59a064e9_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 12,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
-            "percent_saleoff": 10,
+            "price": 210000,
+            "start_price":10000,
+            "percent_saleoff": 20,
             "body_img_url": "https://cf.shopee.vn/file/c613aa255b7392f66dd8d4bf074186e2_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 13,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/712c1baa78056676cc6eb7145778dd95_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 14,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 210000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/0fe6611b2352bfddc931f8715a85f88f_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 73,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 15,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/f7c965fe364de4def0637e1b38bdfdeb_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 16,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/cbd9316bfb7ad6582fb7128b32190144_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 17,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/759068cad71a81fb609ab6ec27c55d52_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 18,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/ed6e59e0b6a7856a5ca8eea8a21be671_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 32,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 19,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": 130.000,
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/7a322c0951c6c8dc97cfc3fddae15ea3_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 20,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/6ffa1854dd2f59c8dcf516c5ab7aadcf_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 21,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/8d1b9c48987c870257f082360c1fbd09_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 32,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 22,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/5068f6016e6c286f4e0eb82afc120f58_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 332,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 23,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/5068f6016e6c286f4e0eb82afc120f58_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quatity_rating": 773,
             "quantity_sold": "",
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 24,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/5068f6016e6c286f4e0eb82afc120f58_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 73,
             "quantity_sold": 500,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 25,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/b8b4d2d62f633a2e1a5163b20d7b9492_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 550,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 26,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/2f20489d7cd6805485a3611c24b37ec0_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 400,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 27,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/2f515d0ca446909c1dfab9acb39ea68f_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 500,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 28,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/292cdc32e9dbe37c0148b69db8eaf132_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 900,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 29,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/759068cad71a81fb609ab6ec27c55d52_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 999,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         },
         {
             "id": 30,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
-            "price": "200.000",
-            "price_promotion": "130.000",
+            "price": 200000,
+            "start_price":10000,
             "percent_saleoff": 10,
             "body_img_url": "https://cf.shopee.vn/file/3d73351f70bc5d4c84e47b7999e34f0c_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
             "quantity_sold": 1000,
-            "category": "Thiết bị điện tử",
-            "shop_adress": "Ninh Bình"
+            "catagory": "Thiết bị điện tử",
+            "shop_address": "Ninh Bình"
         }
     ],
     "shop_onlines":[
@@ -988,6 +1015,153 @@
             "banner_link":""
         }
     ],
+    "flash_sale":[
+        {
+            "id": 1,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/2fc926d808e8d7d7aa2dbf71bb4154e3_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 2,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/2477942b1ded3ec5ad3108a6e3140f63_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 3,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/80386b46b38542ed0c673e130e72672f_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 4,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/01341bb7d0e457b0472d910c0e16e853_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 5,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/d228e402ef6f7e11b205f02e383a1dd1_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 6,
+            "id_shop": 2,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/d70875cac5c72a16b18274f91cfe681a_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 7,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/f5999b102cb62199e8180a80aaf21e8b_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 8,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url": "https://cf.shopee.vn/file/12d1ba6dde3dac679c9ac07467270be2_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 9,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url": "https://cf.shopee.vn/file/b58d9d4a99a6764467b730ec0853c34f_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 10,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":  "https://cf.shopee.vn/file/0be4bb8437f08180d3e1e5aa822c5751_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 11,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":  "https://cf.shopee.vn/file/3444f952e7bf025eb03d891287f77adb_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 12,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url": "https://cf.shopee.vn/file/399c58e63ae0190269d93b19fdbb01e5_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 13,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/3ba14e8630c012fee002c08246c714a3_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 14,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/f6ab0432fa04b67a2cee110000044652_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 15,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/1dda44d29bc154e40a0b99165243c488_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        },
+        {
+            "id": 16,
+            "id_shop": 1,
+            "percent_saleoff":20,
+            "price":200000,
+            "quantity_sold": 20,
+            "body_img_url":"https://cf.shopee.vn/file/d228e402ef6f7e11b205f02e383a1dd1_tn",
+            "footer_img_url":"https://cf.shopee.vn/file/bc1042760daaabc6944c8990a99eb723_tn"
+        }
+        
+    ],
     "top_search":[
         {
             "product_id": 1,
@@ -1037,116 +1211,96 @@
     "shopee_mall":[
         {
             "product_id": 1,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/f3dbbae51cbd5e2a7dd653cc24579ed0_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 2,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/6b01dfe42b8633a3daba8c8b9e9e7364_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 3,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/0b8863f0b34f0a258b4feba6756319b9_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 4,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/db626258ef0fbd128848bab4ad4ffc72_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 5,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/fbc36e59ad705a69422e5a6a047fa870_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 6,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/06bf46cbc24a74d1293aca5d7972f9a3_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 7,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/c240d676e1dcfac53564ee89bab350bc_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 8,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/01c654839f3982439a594147ff0e0bf3_xhdpi",
             "quantity_sold": "332",
-            "content_description": "Giảm đến 50%"
+            "content_description":"Mua là có quà, mưa ưu đãi-mua thả ga"
         },
         {
             "product_id": 9,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/95bd3a0bbc0c514c663248c36cd0a992_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 10,
-            "title": "sữa rửa mặt",
-            "body_img_url": "https://cf.shopee.vn/file/95bd3a0bbc0c514c663248c36cd0a992_xhdpi",
+
+            "body_img_url": "https://cf.shopee.vn/file/1d588127ef5c1dc993653079500e079f_xhdpi",
             "quantity_sold": "332",
-            "content_description": "Giảm đến 50%"
+            "content_description": "Làm xanh thế giới "
         },
         {
             "product_id": 11,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/f55ceb09278c7276f4c7bfbd13507556_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         },
         {
             "product_id": 12,
-            "title": "sữa rửa mặt",
             "body_img_url": "https://cf.shopee.vn/file/6c14360930236e0a442dc4c72e6b0e41_xhdpi",
             "quantity_sold": "332",
-            "content_description": "Giảm đến 50%"
+            "content_description": "Hàng thu ưu đãi 40%"
         },
         {
             "product_id": 13,
-            "title": "sữa rửa mặt",
-            "body_img_url": "https://cf.shopee.vn/file/95bd3a0bbc0c514c663248c36cd0a992_xhdpi",
+            "body_img_url": "https://cf.shopee.vn/file/a66c52e68016992e5218086816bbc6cf_xhdpi",
             "quantity_sold": "332",
-            "content_description": "Giảm đến 50%"
+            "content_description": "Giảm tới 40%"
         },
         {
             "product_id": 14,
-            "title": "sữa rửa mặt",
-            "body_img_url": "https://cf.shopee.vn/file/95bd3a0bbc0c514c663248c36cd0a992_xhdpi",
+            "body_img_url": "https://cf.shopee.vn/file/70bfec1222927f1234cf221567f67c00_xhdpi",
             "quantity_sold": "332",
-            "content_description": "Giảm đến 50%"
+            "content_description": "Bộ sưu tập mới"
         },
         {
             "product_id": 15,
-            "title": "sữa rửa mặt",
-            "body_img_url": "https://cf.shopee.vn/file/f55ceb09278c7276f4c7bfbd13507556_xhdpi",
-            "quantity_sold": "332",
-            "content_description": "Giảm đến 50%"
-        },
-        {
-            "product_id": 16,
-            "title": "sữa rửa mặt",
-            "body_img_url": "https://cf.shopee.vn/file/6c14360930236e0a442dc4c72e6b0e41_xhdpi",
+            "body_img_url": "https://cf.shopee.vn/file/ea7753f9a6c178a4ac8ba223b44d6a52_xhdpi",
             "quantity_sold": "332",
             "content_description": "Giảm đến 50%"
         }
+      
 
     ],
     "key_search":[
