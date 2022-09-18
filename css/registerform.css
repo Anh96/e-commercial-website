@@ -1,6 +1,6 @@
 @import url('../css/style.css');
 @import url('../css/sellerpage.css');
-#login-form{
+#register-login-form{
     min-width: 1200px;
     max-width: 100%;
 }

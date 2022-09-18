@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/registerform.css">
-    <title>Đăng nhập tài khoản</title>
+    <title>Đăng ký tài khoản</title>
 </head>
 <body>
     <div id="register-login-form">
@@ -21,7 +21,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <div class="mgl-8 flex font600 font20">Đăng nhập</div>
+                            <div class="mgl-8 flex font600 font20">Đăng ký</div>
                         </div>
                         <div class="right-header">
                             <a href="" class="color-primary-text">Bạn cần giúp đỡ?</a>
@@ -31,34 +31,17 @@
             </header>
             <div class="body-form">
                 <div class="bodyBGR grid">
-                    <div id="login_with_password_layout" class="right-body mgl-16 mgr-16 margin-tb32 box_shadow">
+                    <div class="right-body mgl-16 mgr-16 margin-tb32 box_shadow">
                         <div class="heading-form flex margin-tb32">
-                            <h1 class="txt-Black-color">Đăng nhập</h1>
-                            <div class="lTxt mgl-16">
-                                <div class="txt-Capitalize font-14 font600">đăng nhập với mã QR</div>
-                            </div>
-                            <div id="qrcode-ic" class="code_ic none-change-opacity" class="flex">
-                                <svg width="40" height="40" fill="none" class="sYzQJQ"><g clip-path="url(#clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 0H0v18h18V0zM3 15V3h12v12H3zM18 22H0v18h18V22zm-3 15H3V25h12v12zM40 0H22v18h18V0zm-3 15H25V3h12v12z" fill="#EE4D2D"></path><path d="M37 37H22.5v3H40V22.5h-3V37z" fill="#EE4D2D"></path><path d="M27.5 32v-8h-3v8h3zM33.5 32v-8h-3v8h3zM6 6h6v6H6zM6 28h6v6H6zM28 6h6v6h-6z" fill="#EE4D2D"></path><path fill="#fff" d="M-4.3 4l44 43.9-22.8 22.7-43.9-44z"></path></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h40v40H0z"></path></clipPath></defs></svg>
-                            </div>
+                            <h1 class="txt-Black-color">Đăng ký</h1>
                         </div>
                         <div class="ctn-form margin-auto">
                             <form action="">
                                 <div class="inpAcc margin-tb32">
-                                    <input type="text" name="" class="font16" id="user-acc" required placeholder="Email/Số điện thoại/Tên đăng nhập">
-                                </div>
-                                <div class="inpPw">
-                                    <input type="password" name="" class="font16" id="password" required placeholder="Mật khẩu">
-                                </div>
-                                <div class="ctn-check flex-jtfspbt margin-tb16">
-                                    <div class="forgot-password margin-tb16">
-                                        <a href="#" class="fgPw">Quên mật khẩu?</a>
-                                    </div>
-                                    <div class="forgot-password margin-tb16">
-                                        <a href="#" class="fgPw">Đăng nhập với SMS</a>
-                                    </div>
+                                    <input type="text" name="" class="font16" id="user-acc" required placeholder="Email/Số điện thoại">
                                 </div>
                                 <div class="btn-sbmit btn-signIn flex margin-tb32">
-                                    <button class="none-change-opacity txt-white-color">Đăng nhập</button>
+                                    <button class="none-change-opacity txt-white-color txt-UperCase">Tiếp theo</button>
                                 </div>
                                 <div class="vRtc-line flex margin-tb32">OR</div>
                                 <div class="flex-jtfspbt">
@@ -75,38 +58,17 @@
                                         <div class="font-14">Apple</div>
                                     </a>
                                 </div>
-                                <div class="hasnot-acc flex margin-tb32">
-                                    <div class="hsnot-txt">Bạn mới biết đến Shopee?</div>
-                                    <a href="../page/signin_form.html" class="">Tạo tài khoản</a>
+                                <div class="hasnot-acc margin-tb32">
+                                    <div class="hsnot-txt flex">Bằng việc đăng kí, bạn đã đồng ý với Shopee về</div>
+                                    <div class="flex">
+                                        <a href="#" class="">Điều khoản dịch vụ</a> 
+                                        & 
+                                        <a href="#" class="">Chính sách bảo mật</a>
+                                    </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div id="login_with_QRcode_layout" class="right-body mgl-16 mgr-16 margin-tb32 box_shadow" style="display:none ;">
-                        <div class="heading-form flex margin-tb32">
-                            <h2 class="txt-Black-color mgl-8">Đăng nhập với QR</h2>
-                            <div class="lTxt mgl-8">
-                                <div class="txt-Capitalize font-10 flex font600">Đăng nhập với mật khẩu</div>
-                            </div>
-                            <div id="password-ic" class="code_ic none-change-opacity mgR-8" class="flex">
-                                <svg width="40" height="40" fill="none" class="sYzQJQ"><g clip-path="url(#clip0)"><rect x="1.5" y="1.5" width="37" height="28" rx="2.5" stroke="#EE4D2D" stroke-width="3"></rect><path stroke="#EE4D2D" stroke-width="3" d="M22 38.5h11"></path><path stroke="#EE4D2D" stroke-width="10" d="M21 29v9"></path><path fill="#fff" d="M-12.28 0l43.933 43.933-22.72 22.72L-35 22.72z"></path><path d="M10.997 16.545l-2.76-.782.519-1.591 2.733 1.098-.176-3.067h1.723l-.176 3.129 2.663-1.081.519 1.608-2.813.783 1.846 2.338-1.397.993-1.6-2.567-1.582 2.479-1.397-.95 1.898-2.39zm8.156 0l-2.76-.782.52-1.591 2.732 1.098-.175-3.067h1.722l-.175 3.129 2.663-1.081.518 1.608-2.812.783 1.845 2.338-1.397.993-1.6-2.567-1.582 2.479-1.397-.95 1.898-2.39zm8.157 0l-2.76-.782.518-1.591 2.734 1.098-.176-3.067h1.723l-.176 3.129 2.663-1.081.519 1.608-2.813.783 1.846 2.338-1.398.993-1.6-2.567-1.581 2.479-1.398-.95 1.899-2.39z" fill="#EE4D2D"></path></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h40v40H0z"></path></clipPath></defs></svg>
-                            </div>
-                        </div>
-                        <div class="ctn-form margin-auto">
-                            <form action="">
-                                <div class="flex margin-tb32">
-                                    <img src="../assets/imgs/logo/qrcode.png"></img>
-                                </div>
-                                <div class="flex margin-tb32">
-                                    <h3 id="not_timeout" href="#" class="font20">Quét mã QR bằng ứng dụng Shopee</h3>
-                                    <h3 id="Timeout" href="#" class="font20" style="display: none;">Quét mã QR bằng ứng dụng Shopee</h3>
-                                </div>
-                                <div class="flex margin-tb32">
-                                    <a href="#" class="font20">Làm thế nào để quét mã?</a>
-                                </div>
-                                <div class="hasnot-acc flex margin-tb32">
-                                    <div class="hsnot-txt">Bạn mới biết đến Shopee?</div>
-                                    <a href="../page/signin_form.html" class="">Tạo tài khoản</a>
+                                <div class="hasnot-acc margin-tb32 flex">
+                                    <div class="hsnot-txt">Bạn đã có tài khoản?</div>
+                                    <a href="../page/register_form.html" class="">Đăng nhập</a> 
                                 </div>
                             </form>
                         </div>
@@ -117,6 +79,5 @@
     </div>
     <script src=""></script>
     <script src="../js/footer.js"></script>
-    <script type="module" src="../js/loginform.js"></script>
 </body>
 </html>

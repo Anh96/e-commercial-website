@@ -111,11 +111,11 @@ function renderHeaderNav(){
                         </div>
                     </div>
                 </li>
-                <li class="header-navbar-item header-item-vertical-line flex-jtfspar">
-                    <a class="font-weigh-bold" href="#">Đăng Ký</a>
+                <li id="sign-in" class="header-navbar-item header-item-vertical-line flex-jtfspar">
+                    <a class="font-weigh-bold" href="../page/signin_form.html" target="_self">Đăng Ký</a>
                 </li>
-                <li class="header-navbar-item">
-                    <a class="font-weigh-bold" href="#">Đăng Nhập</a>
+                <li id="log-in" class="header-navbar-item">
+                    <a class="font-weigh-bold" href="../page/register_form.html" target="_self">Đăng Nhập</a>
                 </li>
 
             </ul>
