@@ -1,14 +1,91 @@
 @import url('../css/style.css');
-@import url('../css/login_form_sellerPage.css');
+@import url('../css/sellerpage.css');
+#login-form{
+    min-width: 1200px;
+    max-width: 100%;
+}
 .header-form{
     background-color: var(--white-color);
     height: 90px;
 }
 .body-form{
+    position: relative;
     height: 700px;
-    background-color: aqua;
+    background-color: var(--primary-color);
+}
+.bodyBGR{
+    width: 1040px;
+    height: inherit;
     background-image: url("https://cf.shopee.vn/file/5569eb9dc7e09e2dbed5315b8f2ea8ba");
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.right-body{
+    width: 450px;
+    transform: translateY(6%);
+    border-radius: 10px;
+}
+.lTxt{
+    position: relative;
+    width: 110px;
+    padding: 2px;
+    background-color: rgb(250, 245, 215);
+    border: 2px solid rgb(196, 139, 5);
+}
+.lTxt div::before{
+    display: block;
+    position: absolute;
+    content: "";
+    top: 19%;
+    right: -21px;
+    border: 10px solid;
+    border-color:transparent transparent transparent rgb(196, 139, 5);;
+}
+.lTxt div::after{
+    display: block;
+    position: absolute;
+    content: "";
+    top: 20%;
+    right: -17px;
+    border: 9px solid;
+    border-color:transparent transparent transparent rgb(250, 245, 215) ;;
+}
+.right-body{
+    position: absolute;
+    right: 0;
+}
+.code_ic{
+    margin-left: 40px;
+}
+.social-media-link{
+    position: relative;
+    padding: 8px;
+    width: 30%;
+    height: 40px;
+    border: 1px solid var(--container-color);
+}
+
+#fb{
+    background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7b95007f3377150730bbb5d1ddb477d6.png");
+    background-size: 325% 287.5%;
+    background-position: 5.555555555555555% 62.666666666666664%;
+    width: 22px;
+    height: 22px;
+}
+#google{
+    background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7b95007f3377150730bbb5d1ddb477d6.png");
+    background-size: 722.2222222222222% 638.8888888888889%;
+    background-position: 83.92857142857143% 5.154639175257732%;
+    width: 22px;
+    height: 22px;
+}
+#app_id{
+    background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7b95007f3377150730bbb5d1ddb477d6.png");
+    background-size: 406.25% 359.375%;
+    background-position: 5.1020408163265305% 6.024096385542169%;
+    width: 22px;
+    height: 22px;
 }
 .footer{
     margin-top: 0px;

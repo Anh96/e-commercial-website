@@ -95,9 +95,11 @@ a:hover{
     max-width: 100%;
     height: 100%;
 }
-.right-body,
+.right-body{
+    width: 40%;
+}
 .left-body{
-    width: 50%;
+    width: 60%;
 }
 .body-h3 h3{
     color: var(--footer-color-text);
