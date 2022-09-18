@@ -29,6 +29,7 @@ ul li{
     width: 100%;
 }
 .right-sort .today-sggtion-wrapper{
+    position: relative;
     margin-top: 0px;
 }
 .hdx .connect a img{
@@ -178,10 +179,9 @@ ul li{
     position: absolute;
     right: 110px;
 }
-.pre-next-btn{
+.pRNBTN{
     position: absolute;
-    width: auto;
-   right: -110px;
+    right: -110px;
 }
 .nbP,
 .prev-btn,
@@ -270,15 +270,16 @@ ul li{
     height: 50px;
 }
 .tdsgt-SortResult{
+    position: relative;
     width: 100%;
     height: 100%;
 }
 .pre-next-btn{
     width: 330px;
+    height: inherit;
 }
 .number-page{
     overflow: hidden;
-    justify-content: flex-start;
 }
 .number-page button{
     min-width: 25px;

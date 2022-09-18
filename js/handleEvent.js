@@ -1,22 +1,19 @@
-import {renderProduct_Relative_HomePage} from "./home.js"
+// import {renderProduct_Relative_HomePage} from "./home.js"
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);   
 // handle box search
 const get_input_value = $('.header-home input');
 const get_headingTXT_agency = $('.agency-saleOff span');
 const agency = $('.agency-saleOff')
-const search_Shop = $('.search-shop-inShopee')
+const search_Shop = $('.search-shop-inShopee');
 
-//Calculate The Promotion Price
-export function calculator_promotion_price(products){
-    return products.price - (products.price *products.percent_saleoff/100);
-}
-// handdle search history
-get_input_value.placeholder= get_headingTXT_agency.innerText;
-get_input_value.onkeydown = function(){
-    agency.style.display = 'none'
-    search_Shop.style.display ='block'
-}
+
+// handle search history
+    // get_input_value.placeholder = get_headingTXT_agency.innerText;
+    // get_input_value.onkeydown = function(){
+    //     agency.style.display = 'none'
+    //     search_Shop.style.display ='block'
+    // }
 //Handle Home Banner
 
 

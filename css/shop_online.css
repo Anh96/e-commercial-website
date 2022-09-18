@@ -223,9 +223,9 @@
     border-bottom: 2px solid var(--primary-color);
 }
 .ctPRD{
-    min-width: 16.9999%;
+    min-width: 180px;
     height: 40px;
-    /* margin-right: 8px; */
+    margin-right: 8px;
 }
 .choose-prd div:hover,
 .ctPRD:hover{

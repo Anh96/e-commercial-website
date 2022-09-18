@@ -655,6 +655,7 @@
             "quantity_rating": 773,
             "quantity_sold": 0,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Túi đeo chéo",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -669,7 +670,8 @@
             "quantity_available":20,
             "quantity_rating": 77,
             "quantity_sold": 0,
-            "category": "Dresses",
+            "category": "Quần áo nữ",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -685,6 +687,7 @@
             "quantity_rating": 773,
             "quantity_sold": 450,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Siêu deal 15/9",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -699,7 +702,8 @@
             "quantity_available":10,
             "quantity_rating": 773,
             "quantity_sold": 430,
-            "category": "Dresses",
+            "category": "Đồng hồ",
+            "catagories_inshop": "Top bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -714,7 +718,8 @@
             "quantity_available": 10,
             "quantity_rating": 773,
             "quantity_sold": 100,
-            "category": "Thiết bị điện tử",
+            "category": "Mỹ phẩm chính hãng",
+            "catagories_inshop": "Son kem",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -730,6 +735,7 @@
             "quantity_rating": 773,
             "quantity_sold": 100,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -745,6 +751,7 @@
             "quantity_rating": 773,
             "quantity_sold": 332,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "IPhone mới về",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -760,6 +767,7 @@
             "quantity_rating": 773,
             "quantity_sold": 332,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -775,6 +783,7 @@
             "quantity_rating": 773,
             "quantity_sold": 532,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -790,6 +799,7 @@
             "quantity_rating": 773,
             "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -805,6 +815,7 @@
             "quantity_rating": 773,
             "quantity_sold": 332,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -820,6 +831,7 @@
             "quantity_rating": 773,
             "quantity_sold": 432,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -835,6 +847,7 @@
             "quantity_rating": 773,
             "quantity_sold": 332,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -850,6 +863,7 @@
             "quantity_rating": 773,
             "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -865,6 +879,7 @@
             "quantity_rating": 773,
             "quantity_sold": 332,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -880,6 +895,7 @@
             "quantity_rating": 773,
             "quantity_sold": 332,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -895,6 +911,7 @@
             "quantity_rating": 773,
             "quantity_sold": 332,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -910,6 +927,7 @@
             "quantity_rating": 773,
             "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -925,6 +943,7 @@
             "quantity_rating": 773,
             "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Quần Jean nữ",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -940,6 +959,7 @@
             "quantity_rating": 773,
             "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
+            "catagories_inshop": "Áo len",
             "shop_adress": "Ninh Bình"
         }
     ],

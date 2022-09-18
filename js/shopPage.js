@@ -51,6 +51,7 @@ fetch('../data/product.json')
         return res.json();
     })
     .then(data=>{
+        filter_catagories(data.products_inshop)
         renderPromotionItem(data.shop_promotion_codes)
         check(data.shop_promotion_codes)
         suggestion_products_ShopOnline(data.products_inshop)
@@ -58,6 +59,60 @@ fetch('../data/product.json')
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop)
     }) 
+
+//Catagories in shop
+    let filter_cata = [];
+    function filter_catagories(catagories){
+        catagories.forEach(cata=>{
+            if(!filter_cata.includes(cata.catagories_inshop)){
+                filter_cata.push(cata.catagories_inshop)
+            }
+        })
+
+        if(check_lengthCatagories(filter_cata)){
+            $('.show-more-ctn').style.display = "block";
+            filter_cata.forEach((cata,index)=>{
+                if(index<4){
+                    htmls = `
+                        <a href="" class="ctPRD flex none-change-opacity txt-Black-color">
+                            <div class="txt-UperCase">${cata}</div>
+                        </a>
+                    `
+                    $('.ctalist').insertAdjacentHTML('beforeend',htmls)
+                }
+                if(index>4){
+                    
+                    htmls = `
+                        <div class="txt-Black-Color font16 pd-TBLR-16 none-change-opacity">${cata}</div>
+                    `
+                    $('.choose-prd').insertAdjacentHTML('beforeend',htmls)
+
+                }
+            })
+            if(!check_lengthCatagories(filter_cata)){
+                $('.show-more-ctn').style.display = "block";
+                filter_cata.forEach(cata=>{
+                    htmls = `
+                        <a href="" class="ctPRD flex none-change-opacity txt-Black-color">
+                            <div class="txt-UperCase">${cata}</div>
+                        </a>
+                    `
+                })
+            }
+        }
+         
+    }
+    function check_lengthCatagories(catagories){
+        catagories = filter_cata.length;
+        if(catagories>4){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+
 //Promotion CODE
     //Condition to hide or show next button
     function check(promotions){
@@ -195,7 +250,6 @@ fetch('../data/product.json')
         }
         const PMTcode = $$('.PMTcode')
         let count_click=0;
-        //console.log(PMTcode.length%2)
         PMTcode.forEach(ptmcode=>{
             $('.right-arr').onclick =()=>{
                 count_click++;
@@ -224,7 +278,9 @@ fetch('../data/product.json')
     }
 
 //Suggesstion
-    import {calculator_promotion_price} from "./handleEvent"
+    let calculator_promotion_price = (products)=>{
+        return products.price - (products.price *products.percent_saleoff/100);
+    }
     function suggestion_products_ShopOnline(products){
         var x=0;
         products.forEach((prod,index)=>{
