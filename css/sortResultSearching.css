@@ -64,8 +64,9 @@ ul li{
     width: 80px;
     height: 80px;
 }
-.logo_shop_img{
+#logo_shop_img{
     height: inherit;
+    background: url('../assets/imgs/logo/epimarble-pr-1.jpg');
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     border-radius: 50%;
@@ -230,6 +231,10 @@ ul li{
 .icon-arrow-small{
     width: 12px;
     fill: var(--footer-color-text);
+}
+#pre-next-btn-header{
+    position: absolute;
+    right: -110px;
 }
 .sortBy_right .prev-btn,
 .sortBy_right .nExt-btn{

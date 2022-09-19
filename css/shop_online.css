@@ -149,13 +149,24 @@
     background-color: contain;
     opacity: 0.2;
 }
+.shop-online .ltf-img-ctn{
+    position: relative;
+}
 .shop-online .ltf-img div{
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat no-repeat;
+    background-size: contain;
     border-radius: 50%;
     border: 4px solid var(--line-color);
 }
-.shop-online .ltf-img-ctn{
-    height: fit-content;
-    position: relative;
+
+.fvr-shop{
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    background-color: var(--primary-color);
+    bottom: 0px;
 }
 .shopName{
     font-weight: 600;
@@ -412,7 +423,7 @@
     width: 100%;
 }
 .b4etd{
-    width: 192px;
+    width: 189px;
 }
 .header-block-sale-off{
     transform: translateY(15%);
@@ -499,4 +510,7 @@
 }
 .sortBy{
     position: relative;
+}
+#tdsgtion-relative-product .b4etd{
+    width: 197px;
 }

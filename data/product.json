@@ -610,7 +610,8 @@
     "shop_onlines":[
         {
             "shop_id": 1,
-            "shop_name": "Fast Buy",
+            "shop_name": "FastBuy_official_store",
+            "shop_patron":"FastBuy_Official_Store",
             "state_online":true,
             "favorite_shop": true,
             "hours_online_ago": 2,
@@ -619,7 +620,7 @@
             "quantity_pages_follow":740,
             "percent_respons": 99,
             "quantity_users_follow": 2000,
-            "rating_shop": 5,
+            "rating_shop": 5.0,
             "quantity_rating": 2000,
             "time_shop_joined": "9 tháng",
             "shop_background_image": "../assets/imgs/product_img/z3620837210178_bf50ed5e1927a8dab1f98c44f029a85c.jpg"
@@ -627,6 +628,7 @@
         {
             "shop_id": 2,
             "shop_name": "Lover Indoor Plants",
+            "shop_patron":"Indoor_Official_Store",
             "state_online":false,
             "favorite_shop": false,
             "hours_online_ago": 2,
@@ -635,7 +637,7 @@
             "quantity_pages_follow":740,
             "percent_respons": 99,
             "quantity_users_follow": 20,
-            "rating_shop": 5000,
+            "rating_shop": 4.8,
             "quantity_rating": 2000,
             "time_shop_joined": 12,
             "shop_background_image": "../assets/imgs/product_img/z3620837210178_bf50ed5e1927a8dab1f98c44f029a85c.jpg"
@@ -660,7 +662,7 @@
         },
         {
             "id": 2,
-            "title": "Armani Frok Ladies -  Imported Fork Blue",
+            "title": " [Trả góp 0%] Apple Macbook Air 13.6\" M2 (2022') 8C GPU/8GB/256GB Space Grey- Hàng Chính Hãng [Futureworld- APR]",
             "price": 300000,
             "percent_saleoff": 30,
             "freeship":true,
@@ -676,7 +678,7 @@
         },
         {
             "id": 3,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "[Mã ELAP500K giảm 8% đơn 500K] Apple Watch Series 3 38mm GPS Sport Band",
             "price": 200000,
             "percent_saleoff": 0,
             "freeship":true,
@@ -692,7 +694,7 @@
         },
         {
             "id": 4,
-            "title": " Váy Cổ Yếm Bo Eo Che Bụng Cực Tiểu Thư - Váy Thắt Nơ Yếm Sang Chảnh",
+            "title": "[Mã ELAP1TR giảm 5% đơn 3TR] Apple iPhone 11 64GB",
             "price": 450000,
             "percent_saleoff": 0,
             "freeship":false,
@@ -708,7 +710,7 @@
         },
         {
             "id": 5,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Túi đeo chéo đi chơi, du lịch cho nam nữ TDC007 ĐẸP NHẤT 2022",
             "price": 500000,
             "percent_saleoff": 0,
             "freeship":true,
@@ -724,7 +726,7 @@
         },
         {
             "id": 6,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Nước hoa Narcis rodriguez for him EDP 100ml nam tính và mạnh mẽ - Flora perfume",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":true,
@@ -740,11 +742,11 @@
         },
         {
             "id": 7,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Nước hoa Armani Prive Rose d'Arabie EDP  5ml 10ml 20ml",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":true,
-            "body_img_url": "https://cf.shopee.vn/file/82667a36b43bb8024076fe77d87375e5_tn",
+            "body_img_url": "https://cf.shopee.vn/file/8692fce528833da7394a2cb78609a905_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_available":10,
@@ -756,7 +758,7 @@
         },
         {
             "id": 8,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Mắt kính unisex hot trend thời trang 💖FREESHIP💖 gọng kính mát nam nữ nhiều màu phong cách",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship": false,
@@ -772,7 +774,7 @@
         },
         {
             "id": 9,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Basic tee Oversize Ulzzang cá tính - Áo Thun Unisex Nam Nữ SDVN BAD VIBES (V147)",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":true,
@@ -788,7 +790,7 @@
         },
         {
             "id": 10,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "MVP2665 Đèn lồng LED phong cách Trung Hoa cho năm mới",
             "price": 230000,
             "percent_saleoff": 10,
             "freeship":true,
@@ -804,7 +806,7 @@
         },
         {
             "id": 11,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Áo Thun Nam Nữ Tay Lỡ Unisex Phông Trơn Oversize Form Rộng Basic Tee Hình New Happiness Unisex",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":false,
@@ -820,7 +822,7 @@
         },
         {
             "id": 12,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Quạt mini tích điện gấu bear siêu hót hàng quảng châu l1",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":false,
@@ -836,11 +838,11 @@
         },
         {
             "id": 13,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "QUẠT KẸP MINI TÍCH ĐIỆN BEAR",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":false,
-            "body_img_url": "https://cf.shopee.vn/file/712c1baa78056676cc6eb7145778dd95_tn",
+            "body_img_url": "https://cf.shopee.vn/file/11e63e5a3fdec5e24468084256306d95_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_available":10,
@@ -852,11 +854,11 @@
         },
         {
             "id": 14,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Son kem Perfect Diary màu lì siêu mịn lâu trôi 2.5g",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":false,
-            "body_img_url": "https://cf.shopee.vn/file/0fe6611b2352bfddc931f8715a85f88f_tn",
+            "body_img_url": "https://cf.shopee.vn/file/4d07ca30dc7f9a894d755e49e9fad1b2_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_available":10,
@@ -868,11 +870,11 @@
         },
         {
             "id": 15,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Son dưỡng Lip Maximizer 020 fullsize unbox",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":false,
-            "body_img_url": "https://cf.shopee.vn/file/f7c965fe364de4def0637e1b38bdfdeb_tn",
+            "body_img_url": "https://cf.shopee.vn/file/de69d3c79e90e8b45f8c38c20d8e87dc_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_available":10,
@@ -884,7 +886,7 @@
         },
         {
             "id": 16,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "[Mã 159LSSALE1 giảm 100% đơn 99K] Móc khóa phi hành gia hot trend phụ kiện túi xách ArsC Store",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":false,
@@ -900,11 +902,11 @@
         },
         {
             "id": 17,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Móc khóa thỏ đội nón đáng yêu",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":false,
-            "body_img_url": "https://cf.shopee.vn/file/759068cad71a81fb609ab6ec27c55d52_tn",
+            "body_img_url": "https://cf.shopee.vn/file/6d4d7190b073040354895483ad208dc3_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_available":10,
@@ -916,11 +918,11 @@
         },
         {
             "id": 18,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "Tai nghe bluetooth Beartek Bearpods B68 có đổi tên, chạm cảm ứng, bass mạnh",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":true,
-            "body_img_url": "https://cf.shopee.vn/file/ed6e59e0b6a7856a5ca8eea8a21be671_tn",
+            "body_img_url": "https://cf.shopee.vn/file/5858251faf5cdcefa507370a8b6f6dd0_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_available":10,
@@ -932,7 +934,7 @@
         },
         {
             "id": 19,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "[Mã ELAAR159 hoặc ELHUNT159 giảm 5% đơn 3TR] Điện Thoại Apple iPhone 13 128Gb",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":true,
@@ -948,7 +950,7 @@
         },
         {
             "id": 20,
-            "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
+            "title": "[Mã ELAP1TR giảm 5% đơn 3TR] Apple iPhone 13 Pro Max 256GB",
             "price": 200000,
             "percent_saleoff": 10,
             "freeship":true,
@@ -958,6 +960,38 @@
             "quantity_available":10,
             "quantity_rating": 773,
             "quantity_sold": 3320,
+            "category": "Thiết bị điện tử",
+            "catagories_inshop": "Áo len",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 21,
+            "title": "Monstera deli thaicons trầu bà var cây chọn tuyển var lạ",
+            "price": 200000,
+            "percent_saleoff": 10,
+            "freeship":true,
+            "body_img_url": "https://cf.shopee.vn/file/c092a25b3c2111aad6e3dcdf45fbd302_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": "4.8",
+            "quantity_available":10,
+            "quantity_rating": 773,
+            "quantity_sold": 3320,
+            "category": "Thiết bị điện tử",
+            "catagories_inshop": "Áo len",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 22,
+            "title": "(Model 11) Lồng Đèn Mùa Thu Trung Quốc Tự Làm Thủ Công Cho Trẻ Em, Lồng Đèn Cung Điện Trung Quốc",
+            "price": 100000,
+            "percent_saleoff": 0,
+            "freeship":true,
+            "body_img_url": "https://cf.shopee.vn/file/55e8c4d1ca58b2439d146a12200dedca_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": "4.8",
+            "quantity_available":10,
+            "quantity_rating": 773,
+            "quantity_sold": 0,
             "category": "Thiết bị điện tử",
             "catagories_inshop": "Áo len",
             "shop_adress": "Ninh Bình"
@@ -1331,7 +1365,7 @@
         },
         {
             "product_id":"2",
-            "key_product": "Kiếm phát sáng",
+            "key_product": "Laptop",
             "key_link": ""
         },
         {

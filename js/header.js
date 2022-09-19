@@ -79,8 +79,8 @@ function renderHeaderNav(){
                             </div>
                             
                             <div class="btn-login-signup flex">
-                                <div class="txt-Black-color none-change-opacity">Đăng nhập</div>
-                                <div class="txt-Black-color none-change-opacity">Đăng ký</div>
+                                <a href="../page/register_form.html" class="txt-Black-color none-change-opacity">Đăng nhập</a>
+                                <a href="../page/signin_form.html" class="txt-Black-color none-change-opacity">Đăng ký</a>
                             </div>
                         </div>
                     </div>

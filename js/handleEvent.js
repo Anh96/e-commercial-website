@@ -7,7 +7,10 @@ const get_headingTXT_agency = $('.agency-saleOff span');
 const agency = $('.agency-saleOff')
 const search_Shop = $('.search-shop-inShopee');
 
-
+//Caculate price promotion
+export let calculator_promotion_price = (products)=>{
+    return products.price - (products.price *products.percent_saleoff/100);
+}
 // handle search history
     // get_input_value.placeholder = get_headingTXT_agency.innerText;
     // get_input_value.onkeydown = function(){
