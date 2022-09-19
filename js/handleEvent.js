@@ -188,3 +188,4 @@ prev_topSearch.onclick = ()=>{
         topSearch_productCTN.style.transform = 'translateX(1000px)'
     }
 }
+

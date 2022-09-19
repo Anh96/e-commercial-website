@@ -51,7 +51,7 @@ fetch('../data/product.json')
         return res.json();
     })
     .then(data=>{
-        filter_catagories(data.products_inshop)
+        filter_catagories(data.products_inshop);
         renderPromotionItem(data.shop_promotion_codes)
         check(data.shop_promotion_codes)
         suggestion_products_ShopOnline(data.products_inshop)
@@ -62,13 +62,22 @@ fetch('../data/product.json')
 
 //Catagories in shop
     let filter_cata = [];
+    import {moveArrCatagories} from "./handleEventShopOnline.js"
+    function check_lengthCatagories(catagories){
+        catagories = filter_cata.length;
+        if(catagories>4){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     function filter_catagories(catagories){
         catagories.forEach(cata=>{
             if(!filter_cata.includes(cata.catagories_inshop)){
                 filter_cata.push(cata.catagories_inshop)
             }
         })
-
         if(check_lengthCatagories(filter_cata)){
             $('.show-more-ctn').style.display = "block";
             filter_cata.forEach((cata,index)=>{
@@ -89,7 +98,8 @@ fetch('../data/product.json')
 
                 }
             })
-            if(!check_lengthCatagories(filter_cata)){
+        }
+        if(!check_lengthCatagories(filter_cata)){
                 $('.show-more-ctn').style.display = "block";
                 filter_cata.forEach(cata=>{
                     htmls = `
@@ -98,23 +108,25 @@ fetch('../data/product.json')
                         </a>
                     `
                 })
-            }
         }
-         
+
+        //render catagories in sort side
+        filter_cata.forEach(fil=>{
+            htmls = 
+            `
+                <div class="shTxt flxC mgTB-8 none-change-opacity font600">
+                    <div class="txt-Capitalize h4txt">${fil}</div>
+                </div>
+            `
+            $('#shTxt-group').insertAdjacentHTML('beforeend',htmls)
+        })
+        const h4txt = $$('.h4txt')
+        moveArrCatagories(h4txt)
     }
-    function check_lengthCatagories(catagories){
-        catagories = filter_cata.length;
-        if(catagories>4){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    
 
 //Promotion CODE
     //Condition to hide or show next button
+    import {getWidth_promotion_code} from './handleEventShopOnline.js'
     function check(promotions){
         var sum=0;
         promotions.forEach(p=>{
@@ -129,10 +141,7 @@ fetch('../data/product.json')
             $('.right-arr').style.display="block"
         }
     }
-    function getWidth_promotion_code(promotion){
-        const getWidth = promotion.getBoundingClientRect().width;
-        return getWidth;
-    }
+
     function renderPromotionItem(promotions){
         let count =0;
         promotions.forEach(promot=>{
@@ -278,9 +287,7 @@ fetch('../data/product.json')
     }
 
 //Suggesstion
-    let calculator_promotion_price = (products)=>{
-        return products.price - (products.price *products.percent_saleoff/100);
-    }
+    import {calculator_promotion_price} from './handleEventShopOnline.js'
     function suggestion_products_ShopOnline(products){
         var x=0;
         products.forEach((prod,index)=>{
