@@ -18,7 +18,7 @@ fetch('../data/product.json')
                         <div class="lft-rltSk flx mgl-8">
                             <div class="ltf-img-ctn">
                                 <div class="ltf-img">
-                                    <div id="logo_shop_img"></div>
+                                    <div id="logo_shop_img" style="background-image:url('${info.logo_shop}')"></div>
                                 </div>
                                 <div class="fvr-shop txt-white-color flex">Yêu Thích</div>
                             </div>

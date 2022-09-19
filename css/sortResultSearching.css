@@ -66,7 +66,6 @@ ul li{
 }
 #logo_shop_img{
     height: inherit;
-    background: url('../assets/imgs/logo/epimarble-pr-1.jpg');
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     border-radius: 50%;

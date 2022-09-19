@@ -51,7 +51,8 @@ fetch('../data/product.json')
         return res.json();
     })
     .then(data=>{
-        filter_catagories(data.products_inshop);
+        catagories(data.products_inshop);
+        fiterProducts_followCatagories(data.products_inshop);
         renderPromotionItem(data.shop_promotion_codes)
         check(data.shop_promotion_codes)
         suggestion_products_ShopOnline(data.products_inshop)
@@ -61,10 +62,10 @@ fetch('../data/product.json')
     }) 
 
 //Catagories in shop
-    let filter_cata = [];
+    let catas = [];
     import {moveArrCatagories} from "./handleEventShopOnline.js"
     function check_lengthCatagories(catagories){
-        catagories = filter_cata.length;
+        catagories = catas.length;
         if(catagories>4){
             return true;
         }
@@ -72,15 +73,15 @@ fetch('../data/product.json')
             return false;
         }
     }
-    function filter_catagories(catagories){
+    function catagories(catagories){
         catagories.forEach(cata=>{
-            if(!filter_cata.includes(cata.catagories_inshop)){
-                filter_cata.push(cata.catagories_inshop)
+            if(!catas.includes(cata.catagories_inshop)){
+                catas.push(cata.catagories_inshop)
             }
         })
-        if(check_lengthCatagories(filter_cata)){
+        if(check_lengthCatagories(catas)){
             $('.show-more-ctn').style.display = "block";
-            filter_cata.forEach((cata,index)=>{
+            catas.forEach((cata,index)=>{
                 if(index<4){
                     htmls = `
                         <a href="" class="ctPRD flex none-change-opacity txt-Black-color">
@@ -99,9 +100,9 @@ fetch('../data/product.json')
                 }
             })
         }
-        if(!check_lengthCatagories(filter_cata)){
+        if(!check_lengthCatagories(catas)){
                 $('.show-more-ctn').style.display = "block";
-                filter_cata.forEach(cata=>{
+                catas.forEach(cata=>{
                     htmls = `
                         <a href="" class="ctPRD flex none-change-opacity txt-Black-color">
                             <div class="txt-UperCase">${cata}</div>
@@ -111,7 +112,7 @@ fetch('../data/product.json')
         }
 
         //render catagories in sort side
-        filter_cata.forEach(fil=>{
+        catas.forEach(fil=>{
             htmls = 
             `
                 <div class="shTxt flxC mgTB-8 none-change-opacity font600">
@@ -1192,4 +1193,9 @@ function allproducts_inshop(products){
         }
         $('#tdsgtion-relative-product').insertAdjacentHTML('beforeend',htmls);
     })
+}
+
+// Filter Products Follow Catagories
+function fiterProducts_followCatagories(catagories){
+    
 }
