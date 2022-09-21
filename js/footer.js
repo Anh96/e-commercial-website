@@ -272,16 +272,28 @@ function renderFooter(){
                 <div class="left-col">
                     <div class="left-text">© 2022 Shopee. Tất cả các quyền được bảo lưu.</div>
                 </div>
-                <div class="right-col">
+                <div class="right-col flex">
                     <div class="right-text">Quốc gia & Khu vực: </div>
                     <div class="right-link-block inlineFlex">
-                        <a>Singapore |</a>
+                        <a>Việt Nam |</a>
                     </div>
                     <div class="right-link-block inlineFlex">
                         <a>Singapore |</a>
                     </div>
                     <div class="right-link-block inlineFlex">
-                        <a>Singapore |</a>
+                        <a>Malaysia |</a>
+                    </div>
+                    <div class="right-link-block inlineFlex">
+                        <a>Lào |</a>
+                    </div>
+                    <div class="right-link-block inlineFlex">
+                        <a>Campuchia |</a>
+                    </div>
+                    <div class="right-link-block inlineFlex">
+                        <a>Indonexia |</a>
+                    </div>
+                    <div class="right-link-block inlineFlex">
+                        <a>Thái Lan </a>
                     </div>
                 </div>
             </div>

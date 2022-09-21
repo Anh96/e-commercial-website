@@ -1,13 +1,19 @@
 @import "./style.css";
+.sortResult-main{
+    min-width: 1200px;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: var(--container-color);
+}
 .sOhome-ctn{
     display: contents;
 }
 .sOhome-ctn .xCAO3k{
     margin-top: 130px;
 }
-.lCAO{
+/* .lCAO{
     width: 100%;
-}
+} */
 ul li{
     list-style: none;
 }

@@ -1,9 +1,7 @@
 /* Shop Page */
 @import url('./style.css');
 @import url('./sortResultSearching.css');
-#shop_online_main{
-    background-color: var(--container-color);
-}
+
 .hd-shop-online a{
     color: var(--white-color);
 }
@@ -118,6 +116,11 @@
     width: 100%;
 }
 /* CODE PROMOTION */
+.left-arr svg,
+.right-arr svg{
+    top: 8.5px ;
+    right: 10px;
+}
 .CODE-promotion-ctn,
 .shop-online{
     position: relative;

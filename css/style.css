@@ -30,9 +30,7 @@ html{
 body{
     background-color: var(--container-color);
 }
-#home-body{
-    width: 100%;
-}
+
 .header{
     position: fixed;
     top: 0;
@@ -111,7 +109,6 @@ h3{
     height: 0.9375rem;
     opacity: 0.6;
     right: -6px;
-    /* top:calc(100%-7px); */
     top: 5px;
     transform: translateY(10%);
 }
@@ -1111,7 +1108,7 @@ h3{
 .arrow-btn-ctn{
     display: flex;
     position: absolute;
-    top: 46%;
+    top: 48%;
     width: 30px;
     height: 30px;
     background-color: var(--white-color);
