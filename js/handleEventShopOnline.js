@@ -21,28 +21,28 @@
             }
         })
     }
-//Filter products follow keyword of catagories
+    //Filter products follow keyword of catagories
     export function filter_products(){
         const ctPRDs =  $$('.ctPRD'),products = $$('#sort_result_search');
         let result, text;
-        for(let i=2;i<ctPRDs.length;i++){
+        for(let i=1;i<ctPRDs.length;i++){
             ctPRDs[i].onclick =()=>{
-                // console.log(ctPRDs[i].getAttribute("data-catagory"));
-                text = ctPRDs[i].getAttribute("data-catagory");
-                for(let j =0;j<products.length;j++){
-                    //console.log(products[j].getAttribute("data-catagories-inshop"))
-                    if(products[j].getAttribute("data-catagories-inshop")== text){
-                        //console.log(products[j].getAttribute("data-catagories-inshop"))
-                        products[j].style.display = "block";
+                if(i!=1)
+                    text = ctPRDs[i].getAttribute("data-catagory");
+                    for(let j =0;j<products.length;j++){
+                        if(products[j].getAttribute("data-catagories-inshop")== text){
+                            products[j].style.display = "block";
+                        }
+                        else{
+                            products[j].style.display = "none"
+                        }
                     }
-                    else{
-                        products[j].style.display = "none"
-                    }
-                }
+
             }
         }
         
     }
+    //handle animation 
 //Promotion Code
     export function getWidth_promotion_code(promotion){
         const getWidth = promotion.getBoundingClientRect().width;

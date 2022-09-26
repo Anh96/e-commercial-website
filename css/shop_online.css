@@ -1,7 +1,15 @@
 /* Shop Page */
 @import url('./style.css');
 @import url('./sortResultSearching.css');
-
+@import url('./suport_center.css');
+@import url('./sellerpage.css');
+a:hover{
+    text-decoration: none;
+}
+.shop-online-ctn{
+    min-width: 1200px;
+    overflow: hidden;
+}
 .hd-shop-online a{
     color: var(--white-color);
 }
@@ -237,14 +245,18 @@
     border-bottom: 2px solid var(--primary-color);
 }
 .ctPRD{
-    min-width: 180px;
+    width: 240px;
     height: 40px;
     margin-right: 8px;
 }
-.choose-prd div:hover,
 .ctPRD:hover{
     text-decoration: none;
     color: var(--primary-color);
+}
+.ctPRD div{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .shop-menu-container{
     position: relative;
@@ -285,8 +297,9 @@
     display: block;
     position: absolute;
     content: "";
+    left: -10px;
     top: 9px;
-    width: 2px;
+    width:3px;
     height: 60%;
     background-color: var(--hover-color);
 }
@@ -295,7 +308,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 10px;
+    height: 20px;
     bottom: -10px;
 }
 .choose-prd-ctn{
@@ -515,5 +528,5 @@
     position: relative;
 }
 #tdsgtion-relative-product .b4etd{
-    width: 197px;
+    width: 194.5px;
 }
