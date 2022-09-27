@@ -196,7 +196,7 @@
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 3,
             "catagory": "Thiết bị điện tử",
             "shop_address": "Ninh Bình"
         },
@@ -210,7 +210,7 @@
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 32,
             "catagory": "Thiết bị điện tử",
             "shop_address": "Ninh Bình"
         },
@@ -224,7 +224,7 @@
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 33,
             "catagory": "Thiết bị điện tử",
             "shop_address": "Ninh Bình"
         },
@@ -238,7 +238,7 @@
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 3,
             "catagory": "Dresses",
             "shop_address": "Ninh Bình"
         },
@@ -252,7 +252,7 @@
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 2,
             "catagory": "Thiết bị điện tử",
             "shop_address": "Ninh Bình"
         },
@@ -266,7 +266,7 @@
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 33,
             "catagory": "Thiết bị điện tử",
             "shop_address": "Ninh Bình"
         },
@@ -280,7 +280,7 @@
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": "4.8",
             "quantity_rating": 773,
-            "quantity_sold": 332,
+            "quantity_sold": 1,
             "catagory": "Thiết bị điện tử",
             "shop_address": "Ninh Bình"
         },
@@ -648,14 +648,14 @@
             "id": 1,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
             "price": 200000,
-            "percent_saleoff": 25,
-            "freeship": true,
+            "percent_saleoff": 0,
+            "freeship": false,
             "body_img_url": "https://cf.shopee.vn/file/5b0ee8b80d604dd93e2b77278b770928_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
             "rating": 0,
             "quantity_available": 20,
             "quantity_rating": 773,
-            "quantity_sold": 0,
+            "quantity_sold": 1,
             "category": "Thiết bị điện tử",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
@@ -664,7 +664,7 @@
             "id": 2,
             "title": " [Trả góp 0%] Apple Macbook Air 13.6\" M2 (2022') 8C GPU/8GB/256GB Space Grey- Hàng Chính Hãng [Futureworld- APR]",
             "price": 300000,
-            "percent_saleoff": 30,
+            "percent_saleoff": 10,
             "freeship":true,
             "body_img_url": "https://cf.shopee.vn/file/1cba156175a5ef0b0d356b52451b4c42_tn",
             "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
@@ -687,7 +687,7 @@
             "rating": 5,
             "quantity_available":10,
             "quantity_rating": 773,
-            "quantity_sold": 450,
+            "quantity_sold": 50,
             "category": "Thiết bị điện tử",
             "catagories_inshop": "Siêu deal 15/9",
             "shop_adress": "Ninh Bình"
@@ -719,9 +719,9 @@
             "rating": 2,
             "quantity_available": 10,
             "quantity_rating": 773,
-            "quantity_sold": 100,
+            "quantity_sold": 2,
             "category": "Mỹ phẩm chính hãng",
-            "catagories_inshop": "Son kem",
+            "catagories_inshop": "Túi đeo chéo",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -929,7 +929,7 @@
             "quantity_rating": 773,
             "quantity_sold": 3320,
             "category": "Thiết bị điện tử",
-            "catagories_inshop": "Tai nghe Bluetooth",
+            "catagories_inshop": "Tai nghe bluetooth",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -993,7 +993,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "category": "Thiết bị điện tử",
-            "catagories_inshop": "Áo len",
+            "catagories_inshop": "Đèn trang trí",
             "shop_adress": "Ninh Bình"
         },
         {
@@ -1030,6 +1030,22 @@
         },
         {
             "id": 25,
+            "title": "Váy Xốp Cổ Vuông Dây Yếm Mẫu Mới Ulzzang Hàn Quốc",
+            "price": 100000,
+            "percent_saleoff": 30,
+            "freeship":true,
+            "body_img_url": "https://cf.shopee.vn/file/2b14eef08c52f3b950fa6e8a6ea34233_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": 5,
+            "quantity_available":10,
+            "quantity_rating": 773,
+            "quantity_sold": 10,
+            "category": "Thời trang nữ",
+            "catagories_inshop": "Váy cưới",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 26,
             "title": "[Mã ELMALL1TR giảm 5% đơn 3TR] Màn Hình LG 27UP600-W 27'' 4K UHD IPS VESA DisplayHDR™ 400 - Hàng Chính Hãng",
             "price": 100000,
             "percent_saleoff": 30,
@@ -1040,10 +1056,75 @@
             "quantity_available":10,
             "quantity_rating": 773,
             "quantity_sold": 10,
+            "category": "Thời trang nữ",
+            "catagories_inshop": "Váy cưới",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 27,
+            "title": "Đầm đi tiệc màu xám tươi mới độc đáo cho nữ size s-3xl",
+            "price": 100000,
+            "percent_saleoff": 30,
+            "freeship":true,
+            "body_img_url": "https://cf.shopee.vn/file/50b6c980025d7260651b0e63d0efee3c_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": 5,
+            "quantity_available":10,
+            "quantity_rating": 773,
+            "quantity_sold": 10,
             "category": "Màn hình",
             "catagories_inshop": "Tivi LG",
             "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 28,
+            "title": "Đầm váy nữ basic Banamo fashion cổ sơ mi cài cúc chiết eo lưng chun, váy nữ cộc tay nhiều màu 5915",
+            "price": 100000,
+            "percent_saleoff": 30,
+            "freeship":true,
+            "body_img_url": "https://cf.shopee.vn/file/3ecc0d8b7c080319ac4d9325d0b321ac_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": 5,
+            "quantity_available":10,
+            "quantity_rating": 773,
+            "quantity_sold": 10,
+            "category": "Thời trang nữ",
+            "catagories_inshop": "Chân váy",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 29,
+            "title": "LG Tone Free FP8 - Màu Trắng - Hàng Chính Hãng",
+            "price": 100000,
+            "percent_saleoff": 30,
+            "freeship":true,
+            "body_img_url": "https://cf.shopee.vn/file/f0a079274b3a9c27458d568fc9614363_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": 5,
+            "quantity_available":10,
+            "quantity_rating": 773,
+            "quantity_sold": 10,
+            "category": "Thiêt bị điện tử",
+            "catagories_inshop": "Tai nghe Bluetooth",
+            "shop_adress": "Ninh Bình"
+        },
+        {
+            "id": 30,
+            "title": "Loa Bluetooth Di Động LG Xboomgo PL7W - Hàng Chính Hãng - Màu Trắng",
+            "price": 100000,
+            "percent_saleoff": 30,
+            "freeship":true,
+            "body_img_url": "https://cf.shopee.vn/file/770e4144235853f12f11952372a62496_tn",
+            "footer_img_url": "https://cf.shopee.vn/file/638c2e330bbdaeecb40ee4278011f38a_tn",
+            "rating": 5,
+            "quantity_available":10,
+            "quantity_rating": 773,
+            "quantity_sold": 10,
+            "category": "Thiết bị điện tử",
+            "catagories_inshop": "Loa bluetooth",
+            "shop_adress": "Ninh Bình"
         }
+
     ],
     "shop_promotion_codes":[
         {
