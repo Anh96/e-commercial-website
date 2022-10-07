@@ -59,6 +59,7 @@ fetch('../data/product.json')
         banner(data.banner_shop_online)
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop);
+        sort_quantitySold(data.products_inshop)
         //sortFollowBtn(data.products_inshop);
     }) 
 

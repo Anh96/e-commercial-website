@@ -117,6 +117,14 @@ function getValue(btn){
                                             btn.classList.remove('active');
                                         }
                                     })
+                                    for(let j =0; j<products.length;++j){
+                                        if(products[j].getAttribute("data-catagories-inshop")==h4txts[i].getAttribute("data-catagories-inshop")){
+                                            products[j].style.display = "block";
+                                        }
+                                        else{
+                                            products[j].style.display = "none";
+                                        }
+                                    }
                                 }
                                 if(index==1){
                                     btn.classList.add('active');
@@ -132,13 +140,17 @@ function getValue(btn){
                                         if(index!=2){
                                             btn.classList.remove('active');
                                         }
-                                    })
-                                    sort_quantitySold(products);
-                                    products.forEach(prod=>{
-                                        console.log(prod)
-                                    })
+                                    });
+                                    sort_quantitySold(products)
+                                    for(let j =0; j<products.length;++j){
+                                        if(products[j].getAttribute("data-catagories-inshop")==h4txts[i].getAttribute("data-catagories-inshop")){
+                                            products[j].style.display = "block";
+                                        }
+                                        else{
+                                            products[j].style.display == 'none'
+                                        }
+                                    }
                                 }
-
                             }
                         })
                     }
