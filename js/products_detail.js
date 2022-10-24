@@ -1,5 +1,6 @@
 const productsAPI = "../data/product.json"
-let htmls
+import {render_products} from "./condition_render_products"
+let htmls;
 function handleProducts(){
     fetch(productsAPI)
         .then(res=>{
