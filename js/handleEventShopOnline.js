@@ -24,11 +24,6 @@ export function setValue(){
         btn.setAttribute("data-relBtn",currBtn)
     })
 }
-function getValue(btn){
-    if(btn.getAttribute('class').indexOf('active')> -1){
-        return true;
-    }
-}
 //Promotion Code
     export function getWidth_promotion_code(promotion){
         const getWidth = promotion.getBoundingClientRect().width;
@@ -44,20 +39,9 @@ function getValue(btn){
         products.filter(prod=>prod.quantity_available>0)
     }
     // Sort follow keyword of bl1Sb-btn button clicked;
-    // ascending sort
-    export function sort_quantitySold(products){
-        let temp;
-        for(let x= 0; x<products.length;++x){
-            for(let y= x+1;y<products.length;++y){
-                if(products[x].quantity_sold < products[y].quantity_sold){
-                    temp = products[x]
-                    products[x]= products[y];
-                    products[y] = temp;
-                }
-            }
-        }
-        return products;
-    }
+    // default sort
+ 
+    
     import {render_products} from "./condition_render_products.js";
     // Catagories in shop
         //Filter products follow keyword of catagories
@@ -135,21 +119,26 @@ function getValue(btn){
                                     })
                                 }
                                 if(index==2){
+                                    const arrsort = []
                                     btns[2].classList.add('active');
                                     btns.forEach((btn,index)=>{
                                         if(index!=2){
                                             btn.classList.remove('active');
                                         }
                                     });
-                                    sort_quantitySold(products)
-                                    for(let j =0; j<products.length;++j){
-                                        if(products[j].getAttribute("data-catagories-inshop")==h4txts[i].getAttribute("data-catagories-inshop")){
-                                            products[j].style.display = "block";
+                                    const val = jQuery('#tdsgtion-relative-product .number-sld').map(
+                                        function(){
+                                            return this.innerHTML;
                                         }
-                                        else{
-                                            products[j].style.display == 'none'
-                                        }
-                                    }
+                                    ).get();
+                                    const products = jQuery('#tdsgtion-relative-products .b4etd');
+                                    products.sort(function(a,b){
+                                        jQuery.each(val,function(ind,v){
+                                            return parseFloat(v);
+                                        })
+                                        return $(v,a) - $(v,b);
+                                    })
+                                    jQuery('#tdsgtion-relative-product').appendTo(products)
                                 }
                             }
                         })
@@ -162,7 +151,7 @@ function getValue(btn){
                     }
                 }
             }
-            //sortFollowBtn(products)
+            sortFollowBtn(products)
         }
         export function sortFollowBtn(products){
             btns.forEach((btn,i)=>{
@@ -172,21 +161,24 @@ function getValue(btn){
                         btn.classList.add('active');
                         //console.log(getValue(btn));
                         if(i==0){
-                            htmls = $$('#sort_result_search');
-                            htmls.forEach(html=>{
-                                html.style.display = "block";
-                            })
+                            // htmls = $$('#sort_result_search');
+                            // htmls.forEach(html=>{
+                            //     html.style.display = "block";
+                            // })
+                            sort_quantitySold();
                         }
                         if(i==2){
-                            htmls = $$('#sort_result_search');
-                            htmls.forEach(html=>{
-                                html.style.display = "none";
-                            })
-                            sort_quantitySold(products)
-                            products.forEach(prod=>{
-                                htmls = render_products(prod);
-                                $('#tdsgtion-relative-product').insertAdjacentHTML('beforeend',htmls);
-                            })
+                            // htmls = $$('#sort_result_search');
+                            // htmls.forEach(html=>{
+                            //     html.style.display = "none";
+                            // })
+                            // // sort_quantitySold(products)
+                            ascending_sort()
+                            // products.forEach(prod=>{
+                            //     htmls = render_products(prod);
+                            //     $('#tdsgtion-relative-product').insertAdjacentHTML('beforeend',htmls);
+                            // })
+                        
                         }
                     }
                 }
