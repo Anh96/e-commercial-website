@@ -1,4 +1,4 @@
- let htmls, results;
+ let htmls, clickAmount=0;
  const h4txts=$$('.h4txt');
  export const btns = $$('.bl1Sb-btn');
 export function moveArrowInCatagories(h4txt){
@@ -24,11 +24,6 @@ export function setValue(){
         btn.setAttribute("data-relBtn",currBtn)
     })
 }
-function getValue(btn){
-    if(btn.getAttribute('class').indexOf('active')> -1){
-        return true;
-    }
-}
 //Promotion Code
     export function getWidth_promotion_code(promotion){
         const getWidth = promotion.getBoundingClientRect().width;
@@ -39,12 +34,32 @@ function getValue(btn){
         return products.price - (products.price *products.percent_saleoff/100);
     }
 // All Products
-    // Check available products
-    function quantity_availableProducts(products){
-        products.filter(prod=>prod.quantity_available>0)
-    }
+    
     // Sort follow keyword of bl1Sb-btn button clicked;
-    // ascending sort
+    //function sort
+    function sort(){
+        let sorted = $$("#tdsgtion-relative-product .b4etd").sort(function(a,b){
+           let x  = parseFloat(a.querySelector('.number-sld').innerHTML);
+           let y = parseFloat(b.querySelector('.number-ald').innerHTML);
+           if(x==null){
+               return 1;
+           }
+           if(b==null) {
+               return -1;
+           }
+           if(a==b) {
+               return 0;
+           }
+           return a<b?1 : -1;
+        });
+        
+        sorted.forEach(s => {
+            console.log(s.querySelector('.number-sld'))
+        })
+        //return sorted;
+        //$('#tdsgtion-relative-product').append(sorted);
+    }
+    // descending sort
     export function sort_quantitySold(products){
         let temp;
         for(let x= 0; x<products.length;++x){
@@ -58,11 +73,16 @@ function getValue(btn){
         }
         return products;
     }
+    
     import {render_products} from "./condition_render_products.js";
     // Catagories in shop
         //Filter products follow keyword of catagories
-        export function filter_products(){
-            const ctPRDs =  $$('.ctPRD'),h4txts=$$('.h4txt'),products = $$('#tdsgtion-relative-product #sort_result_search');
+        export function filter(products){
+            const ctPRDs =  $$('.ctPRD'),h4txts=$$('.h4txt');
+            const newArrayProducts = new Array;
+            products.map(prod=>{
+                return newArrayProducts.push(prod);
+            })
             let text, index;
             //handle ctPRDs are clicked (Header Catagories)
             for(let i=1;i<ctPRDs.length;i++){
@@ -70,21 +90,21 @@ function getValue(btn){
                     if(i!=1){
                         index = i-1;
                         text = ctPRDs[i].getAttribute("data-catagory");
-                        for(let j =0;j<products.length;j++){
-                            if(products[j].getAttribute("data-catagories-inshop") == text){
-                                products[j].style.display = "block";
+                        htmls = products.map(prod=>{
+                            if(text == prod.catagories_inshop.toLowerCase()){
+                                //productss.push(prod)
+                                return render_products(prod);
                             }
-                            else{
-                                products[j].style.display = "none"
-                            }
-                        }
+                        })
+                        $('#tdsgtion-relative-product').innerHTML = htmls.join('');
+                        //productss.forEach(prod=>console.log(prod))
                     }
                     if(i==1){
                         index =0;
-                        for(let prod of products){
-                            //All products are displayed
-                            prod.style.display = "block";
-                        }
+                        htmls = products.map(prod=>{
+                            return render_products(prod)
+                        })
+                        $('#tdsgtion-relative-product').innerHTML = htmls.join('');
                     }
                     moveArrowInCatagories(h4txts[index]);
                 }
@@ -93,76 +113,129 @@ function getValue(btn){
             for(let i =0; i<h4txts.length;++i){
                 h4txts[i].onclick = ()=>{
                     moveArrowInCatagories(h4txts[i]);
-                    if(i!=0){
-                        btns[0].classList.add('active');
-                        btns.forEach((btn,index)=>{
-                            if(index!=0){
-                                btn.classList.remove('active')
-                            }
-                        })
-                        for(let j =0; j<products.length;++j){
-                            if(products[j].getAttribute("data-catagories-inshop")==h4txts[i].getAttribute("data-catagories-inshop")){
-                                products[j].style.display = "block";
-                            }
-                            else{
-                                products[j].style.display = "none";
-                            }
+                    if(clickAmount>0){
+                        if(i!=0){
+                            btns[0].classList.add('active');
+                            btns.forEach((btn,index)=>{
+                                if(index!=0){
+                                    btn.classList.remove('active')
+                                }
+                            })
+                            htmls = products.map(prod =>{
+                                if(h4txts[i].getAttribute("data-catagories-inshop")==prod.catagories_inshop.toLowerCase()){
+                                     //console.log(render_products(prod))
+                                    return render_products(prod);
+                                }
+                            });
+                            $('#tdsgtion-relative-product').innerHTML = htmls.join('');
+                            
+                            btns.forEach((btn,index)=>{
+                                btn.onclick = ()=>{
+                                    if(index==0){
+                                        btn.classList.add('active');
+                                        btns.forEach((btn,index)=>{
+                                            if(index!=0){
+                                                btn.classList.remove('active');
+                                            }
+                                        })
+                                        for(let j =0; j<products.length;++j){
+                                            if(products[j].getAttribute("data-catagories-inshop")==h4txts[i].getAttribute("data-catagories-inshop")){
+                                                products[j].style.display = "block";
+                                            }
+                                            else{
+                                                products[j].style.display = "none";
+                                            }
+                                        }
+                                    }
+                                    if(index==1){
+                                        btn.classList.add('active');
+                                        btns.forEach((btn,index)=>{
+                                            if(index!=1){
+                                                btn.classList.remove('active');
+                                            }
+                                        })
+                                    }
+                                    if(index==2){
+                                        btns[2].classList.add('active');
+                                        btns.forEach((btn,index)=>{
+                                            if(index!=2){
+                                                btn.classList.remove('active');
+                                            }
+                                        });
+                                    }
+                                }
+                            })
                         }
-                        btns.forEach((btn,index)=>{
-                            btn.onclick = ()=>{
-                                if(index==0){
-                                    btn.classList.add('active');
-                                    btns.forEach((btn,index)=>{
-                                        if(index!=0){
-                                            btn.classList.remove('active');
-                                        }
-                                    })
-                                    for(let j =0; j<products.length;++j){
-                                        if(products[j].getAttribute("data-catagories-inshop")==h4txts[i].getAttribute("data-catagories-inshop")){
-                                            products[j].style.display = "block";
-                                        }
-                                        else{
-                                            products[j].style.display = "none";
-                                        }
-                                    }
-                                }
-                                if(index==1){
-                                    btn.classList.add('active');
-                                    btns.forEach((btn,index)=>{
-                                        if(index!=1){
-                                            btn.classList.remove('active');
-                                        }
-                                    })
-                                }
-                                if(index==2){
-                                    btns[2].classList.add('active');
-                                    btns.forEach((btn,index)=>{
-                                        if(index!=2){
-                                            btn.classList.remove('active');
-                                        }
-                                    });
-                                    sort_quantitySold(products)
-                                    for(let j =0; j<products.length;++j){
-                                        if(products[j].getAttribute("data-catagories-inshop")==h4txts[i].getAttribute("data-catagories-inshop")){
-                                            products[j].style.display = "block";
-                                        }
-                                        else{
-                                            products[j].style.display == 'none'
-                                        }
-                                    }
-                                }
-                            }
-                        })
+                        if(i==0){
+                            htmls = products.map(prod =>{
+                                return render_products(prod)
+                            });
+                            $('#tdsgtion-relative-product').innerHTML = htmls.join('');
+                        }
                     }
-                    if(i==0){
-                        for(let prod of products){
-                            // All products are displayed 
-                            prod.style.display = "block";
+                    if(clickAmount==0){
+                        if(i!=0){
+                            btns[0].classList.add('active');
+                            btns.forEach((btn,index)=>{
+                                if(index!=0){
+                                    btn.classList.remove('active')
+                                }
+                            })
+                            htmls = products.map(prod=>{
+                                if(h4txts[i].getAttribute("data-catagories-inshop") == prod.catagories_inshop.toLowerCase()){
+                                    return render_products(prod);
+                                }
+                            })
+                            $('#tdsgtion-relative-product').innerHTML = htmls.join('')
+                            btns.forEach((btn,index)=>{
+                                btn.onclick = ()=>{
+                                    if(index==0){
+                                        btn.classList.add('active');
+                                        btns.forEach((btn,index)=>{
+                                            if(index!=0){
+                                                btn.classList.remove('active');
+                                            }
+                                        })
+                                        htmls = products.map(prod=>{
+                                            if(h4txts[i].getAttribute("data-catagories-inshop") == prod.catagories_inshop.toLowerCase()){
+                                                return render_products(prod);
+                                            }
+                                        })
+                                        $('#tdsgtion-relative-product').innerHTML = htmls.join('')
+                                    }
+                                    if(index==1){
+                                        btn.classList.add('active');
+                                        btns.forEach((btn,index)=>{
+                                            if(index!=1){
+                                                btn.classList.remove('active');
+                                            }
+                                        })
+                                    }
+                                    if(index==2){
+                                        btns[2].classList.add('active');
+                                        btns.forEach((btn,index)=>{
+                                            if(index!=2){
+                                                btn.classList.remove('active');
+                                            }
+                                        });
+                                    }
+                                }
+                            })
+                        }
+                        if(i==0){
+                            for(let prod of products){
+                                // All products are displayed 
+                                htmls = products.map(prod=>{
+                                    if(h4txts[i].getAttribute("data-catagories-inshop") == prod.catagories_inshop.toLowerCase()){
+                                        return render_products(prod);
+                                    }
+                                })
+                                $('#tdsgtion-relative-product').innerHTML = htmls.join('')
+                            }
                         }
                     }
                 }
             }
-            //sortFollowBtn(products)
         }
         export function sortFollowBtn(products){
             btns.forEach((btn,i)=>{
@@ -172,21 +245,22 @@ function getValue(btn){
                         btn.classList.add('active');
                         //console.log(getValue(btn));
                         if(i==0){
-                            htmls = $$('#sort_result_search');
-                            htmls.forEach(html=>{
-                                html.style.display = "block";
+                            htmls = products.map(prod=>{
+                                return render_products(prod);
                             })
+                            $('#tdsgtion-relative-product').innerHTML = htmls.join('')
                         }
                         if(i==2){
-                            htmls = $$('#sort_result_search');
-                            htmls.forEach(html=>{
-                                html.style.display = "none";
+                            clickAmount++;
+                            let products2 = [];
+                            products.map(prod=>{
+                                products2.push(prod);
                             })
-                            sort_quantitySold(products)
-                            products.forEach(prod=>{
-                                htmls = render_products(prod);
-                                $('#tdsgtion-relative-product').insertAdjacentHTML('beforeend',htmls);
+                            sort_quantitySold(products2);
+                            htmls = products2.map(prod=>{
+                                return render_products(prod);
                             })
+                            $('#tdsgtion-relative-product').innerHTML = htmls.join('')
                         }
                     }
                 }
