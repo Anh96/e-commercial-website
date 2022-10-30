@@ -1,6 +1,7 @@
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
 import {render_products} from './condition_render_products.js'
+import {getWidth_promotion_code,sortFollowPrice,sortFollowBtn,filter, pagnition} from "./handleEventShopOnline.js"
 // change position for check-icon when click on each element namethod name
 // js for change the key of search Method
 var get_Value_input  = $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input')
@@ -57,7 +58,6 @@ fetch('../data/product.json')
        banner(data.banner_shop_online)
        topsales(data.products_inshop)
        allproducts_inshop(data.products_inshop);
-       //filter_products(data.products_inshop)
    })
  
 //Catagories in shop
@@ -132,7 +132,6 @@ fetch('../data/product.json')
  
 //Promotion CODE
    //Condition to hide or show next button
-   import {getWidth_promotion_code} from './handleEventShopOnline.js'
    function check(promotions){
        var sum=0;
        promotions.forEach(p=>{
@@ -321,62 +320,62 @@ fetch('../data/product.json')
        })
        ///////////////hanndle slide banner
        const imgs=$$('.list-item-shopSld');
-           ///////////auto show slide
-           autoshow();
-           function autoshow(){
-               let i;
-               for(i=0;i<imgs.length;++i){
-                   imgs[i].style.display ='none'
-               }
-               current_index++;
-               if(current_index>imgs.length){
-                   current_index = 1;
-               }
-               for(i =0; i<next_circle.length;++i){
-                   next_circle[i].classList.remove('active')
-               }
-               imgs[current_index-1].style.display ='block'
-               next_circle[current_index-1].classList.add('active')
-               setTimeout(autoshow,3000);
-           }
-           //////////handle click button
-           function currentSlide(n){
-               show(current_index=n);
-           }
-           function plusSlide(n){
-               show(current_index+=n);
-           }
-           show(current_index)
-           function show(n){
-               let i;
-               if(n>imgs.length){
-                   current_index = 1;
-               }
-               if(n<1){
-                   current_index=imgs.length;
-               }
-               for(i =0;i<imgs.length ;++i){
-                   imgs[i].style.display ='none';
-               }
-               for( i =0; i<next_circle.length;++i){
-                   next_circle[i].classList.remove('active')
-               }
-               imgs[current_index-1].style.display = 'block'
-               next_circle[current_index-1].classList.add('active')
-           }
-           //handle click circle
-           next_circle.forEach((dot,index)=>{
-               dot.onclick= ()=>{
-                   currentSlide(index+1)
-               }
-           })
-           //handle click next-prev-btn
-           $('.left-btn').onclick = ()=>{
-               plusSlide(-1);
-           }
-           $('.right-btn').onclick = ()=>{
-               plusSlide(1)
-           }
+        ///////////auto show slide
+        autoshow();
+        function autoshow(){
+            let i;
+            for(i=0;i<imgs.length;++i){
+                imgs[i].style.display ='none'
+            }
+            current_index++;
+            if(current_index>imgs.length){
+                current_index = 1;
+            }
+            for(i =0; i<next_circle.length;++i){
+                next_circle[i].classList.remove('active')
+            }
+            imgs[current_index-1].style.display ='block'
+            next_circle[current_index-1].classList.add('active')
+            setTimeout(autoshow,3000);
+        }
+        //////////handle click button
+        function currentSlide(n){
+            show(current_index=n);
+        }
+        function plusSlide(n){
+            show(current_index+=n);
+        }
+        show(current_index)
+        function show(n){
+            let i;
+            if(n>imgs.length){
+                current_index = 1;
+            }
+            if(n<1){
+                current_index=imgs.length;
+            }
+            for(i =0;i<imgs.length ;++i){
+                imgs[i].style.display ='none';
+            }
+            for( i =0; i<next_circle.length;++i){
+                next_circle[i].classList.remove('active')
+            }
+            imgs[current_index-1].style.display = 'block'
+            next_circle[current_index-1].classList.add('active')
+        }
+        //handle click circle
+        next_circle.forEach((dot,index)=>{
+            dot.onclick= ()=>{
+                currentSlide(index+1)
+            }
+        })
+        //handle click next-prev-btn
+        $('.left-btn').onclick = ()=>{
+            plusSlide(-1);
+        }
+        $('.right-btn').onclick = ()=>{
+            plusSlide(1)
+        }
    }  
 //Top Sales
    function topsales(products){
@@ -392,14 +391,16 @@ fetch('../data/product.json')
        }
    }
 //ALL Products
-import {sortFollowPrice,sortFollowBtn,filter} from "./handleEventShopOnline.js"
 function allproducts_inshop(products){
-   products.forEach(prod=>{
-       htmls = render_products(prod);
-       $('#tdsgtion-relative-product').insertAdjacentHTML('beforeend',htmls);
+   products.forEach((prod,index)=>{
+      if(index <20){
+        htmls = render_products(prod);
+        $('#tdsgtion-relative-product').insertAdjacentHTML('beforeend',htmls);
+      }
    })
    filter(products);
    sortFollowBtn(products);
    sortFollowPrice(products);
+   pagnition(products)
 }
  

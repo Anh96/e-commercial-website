@@ -401,20 +401,24 @@ export function setValue(){
                        btn.classList.add('active');
                        //console.log(getValue(btn));
                        if(i==0){
-                           htmls = products.map(prod=>{
-                               return render_products(prod);
+                           htmls = products.map((prod,ind)=>{
+                               if(ind<20){
+                                    return render_products(prod);
+                               }
                            })
                            $('#tdsgtion-relative-product').innerHTML = htmls.join('')
                        }
                        if(i==2){
                            clickAmount++;
                            const products2 = new Array;
-                           products.map(prod=>{
-                               products2.push(prod);
+                           products.map((prod,ind)=>{
+                               if(ind<20){
+                                    products2.push(prod);
+                               }
                            })
                            sort_quantitySold(products2);
-                           htmls = products2.map(prod=>{
-                               return render_products(prod);
+                           htmls = products2.map((prod,ind)=>{
+                               return render_products(prod)
                            })
                            $('#tdsgtion-relative-product').innerHTML = htmls.join('')
                        }
@@ -423,27 +427,31 @@ export function setValue(){
            })
        }
        export function sortFollowPrice(products){
-           const newArrayAscendingSort = new Array;
-           products.map(prod=>{
-               return newArrayAscendingSort.push(prod);
+           const newArrayAscendingSort_20firtsItem = new Array;
+           products.map((prod,ind)=>{
+                if(ind<20){
+                return newArrayAscendingSort_20firtsItem.push(prod);
+                }
            })
-           const newArrayDescendingSort = new Array;
-           products.map(prod=>{
-               return newArrayDescendingSort.push(prod);
+           const newArrayDescendingSort_20firtsItem = new Array;
+           products.map((prod,ind)=>{
+               if(ind<20){
+                return newArrayDescendingSort_20firtsItem.push(prod);
+               }
            })
            conditions_sort_links.forEach((link,ind)=>{
                link.onclick = ()=>{
                    if(ind ==0){
-                       sort_AscendingPriceSold(newArrayAscendingSort);
-                       htmls = newArrayAscendingSort.map(prod=>{
-                           return render_products(prod);
+                       sort_AscendingPriceSold(newArrayAscendingSort_20firtsItem);
+                       htmls = newArrayAscendingSort_20firtsItem.map((prod,ind)=>{
+                        return render_products(prod);
                        })
                        $('#tdsgtion-relative-product').innerHTML = htmls.join('')
                    }
                    if(ind == 1){
-                       sort_DescendingPriceSold(newArrayDescendingSort);
-                       htmls = newArrayDescendingSort.map(prod=>{
-                           return render_products(prod);
+                       sort_DescendingPriceSold(newArrayDescendingSort_20firtsItem);
+                       htmls = newArrayDescendingSort_20firtsItem.map((prod,ind)=>{
+                        return render_products(prod);
                        })
                        $('#tdsgtion-relative-product').innerHTML = htmls.join('')
                    }
@@ -452,7 +460,42 @@ export function setValue(){
        }
  
  // Pagnition
- export function pagnition(){
-     
+ export function pagnition(products){
+    let total_pages, maximum_numbers_item_on_per_page = 30, clicked =1;
+    total_pages = products.length/maximum_numbers_item_on_per_page;
+    if(products.length % maximum_numbers_item_on_per_page != 0){
+        total_pages++;
+        $('#last-number').innerHTML = total_pages.toFixed(0);
+    }
+    else{
+        $('#last-number').innerHTML = total_pages.toFixed(0);
+    }
+    //change opacity of btns
+    if( $('#start-number').innerHTML == 1){
+        $(".prev-btn").style.opacity = 0.5;
+    }
+    $(".prev-btn").onclick = ()=>{
+        clicked--;
+        if(clicked<=1){
+            clicked = 1
+            $('#start-number').innerHTML = clicked;
+            $(".prev-btn").disabled = true;
+        }
+        if(clicked >1){
+            $('#start-number').innerHTML = clicked;
+            $(".prev-btn").disabled = false;           
+        }
+    }
+    $('.nExt-btn').onclick = ()=>{
+        clicked++;
+        if(clicked <= total_pages ){
+                $('#start-number').innerHTML = clicked;
+                $(".nExt-btn").disabled = false;
+        }
+        if(clicked > total_pages){
+                clicked =  $('#last-number').innerHTML;
+                $(".nExt-btn").disabled = true;
+        }
+    }
  }
  
