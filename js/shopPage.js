@@ -401,6 +401,7 @@ function allproducts_inshop(products){
    filter(products);
    sortFollowBtn(products);
    sortFollowPrice(products);
-   pagnition(products)
+   pagnition(products);
+   
 }
  

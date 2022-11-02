@@ -293,6 +293,7 @@ ul li{
 }
 .number-page button{
     min-width: 25px;
+    border: 0px;
 }
 .round-price{
     padding: 8px 0px;

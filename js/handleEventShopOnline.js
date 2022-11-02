@@ -1,4 +1,4 @@
-let htmls, clickAmount=0;
+let htmls, clickAmount=0, total_pages;
 const h4txts=$$('.h4txt');
 export const btns = $$('.bl1Sb-btn');
 const conditions_sort_links = $$(".hv-prcx a");
@@ -7,6 +7,10 @@ export function moveArrowInCatagories(h4txt){
    $('.icx').style.top = h4txt.offsetTop + 'px';
    $(".h4txt.prd-active").classList.remove("prd-active");
    h4txt.classList.add('prd-active');
+}
+function moveStateActiveBtns(nbp){
+    $('.nbP.active').classList.remove("active");
+    nbp.classList.add("active");
 }
 export function setValue(){
    const ctPRDs =  $$('.ctPRD');
@@ -461,7 +465,7 @@ export function setValue(){
  
  // Pagnition
  export function pagnition(products){
-    let total_pages, maximum_numbers_item_on_per_page = 30, clicked =1;
+    let total_pages, maximum_numbers_item_on_per_page = 30, clicked =1, clicked_nbP =0;
     total_pages = products.length/maximum_numbers_item_on_per_page;
     if(products.length % maximum_numbers_item_on_per_page != 0){
         total_pages++;
@@ -472,29 +476,98 @@ export function setValue(){
     }
     //change opacity of btns
     if( $('#start-number').innerHTML == 1){
-        $(".prev-btn").style.opacity = 0.5;
+        $(".sortBy_right .prev-btn").style.opacity = 0.5;
     }
-    $(".prev-btn").onclick = ()=>{
+    //handle event when clicked btns
+    $(".sortBy_right .prev-btn").onclick = ()=>{
         clicked--;
         if(clicked<=1){
             clicked = 1
             $('#start-number').innerHTML = clicked;
-            $(".prev-btn").disabled = true;
+            $(".sortBy_right .prev-btn").disabled = true;
         }
         if(clicked >1){
             $('#start-number').innerHTML = clicked;
-            $(".prev-btn").disabled = false;           
+            $(".prev-btn").disabled = false;     
+        }
+        //change opacity of prev-next btns while clicked
+        if($("#start-number").innerHTML == 1){
+            $(".sortBy_right .prev-btn").style.opacity = 0.5;
+            $(".sortBy_right .nExt-btn").style.opacity = 1;
+        }
+        if($("#start-number").innerHTML > 1){
+            $(".sortBy_right .prev-btn").style.opacity = 1;
         }
     }
-    $('.nExt-btn').onclick = ()=>{
+    $('.sortBy_right .nExt-btn').onclick = ()=>{
         clicked++;
         if(clicked <= total_pages ){
                 $('#start-number').innerHTML = clicked;
-                $(".nExt-btn").disabled = false;
+                $(".sortBy_right .nExt-btn").disabled = false;
         }
         if(clicked > total_pages){
                 clicked =  $('#last-number').innerHTML;
-                $(".nExt-btn").disabled = true;
+                $(".sortBy_right .nExt-btn").disabled = true;
+        }
+        //change opacity of prev-next btns while clicked
+        if($("#start-number").innerHTML == 1){
+            $(".sortBy_right .prev-btn").style.opacity = 0.5;
+            $(".sortBy_right .nExt-btn").style.opacity = 1;
+        }
+        if($("#start-number").innerHTML < $('#last-number').innerHTML){
+            $(".sortBy_right .prev-btn").style.opacity = 1;
+        }
+        if($("#start-number").innerHTML == $('#last-number').innerHTML){
+            $(".sortBy_right .prev-btn").style.opacity = 1;
+            $(".sortBy_right .nExt-btn").style.opacity = 0.5;
+        }
+    }
+    //paginition btns on the last page
+    total_pages = parseFloat($('#last-number').innerHTML);
+    for(let i  = 1; i <= total_pages; ++i){
+        htmls = `
+            <button class="nbP flex">${i}</button>
+        `
+        $(".number-page").insertAdjacentHTML("beforeend",htmls);
+    }
+    if(total_pages>5){
+        let dots = `<div class="nbP flex color-gray font16">...</div>`
+        $(".number-page").insertAdjacentHTML("afterend",dots);
+    }
+
+    //add atribute color for text and btns paginition
+    $$('.nbP').forEach((btn,ind)=>{
+       if(ind== 0){
+           btn.classList.add("active");
+       }
+       btn.onclick = ()=>{
+            moveStateActiveBtns(btn);
+       }
+    })
+    //handle when clicked on $(".tdsgt-SortResult .prev-next btns")
+    $(".tdsgt-SortResult .nExt-btn").onclick = () =>{
+        clicked_nbP++;
+        if(clicked_nbP <= total_pages){
+           $$(".nbP").forEach((btn,ind)=>{
+               ind = clicked_nbP;
+               moveStateActiveBtns(btn)
+           })
+        }
+        if(clicked_nbP >total_pages){
+            clicked_nbP = total_pages;
+        }
+    }
+    $(".tdsgt-SortResult .prev-btn").onclick = ()=>{
+        clicked_nbP--;
+        if(clicked_nbP >= 0){
+            $$(".nbP").forEach((btn,ind)=>{
+                ind = clicked_nbP - 2;
+                moveStateActiveBtns(btn)
+            })
+        }
+        if(clicked_nbP<0){
+            ind = 0;
+            moveStateActiveBtns(btn)
         }
     }
  }
