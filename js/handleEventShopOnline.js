@@ -1,4 +1,4 @@
-let htmls, clickAmount=0, total_pages;
+let htmls, clickAmount=0, total_pages, clicked = 1;
 const h4txts=$$('.h4txt');
 export const btns = $$('.bl1Sb-btn');
 const conditions_sort_links = $$(".hv-prcx a");
@@ -11,6 +11,20 @@ export function moveArrowInCatagories(h4txt){
 function moveStateActiveBtns(nbp){
     $('.nbP.active').classList.remove("active");
     nbp.classList.add("active");
+}
+function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
+    if(parseFloat(start_numberBtn) == 1){
+        prev_btn.style.opacity = 0.5;
+        next_btn.style.opacity = 1;
+    }
+    if(parseFloat(start_numberBtn)>1 && parseFloat(start_numberBtn) < total_pages){
+        prev_btn.style.opacity = 1;
+        next_btn.style.opacity = 1;
+    }
+    if(parseFloat(start_numberBtn) == total_pages){
+        prev_btn.style.opacity = 1;
+        next_btn.style.opacity = 0.5;
+    }
 }
 export function setValue(){
    const ctPRDs =  $$('.ctPRD');
@@ -465,15 +479,10 @@ export function setValue(){
  
  // Pagnition
  export function pagnition(products){
-    let total_pages, maximum_numbers_item_on_per_page = 30, clicked =1, clicked_nbP =0;
-    total_pages = products.length/maximum_numbers_item_on_per_page;
-    if(products.length % maximum_numbers_item_on_per_page != 0){
-        total_pages++;
-        $('#last-number').innerHTML = total_pages.toFixed(0);
-    }
-    else{
-        $('#last-number').innerHTML = total_pages.toFixed(0);
-    }
+    let total_pages, maximum_numbers_item_on_per_page = 20, clicked_nbP =0;
+    total_pages = Math.ceil(products.length/maximum_numbers_item_on_per_page);
+    // Làm tròn số bằng hàm Math.ceil()
+    $("#last-number").innerHTML = total_pages;
     //change opacity of btns
     if( $('#start-number').innerHTML == 1){
         $(".sortBy_right .prev-btn").style.opacity = 0.5;
@@ -484,46 +493,36 @@ export function setValue(){
         if(clicked<=1){
             clicked = 1
             $('#start-number').innerHTML = clicked;
-            $(".sortBy_right .prev-btn").disabled = true;
+            $(".sortBy_right .prev-btn").setAttribute("disabled","disabled");
         }
         if(clicked >1){
             $('#start-number').innerHTML = clicked;
-            $(".prev-btn").disabled = false;     
+            $(".prev-btn").removeAttribute("disabled");  
         }
-        //change opacity of prev-next btns while clicked
-        if($("#start-number").innerHTML == 1){
-            $(".sortBy_right .prev-btn").style.opacity = 0.5;
-            $(".sortBy_right .nExt-btn").style.opacity = 1;
-        }
-        if($("#start-number").innerHTML > 1){
-            $(".sortBy_right .prev-btn").style.opacity = 1;
-        }
+        $$(".nbP").forEach((btn,ind)=>{
+            ind = clicked -1;
+            moveStateActiveBtns($$(".nbP")[ind]);
+        })
+        setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
     }
     $('.sortBy_right .nExt-btn').onclick = ()=>{
         clicked++;
         if(clicked <= total_pages ){
                 $('#start-number').innerHTML = clicked;
-                $(".sortBy_right .nExt-btn").disabled = false;
+                $(".sortBy_right .nExt-btn").removeAttribute("disabled");
         }
         if(clicked > total_pages){
-                clicked =  $('#last-number').innerHTML;
-                $(".sortBy_right .nExt-btn").disabled = true;
+                clicked =  total_pages;
+                $(".sortBy_right .nExt-btn").setAttribute("disabled","disabled");
         }
-        //change opacity of prev-next btns while clicked
-        if($("#start-number").innerHTML == 1){
-            $(".sortBy_right .prev-btn").style.opacity = 0.5;
-            $(".sortBy_right .nExt-btn").style.opacity = 1;
-        }
-        if($("#start-number").innerHTML < $('#last-number').innerHTML){
-            $(".sortBy_right .prev-btn").style.opacity = 1;
-        }
-        if($("#start-number").innerHTML == $('#last-number').innerHTML){
-            $(".sortBy_right .prev-btn").style.opacity = 1;
-            $(".sortBy_right .nExt-btn").style.opacity = 0.5;
-        }
+        $$(".nbP").forEach((btn,ind)=>{
+            ind = clicked -1;
+            moveStateActiveBtns($$(".nbP")[ind]);
+        })
+        setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
     }
-    //paginition btns on the last page
-    total_pages = parseFloat($('#last-number').innerHTML);
+    
+    //paginition btns on the footer all-produtcs page
     for(let i  = 1; i <= total_pages; ++i){
         htmls = `
             <button class="nbP flex">${i}</button>
@@ -535,40 +534,62 @@ export function setValue(){
         $(".number-page").insertAdjacentHTML("afterend",dots);
     }
 
-    //add atribute color for text and btns paginition
+    //add animation for nbP btns
     $$('.nbP').forEach((btn,ind)=>{
        if(ind== 0){
            btn.classList.add("active");
        }
        btn.onclick = ()=>{
             moveStateActiveBtns(btn);
+            $("#start-number").innerHTML = ind+1;
+            clicked = ind;
+            setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
+            $('.sortBy_right .nExt-btn').onclick = ()=>{
+                clicked++;
+                if(clicked <= total_pages ){
+                        $('#start-number').innerHTML = clicked;
+                        $(".sortBy_right .nExt-btn").removeAttribute("disabled");
+                }
+                if(clicked > total_pages){
+                        clicked =  total_pages;
+                        $(".sortBy_right .nExt-btn").setAttribute("disabled","disabled");
+                }
+                $$(".nbP").forEach((btn,ind)=>{
+                    ind = clicked -1;
+                    moveStateActiveBtns($$(".nbP")[ind]);
+                })
+                setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
+            }
        }
     })
     //handle when clicked on $(".tdsgt-SortResult .prev-next btns")
     $(".tdsgt-SortResult .nExt-btn").onclick = () =>{
         clicked_nbP++;
-        if(clicked_nbP <= total_pages){
+        if(clicked_nbP < total_pages){
            $$(".nbP").forEach((btn,ind)=>{
                ind = clicked_nbP;
-               moveStateActiveBtns(btn)
+               moveStateActiveBtns($$(".nbP")[ind]);
            })
         }
-        if(clicked_nbP >total_pages){
-            clicked_nbP = total_pages;
+        if(clicked_nbP >= total_pages){
+            clicked_nbP = total_pages-1;
         }
+        $("#start-number").innerHTML = $(".nbP.active").innerHTML;
+        setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
     }
     $(".tdsgt-SortResult .prev-btn").onclick = ()=>{
         clicked_nbP--;
         if(clicked_nbP >= 0){
             $$(".nbP").forEach((btn,ind)=>{
-                ind = clicked_nbP - 2;
-                moveStateActiveBtns(btn)
+                ind = clicked_nbP;
+                moveStateActiveBtns($$(".nbP")[ind])
             })
         }
         if(clicked_nbP<0){
-            ind = 0;
-            moveStateActiveBtns(btn)
+            clicked_nbP = 0;
         }
+        $("#start-number").innerHTML = $(".nbP.active").innerHTML;
+        setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
     }
  }
  
