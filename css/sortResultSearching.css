@@ -194,7 +194,6 @@ ul li{
 .nExt-btn{
     width: 30px;
     border: 0px;
-    width: 50px;
     height: 30px;
     border-radius: 2px;
     margin: 0 8px;
@@ -239,7 +238,7 @@ ul li{
 }
 #pre-next-btn-header{
     position: absolute;
-    right: -110px;
+    right: 0px;
 }
 .sortBy_right .prev-btn,
 .sortBy_right .nExt-btn{
@@ -280,19 +279,39 @@ ul li{
     height: 50px;
 }
 .tdsgt-SortResult{
-    position: relative;
     width: 100%;
     height: 100%;
 }
 .pre-next-btn{
-    width: 330px;
+    position: relative;
     height: inherit;
+}
+.nav-btn{
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+}
+.nav-btn.prev-btn{
+    left: 300px;
+}
+.nav-btn.nExt-btn{
+    right: 300px;
+}
+.number-page-wrapper{
+    position: relative;
+    width: 275px;
+    height: 100%;
+    overflow: hidden;
 }
 .number-page{
     overflow: hidden;
+    height: 100%;
+    position: absolute;
+    /* width: max-content; */
+
 }
 .number-page button{
-    min-width: 25px;
+    width: 30px;
     border: 0px;
 }
 .round-price{

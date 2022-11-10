@@ -1,7 +1,7 @@
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
 import {render_products} from './condition_render_products.js'
-import {getWidth_promotion_code,sortFollowPrice,sortFollowBtn,filter, pagnition} from "./handleEventShopOnline.js"
+import {getWidth_promotion_code,sortFollowPrice,sortFollowBtn,filter, paginition} from "./handleEventShopOnline.js"
 // change position for check-icon when click on each element namethod name
 // js for change the key of search Method
 var get_Value_input  = $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input')
@@ -393,7 +393,7 @@ fetch('../data/product.json')
 //ALL Products
 function allproducts_inshop(products){
    products.forEach((prod,index)=>{
-      if(index <20){
+      if(index <10){
         htmls = render_products(prod);
         $('#tdsgtion-relative-product').insertAdjacentHTML('beforeend',htmls);
       }
@@ -401,7 +401,6 @@ function allproducts_inshop(products){
    filter(products);
    sortFollowBtn(products);
    sortFollowPrice(products);
-   pagnition(products);
-   
+   paginition(products); 
 }
  

@@ -26,23 +26,6 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
         next_btn.style.opacity = 0.5;
     }
 }
-export function setValue(){
-   const ctPRDs =  $$('.ctPRD');
-   ctPRDs.forEach((ctPRD,index)=>{
-       ctPRD.setAttribute("data-id",index);
-   })
-   h4txts.forEach((h4txt,curr)=>{
-       if(curr==0){
-           h4txt.classList.add('prd-active')
-       }
-   })
-   btns.forEach((btn,currBtn)=>{
-       if(currBtn==0){
-           btn.classList.add('active');
-       }
-       btn.setAttribute("data-relBtn",currBtn)
-   })
-}
 //Promotion Code
    export function getWidth_promotion_code(promotion){
        const getWidth = promotion.getBoundingClientRect().width;
@@ -478,8 +461,8 @@ export function setValue(){
        }
  
  // Pagnition
- export function pagnition(products){
-    let total_pages, maximum_numbers_item_on_per_page = 20, clicked_nbP =0;
+ export function paginition(products){
+    let total_pages, maximum_numbers_item_on_per_page = 5,clicked =1, clicked_nbP =0;
     total_pages = Math.ceil(products.length/maximum_numbers_item_on_per_page);
     // Làm tròn số bằng hàm Math.ceil()
     $("#last-number").innerHTML = total_pages;
@@ -491,7 +474,7 @@ export function setValue(){
     $(".sortBy_right .prev-btn").onclick = ()=>{
         clicked--;
         if(clicked<=1){
-            clicked = 1
+            clicked = 1;
             $('#start-number').innerHTML = clicked;
             $(".sortBy_right .prev-btn").setAttribute("disabled","disabled");
         }
@@ -500,7 +483,7 @@ export function setValue(){
             $(".prev-btn").removeAttribute("disabled");  
         }
         $$(".nbP").forEach((btn,ind)=>{
-            ind = clicked -1;
+            ind = clicked-1;
             moveStateActiveBtns($$(".nbP")[ind]);
         })
         setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
@@ -515,26 +498,41 @@ export function setValue(){
                 clicked =  total_pages;
                 $(".sortBy_right .nExt-btn").setAttribute("disabled","disabled");
         }
+        
         $$(".nbP").forEach((btn,ind)=>{
-            ind = clicked -1;
+            ind = clicked-1;
             moveStateActiveBtns($$(".nbP")[ind]);
         })
         setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
     }
     
-    //paginition btns on the footer all-produtcs page
-    for(let i  = 1; i <= total_pages; ++i){
-        htmls = `
-            <button class="nbP flex">${i}</button>
-        `
-        $(".number-page").insertAdjacentHTML("beforeend",htmls);
+    //Pagination btns on the footer all-produtcs page
+    if(total_pages<5){
+        for(let i  = 1; i <= total_pages; ++i){
+            htmls = `
+                <button class="nbP flex">${i}</button>
+            `
+            $(".number-page").insertAdjacentHTML("beforeend",htmls);
+        }
     }
     if(total_pages>5){
-        let dots = `<div class="nbP flex color-gray font16">...</div>`
-        $(".number-page").insertAdjacentHTML("afterend",dots);
+        for(let i  = 1; i <=5; ++i){
+            htmls = `
+                <button class="nbP flex">${i}</button>
+            `
+            $(".number-page").insertAdjacentHTML("beforeend",htmls);
+        }
+        let dots = `<button class="nbP flex color-gray font16">...</button>`
+        $(".number-page").insertAdjacentHTML("beforeend",dots);
+        for(let i  = 6; i <= total_pages; ++i){
+            htmls = `
+                <button class="nbP flex">${i}</button>
+            `
+            $(".number-page").insertAdjacentHTML("beforeend",htmls);
+        }
     }
 
-    //add animation for nbP btns
+    //Add animation for nbP btns
     $$('.nbP').forEach((btn,ind)=>{
        if(ind== 0){
            btn.classList.add("active");
@@ -544,22 +542,6 @@ export function setValue(){
             $("#start-number").innerHTML = ind+1;
             clicked = ind;
             setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
-            $('.sortBy_right .nExt-btn').onclick = ()=>{
-                clicked++;
-                if(clicked <= total_pages ){
-                        $('#start-number').innerHTML = clicked;
-                        $(".sortBy_right .nExt-btn").removeAttribute("disabled");
-                }
-                if(clicked > total_pages){
-                        clicked =  total_pages;
-                        $(".sortBy_right .nExt-btn").setAttribute("disabled","disabled");
-                }
-                $$(".nbP").forEach((btn,ind)=>{
-                    ind = clicked -1;
-                    moveStateActiveBtns($$(".nbP")[ind]);
-                })
-                setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
-            }
        }
     })
     //handle when clicked on $(".tdsgt-SortResult .prev-next btns")
@@ -576,6 +558,18 @@ export function setValue(){
         }
         $("#start-number").innerHTML = $(".nbP.active").innerHTML;
         setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
+        // console.log("nbP:" + " " + clicked_nbP)
+        // $$(".nbP").forEach((btn,indx) => {
+        //     if(btn.classList.contains("active")){
+        //         clicked_nbP  = indx;
+        //     }
+        // });
+        // $$(".nbP").forEach((btn,indx) =>{
+        //     indx = clicked_nbP+1;
+        //     if(indx<total_pages){
+        //         moveStateActiveBtns($$(".nbP")[indx])
+        //     }
+        // })
     }
     $(".tdsgt-SortResult .prev-btn").onclick = ()=>{
         clicked_nbP--;
@@ -590,6 +584,19 @@ export function setValue(){
         }
         $("#start-number").innerHTML = $(".nbP.active").innerHTML;
         setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
+        //console.log("nbP:" + " "+ clicked_nbP)
+        // $$(".nbP").forEach((btn,indx) => {
+        //     if(btn.classList.contains("active")){
+        //         clicked_nbP  = indx;
+        //     }
+        // });
+        // $$(".nbP").forEach((btn,indx) =>{
+        //     indx = clicked_nbP-1;
+        //     if(indx>=0){
+        //         moveStateActiveBtns($$(".nbP")[indx])
+        //     }
+        // })
+        // console.log(clicked_nbP);
     }
  }
  
