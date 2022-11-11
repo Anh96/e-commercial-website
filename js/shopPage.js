@@ -1,7 +1,7 @@
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
 import {render_products} from './condition_render_products.js'
-import {getWidth_promotion_code,sortFollowPrice,sortFollowBtn,filter, paginition} from "./handleEventShopOnline.js"
+import {getWidth_promotion_code,sortFollowPrice,sortFollowBtn,filter, pagination} from "./handleEventShopOnline.js"
 // change position for check-icon when click on each element namethod name
 // js for change the key of search Method
 var get_Value_input  = $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input')
@@ -275,7 +275,7 @@ fetch('../data/product.json')
                        $('.right-arr').style.display = "none"
                    }
                }
-               $('.CDpmt-wrapper').scrollLeft +=getWidth_promotion_code(ptmcode);
+               $('.CDpmt-wrapper').scrollLeft += getWidth_promotion_code(ptmcode);
            }
            $('.left-arr').onclick =()=>{
                count_click--;
@@ -285,7 +285,7 @@ fetch('../data/product.json')
                if(count_click<=0){
                    $('.left-arr').style.display ="none";
                }
-               $('.CDpmt-wrapper').scrollLeft -=getWidth_promotion_code(ptmcode);
+               $('.CDpmt-wrapper').scrollLeft -= getWidth_promotion_code(ptmcode);
            }
        })
    }
@@ -401,6 +401,6 @@ function allproducts_inshop(products){
    filter(products);
    sortFollowBtn(products);
    sortFollowPrice(products);
-   paginition(products); 
+   pagination(products);
 }
  

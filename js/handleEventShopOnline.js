@@ -12,6 +12,20 @@ function moveStateActiveBtns(nbp){
     $('.nbP.active').classList.remove("active");
     nbp.classList.add("active");
 }
+function hiddenBtn(nbp){
+    nbp.style.display = "none";
+}
+function ascendingWidthNumberPage(){
+    return $(".number-page-wrapper").style.width = "300px";
+}
+function moveScrollLeftbtns(nbp){
+    //ascendingWidthNumberPage();
+    return $(".number-page-wrapper").scrollLeft += getWidthBtnPaginationController(nbp);
+}
+function moveScrollRightbtns(nbp){
+    ascendingWidthNumberPage();
+    return $(".number-page-wrapper").scrollLeft += getWidthBtnPaginationController(nbp);
+}
 function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
     if(parseFloat(start_numberBtn) == 1){
         prev_btn.style.opacity = 0.5;
@@ -26,17 +40,18 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
         next_btn.style.opacity = 0.5;
     }
 }
+function getWidthBtnPaginationController(nbp){
+    return nbp.getBoundingClientRect().width;
+}
 //Promotion Code
    export function getWidth_promotion_code(promotion){
-       const getWidth = promotion.getBoundingClientRect().width;
-       return getWidth;
+       return promotion.getBoundingClientRect().width;
    }
 // Suggestion
    export let calculator_promotion_price = (products)=>{
        return products.price - (products.price *products.percent_saleoff/100);
    }
-// All Products
-  
+// All Products View 
    // Sort follow keyword of bl1Sb-btn button clicked;
    //function sort
    // descending sort
@@ -461,8 +476,8 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
        }
  
  // Pagnition
- export function paginition(products){
-    let total_pages, maximum_numbers_item_on_per_page = 5,clicked =1, clicked_nbP =0;
+ export function pagination(products){
+    let total_pages, maximum_numbers_item_on_per_page = 5,clicked =1, clicked_nbP =0, cont = 0;
     total_pages = Math.ceil(products.length/maximum_numbers_item_on_per_page);
     // Làm tròn số bằng hàm Math.ceil()
     $("#last-number").innerHTML = total_pages;
@@ -482,6 +497,7 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
             $('#start-number').innerHTML = clicked;
             $(".prev-btn").removeAttribute("disabled");  
         }
+        clicked_nbP = clicked - 1;
         $$(".nbP").forEach((btn,ind)=>{
             ind = clicked-1;
             moveStateActiveBtns($$(".nbP")[ind]);
@@ -498,7 +514,7 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
                 clicked =  total_pages;
                 $(".sortBy_right .nExt-btn").setAttribute("disabled","disabled");
         }
-        
+        clicked_nbP = clicked - 1;
         $$(".nbP").forEach((btn,ind)=>{
             ind = clicked-1;
             moveStateActiveBtns($$(".nbP")[ind]);
@@ -506,7 +522,7 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
         setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
     }
     
-    //Pagination btns on the footer all-produtcs page
+    //Pagination btns on the footer all-produtcs views.
     if(total_pages<5){
         for(let i  = 1; i <= total_pages; ++i){
             htmls = `
@@ -516,34 +532,38 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
         }
     }
     if(total_pages>5){
-        for(let i  = 1; i <=5; ++i){
+        for(let i  = 1; i <=total_pages; ++i){
             htmls = `
                 <button class="nbP flex">${i}</button>
             `
             $(".number-page").insertAdjacentHTML("beforeend",htmls);
         }
-        let dots = `<button class="nbP flex color-gray font16">...</button>`
-        $(".number-page").insertAdjacentHTML("beforeend",dots);
-        for(let i  = 6; i <= total_pages; ++i){
-            htmls = `
-                <button class="nbP flex">${i}</button>
-            `
-            $(".number-page").insertAdjacentHTML("beforeend",htmls);
-        }
+        let dots = `<button class="nbP nbp--none-click flex color-gray font16" disabled>...</button>`
+        $(".number-page-wrapper").insertAdjacentHTML("afterend",dots);
     }
 
     //Add animation for nbP btns
     $$('.nbP').forEach((btn,ind)=>{
-       if(ind== 0){
-           btn.classList.add("active");
-       }
-       btn.onclick = ()=>{
+        if(ind==0){
+            btn.classList.add("active");
+        }
+        
+        btn.onclick = ()=>{
+            clicked_nbP = ind;
+            clicked = ind+1;
             moveStateActiveBtns(btn);
             $("#start-number").innerHTML = ind+1;
-            clicked = ind;
             setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
-       }
+            if(ind==4){
+                moveScrollLeftbtns(btn);
+                btn.onclick = false;
+            }
+            if(ind>4){
+                moveScrollLeftbtns(btn);
+            }
+        }
     })
+    
     //handle when clicked on $(".tdsgt-SortResult .prev-next btns")
     $(".tdsgt-SortResult .nExt-btn").onclick = () =>{
         clicked_nbP++;
@@ -556,20 +576,9 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
         if(clicked_nbP >= total_pages){
             clicked_nbP = total_pages-1;
         }
+        clicked = clicked_nbP+1;
         $("#start-number").innerHTML = $(".nbP.active").innerHTML;
         setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
-        // console.log("nbP:" + " " + clicked_nbP)
-        // $$(".nbP").forEach((btn,indx) => {
-        //     if(btn.classList.contains("active")){
-        //         clicked_nbP  = indx;
-        //     }
-        // });
-        // $$(".nbP").forEach((btn,indx) =>{
-        //     indx = clicked_nbP+1;
-        //     if(indx<total_pages){
-        //         moveStateActiveBtns($$(".nbP")[indx])
-        //     }
-        // })
     }
     $(".tdsgt-SortResult .prev-btn").onclick = ()=>{
         clicked_nbP--;
@@ -582,21 +591,9 @@ function setOpacity(start_numberBtn, total_pages, prev_btn, next_btn){
         if(clicked_nbP<0){
             clicked_nbP = 0;
         }
+        clicked = clicked_nbP+1;
         $("#start-number").innerHTML = $(".nbP.active").innerHTML;
         setOpacity($("#start-number").innerHTML, total_pages,$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
-        //console.log("nbP:" + " "+ clicked_nbP)
-        // $$(".nbP").forEach((btn,indx) => {
-        //     if(btn.classList.contains("active")){
-        //         clicked_nbP  = indx;
-        //     }
-        // });
-        // $$(".nbP").forEach((btn,indx) =>{
-        //     indx = clicked_nbP-1;
-        //     if(indx>=0){
-        //         moveStateActiveBtns($$(".nbP")[indx])
-        //     }
-        // })
-        // console.log(clicked_nbP);
     }
  }
  

@@ -11,9 +11,6 @@
 .sOhome-ctn .xCAO3k{
     margin-top: 130px;
 }
-/* .lCAO{
-    width: 100%;
-} */
 ul li{
     list-style: none;
 }
@@ -183,7 +180,7 @@ ul li{
 }
 .numberOfdata{
     position: absolute;
-    right: 110px;
+    right: 70px;
 }
 .pRNBTN{
     position: absolute;
@@ -299,20 +296,27 @@ ul li{
 }
 .number-page-wrapper{
     position: relative;
-    width: 275px;
+    width: 235px;
     height: 100%;
-    overflow: hidden;
+    overflow-x: scroll;
+}
+.number-page-wrapper::-webkit-scrollbar{
+    display: none;
 }
 .number-page{
-    overflow: hidden;
     height: 100%;
     position: absolute;
-    /* width: max-content; */
-
 }
 .number-page button{
     width: 30px;
     border: 0px;
+}
+.nbp--none-click{
+    color: inherit;
+}
+.nbp--none-click:hover{
+    color: var(--primary-color);
+    cursor: auto;
 }
 .round-price{
     padding: 8px 0px;
