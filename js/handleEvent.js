@@ -7,10 +7,6 @@ const get_headingTXT_agency = $('.agency-saleOff span');
 const agency = $('.agency-saleOff')
 const search_Shop = $('.search-shop-inShopee');
 
-//Caculate price promotion
-export let calculator_promotion_price = (products)=>{
-    return products.price - (products.price *products.percent_saleoff/100);
-}
 // handle search history
     // get_input_value.placeholder = get_headingTXT_agency.innerText;
     // get_input_value.onkeydown = function(){
@@ -20,7 +16,7 @@ export let calculator_promotion_price = (products)=>{
 //Handle Home Banner
 
 
-// Handlde Catagories
+// Handle Catagories
     // Get variable Catagories
     const sectionContainer = $('.section-grid-layout-container')
     const listItemSection = $$('.list-item-section')
@@ -149,7 +145,7 @@ export default function handleEvent_next_prevBtn(item_Flash_sale){
             shopeeMallproductList.style.transform= 'translateX(0px)'
         }
         if(click_shopeeMall==1){
-            shopeeMallproductList.style.transform= 'translateX(-865px)'
+            shopeeMallproductList.style.transform= 'translateX(-883px)'
             prev__SPM_productBtn.style.display = 'block'
             next__SPM_productBtn.style.display = 'none'
         }
@@ -162,7 +158,7 @@ export default function handleEvent_next_prevBtn(item_Flash_sale){
             next__SPM_productBtn.style.display = 'block'
         }
         if(click_shopeeMall==1){
-            shopeeMallproductList.style.transform= 'translateX(865px)'
+            shopeeMallproductList.style.transform= 'translateX(855px)'
         }
     }
 
@@ -171,7 +167,6 @@ const next_topSearch = $('.nextBtn_topSearch')
 const prev_topSearch = $('.prevBtn_topSearch')
 const topSearch_productCTN = $('.top-search-wrapper')
 let click_TopSearch = 0;
-console.log()
 next_topSearch.onclick = ()=>{
     click_TopSearch++;
     if(click_TopSearch==1){

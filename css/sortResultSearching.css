@@ -203,7 +203,6 @@ ul li{
 .relative-wrapper .hv-above{
     display: block;
 }
-
 .stkBr{
     width: 100px;
     border: 0.05px solid var(--primary-color);
@@ -286,6 +285,7 @@ ul li{
 .nav-btn{
     position: absolute;
     height: 100%;
+    margin: 0 30px;
     z-index: 2;
 }
 .nav-btn.prev-btn{
@@ -299,6 +299,7 @@ ul li{
     width: 235px;
     height: 100%;
     overflow-x: scroll;
+    background-color: antiquewhite;
 }
 .number-page-wrapper::-webkit-scrollbar{
     display: none;
@@ -308,6 +309,7 @@ ul li{
     position: absolute;
 }
 .number-page button{
+    /* position: absolute; */
     width: 30px;
     border: 0px;
 }

@@ -1605,6 +1605,9 @@ h3{
     font-size: 13px;
     color: var(--text-color);
 }
+.dcrs0{
+    height: 30px;
+}
 .dcrs00{
     word-wrap: break-word;
     display: -webkit-box;

@@ -1,5 +1,6 @@
 $ = document.querySelector.bind(document);
-$$ = document.querySelectorAll.bind(document)
+$$ = document.querySelectorAll.bind(document);
+let htmls = "";
 // history search API
 let searchable = [
     'mua hàng',
@@ -16,113 +17,70 @@ let searchable = [
 // box search variables
 const inputField = $('.nav-search-input')
 const historySearchCtn = $('.history-search-container')
-const noneDataHistory = $('#none-flexible-data')
-const sortSearchable = searchable.sort()
-// let hasDataHistory = $('#has-data')
-console.log()
+
 // popup variables
 const popup_item = $$('.popup-item')
 const cancelBtn = $$('.cancel-popup')
 const nextCircleSupport = $$('.list-next-circle-animation');
 let current =0;
 //handle history search variables
-console.log()
-/*inputField.onkeyup = ()=>{
-    var results=[];
-    var textInputValue = inputField.value;
-    let i;
-    for(i of searchable){
-        if(!textInputValue.length){
-            historySearchCtn.style.display ='none'
-        }
-        if(textInputValue){
-            if(i.toLowerCase().startsWith(textInputValue.toLowerCase())){
-                historySearchCtn.style.display = 'block'
-                noneDataHistory.style.display ='none'
-                results.push(i);
-                renderHistorySearch(results);
-            }
-            else{
-                historySearchCtn.style.display = 'block'
-                noneDataHistory.style.display ='block'
-            }
-        }
-    }
+// none flexible data results search
+function noneDataHistory(){
+    htmls = `
+                <div id="none-flexible-data" class="history-search" style="height: 200px;padding: 42px;">
+                    <div class="flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-emoji-frown-fill mgTB-8" viewBox="0 0 16 16">
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm-2.715 5.933a.5.5 0 0 1-.183-.683A4.498 4.498 0 0 1 8 9.5a4.5 4.5 0 0 1 3.898 2.25.5.5 0 0 1-.866.5A3.498 3.498 0 0 0 8 10.5a3.498 3.498 0 0 0-3.032 1.75.5.5 0 0 1-.683.183zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+                        </svg>
+                    </div>
+                    <div class="has_data_text" style="height:50%;">
+                        <h3 style=" text-align: center;">Không tìm được kết quả phù hợp</h3>
+                        <p style=" text-align: center;">
+                            Vui lòng tìm kiếm bằng từ khóa khác
+                            To learn more about selling on Shopee, visit the 
+                            <a style="color: blue; text-decoration:underline">Seller Education Hub.</a>
+                        </p>
+                    </div>
+                </div>
+            `
+        return htmls;
 }
-function renderHistorySearch(results){
-    
-    if(results.length==0){
-        noneDataHistory.style.display = 'block'
-        historySearchCtn.innerHTML = " "
-        //console.log(results.length)
+let render_filter_results = function(listData){
+    let li = "";
+    for(i of listData){
+        li += `<a class="list-history-search-link">${i}</a>`;
+    }
+    historySearchCtn.innerHTML = li;
+}
+let filter_keyword = function(e){
+    keyword = inputField.value.toLowerCase();
+    filter_data = searchable.filter(data=>{
+        return data.toLowerCase().indexOf(keyword) > -1;
+    })
+    if(filter_data.length == 0){
+        htmls = noneDataHistory();
+        historySearchCtn.innerHTML = htmls
+    }
+    else 
+        render_filter_results(filter_data);
+}
+function displayText(item){
+    inputField.value = item;
+    historySearchCtn.style.display = "none";
+}
+inputField.onkeyup = ()=>{
+    if(inputField.value.length > 0){
+        historySearchCtn.style.display = "block";
+        filter_keyword();
+        $$(".list-history-search-link").forEach(item=>{
+            item.onclick = ()=>{
+                displayText(item.innerHTML);
+            }
+        })
     }
     else{
-        const htmls = results.map(item=>{   
-            return `
-                    <a href="#" class="list-history-search-link">
-                        <div class="shopee-searchbar-hints__history-entry__text">
-                            <span>${item}</span>
-                        </div> 
-                    </a>
-            `
-        }).join('');
-        historySearchCtn.innerHTML = `<div class="history-search has-data"> ${htmls}</div>`
-        
+        historySearchCtn.style.display = "none";
     }
-}*/
-inputField.onkeyup = function(){
-    let i;
-    removeElement();
-    for(i of searchable.sort()){
-        /*if(i.toLocaleLowerCase().startsWith(inputField.value.toLowerCase()) && inputField.value.length != 0){
-            let listItem  = document.createElement('a');
-            listItem.classList.add('list-history-search-link')
-            listItem.setAttribute("onclick","displayText('" + i + "')")
-            let word = i.substr(0, inputField.value.length);
-            word+= i.substr(inputField.value.length);
-            listItem.innerHTML = word;
-            historySearchCtn.appendChild(listItem)
-            historySearchCtn.style.display ='block'
-        }
-        if(i.toLocaleLowerCase().includes(inputField.value.toLowerCase())==false && inputField.value.length !=0){
-                noneDataHistory.style.display ='block';
-                historySearchCtn.style.display ='block';
-        }
-        */
-        if(inputField.value.length!=0){
-            noneDataHistory.style.display ='none';
-            if(i.toLocaleLowerCase().startsWith(inputField.value.toLowerCase())){
-                let listItem  = document.createElement('a');
-                listItem.classList.add('list-history-search-link')
-                listItem.setAttribute("onclick","displayText('" + i + "')")
-                let word = i.substr(0, inputField.value.length);
-                word+= i.substr(inputField.value.length);
-                listItem.innerHTML = word;
-                historySearchCtn.appendChild(listItem)
-                historySearchCtn.style.display ='block'
-                noneDataHistory.style.display ='none';
-                
-
-            }
-            if(i.toLocaleLowerCase().includes(inputField.value.toLowerCase())==false){
-                    noneDataHistory.style.display ='block';
-                    historySearchCtn.style.display ='block';
-            }
-        }
-        if(!inputField.value){
-            historySearchCtn.style.display ='none'
-        }
-        
-    }
-}
-function displayText(text){
-    inputField.value = text;
-}
-function removeElement(){
-    let elements = document.querySelectorAll('.list-history-search-link')
-    elements.forEach(e=>{
-        e.remove()
-    })
 }
 // auto show popup
 autoShowPopUp()

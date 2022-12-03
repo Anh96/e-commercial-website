@@ -1,68 +1,67 @@
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
 import {render_products} from './condition_render_products.js'
-import {getWidth_promotion_code,sortFollowPrice,sortFollowBtn,filter, pagination} from "./handleEventShopOnline.js"
+import { pagination } from './paging.js';
+import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
 // change position for check-icon when click on each element namethod name
-// js for change the key of search Method
-var get_Value_input  = $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input')
-var getName = $('.shopOnline-nav-search-ctn .search_inshop .above .which-shop');
-var getNameMethod = $$('.shopOnline-nav-search-ctn .search_inshop .bellow-search_inshop .cekTXT')
-var checkBtn = $('.check-btn');
+    // js for change the key of search Method
+    var get_Value_input  = $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input')
+    var getName = $('.shopOnline-nav-search-ctn .search_inshop .above .which-shop');
+    var getNameMethod = $$('.shopOnline-nav-search-ctn .search_inshop .bellow-search_inshop .cekTXT')
+    var checkBtn = $('.check-btn');
 //bannner var
-const next_circle = $$('.list-next-circle-animation')
-var current_index =0;
-getNameMethod.forEach((name,index)=>{
-    name.onclick=  function(){
-        const html = name.innerText;
-        getName.innerHTML = html;
- 
-       // change position of check button
-       $('.cekTXT.prd-active').classList.remove('prd-active')
-       this.classList.add('prd-active')
-       checkBtn.style.top = this.offsetTop + 10 +'px'
-       $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input').placeholder = 'Tìm trong shop này'
-        // change placeholder value
-      
-       if(index==0){
-           $('.search-inShop-history').style.display = 'block'
-           $('.search_in-shope-ctn').style.display = 'none'
-       }
-       else{
-           //active search in shop
-           $('.agency-saleOff').style.display = 'block'
-           //off search in shopee
-           $('.search-inShop-history').style.display = 'none'
-           $('.search-shop-inShopee').style.display ='none'
-      
-           var placeHolder = $('.search_in-shope-ctn .agency-saleOff span')
-           $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input').placeholder = placeHolder.innerText
-           get_Value_input.onkeydown = function(){
-               $('.agency-saleOff').style.display = 'none'
-               $('.search-shop-inShopee').style.display= 'block'
-           }
-       }
-        //get compatible history method search
-     }
-})
+    const next_circle = $$('.list-next-circle-animation')
+    var current_index =0;
+    getNameMethod.forEach((name,index)=>{
+        name.onclick=  function(){
+            const html = name.innerText;
+            getName.innerHTML = html;
+    
+        // change position of check button
+        $('.cekTXT.prd-active').classList.remove('prd-active')
+        this.classList.add('prd-active')
+        checkBtn.style.top = this.offsetTop + 10 +'px'
+        $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input').placeholder = 'Tìm trong shop này'
+            // change placeholder value
+        if(index==0){
+            $('.search-inShop-history').style.display = 'block'
+            $('.search_in-shope-ctn').style.display = 'none'
+        }
+        else{
+            //active search in shop
+            $('.agency-saleOff').style.display = 'block'
+            //off search in shopee
+            $('.search-inShop-history').style.display = 'none'
+            $('.search-shop-inShopee').style.display ='none'
+        
+            var placeHolder = $('.search_in-shope-ctn .agency-saleOff span')
+            $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input').placeholder = placeHolder.innerText
+            get_Value_input.onkeydown = function(){
+                $('.agency-saleOff').style.display = 'none'
+                $('.search-shop-inShopee').style.display= 'block'
+            }
+        }
+            //get compatible history method search
+        }
+    })
 //recommend products shop online
-let htmls;
-fetch('../data/product.json')
-   .then(res=>{
-       return res.json();
-   })
-   .then(data=>{
-       catagories(data.products_inshop);
-       renderPromotionItem(data.shop_promotion_codes)
-       check(data.shop_promotion_codes)
-       suggestion_products_ShopOnline(data.products_inshop)
-       banner(data.banner_shop_online)
-       topsales(data.products_inshop)
-       allproducts_inshop(data.products_inshop);
-   })
- 
+    let htmls;
+    fetch('../data/product.json')
+    .then(res=>{
+        return res.json();
+    })
+    .then(data=>{
+        catagories(data.products_inshop);
+        renderPromotionItem(data.shop_promotion_codes)
+        check(data.shop_promotion_codes)
+        suggestion_products_ShopOnline(data.products_inshop)
+        banner(data.banner_shop_online)
+        topsales(data.products_inshop)
+        allproducts_inshop(data.products_inshop);
+    })
+    
 //Catagories in shop
    let catas = [];
-   import {moveArrowInCatagories} from "./handleEventShopOnline.js"
    function check_lengthCatagories(catagories){
        catagories = catas.length;
        if(catagories>4){
@@ -379,7 +378,7 @@ fetch('../data/product.json')
    }  
 //Top Sales
    function topsales(products){
-       let amount= [];
+       let amount= new Array;
        products.forEach(prod=>{
            if(prod.quantity_sold>=500){
                amount.push(prod)
@@ -392,15 +391,9 @@ fetch('../data/product.json')
    }
 //ALL Products
 function allproducts_inshop(products){
-   products.forEach((prod,index)=>{
-      if(index <10){
-        htmls = render_products(prod);
-        $('#tdsgtion-relative-product').insertAdjacentHTML('beforeend',htmls);
-      }
-   })
-   filter(products);
-   sortFollowBtn(products);
-   sortFollowPrice(products);
-   pagination(products);
+    pagination(products);
+    filter(products);
+    sortFollowBtn(products);
+    sortFollowPrice(products);
 }
  
