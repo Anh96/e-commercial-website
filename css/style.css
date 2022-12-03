@@ -556,21 +556,21 @@ h3{
 }
 .shopping-cart:hover .cart-view-notification{
     display: block;
-    z-index: 2;
+    z-index: 10;
 }
 .cart-view-notification{
     display: none;
     position: absolute;
     top:85%;
     right:0px;
-    background-color: var(white);
+    background-color: white;
     width: 410px;
     height:fit-content;
-    z-index: 2;
-    animation: AnimationNotification ease-in 0.4s;
-    -moz-animation:AnimationNotification ease-in 0.4s; 
-    -webkit-animation: AnimationNotification ease-in 0.4s;
-    -o-animation: AnimationNotification ease-in 0.4s;
+    z-index: 10;
+    animation: AnimationNotification ease-in 0.6s;
+    -moz-animation:AnimationNotification ease-in 0.6s; 
+    -webkit-animation: AnimationNotification ease-in 0.6s;
+    -o-animation: AnimationNotification ease-in 0.6s;
     transform-origin: top calc(100%-10px) ;
     will-change: opacity transform;
 }
@@ -582,6 +582,7 @@ h3{
     top: -25px;
     right: 8px;
 }
+
 .shopping-cart-none-products{
     display: block;
     position: absolute;

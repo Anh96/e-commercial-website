@@ -114,7 +114,7 @@ function renderHeaderNav(){
                 <li id="sign-in" class="header-navbar-item header-item-vertical-line flex-jtfspar">
                     <a class="font-weigh-bold" href="../page/signin_form.html" target="_self">Đăng Ký</a>
                 </li>
-                <li id="log-in" class="header-navbar-item">
+                <li id="log-in" class="header-navbar-item flex-jtfspar">
                     <a class="font-weigh-bold" href="../page/register_form.html" target="_self">Đăng Nhập</a>
                 </li>
 

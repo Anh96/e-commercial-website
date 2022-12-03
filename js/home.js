@@ -303,97 +303,29 @@ function renderProduct_topSearch(products){
         top_search_link_ctn.insertAdjacentHTML("beforeend", htmls)
     })
 }
-function render_products(prod){
-    return htmls =
-    `
-        <div class="b4etd none-change-opacity">
-            <a class="grid-item-link-product none-change-opacity box_shadow">
-                <div class="bellow-grid-item-link">
-                    <div class="body-container">
-                        <div class="favorite-shop">
-                            <div class="header-block-favorite-shop">
-                                <span class="fvr-text">Yêu thích</span>
-                            </div>
-                        </div>
-                        <div class="product-img-body">
-                            <img src="${prod.body_img_url}" class="img-body" alt="">
-                        </div>
-                        <div class="product-img-footer">
-                            <img src="${prod.footer_img_url}" class="img-footer">    
-                        </div>
-                    </div>
-                    <div class="footer-sggtion">  
-                        <div class="description-sggtion">
-                            <div class="descrp-txt-overflow">
-                                <div class="dcrs0">
-                                    <div class="dcrs00">
-                                    ${prod.title}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>          
-                        <div class="ft-sggtion-block ">
-                            <div class="sticker-brand-ctn mgTB-4 flxC">
-                                <div class="stkBr flex">
-                                    <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
-                                </div>
-                                <div class="stkBr flex">
-                                    <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
-                                </div>
-                            </div>
-                            <div class="price-block mgT32 flex-jtfspbt">
-                                    <div class="crr-price flxC">
-                                        <div class="currenty-sggtion font-14">đ</div>
-                                        <div class="price-sggtion">${prod.price}</div>
-                                    </div>  
-                                    <div class="nbs-sggtion flex">
-                                        <div class="mgl-8 font-14">Đã bán
-                                            <span class="number-sld">${prod.quantity_sold}</span>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <div class="hover-looking-same-product">
-                <div class="hv-above">
-                    <a href="../page/product_detail.html" ></a>
-                </div>
-                <a class="none-change-opacity none-padding txt-white-color">
-                    <div class="flex font16">
-                        Tìm sản phẩm tương tự
-                    </div>
-                </a>
-            </div>
-        </div>
-    `
-}
 // TODAY SUGGESSTIONS
+import { render_products_has_hoversameblock } from "./condition_render_products.js"
 export function renderProduct_Relative_HomePage(products){
     let loadmore = $('.ft-sggtion-btn');
     var maxResult = 6;
-    products.map(prod=>{
-        if(prod.percent_saleoff==0)
-            return new_Array.push(prod);
-    })
-    if(new_Array.length<= maxResult){
-        new_Array.map(item=>{
-            tdsgtion.innerHTML += render_products(item);
-        })
+    if(products.length<= maxResult){
+        for( let i in products){
+            htmls = render_products_has_hoversameblock(products[i]);
+            tdsgtion.innerHTML += htmls;
+        }
     }
     else{
         for(let i =0; i<maxResult;++i) {
-            tdsgtion.innerHTML += render_products(new_Array[i])
+            htmls = render_products_has_hoversameblock(products[i]);
+            tdsgtion.innerHTML += htmls;
         }
         loadmore.onclick = ()=>{
             for(let i =maxResult;i<maxResult+6;++i){
-                if(products[i].percent_saleoff==0){
-                    tdsgtion.innerHTML += render_products(new_Array[i])  
-                }
+                htmls = render_products_has_hoversameblock(products[i]);
+                tdsgtion.innerHTML += htmls;
             }
             maxResult+=6;
-            if(maxResult>= new_Array.length){
+            if(maxResult>= products.length){
                 $('.footer-sggtion-see-more').style.display ='none'
             }
         }
