@@ -1,8 +1,9 @@
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
 import {render_products} from './condition_render_products.js'
-import { pagination } from './paging.js';
+import { totalPages, pagination } from './paging.js';
 import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
+import { create_htmls_frame_infoshop, render_info_shop_online } from './shop_information.js';
 // change position for check-icon when click on each element namethod name
     // js for change the key of search Method
     var get_Value_input  = $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input')
@@ -44,13 +45,14 @@ import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, so
             //get compatible history method search
         }
     })
-//recommend products shop online
+// Call API uses FETCH
     let htmls;
     fetch('../data/product.json')
     .then(res=>{
         return res.json();
     })
     .then(data=>{
+        //create_htmls_frame_infoshop()
         catagories(data.products_inshop);
         renderPromotionItem(data.shop_promotion_codes)
         check(data.shop_promotion_codes)
@@ -58,6 +60,7 @@ import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, so
         banner(data.banner_shop_online)
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop);
+        render_info_shop_online(data.shop_onlines)
     })
     
 //Catagories in shop
@@ -396,4 +399,4 @@ function allproducts_inshop(products){
     sortFollowBtn(products);
     sortFollowPrice(products);
 }
- 
+

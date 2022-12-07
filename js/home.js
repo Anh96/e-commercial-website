@@ -108,7 +108,7 @@ function render_slide_rightSlide_homeBanner(imgs){
         `
             <a class="right-slider-img box_shadow none-padding">
                 <div class="right-slider-img-bgr">
-                    <div class="right-img" style="background-image:url('${img.right_img}')"></div>
+                    <div class="right-img" style="background-image:url('${img.right_img}'); background-size: cover; background-repeat: no-repeat no-repeat'"></div>
                 </div>
             </a>
         `

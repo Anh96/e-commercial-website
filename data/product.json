@@ -2,7 +2,7 @@
     "slider":[
         {
             "slide_id": 1,
-            "silde_img_link": "https://cf.shopee.vn/file/bb37fa0c31b5ee1a04d2737bfe25e435_xxhdpi "
+            "silde_img_link": "https://cf.shopee.vn/file/f77fa025d079ae928a764488a07ea636_xxhdpi"
         },
         {
             "slide_id": 2,
@@ -10,7 +10,7 @@
         },
         {
             "slide_id": 3,
-            "silde_img_link": "https://cf.shopee.vn/file/f7ea085eb75581b0cb9ba7d5e8cd8385_xxhdpi"
+            "silde_img_link": "https://cf.shopee.vn/file/950c1b1ec053c7809338d025dc42439f_xxhdpi"
         },
         {
             "slide_id": 4,
@@ -24,7 +24,7 @@
         },
         {
             "bellow_link":"",
-            "right_img": "https://cf.shopee.vn/file/adf20f078915c03b5bcaffb6681da693_xhdpi"
+            "right_img": "https://cf.shopee.vn/file/eeb1944f62a948d04a30aa58a4c42e3b_xhdpi"
         }
     ],
     "catagories":[
@@ -411,12 +411,29 @@
         },
         {
             "shop_id": 2,
-            "shop_name": "Lover Indoor Plants",
-            "shop_patron":"Indoor_Official_Store",
+            "shop_name": "Prola Parfum Vietnam",
+            "shop_patron":"Prola_Parfum_Vietnam",
             "state_online":false,
             "favorite_shop": false,
             "hours_online_ago": 2,
-            "logo_shop":"https://cf.shopee.vn/file/719f1f779b3cc5dd69804799a034da79_tn",
+            "logo_shop":"https://cf.shopee.vn/file/41997880dac513c5f7bd35c5d1499078_tn",
+            "quantity_products_inshop":240,
+            "quantity_pages_follow":740,
+            "percent_respons": 99,
+            "quantity_users_follow": 20,
+            "rating_shop": 4.8,
+            "quantity_rating": 2000,
+            "time_shop_joined": 12,
+            "shop_background_image": "../assets/imgs/product_img/z3620837210178_bf50ed5e1927a8dab1f98c44f029a85c.jpg"
+        },
+        {
+            "shop_id": 3,
+            "shop_name": "Apple chính hãng",
+            "shop_patron":"Apple_Flagship_Store",
+            "state_online":false,
+            "favorite_shop": false,
+            "hours_online_ago": 2,
+            "logo_shop":"https://cf.shopee.vn/file/62160f74aa5cffa160b2062658d2be75_tn",
             "quantity_products_inshop":240,
             "quantity_pages_follow":740,
             "percent_respons": 99,
