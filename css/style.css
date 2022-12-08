@@ -21,7 +21,7 @@
     line-height: 1.2;
 }
 html{
-    font-size: 0.875rem; 
+    /* font-size: 0.875rem;  */
     line-height: 1.6rem;/*=100%*/
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
@@ -53,6 +53,7 @@ a{
 a:hover{
     opacity: 0.8;
     cursor: pointer;
+    text-decoration: none;
 }
 ul{
     list-style: none;
