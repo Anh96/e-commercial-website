@@ -3,7 +3,8 @@ $$ = document.querySelectorAll.bind(document);
 import {render_products} from './condition_render_products.js'
 import { totalPages, pagination } from './paging.js';
 import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
-import { create_htmls_frame_infoshop, render_info_shop_online } from './shop_information.js';
+import {render_info_shop_online } from './shop_information.js';
+// import { responsive_shop_page } from './responsive.js';
 // change position for check-icon when click on each element namethod name
     // js for change the key of search Method
     var get_Value_input  = $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input')
@@ -60,7 +61,8 @@ import { create_htmls_frame_infoshop, render_info_shop_online } from './shop_inf
         banner(data.banner_shop_online)
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop);
-        render_info_shop_online(data.shop_onlines)
+        render_info_shop_online(data.shop_onlines);
+        // responsive_shop_page();
     })
     
 //Catagories in shop

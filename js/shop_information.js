@@ -115,7 +115,6 @@ export function render_info_shop_online(shop_onlines){
                     `
             }
             $('.time-online').insertAdjacentHTML('beforeend',htmls)
-
             //handle data > 10000
             if(shop.quantity_products_inshop>1000){
                 $('.quantity_products_inshop').innerHTML = `${shop.quantity_products_inshop/1000}k`
@@ -144,9 +143,17 @@ export function render_info_shop_online(shop_onlines){
                 $('.quantity_rating').innerHTML = `(${shop.quantity_rating/1000}k Đánh giá)`
             }
             if(shop.quantity_rating<1000){
-                $('.quantity_rating').innerHTML = `${quantity_rating}`
+                $('.quantity_rating').innerHTML = `${shop.quantity_rating}`
             }
             $('.time_shop_joined').innerHTML = `${shop.time_shop_joined}`
+            // MOBILE SCREEN
+            //$("data-rating").innerHTML = `${shop.rating_shop}`
+            if(window.innerWidth<=480){
+                //$(".mobile-rating-followers").style.display = "block";
+                $(".data-rating").innerHTML = `${shop.rating_shop}`;
+                $(".followers div").innerHTML = `${shop.quantity_pages_follow}`
+            }
+            
         }
         $('.shop-bgr').innerHTML = `<div class="shopBGR-img" style = "background-image:url('${shop.shop_background_image}')"></div>`
     })
