@@ -5,7 +5,10 @@ const productsAPI = "../data/product.json"
 const section_grid_layout_container = $('.section-grid-layout-container')
 const trennding_linkCTN = $('.grid-ctn-body-trendding')
 const tdsgtion = $('#tdsgtion-relative-product');
-let htmls = '', new_Array = new Array;
+let htmls,new_Array = new Array;
+import {renderHeaderNav} from "./header.js"
+import {keysearch} from "./search_result.js"
+renderHeaderNav();
 function handleProducts(){
     fetch(productsAPI)
         .then(res=>{
@@ -20,9 +23,14 @@ function handleProducts(){
             renderProduct_TrenddingSearch(data.trendding_search)
             renderProduct_topSearch(data.products)
             renderProduct_Relative_HomePage(data.products);
+            if(window.innerWidth>=1080){
+
+                keysearch(data.key_search)
+            }
         })
 } 
 handleProducts()
+// 
 var imgSliders;
 var currentIndex =0;
 const nextCircleAnimationHomeBanner = $$('.list-next-circle-animation')

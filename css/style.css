@@ -1,3 +1,4 @@
+@import url("./resposive_index_page.css");
 :root{
     --primary-color: #ee4d2d;
     --primary-color-rgba:rgb(238, 77, 45,0.07) ;
@@ -29,19 +30,6 @@ html{
 }
 body{
     background-color: var(--container-color);
-}
-
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: translateZ(0);
-    z-index: 100;
-    height:var(--header-heigh);
-    background-image: linear-gradient(0, #fe6433, #f53e28);
-    color: var(--white-color);
-    padding-top: 4px;
 }
 a{
     text-decoration: none;
@@ -78,6 +66,18 @@ h3{
 .change-opacity:hover{
     opacity: 0.8;
     cursor: pointer;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateZ(0);
+    z-index: 100;
+    height:var(--header-heigh);
+    background-image: linear-gradient(0, #fe6433, #f53e28);
+    color: var(--white-color);
+    padding-top: 4px;
 }
 .nav-bar-wrap-container{
     height: 2.125rem;

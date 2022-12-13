@@ -6,110 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/base.css">
+        <link rel="stylesheet" href="./css/resposive_index_page.css">
         <link rel="shortcut icon" href="./assets/imgs/logo/logoshop.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <script type ="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     </head>
     <body id="home-body">
         <div id="main">
+            <!-- header on desktop -->
             <header class="header hdx">
                 <div class="grid nav-bar-wrap-container header-home">
                     <nav class="header-nav-bar flex-jtfspbt"></nav>
                     <!-- search container -->
-                    <div id= "mainSctn" class="nav-header-container-with-search">
-                        <a href="index.html" class="header-logo">
-                            <div class="header-logo-wraper inlineFlex" href="#">
-                                <img src="../assets/imgs/logo/logoshop.png" alt="$logo-error" id="logo-img">
-                                <div id="shop-name">Fast Buy</div>
-                            </div>
-                        </a>     
-                        <div class="nav-header-with-search">
-                            <div class="box-search">
-                                <div class="box-search-input-icon">
-                                    <div class="container-input-history-search">
-                                        <input type="text" name="search" value="" autocomplete="off" class="nav-search-input" placeholder="">
-                                        <div class="history-search-container box_shadow">
-                                                <div class="history-search">
-                                                    <div id="historyDIV">
-                                                        <div id="sH" class="search_in-shope-ctn">
-                                                            <a href="#" class="shopee-searchbar-hints__history-prefill agency-saleOff  flex-jtfspbt" style="display:block">
-                                                                <span class="mgl-8 mgR-8 txt-UperCase">Tựu trường sale chất -50%</span>
-                                                                <img src="https://cf.shopee.vn/file/4fa96751e79f4d4d2de96f87d8a8dc85" height="24">
-                                                            </a>
-                                                            <a href="#" class="shopee-searchbar-hints__history-prefill search-shop-inShopee" style="display:none">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ee4d2d" class="bi bi-shop mgl-8" viewBox="0 0 16 16">
-                                                                    <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
-                                                                </svg>
-                                                                <span class="mgl-8">Tìm Shop</span>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="keyWordHistory">
-                                                        <a href="#" class="list-history-search-link">
-                                                            <div class="shopee-searchbar-hints__history-entry__text">
-                                                                <span>lọ chiết serum</span>
-                                                            </div> 
-                                                        </a>
-                                                        <a href="#" class="list-history-search-link">
-                                                            <div class="shopee-searchbar-hints__history-entry__text">
-                                                                <span>Caldium frog of blended</span>
-                                                            </div> 
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    <button class="search-btn flex">
-                                            <svg height="19" viewBox="0 0 19 19" width="19" class="shopee-svg-icon sBTN"><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z"></path></g></g></g></g></g></svg>
-                                    </button>
-                                </div>
-                                <div class="box-search-follow-data">
-                                    <ul class="top-list-data-search"></ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                        </div>
-                        <div class="shopping-cart">
-                                <a href="#" class="shopping-cart-link">
-                                    <div>
-                                        <svg class="iicon-shopping-cart-2" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                        </svg>
-                                    </div>
-                                </a>
-                            <div class="cart-view-notification box_shadow">
-                                <div class="shopping-cart-none-products">
-                                    <img src="../assets/imgs/notification/f716952b0acbc99590da.jpg" alt="" class="img-cart-view-none-product">
-                                    <p>Chưa có sản phẩm nào</p>
-                                </div>
-                                <div class="shopping-cart-has-product">
-                                    <ul class="ul-cart-bag">
-                                        <p class="ul-heading-txt">Sản phẩm mới thêm</p>
-                                        <li class="list-product-in-bag">
-                                            <a href="#" class="product-cart-detail-link">
-                                                <div class="div-img-product-cart-view">
-                                                    <img src="../assets/imgs/product_img/jacklyn-pr-1.jpg" alt="" class="product-img-cart">
-                                                </div>
-                                                <div class="div-txt">
-                                                    <p class="name-product">Cây con Jacklyn</p>
-                                                    <p class="price-product">đ14.0000</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <div class="footer-cart-notification">
-                                            <div class="count-number-other-product">3 sản phẩm thêm vào giỏ hàng</div>
-                                            <div class="btn-see-cart-view">
-                                                <button>Xem giỏ hàng</button>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="search-logo-cart"></div>
                 </div>
             </header>
+            <!-- end header on desktop -->
+        
             <div class="div-container-home">
                 <div class="xCao3k N2AB">
                     <div class="home-page">
@@ -456,9 +369,9 @@
             <div class="footer"></div>
         </div>
     </body>
-    <script src="./js/header.js"></script>
+    <!-- <script src="./js/header.js"></script> -->
     <script src="./js/footer.js"></script>
-    <script src="./js/search_result.js"></script>
+    <!-- <script type="module" src="./js/search_result.js"></script> -->
     <script type="module" src="./js/home.js"></script>
     <script type="module" src="./js/handleEvent.js"></script>
 </html>

@@ -1,0 +1,28 @@
+@import url("./style.css");
+/* @import url("./responsive.css"); */
+@media only screen and (max-width:480) {
+    .grid{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .nav-header-container-with-search{
+        width: 100%;
+        background-color: antiquewhite;
+    }
+   .box-search{
+       width: 100%;
+       background-color: antiquewhite;
+   }
+   .box-search-input-icon{
+       width: 100%;
+   }
+   .container-input-history-search{
+       width: 100%;
+   }
+   .nav-search-input{
+       width: 20%;
+   }
+}
+@media only screen and (min-width:1024){
+    
+}
