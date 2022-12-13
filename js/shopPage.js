@@ -62,7 +62,6 @@ import {render_info_shop_online } from './shop_information.js';
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop);
         render_info_shop_online(data.shop_onlines);
-        // responsive_shop_page();
     })
     
 //Catagories in shop
@@ -314,7 +313,7 @@ import {render_info_shop_online } from './shop_information.js';
                    <a href="${banner.banner_link}" class="lIt-link none-padding none-change-opacity">
                        <div class="lIt-item-BGR">
                            <div>
-                               <img width="invalid-value" height="invalid-value" class="LIRqnE _1KQ1MG" style="object-fit: contain" src="${banner.banner_img_link}">
+                               <img  class="LIRqnE _1KQ1MG" style="object-fit:cover" src="${banner.banner_img_link}">
                            </div>
                        </div>
                    </a>

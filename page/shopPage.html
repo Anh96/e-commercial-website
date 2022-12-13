@@ -175,21 +175,28 @@
                                                    </div>
                                                    <div class="rgt mgl-8 flex-jtfspbt">
                                                        <div>
-                                                            <div class="shopName txt-UperCase txt-white-color font20"></div>
+                                                            <div class="rgt0 flxC" >
+                                                                <div class=" rgt00 flxC">
+                                                                    <div class="shopName txt-UperCase txt-white-color font20"></div>
+                                                                    <!-- Mobile Arrow btn go to SHOP DETAILS -->
+                                                                    <div class="arrow-gotoshopdetails">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <!-- end Arrow go to SHOP DETAILS -->
+                                                                </div>
+                                                            </div>
                                                             <div class="time-online flxC"></div>
                                                        </div>
-                                                       <div class="arrow-gotoshop">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                                            </svg>
-                                                        </div>
+                                                       
                                                         <div id="followbtn_mobile">
                                                             <div class="follow-shop-btn mgTB-8 flex">
                                                                 <div class="flex">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-plus" viewBox="0 0 16 16">
                                                                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                                                                      </svg>
-                                                                     <div class="txt-white-color font16 txt-UperCase none-change-opacity flex">Theo dõi</div>
+                                                                     <div class="txt-white-color txt-UperCase none-change-opacity flex" style="font-size: 11px;">Theo dõi</div>
                                                                 </div>
                                                                 
                                                             </div>
@@ -244,7 +251,24 @@
                                    </div>
                                    <!-- Header Catagory -->
                                    <div class="cata-Prd-shop-ctn txt-Black-color mgT32 flxC">
-                                       <div class="shop-menu-container flex-jtfspbt">
+                                    <!-- Catatgories on mobile -->
+                                    <div id="catagories-mobile" class="shop-menu-container flex-jtfspbt">
+                                        <div class="lft-ctn-shop-menu">
+                                            <div class=" menu-left flxC">
+                                                <a class="ctPRD flex none-change-opacity txt-Black-color item-CtPRD-active">
+                                                    <div class="txt-Capitalize flex">Shop </div>
+                                                </a>
+                                                <a href="#all-products" class="ctPRD flex txt-Black-color">
+                                                    <div class="txt-UperCase flex">sản phẩm</div>
+                                                </a>
+                                                <a href="./catagories_responsive_mobile.html" class="ctPRD flex txt-Black-color">
+                                                    <div class="txt-UperCase flex">Danh mục</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Catagories on desktop -->
+                                       <div id="catagories-desktop" class="shop-menu-container flex-jtfspbt">
                                            <div class="lft-ctn-shop-menu">
                                                <div class=" menu-left flxC">
                                                    <a class="ctPRD flex none-change-opacity txt-Black-color item-CtPRD-active">
@@ -274,7 +298,7 @@
                                </div>
                            </div>
                            <!-- SHOP PROMOTION CODE -->
-                           <div class="grid top">
+                           <div id="top" class="grid shop-promotion-ctn">
                                <div class="CODE-promotion-ctn margin-tb32">
                                    <div class="txt-Upercase mgl-8 pd-LR-8 font600 font16 prmHeading">MÃ GIẢM GIÁ CỦA SHOP</div>
                                    <div class="CDpMT">
@@ -298,17 +322,29 @@
                            </div>
                        </div>
                        <!-- SUGGESTION/TOP SALE/BANNER ADVERTISMENT-->
-                       <div class="grid">
+                       <div class="grid rec-top-ban-ctn">
                            <!-- SUGGESSTION -->
-                           <div class=" suggestion margin-tb32">
-                               <div class="grid-containter">
-                                   <div class="txt-Upercase font20 color-gray mgB-8">GỢI Ý CHO BẠN</div>
-                                   <div class="suggestion_products_ShopOnline flex"></div>
+                           <div class="suggestion margin-tb32">
+                               <div class="sgtion-scroll-ctn">
+                                    <div class="heading-txt-sggtion flex-jtfspbt">
+                                        <div class="txt-Upercase font16 font600 color-gray mgB-8 mgl-8">GỢI Ý CHO BẠN</div>
+                                        <div class="flex txt-color-primary-color mgB-8 mgR-8 see-all">
+                                            <span class="txt-UperCase">xem thêm</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi-chevron-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                            </svg>
+                                        </div>
+                                        
+                                    </div>
+                                   <div class="sgtion-relative">
+                                        <div class="suggestion_products_ShopOnline flex"></div>
+                                   </div>
+
                                </div>
                            </div>
                            <!-- BACKGROUND/IMG ADVERTISMENT -->
                            <div class="bACKGROUND_TPRMT margin-tb32">
-                               <div>
+                               <div class="margin-tb16">
                                    <img width="invalid-value" height="invalid-value" class="LrWLhR _1KQ1MG" style="object-fit: contain" src="https://cf.shopee.vn/file/ef270698447ac2f170dfb365aac682e9">
                                </div>
                            </div>
@@ -341,14 +377,15 @@
                                    <img width="invalid-value" height="invalid-value" class="LrWLhR _1KQ1MG" style="object-fit: contain" src="https://cf.shopee.vn/file/3ba536c7b149d53b5cda3990c5ef8002">
                                </div>
                                <div class="pRDTOPSALE ctn margin-tb32">
-                                   <div class="txt-Upercase font20 color-gray mgB-8">SẢN PHẨM BÁN CHẠY</div>
+                                   <div class="txt-Upercase font20 color-gray mgB-8 mgl-8">SẢN PHẨM BÁN CHẠY</div>
                                    <div id="top_sales" class="flex"></div>
                                </div>
                            </div>
                        </div>
                        <!-- SORT BY -->
-                       <div class="grid">
-                           <div class="lft-nav-Stctn mgT32 flx">
+                       <div class="grid allproducts-ctn">
+                           <div class="lft-nav-Stctn flx">
+                                <!-- start catagories side on desktop -->
                                <div class="left-sort lft-ctgR mgr-16">
                                    <div class="lftS-heading flx ">
                                        <svg viewBox="0 0 12 10" class="shopee-svg-icon _2wRTrs icon-all-cate"><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-373 -208)"><g transform="translate(155 191)"><g transform="translate(218 17)"><path d="m0 2h2v-2h-2zm4 0h7.1519633v-2h-7.1519633z"></path><path d="m0 6h2v-2h-2zm4 0h7.1519633v-2h-7.1519633z"></path><path d="m0 10h2v-2h-2zm4 0h7.1519633v-2h-7.1519633z"></path></g></g></g></g></svg>
@@ -369,7 +406,11 @@
                                        </div>
                                    </div>
                                </div>
+                               <!-- end catagories side on desktop -->
                                <div id="all-products" class="right-sort">
+                                    <!-- heading on mobile -->
+                                    <div class=" heading_on_mobile flxC txt-Black-color txt-UperCase mgTB-8 mgl-8 font600">gợi ý cho bạn</div>
+                                    <!-- start heading sort on desktop-->
                                    <div class="sortBy-ctn mgTB-8">
                                        <div class="sortBy flex-jtfspbt">
                                            <div class="sortBy-Left flx">
@@ -420,6 +461,7 @@
                                            </div>
                                        </div>
                                    </div>
+                                   <!-- end heading sort on desktop -->
                                    <!-- ALL PRODUCTS -->
                                    <div class="today-sggtion-wrapper relative-wrapper">
                                        <div class="grid-containter">
@@ -448,8 +490,12 @@
                    </div>
                </div>
            </div>
-           <!-- Footer -->
+           <!-- Footer on desktop-->
            <div class="footer"></div>
+           <!-- Footer on mobile -->
+           <footer>
+                <div class="flex txt-color-primary-color margin-tb16">Không tìm thấy sản phẩm nào khác</div>
+           </footer>
            <a href="#top" class="btn-go-top none-change-opacity">
                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" version="1">
                    <defs>

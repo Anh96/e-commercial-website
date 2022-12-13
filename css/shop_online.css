@@ -124,10 +124,10 @@ a:hover{
     position: relative;
     width: 100%;
 }
-/* CODE PROMOTION */
+/* PROMOTION CODE*/
 .left-arr svg,
 .right-arr svg{
-    top: 8.5px ;
+    top: 4.5px ;
     right: 10px;
 }
 .CODE-promotion-ctn,
@@ -167,12 +167,14 @@ a:hover{
     height: 100px;
 }
 .logo_shop_img{
+    position: absolute;
     width: 80px;
     height: 80px;
     background-repeat: no-repeat no-repeat;
     background-size: contain;
     border-radius: 50%;
     border: 4px solid var(--line-color);
+    bottom: 0px;
 }
 
 .fvr-shop{
@@ -183,10 +185,15 @@ a:hover{
     background-color: var(--primary-color);
     bottom: 0px;
 }
+
 .shopName{
     font-weight: 600;
 }
 /* Time Online */
+.time-online{
+    position: absolute;
+    top: 30px;
+}
 .circle-state{
     width: 5px;
     height: 5px;
@@ -197,7 +204,7 @@ a:hover{
     width:45%;
     /* max-width: 100%; */
     height: 30px;
-    border: 1px solid var(--white-color);
+    border: 1.5px solid var(--white-color);
     border-radius: 3px;
 }
 .lft-ctgR .sort-list-ctn{
@@ -355,9 +362,6 @@ a:hover{
         text-overflow: ellipsis;
     }
 /* Promotion CODE */
-.CODE-promotion-ctn{
-    position: relative;
-}
 .CDpMT{
     position: relative;
 }
@@ -375,6 +379,7 @@ a:hover{
     height: 120px;
     box-shadow: 0px 0px 20px 0px rgba(102, 85, 87,0.2);
     margin: 0px 8px;
+    font-size: 13px;
 }
 .curve-PRM{
     width: 10px;
@@ -446,6 +451,10 @@ a:hover{
 .LrWLhR{
     width: 100%;
 }
+/* SUGGESSTION */
+.see-all{
+    height: 35px;
+}
 .b4etd{
     width: 189px;
 }
@@ -474,9 +483,9 @@ a:hover{
     background-color: var(--red-color);
     font-size: 8px;
 }
+/* BANNER's SHOP PAGE */
 .shop-page_banner{
     width: 100%;
-    /* height: 1310px; */
     height: auto;
 }
 .shop-page_banner .slide-show-ctn{
@@ -520,15 +529,20 @@ a:hover{
     width: 100%;
 }
 .btn-arrow button{
+    opacity: 0.7;
     background-color: var(--line-color);
     width: 35px;
     height: 100%;
     border: 0px;
 }
+
 .shop-page_banner .next-circle-animation{
     transform:  translateY(-47px);
 }
 /* ALL Products in shop */
+.lft-nav-Stctn{
+    margin-top: 32px;
+}
 #sort_result_search{
     width: 196px;
 }
