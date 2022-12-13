@@ -23,12 +23,12 @@
     }
     .rlt0Sk{
         position: relative;
-        height: 220px;
+        height: 180px;
         background-color: var(--primary-color);
     }
     .shop-online .lft-rltSk {
         width: 100%;
-        height: 200px;
+        height: 160px;
         position: absolute;
         bottom: 0px;
         border-radius: 0px;
@@ -64,16 +64,31 @@
         color: var(--white-color);
         background-color: inherit;
     }
+    .input-icon-box input::placeholder{
+        color: rgb(223, 217, 217);
+        font-size: 13px;
+    }
     .g0{
         position: absolute;
         height: 70%;
-        bottom: 30px;
+        bottom: 10px;
         margin-top: 30px;
     }
     .rgt{
         position: relative;
         width: 70%;
         height: 70px;
+    }
+    .rgt0{
+        position: absolute; 
+        width: 100%; 
+        height: 30px; 
+        top: 0px;
+    }
+    .rgt00{
+        position:relative; 
+        height: inherit; 
+        width:100%;
     }
     .bgr_shop-info{
         position: relative;
@@ -95,16 +110,21 @@
         bottom: 0px;
     }
     .fvr-shop{
-        width:60px;
+        width: 60px;
         height: 12px;
         font-size: 10px;
     }
-    .shopName{
-        position: absolute;
-        top: 15px;
-    }
     .shopName.font20{
         font-size: 12px;
+    }
+    .arrow-gotoshopdetails{
+        position: absolute;
+        right: 30px;
+        width: 15%;
+        height: 100%;
+        top: 5px;
+        margin-right: 4px ;
+        z-index: 15;
     }
     .time-online{
         position: absolute;
@@ -112,15 +132,6 @@
     }
     .time-online div{
         font-size: 12px;
-    }
-    .arrow-gotoshop{
-        position: absolute;
-        right: -10px;
-        width: 15%;
-        height: 20px;
-        top: 15px;
-        margin-right: 4px ;
-        z-index: 15;
     }
     .mobile-rating-followers{  
         display: flex;
@@ -150,7 +161,129 @@
         width: 30%;
     }
     .follow-shop-btn{
-        width: 40%;
+        position: absolute;
+        width: 30%;
+        bottom: 0px;
+    }
+    /* CATAGORIES RESPONSIVE */
+    #catagories-desktop{
+        display: none;
+    }
+    .lft-ctn-shop-menu{
+        width: 100%;
+    }
+    .ctPRD{
+        width: calc(100%/3);
+    }
+    /* PROMOTION CODE */
+        /* hiddend next - previous btns */
+    .small-btn {
+        display: none;
+    }
+    #scroll_ctn{
+        overflow: hidden;
+    }
+    .CDpmt-wrapper{
+        overflow-x: scroll;
+    }
+    .CDpmt-wrapper::-webkit-scrollbar{
+        display: block;
+    }
+    /* SUGESSTION */
+    .sgtion-scroll-ctn{
+        position: relative;
+        width: 100%;
+        height: 420px;
+        /* padding: 6px; */
+    }
+    .sgtion-relative{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+    .suggestion_products_ShopOnline{
+        position: absolute;
+    }
+    .suggestion_products_ShopOnline #sort_result_search{
+        width: 16.6666666%;
+        height: inherit;
+    }
+    /* IMGS PROMOTION */
+    
+    /* BANNER SHOP ONLINE RESPONSIVE */
+    .ul-list-shopSld{
+        position: relative;
+        width: 100%;
+    }
+    .list-item-shopSld img{
+        position: inherit;
+        width: 100%;
+    }
+    .btn-arrow{
+        height: 50px;
+    }
+    .btn-arrow button{
+        width: 30px;
+    }
+    .next-circle-animation{
+        left: 42%;
+    }
+    .list-next-circle-animation{
+        width: 15px;
+        height: 15px;
+    }
+    /* TOP SALE */
+    .pRDTOPSALE{
+        position: relative;
+        width: 100%;
+    }
+    #top_sales{
+        display: flex;
+        position: inherit;
+        flex-flow: row wrap;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .pRDTOPSALE #sort_result_search{
+        width: 183px;
+    }
+    .favorite-shop{
+        font-size: 13px;
+    }
+    .ft-sggtion-block {
+        font-size: 13px;
+    }
+    .nbs-sggtion {
+        font-size: 11px;
+    }
+    .footer{
+        display: none;
+    }
+    /* ALL PRODUCTS IN SHOP AND SORT */
+    .lft-nav-Stctn{
+        position: relative;
+        width: 100%;
+    }
+    .left-sort{
+        display: none;
+    }
+    .sortBy-ctn{
+        display: none;
+    }
+    #all-products{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    #all-products #sort_result_search{
+        width: 183px;
+        height: auto;
+        margin: 0 2px 4px 2px;;
+    }
+    .tdsgt-ftt-ctn{
+        display: none;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -177,13 +310,31 @@
     .mobile-search-controller{
         display: none;
     }
-    .arrow-gotoshop{
+    .arrow-gotoshopdetails{
         display: none;
+    }
+    .time-online{
+        
     }
     .mobile-rating-followers{
         display: none;
     }
+    #followbtn_mobile{
+        display: none;
+    }
     .follow-shop-btn{
        width: 45%;
+    }
+    #catagories-mobile{
+        display: none;
+    }
+    .heading_on_mobile{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    #all-catagories_resp_mobile{
+        display: none;
     }
 }

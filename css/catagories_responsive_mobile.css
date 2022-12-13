@@ -1,0 +1,25 @@
+@import url();
+@import url("./sellerpage.css");
+@import url("./shop_online.css");
+@import url("./responsive.css");
+/* all-catagories_resp_mobile */
+*{
+    padding: 0px;
+}
+#all-catagories_resp_mobile ul{
+    display: block;
+    width: 100%;
+    background-color: var(--white-color);
+}
+#all-catagories_resp_mobile li{
+    display: block;
+    height: 90px;
+    width: 100%;
+    border: 1.5px solid var(--line-color);
+    padding: 4px;
+    background-color: antiquewhite;
+}
+#all-catagories_resp_mobile img{
+    width: 30px;
+    height: 30px;
+}
