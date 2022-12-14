@@ -4,6 +4,8 @@ import {render_products} from './condition_render_products.js'
 import { totalPages, pagination } from './paging.js';
 import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
 import {render_info_shop_online } from './shop_information.js';
+import { renderHeaderNav } from './header.js';
+import {keysearch} from "./keyword_search.js"
 // import { responsive_shop_page } from './responsive.js';
 // change position for check-icon when click on each element namethod name
     // js for change the key of search Method
@@ -53,7 +55,7 @@ import {render_info_shop_online } from './shop_information.js';
         return res.json();
     })
     .then(data=>{
-        //create_htmls_frame_infoshop()
+        renderHeaderNav();
         catagories(data.products_inshop);
         renderPromotionItem(data.shop_promotion_codes)
         check(data.shop_promotion_codes)
@@ -62,10 +64,13 @@ import {render_info_shop_online } from './shop_information.js';
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop);
         render_info_shop_online(data.shop_onlines);
+        if(window.innerWidth >= 1280){
+            keysearch(data.key_search)
+        }
     })
     
 //Catagories in shop
-   let catas = [];
+   let catas = new Array;
    function check_lengthCatagories(catagories){
        catagories = catas.length;
        if(catagories>4){

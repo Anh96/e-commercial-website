@@ -195,7 +195,7 @@ h3{
     transform-origin: top calc(100%-10px) ;
     will-change: opacity transform; /*giúp trình duyệt chạy animation mượt hơn */
 }
-/* create triangle on top notification */
+/* create tri-angle on top notification */
 .notification::before{
     position: absolute;
     content: "";
@@ -680,10 +680,7 @@ h3{
     margin-top: 119px;
 }
 .home-page{
-    /* display: flex;
-    flex-direction: column; */
     margin-bottom: 32px;
-    /* overflow: hidden; */
 }
 /* Home Banner*/
 .home-banner-container{
@@ -1169,7 +1166,6 @@ h3{
     margin-top: 32px;
     color: (--primary-color);
     width: 100%;
-    /* background-color: var(--white-color); */
 }
 .header-smll-container{
     min-width: 1200px;
@@ -1356,7 +1352,6 @@ h3{
 .bgr-item-trendding{
     width: 120px;
     height: 120px;
-    /* background: url("https://cf.shopee.vn/file/d04040a34b1020fcbe1693870473a4aa") 0 no-repeat; */
     background-size: cover;
     background-repeat: no-repeat;
     margin-right: 8px;
@@ -1457,15 +1452,12 @@ h3{
     margin-top: -5.5rem;
 }
 .sggtion-container .header-ctn-trendding-search{
-    /* display: flexbox; */
     display: flex;
     position: sticky;
     width: 100%;
-    /* top: 7.375rem; */
-    top: 9rem;
+    top: 8rem;
     z-index: 1000;
-    /* margin-top: 7.375rem; */
-    margin-top: 10rem;
+    margin-top: 8.5rem;
 }
 .header-suggestion{
     display: flex;

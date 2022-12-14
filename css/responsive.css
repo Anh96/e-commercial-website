@@ -115,13 +115,12 @@
         font-size: 10px;
     }
     .shopName.font20{
-        font-size: 12px;
+        font-size: 11px;
     }
     .arrow-gotoshopdetails{
         position: absolute;
-        right: 30px;
+        right: 20px;
         width: 15%;
-        height: 100%;
         top: 5px;
         margin-right: 4px ;
         z-index: 15;
@@ -156,13 +155,9 @@
     #desktop{
         display: none;
     }
-    #followbtn_mobile{
-        background-color: antiquewhite;
-        width: 30%;
-    }
     .follow-shop-btn{
-        position: absolute;
-        width: 30%;
+        width: auto;
+        height: 100%;
         bottom: 0px;
     }
     /* CATAGORIES RESPONSIVE */
@@ -181,25 +176,24 @@
         display: none;
     }
     #scroll_ctn{
-        overflow: hidden;
+        overflow: visible;
     }
     .CDpmt-wrapper{
+        position: relative;
         overflow-x: scroll;
+        overflow-y: hidden;
     }
     .CDpmt-wrapper::-webkit-scrollbar{
-        display: block;
+        display:-webkit-box;
+    }
+    .PMTcode{
+        width: 90%;
     }
     /* SUGESSTION */
-    .sgtion-scroll-ctn{
-        position: relative;
-        width: 100%;
-        height: 420px;
-        /* padding: 6px; */
-    }
     .sgtion-relative{
         position: relative;
         width: 100%;
-        height: 100%;
+        height: 410px;
         overflow-y: hidden;
         overflow-x: scroll;
     }
@@ -210,8 +204,6 @@
         width: 16.6666666%;
         height: inherit;
     }
-    /* IMGS PROMOTION */
-    
     /* BANNER SHOP ONLINE RESPONSIVE */
     .ul-list-shopSld{
         position: relative;
@@ -247,7 +239,7 @@
         width: 100%;
     }
     .pRDTOPSALE #sort_result_search{
-        width: 183px;
+        width: 170px;
     }
     .favorite-shop{
         font-size: 13px;
@@ -286,7 +278,7 @@
         display: none;
     }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
     .grid{
         min-width: 1200px;
         margin: 0px auto;
@@ -313,9 +305,6 @@
     .arrow-gotoshopdetails{
         display: none;
     }
-    .time-online{
-        
-    }
     .mobile-rating-followers{
         display: none;
     }
@@ -335,6 +324,17 @@
         display: none;
     }
     #all-catagories_resp_mobile{
+        display: none;
+    }
+    /* PROMOTION CODE */
+    #scroll_ctn{
+        overflow: hidden;
+    }
+    .CDpmt-wrapper{
+        position: relative;
+        overflow-x: scroll;
+    }
+    .CDpmt-wrapper::-webkit-scrollbar{
         display: none;
     }
 }

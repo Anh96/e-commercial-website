@@ -362,18 +362,7 @@ a:hover{
         text-overflow: ellipsis;
     }
 /* Promotion CODE */
-.CDpMT{
-    position: relative;
-}
-#scroll_ctn{
-    overflow: hidden;
-}
-.CDpmt-wrapper{
-    overflow-x: scroll;
-}
-.CDpmt-wrapper::-webkit-scrollbar{
-    display: none;
-}
+
 .PMTcode{
     position: relative;
     height: 120px;

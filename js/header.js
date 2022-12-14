@@ -2,8 +2,7 @@ $ = document.querySelector.bind(document)
 $$ = document.querySelectorAll.bind(document)
 let htmls;
 export function renderHeaderNav(){
-    let htmls = "";
-    if(window.innerWidth >= 1080){
+    if(window.innerWidth >= 1280){
         htmls =
         `
                 <div class="nav-bar-list left-nav-bar-list flex-jtfspar">
@@ -89,10 +88,10 @@ export function renderHeaderNav(){
                         
                     </li>
                     <li class="header-navbar-item change-opacity">
-                            <div class="ic flex">
-                                <svg height="16" viewBox="0 0 16 16" width="16" class="shopee-svg-icon icon-help-center"><g fill="none" fill-rule="evenodd" transform="translate(1)"><circle cx="7" cy="8" r="7" stroke="currentColor"></circle><path fill="currentColor" d="m6.871 3.992c-.814 0-1.452.231-1.914.704-.462.462-.693 1.089-.693 1.892h1.155c0-.484.099-.858.297-1.122.22-.319.583-.473 1.078-.473.396 0 .715.11.935.33.209.22.319.517.319.902 0 .286-.11.55-.308.803l-.187.209c-.682.605-1.1 1.056-1.243 1.364-.154.286-.22.638-.22 1.045v.187h1.177v-.187c0-.264.055-.506.176-.726.099-.198.253-.396.462-.572.517-.451.825-.737.924-.858.275-.352.418-.803.418-1.342 0-.66-.22-1.188-.66-1.573-.44-.396-1.012-.583-1.716-.583zm-.198 6.435c-.22 0-.418.066-.572.22-.154.143-.231.33-.231.561 0 .22.077.407.231.561s.352.231.572.231.418-.077.572-.22c.154-.154.242-.341.242-.572s-.077-.418-.231-.561c-.154-.154-.352-.22-.583-.22z"></path></g></svg>
-                            </div>
-                            <a href="../page/support.html"  target="_self" class="mgLR-4">Hỗ Trợ</a>
+                        <div class="ic flex">
+                            <svg height="16" viewBox="0 0 16 16" width="16" class="shopee-svg-icon icon-help-center"><g fill="none" fill-rule="evenodd" transform="translate(1)"><circle cx="7" cy="8" r="7" stroke="currentColor"></circle><path fill="currentColor" d="m6.871 3.992c-.814 0-1.452.231-1.914.704-.462.462-.693 1.089-.693 1.892h1.155c0-.484.099-.858.297-1.122.22-.319.583-.473 1.078-.473.396 0 .715.11.935.33.209.22.319.517.319.902 0 .286-.11.55-.308.803l-.187.209c-.682.605-1.1 1.056-1.243 1.364-.154.286-.22.638-.22 1.045v.187h1.177v-.187c0-.264.055-.506.176-.726.099-.198.253-.396.462-.572.517-.451.825-.737.924-.858.275-.352.418-.803.418-1.342 0-.66-.22-1.188-.66-1.573-.44-.396-1.012-.583-1.716-.583zm-.198 6.435c-.22 0-.418.066-.572.22-.154.143-.231.33-.231.561 0 .22.077.407.231.561s.352.231.572.231.418-.077.572-.22c.154-.154.242-.341.242-.572s-.077-.418-.231-.561c-.154-.154-.352-.22-.583-.22z"></path></g></svg>
+                        </div>
+                        <a href="../page/support.html"  target="_self" class="mgLR-4">Hỗ Trợ</a>
                     </li>
                     <li class="header-navbar-item">
                         <div class="change-languages-container">
@@ -122,7 +121,7 @@ export function renderHeaderNav(){
 
                 </ul>
         `
-        $(".header-home .header-nav-bar").innerHTML = htmls;
+        $(".header-nav-bar").innerHTML = htmls;
         htmls = 
         `
             <div id= "mainSctn" class="nav-header-container-with-search">
@@ -218,23 +217,23 @@ export function renderHeaderNav(){
         `
         $(".header-home .search-logo-cart").innerHTML = htmls;
     }
-    if(window.innerWidth<= 480 ){
+    if(window.innerWidth <= 480 ){
         htmls = 
         `
-            <div id= "mainSctn" class="nav-header-container-with-search gird">
+            <div>
                 <div class="box-search">
-                    <div class="box-search-input-icon">
+                    <div class="box-search-input-icon flex">
                         <div class="container-input-history-search">
                             <input type="text" name="search" value="" autocomplete="off" class="nav-search-input" placeholder="">
                         </div>
-                    <button class="search-btn flex">
-                            <svg height="19" viewBox="0 0 19 19" width="19" class="shopee-svg-icon sBTN"><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z"></path></g></g></g></g></g></svg>
-                    </button>
+                        <button class="search-btn flex">
+                                <svg height="19" viewBox="0 0 19 19" width="19" class="shopee-svg-icon sBTN"><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z"></path></g></g></g></g></g></svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         `
         $(".header .search-logo-cart").innerHTML = htmls;
-        
     }
-    //return htmls;
 }
+renderHeaderNav();

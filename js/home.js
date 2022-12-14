@@ -7,7 +7,7 @@ const trennding_linkCTN = $('.grid-ctn-body-trendding')
 const tdsgtion = $('#tdsgtion-relative-product');
 let htmls,new_Array = new Array;
 import {renderHeaderNav} from "./header.js"
-import {keysearch} from "./search_result.js"
+import {keysearch} from "./keyword_search.js"
 renderHeaderNav();
 function handleProducts(){
     fetch(productsAPI)
@@ -23,8 +23,7 @@ function handleProducts(){
             renderProduct_TrenddingSearch(data.trendding_search)
             renderProduct_topSearch(data.products)
             renderProduct_Relative_HomePage(data.products);
-            if(window.innerWidth>=1080){
-
+            if(window.innerWidth>= 1280){
                 keysearch(data.key_search)
             }
         })

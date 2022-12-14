@@ -1,5 +1,5 @@
 export function keysearch(keys){
-    keys.map(key=>{
+    keys.forEach(key=>{
        let htmls = `
             <li class="name-products">
                 <a href="../page/sortResultSearching.html" target="_self" class="link-product">${key.key_product}</a>
