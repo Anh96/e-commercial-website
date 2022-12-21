@@ -397,7 +397,7 @@
             "shop_name": "FastBuy_official_store",
             "shop_patron":"FastBuy_Official_Store",
             "state_online":true,
-            "favorite_shop": true,
+            "favorite_shop": false,
             "hours_online_ago": 2,
             "logo_shop":"https://img.wattpad.com/5045c17fe931afc78ad247c9a0a2be37ae32d8dd/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f5353346a76384f396d6f4f706f773d3d2d313032323930333139372e313637386266666631663935623636363331303830363832383234372e6a7067",
             "quantity_products_inshop":240,
@@ -447,6 +447,7 @@
     "products_inshop":[
         {
             "id": 1,
+            "shop_id": 1,
             "title": "Tai nghe không dây Bluetooth TWS AMoi F9 Pro - Chống nước IP67 - Pin 2000maH - Dùng 600 tiếng",
             "price": 200000,
             "percent_saleoff": 0,
@@ -463,6 +464,7 @@
         },
         {
             "id": 2,
+            "shop_id": 1,
             "title": " [Trả góp 0%] Apple Macbook Air 13.6\" M2 (2022') 8C GPU/8GB/256GB Space Grey- Hàng Chính Hãng [Futureworld- APR]",
             "price": 36000000,
             "percent_saleoff": 6,
@@ -479,6 +481,7 @@
         },
         {
             "id": 3,
+            "shop_id": 1,
             "title": "[Mã ELAP500K giảm 8% đơn 500K] Apple Watch Series 3 38mm GPS Sport Band",
             "price": 3000000,
             "percent_saleoff": 10,
@@ -495,6 +498,7 @@
         },
         {
             "id": 4,
+            "shop_id": 1,
             "title": "[Mã ELAP1TR giảm 5% đơn 3TR] Apple iPhone 11 64GB",
             "price": 25000000,
             "percent_saleoff": 30,
@@ -511,6 +515,7 @@
         },
         {
             "id": 5,
+            "shop_id": 1,
             "title": "Túi đeo chéo đi chơi, du lịch cho nam nữ TDC007 ĐẸP NHẤT 2022",
             "price": 500000,
             "percent_saleoff": 20,
@@ -527,6 +532,7 @@
         },
         {
             "id": 6,
+            "shop_id": 1,
             "title": "Nước hoa Narcis rodriguez for him EDP 100ml nam tính và mạnh mẽ - Flora perfume",
             "price": 220000,
             "percent_saleoff": 10,
@@ -543,6 +549,7 @@
         },
         {
             "id": 7,
+            "shop_id": 1,
             "title": "Nước hoa nam Giogio Armani Acqua Di Gio Lưu Hương Lâu Quyến Rũ",
             "price": 200000,
             "percent_saleoff": 10,
@@ -559,6 +566,7 @@
         },
         {
             "id": 8,
+            "shop_id": 1,
             "title": "Mắt kính unisex hot trend thời trang 💖FREESHIP💖 gọng kính mát nam nữ nhiều màu phong cách",
             "price": 200000,
             "percent_saleoff": 3,
@@ -575,6 +583,7 @@
         },
         {
             "id": 9,
+            "shop_id": 1,
             "title": "Basic tee Oversize Ulzzang cá tính - Áo Thun Unisex Nam Nữ SDVN BAD VIBES (V147)",
             "price": 200000,
             "percent_saleoff": 10,
@@ -591,6 +600,7 @@
         },
         {
             "id": 10,
+            "shop_id": 1,
             "title": "MVP2665 Đèn lồng LED phong cách Trung Hoa cho năm mới",
             "price": 230000,
             "percent_saleoff": 10,
@@ -607,6 +617,7 @@
         },
         {
             "id": 11,
+            "shop_id": 1,
             "title": "Áo Thun Nam Nữ Tay Lỡ Unisex Phông Trơn Oversize Form Rộng Basic Tee Hình New Happiness Unisex",
             "price": 200000,
             "percent_saleoff": 10,
@@ -623,6 +634,7 @@
         },
         {
             "id": 12,
+            "shop_id": 1,
             "title": "Quạt mini tích điện gấu bear siêu hót hàng quảng châu l1",
             "price": 200000,
             "percent_saleoff": 10,
@@ -639,6 +651,7 @@
         },
         {
             "id": 13,
+            "shop_id": 1,
             "title": "QUẠT KẸP MINI TÍCH ĐIỆN BEAR",
             "price": 200000,
             "percent_saleoff": 10,
@@ -655,6 +668,7 @@
         },
         {
             "id": 14,
+            "shop_id": 1,
             "title": "Son kem Perfect Diary màu lì siêu mịn lâu trôi 2.5g",
             "price": 200000,
             "percent_saleoff": 10,
@@ -671,6 +685,7 @@
         },
         {
             "id": 15,
+            "shop_id": 1,
             "title": "Son dưỡng Lip Maximizer 020 fullsize unbox",
             "price": 200000,
             "percent_saleoff": 10,
@@ -687,6 +702,7 @@
         },
         {
             "id": 16,
+            "shop_id": 1,
             "title": "[Mã 159LSSALE1 giảm 100% đơn 99K] Móc khóa phi hành gia hot trend phụ kiện túi xách ArsC Store",
             "price": 200000,
             "percent_saleoff": 10,
@@ -703,6 +719,7 @@
         },
         {
             "id": 17,
+            "shop_id": 1,
             "title": "Móc khóa thỏ đội nón đáng yêu",
             "price": 200000,
             "percent_saleoff": 10,
@@ -719,6 +736,7 @@
         },
         {
             "id": 18,
+            "shop_id": 1,
             "title": "Tai nghe bluetooth Beartek Bearpods B68 có đổi tên, chạm cảm ứng, bass mạnh",
             "price": 200000,
             "percent_saleoff": 10,
@@ -735,6 +753,7 @@
         },
         {
             "id": 19,
+            "shop_id": 1,
             "title": "[Mã ELAAR159 hoặc ELHUNT159 giảm 5% đơn 3TR] Điện Thoại Apple iPhone 13 128Gb",
             "price": 200000,
             "percent_saleoff": 10,
@@ -751,6 +770,7 @@
         },
         {
             "id": 20,
+            "shop_id": 1,
             "title": "[Mã ELAP1TR giảm 5% đơn 3TR] Apple iPhone 13 Pro Max 256GB",
             "price": 200000,
             "percent_saleoff": 10,
@@ -767,6 +787,7 @@
         },
         {
             "id": 21,
+            "shop_id": 1,
             "title": "Monstera deli thaicons trầu bà var cây chọn tuyển var lạ",
             "price": 200000,
             "percent_saleoff": 10,
@@ -783,6 +804,7 @@
         },
         {
             "id": 22,
+            "shop_id": 1,
             "title": "(Model 11) Lồng Đèn Mùa Thu Trung Quốc Tự Làm Thủ Công Cho Trẻ Em, Lồng Đèn Cung Điện Trung Quốc",
             "price": 100000,
             "percent_saleoff": 20,
@@ -799,6 +821,7 @@
         },
         {
             "id": 23,
+            "shop_id": 1,
             "title": "[Mã ELMALL1TR giảm 5% đơn 3TR] Màn Hình LG 24MP60G-B 23.8'' Full HD IPS AMD FreeSync™ - Hàng Chính Hãng",
             "price": 100000,
             "percent_saleoff": 25,
@@ -815,6 +838,7 @@
         },
         {
             "id": 24,
+            "shop_id": 1,
             "title": "[Mã ELMALL1TR giảm 5% đơn 3TR] Màn hình LG 27UP850-W 27'' UHD 4K IPS 60hz VESA DisplayHDR™ 400 USB Type-C™",
             "price": 100000,
             "percent_saleoff": 20,
@@ -831,6 +855,7 @@
         },
         {
             "id": 25,
+            "shop_id": 1,
             "title": "Váy Xốp Cổ Vuông Dây Yếm Mẫu Mới Ulzzang Hàn Quốc",
             "price": 100000,
             "percent_saleoff": 30,
@@ -847,6 +872,7 @@
         },
         {
             "id": 26,
+            "shop_id": 1,
             "title": "[Mã ELMALL1TR giảm 5% đơn 3TR] Màn Hình LG 27UP600-W 27'' 4K UHD IPS VESA DisplayHDR™ 400 - Hàng Chính Hãng",
             "price": 100000,
             "percent_saleoff": 30,
@@ -863,6 +889,7 @@
         },
         {
             "id": 27,
+            "shop_id": 1,
             "title": "Đầm đi tiệc màu xám tươi mới độc đáo cho nữ size s-3xl",
             "price": 100000,
             "percent_saleoff": 30,
@@ -879,6 +906,7 @@
         },
         {
             "id": 28,
+            "shop_id": 1,
             "title": "Đầm váy nữ basic Banamo fashion cổ sơ mi cài cúc chiết eo lưng chun, váy nữ cộc tay nhiều màu 5915",
             "price": 100000,
             "percent_saleoff": 30,
@@ -895,6 +923,7 @@
         },
         {
             "id": 29,
+            "shop_id": 1,
             "title": "LG Tone Free FP8 - Màu Trắng - Hàng Chính Hãng",
             "price": 100000,
             "percent_saleoff": 30,
@@ -911,6 +940,7 @@
         },
         {
             "id": 30,
+            "shop_id": 1,
             "title": "Loa Bluetooth Di Động LG Xboomgo PL7W - Hàng Chính Hãng - Màu Trắng",
             "price": 100000,
             "percent_saleoff": 30,
@@ -927,6 +957,7 @@
         },
         {
             "id": 31,
+            "shop_id": 1,
             "title": "Áo thun tay ngắn cotton champ AT551 - thời trang nam vnxk SP8",
             "price": 300000,
             "percent_saleoff": 30,
@@ -943,6 +974,7 @@
         },
         {
             "id": 32,
+            "shop_id": 1,
             "title": "Áo thun unisex Overthinking dành cho người nghĩ nhiều AOS phông form oversize",
             "price": 199000,
             "percent_saleoff": 30,
@@ -975,6 +1007,7 @@
         },
         {
             "id": 33,
+            "shop_id": 1,
             "title": "[CAMERA] Dây Đeo Máy Ảnh Classical Thổ Cẩm Hoa Văn Xanh",
             "price": 199000,
             "percent_saleoff": 30,
@@ -991,6 +1024,7 @@
         },
         {
             "id": 34,
+            "shop_id": 1,
             "title": "[Mã ELMALL4 giảm 4% đơn 1TR2] Máy ảnh Canon G7X Mark II - Chính Hãng Cannon",
             "price": 9990000,
             "percent_saleoff": 5,
@@ -1007,6 +1041,7 @@
         },
         {
             "id": 35,
+            "shop_id": 1,
             "title": "[Mã ELMALL4 giảm 4% đơn 1TR2] Máy ảnh Canon EOS M6 Mark II EF-M15-45mm F/3.5-6.3 IS STM - Chính Hãng Cannon",
             "price": 2990000,
             "percent_saleoff": 3,
@@ -1023,6 +1058,7 @@
         },
         {
             "id": 36,
+            "shop_id": 1,
             "title": "Đồng Hồ Đeo Tay Nam Bằng Thép Không Gỉ Mạ Vàng Sang Trọng",
             "price": 899000,
             "percent_saleoff": 3,
@@ -1039,6 +1075,7 @@
         },
         {
             "id": 37,
+            "shop_id": 1,
             "title": "Đồng Hồ Đeo Tay Thời Trang Sang Trọng Cho Nam",
             "price": 890000,
             "percent_saleoff": 5,
@@ -1055,6 +1092,7 @@
         },
         {
             "id": 38,
+            "shop_id": 1,
             "title": "Máy phun sương mini, xông tinh dầu, khuếch tán tinh dầu, tạo độ ẩm không khí Chuby Shop",
             "price": 290000,
             "percent_saleoff": 3,
@@ -1071,6 +1109,7 @@
         },
         {
             "id": 39,
+            "shop_id": 1,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1087,6 +1126,7 @@
         },
         {
             "id": 40,
+            "shop_id": 2,
             "title": "Áo khoác bomber KHN1, Áo hoodies nhung tăm form rộng Oversize unisex",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1103,6 +1143,7 @@
         },
         {
             "id": 41,
+            "shop_id": 2,
             "title": "Tai Nghe Bluetooth M10 Pro Tai Nghe Không M10 Pro Phiên Bản Nâng Cấp Pin Trâu, Nút Cảm Ứng Tự Động Kết Nối - BINTECH",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1119,6 +1160,7 @@
         },
         {
             "id": 42,
+            "shop_id": 2,
             "title": "Áo sweater nỉ bông BREAKING dày dặn, áo khoác nỉ nữ form đẹp - phanhastore262",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1135,6 +1177,7 @@
         },
         {
             "id": 43,
+            "shop_id": 2,
             "title": "QKCASE - Loa Bluetooth Mini - Loa Trứng Nhấp Nháy (Loa Blt)",
             "price": 50000,
             "percent_saleoff": 1,
@@ -1151,6 +1194,7 @@
         },
         {
             "id": 44,
+            "shop_id": 2,
             "title": "[Mã ELSD1TR giảm 1TR đơn 30TR] Apple iPhone 14 Pro Max 128GB",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1167,6 +1211,7 @@
         },
         {
             "id": 45,
+            "shop_id": 2,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1183,6 +1228,7 @@
         },
         {
             "id": 46,
+            "shop_id": 2,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1199,6 +1245,7 @@
         },
         {
             "id": 47,
+            "shop_id": 2,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1215,6 +1262,7 @@
         },
         {
             "id": 48,
+            "shop_id": 2,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1231,6 +1279,7 @@
         },
         {
             "id": 49,
+            "shop_id": 2,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1247,6 +1296,7 @@
         },
         {
             "id": 50,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1263,6 +1313,7 @@
         },
         {
             "id": 51,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1279,6 +1330,7 @@
         },
         {
             "id": 52,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1295,6 +1347,7 @@
         },
         {
             "id": 53,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1311,6 +1364,7 @@
         },
         {
             "id": 54,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1327,6 +1381,7 @@
         },
         {
             "id": 55,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1343,6 +1398,7 @@
         },
         {
             "id": 56,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1359,6 +1415,7 @@
         },
         {
             "id": 57,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1375,6 +1432,7 @@
         },
         {
             "id": 58,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,
@@ -1391,6 +1449,7 @@
         },
         {
             "id": 59,
+            "shop_id": 3,
             "title": "[Đủ mẫu bear] Túi sưởi, túi chườm nóng đau bụng gấu bear cắm điện Chuby Shop",
             "price": 90000,
             "percent_saleoff": 3,

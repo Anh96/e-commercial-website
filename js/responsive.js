@@ -8,5 +8,5 @@
         alert("Have sometthing ERROR")
     })
  async function getData(){
-    const x = await fetch("../data/product.json");
+    const x = await fetch("../data/data.json");
  }

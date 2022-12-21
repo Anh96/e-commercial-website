@@ -50,7 +50,7 @@ import {keysearch} from "./keyword_search.js"
     })
 // Call API uses FETCH
     let htmls;
-    fetch('../data/product.json')
+    fetch('../data/data.json')
     .then(res=>{
         return res.json();
     })

@@ -1,8 +1,7 @@
-const productsAPI = "../data/product.json"
 import {render_products} from "./condition_render_products"
 let htmls;
 function handleProducts(){
-    fetch(productsAPI)
+    fetch("../data/product.json")
         .then(res=>{
             return res.json()
         })
