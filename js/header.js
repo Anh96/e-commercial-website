@@ -236,4 +236,4 @@ export function renderHeaderNav(){
         $(".header .search-logo-cart").innerHTML = htmls;
     }
 }
-renderHeaderNav();
+// renderHeaderNav();

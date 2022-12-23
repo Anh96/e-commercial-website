@@ -9,7 +9,7 @@ import {renderHeaderNav} from "./header.js"
 import {keysearch} from "./keyword_search.js"
 renderHeaderNav();
 function handleProducts(){
-    fetch("../data/data.json")
+    fetch("../data/product.json")
         .then(res=>{
             return res.json()
         })

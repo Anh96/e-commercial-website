@@ -1,7 +1,7 @@
 import {render_products} from "./condition_render_products"
 let htmls;
 function handleProducts(){
-    fetch("../data/data.json")
+    fetch("../data/product.json")
         .then(res=>{
             return res.json()
         })
