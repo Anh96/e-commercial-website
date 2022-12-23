@@ -6,6 +6,6 @@ render_shop_info_mobile()
         alert("ERORR FETCHING DATA")
     })
 async function render_shop_info_mobile(){
-    const dataAPIs = await fetch("../data/data.json");
-    const data = await dataAPIs;
+    const dataAPIs = await fetch("../data/data.json")
+    // const data = await dataAPIs;
 }
