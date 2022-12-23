@@ -1,7 +1,7 @@
 import {calculator_promotion_price, render_products} from "./condition_render_products.js";
 $ = document.querySelector.bind(document)
 let htmls;
-fetch('../data/product.json')
+fetch('../data/data.json')
     .then(res=>{
         return res.json()
     })

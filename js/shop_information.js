@@ -2,7 +2,6 @@ $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
 let htmls;
 export function create_htmls_frame_infoshop(){
-    // <div class="right-rltSk-ctn flex"></div>
     const li = document.createElement("div");
     li.classList.add("right-rltSk-ctn");
     li.classList.add("flex");

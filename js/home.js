@@ -1,7 +1,6 @@
 $ = document.querySelector.bind(document)
 const top_search_link_ctn = $('.top_search_link_ctn')
 const spM_product_list = $('.spM-product-list')
-const productsAPI = "../data/product.json"
 const section_grid_layout_container = $('.section-grid-layout-container')
 const trennding_linkCTN = $('.grid-ctn-body-trendding')
 const tdsgtion = $('#tdsgtion-relative-product');
@@ -10,7 +9,7 @@ import {renderHeaderNav} from "./header.js"
 import {keysearch} from "./keyword_search.js"
 renderHeaderNav();
 function handleProducts(){
-    fetch(productsAPI)
+    fetch("../data/data.json")
         .then(res=>{
             return res.json()
         })
