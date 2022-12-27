@@ -323,6 +323,10 @@
     footer{
         display: none;
     }
+    /* CATAGORIES RESPONSIVE */
+    #catagories-desktop{
+        display: block;
+    }
     #all-catagories_resp_mobile{
         display: none;
     }

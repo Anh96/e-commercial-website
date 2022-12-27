@@ -1,12 +1,19 @@
 $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 let htmls;
+import {catagories_res_mobile, counting_frequencies_item_catagories_inshop} from "./condition_render_products.js";
+import { handle_header_catagories_mobile } from "./responsive.js";
+handle_header_catagories_mobile();
+const arr = [10,3, 1 ,1, 4,3, 10, 10]
 fetch("../data/data.json")
     .then(res=> {
         return res.json()
     })
     .then(data=>{
+        // handle_headerCatag_event()
         render_info_shop_online(data.shop_onlines);
-        render_catagories_res_mobile(data.shop_onlines);
+        //counting_frequencies_item_catagories_inshop(data.products_inshop);
+        catagories_res_mobile(data.products_inshop);
     })
     // .catch(er=> {
     //     alert("Error fetching data")
@@ -37,33 +44,7 @@ fetch("../data/data.json")
                         `
                 }
                 $(".data-rating").innerHTML = `${shop.rating_shop}`;
-                $(".followers div").innerHTML = `${shop.quantity_pages_follow}`
-            }
-        })
-    }
-    function render_catagories_res_mobile(shops){
-        shops.map(shop=>{
-            if(shop.shop_id == 1){
-                htmls = `
-                    <li class="flex-jtfspbt">
-                        <div class="flxC mgl-8">
-                            <div class="flxC"> <img src="../assets/imgs/favicon/technical-support-2_icon-icons.com_52811.ico" alt="" style="width: 30px; height:30px"></div>
-                            <div class="mgLR-4">
-                                <div class="flxC">On Sale</div>
-                                <div class="flxC">
-                                    <div class="quantity_products mgR-8"></div>
-                                    <div class="">Sản phẩm</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flxC mgR-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                </svg>
-                        </div>
-                    </li>
-                `
-                return $("#all-catagories_resp_mobile ul").innerHTML += htmls;
+                $(".followers div").innerHTML = `${shop.quantity_pages_follow}`;
 
             }
         })

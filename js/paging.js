@@ -217,5 +217,5 @@ export function pagination(products){
     // document.querySelector(".number-page").innerHTML = create_pagination_controller(currentPage,totalPages(products));
     create_products(products);
     create_header_pagination(products);
-    //add_animation_btns_controller_pagination(products);
+    // add_animation_btns_controller_pagination(products);
 }

@@ -1,4 +1,4 @@
-// import { calculator_promotion_price } from "./handleEvent.js"
+const $$ = document.querySelectorAll.bind(document)
 //Caculate price promotion
 export let calculator_promotion_price = (product)=>{
     return product.price - (product.price *product.percent_saleoff/100);
@@ -3204,4 +3204,101 @@ export function render_products_has_hoversameblock(prod){
             `
         }
     return htmls;
+}
+export function render_header_catagMobile(){
+    htmls = `
+        <div class="lft-ctn-shop-menu">
+            <div class=" menu-left flxC">
+                <a id="shop" href="#" class="ctPRD flex none-change-opacity txt-Black-color item-CtPRD-active">
+                    <div class="txt-Capitalize flex">Shop </div>
+                </a>
+                <a href="../page/shopPage.html" class="ctPRD flex txt-Black-color">
+                    <div class="txt-UperCase flex">sản phẩm</div>
+                </a>
+                <a id = "detail-catagories" href="../page/catagories_responsive_mobile.html" class="ctPRD flex txt-Black-color">
+                    <div class="txt-UperCase flex">Danh mục</div>
+                </a>
+            </div>
+        </div>
+    `
+    $("#catagories-mobile").innerHTML += htmls;
+}
+export let counting_frequencies_item_catagories_inshop = (arr)=>{
+    //let countDuplicatesItem = arr.reduce((accVal, crrVal) => (accVal[crrVal] = accVal[crrVal] + 1 || 1, accVal), {})
+    const countDuplicatesItem = {};
+    arr.forEach(element => {
+        countDuplicatesItem[element] = (countDuplicatesItem[element] || 0) + 1;
+    });
+    return countDuplicatesItem;
+}
+let shops_ID = (shops)=>{
+    let new_arrr = new Array;
+    shops.map(shop=>{
+       if(shop.shop_id == 1){
+           new_arrr.push(shop);
+       }
+    })
+    return new_arrr;
+}
+export function catagories_res_mobile(shops){
+    let catagNames = [];
+    shops_ID(shops).forEach(shop=>{
+        catagNames.push(shop.catagories_inshop);
+    })
+    let entries = Object.entries(counting_frequencies_item_catagories_inshop(catagNames))
+    for(let i in entries){
+        htmls = `
+            <li class="flex-jtfspbt none-change-opacity">
+                <a href="" class="detail-cata-link flex-jtfspbt">
+                    <div class="flxC mgl-8">
+                        <div class="flxC">
+                            <img src="" alt="" style="width: 30px; height:30px">
+                        </div>
+                        <div class="mgLR-4">
+                            <div class="catag-name flxC">
+                                <div>
+                                    ${entries[i][0]}
+                                </div>
+                            </div>
+                            <div class="flxC below-catagName">
+                                <div class="quantity_products mgR-8">${entries[i][1]}</div>
+                                <div class="">Sản phẩm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flxC mgR-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+        `
+        $("#all-catagories_resp_mobile").innerHTML  += htmls;
+    }
+    htmls = `
+        <li class="flex-jtfspbt none-change-opacity">
+            <a href="" class="detail-cata-link flex-jtfspbt">
+                <div class="flxC mgl-8">
+                    <div class="mgLR-4">
+                        <div class="catag-name flxC">
+                            <div>
+                               Sản phẩm
+                            </div>
+                        </div>
+                        <div class="flxC below-catagName">
+                            <div class="quantity_products mgR-8">${catagNames.length}</div>
+                            <div class="">Sản phẩm</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flxC mgR-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+            </a>
+        </li>
+    `
+    $("#all-catagories_resp_mobile").innerHTML  += htmls;
 }

@@ -5,13 +5,14 @@
 *{
     padding: 0px;
 }
+.ctPRD:last-child{
+    margin-right: 0px;
+}
 #all-catagories_resp_mobile{
     position: relative;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
 }
-
 li{
     position: relative;
     width: 100%;
@@ -19,8 +20,31 @@ li{
     border-top: 0.05px solid rgb(189, 187, 187);
     border-bottom: 0.05px solid rgb(189, 187, 187);
 }
-li<div{
+.detail-cata-link{
+    /* display: block; */
     width: 100%;
-    height: inherit;
-    background-color: green;
+    color: var(--black-color);
+}
+.catag-name{
+    position: relative;
+    width: 200px;
+    height: 30px;
+    text-align: left;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+.catag-name div{
+    font-size: 14px;
+    text-align: left;
+    word-wrap: break-word;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+}
+.below-catagName{
+    font-size: 12px;
+    color: gray;
 }

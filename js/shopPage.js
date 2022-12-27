@@ -1,6 +1,6 @@
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
-import {render_products} from './condition_render_products.js'
+import {render_products, render_header_catagMobile} from './condition_render_products.js'
 import { totalPages, pagination } from './paging.js';
 import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
 import {render_info_shop_online } from './shop_information.js';
@@ -56,7 +56,12 @@ import {keysearch} from "./keyword_search.js"
     })
     .then(data=>{
         renderHeaderNav();
-        catagories(data.products_inshop);
+        if(window.innerWidth>=1367){
+            catagories_desktop(data.products_inshop);
+        }
+        if(window.innerWidth <= 480){
+            render_header_catagMobile();
+        }
         renderPromotionItem(data.shop_promotion_codes)
         check(data.shop_promotion_codes)
         suggestion_products_ShopOnline(data.products_inshop)
@@ -64,9 +69,7 @@ import {keysearch} from "./keyword_search.js"
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop);
         render_info_shop_online(data.shop_onlines);
-        if(window.innerWidth >= 1280){
-            keysearch(data.key_search)
-        }
+        keysearch(data.key_search)
     })
     
 //Catagories in shop
@@ -80,7 +83,7 @@ import {keysearch} from "./keyword_search.js"
            return false;
        }
    }
-   function catagories(catagories){
+   function catagories_desktop(catagories){
        catagories.forEach(cata=>{
            if(!catas.includes(cata.catagories_inshop.toLowerCase())){
                catas.push(cata.catagories_inshop.toLowerCase())
@@ -405,4 +408,3 @@ function allproducts_inshop(products){
     sortFollowBtn(products);
     sortFollowPrice(products);
 }
-

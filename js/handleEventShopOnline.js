@@ -1,3 +1,5 @@
+$ = document.querySelector.bind(document);
+$$ = document.querySelectorAll.bind(document);
 let htmls, clickAmount=0, clicked = 1, products_paging_after_filter = new Array;
 const h4txts=$$('.h4txt');
 import { pagination, maximum_numbers_item_on_per_page, totalPages, setOpacity, create_header_pagination, create_footer_pagination, add_animation_btns_controller_pagination} from "./paging.js";
@@ -53,7 +55,7 @@ export function moveArrowInCatagories(h4txt){
        export function filter(products){
            const ctPRDs =  $$('.ctPRD'),h4txts=$$('.h4txt');
            const nw_Arr = new Array;
-           let index;
+           let index =0;
            //handle ctPRDs are clicked (Header Catagories)
            for(let i=1;i<ctPRDs.length;i++){
                ctPRDs[i].onclick =()=>{
