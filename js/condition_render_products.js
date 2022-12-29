@@ -54,10 +54,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -164,10 +164,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -263,10 +263,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -345,10 +345,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -452,10 +452,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -523,10 +523,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -619,10 +619,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -698,10 +698,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -762,10 +762,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -869,10 +869,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -965,10 +965,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1044,10 +1044,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1148,10 +1148,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1216,10 +1216,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1309,10 +1309,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1385,10 +1385,10 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion font10">${prod.price}</div>
+                                                        <div class="price-sggtion">${prod.price}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1445,7 +1445,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1503,7 +1503,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1603,7 +1603,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1675,7 +1675,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1772,7 +1772,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1841,7 +1841,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1930,7 +1930,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -1991,7 +1991,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2086,7 +2086,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2141,7 +2141,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2238,7 +2238,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2307,7 +2307,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2401,7 +2401,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2467,7 +2467,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2553,7 +2553,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2611,7 +2611,7 @@ export function render_products(prod){
                                             <div class="price-block mgTB-8 flex-jtfspbt">
                                                 <div class="prc flx">
                                                     <div class="crr-price flxC">
-                                                        <div class="currenty-sggtion font-14">đ</div>
+                                                        <div class="currenty-sggtion">đ</div>
                                                         <div class="price-sggtion">${x}</div>
                                                     </div>  
                                                 </div>
@@ -2721,7 +2721,7 @@ export function render_products_has_hoversameblock(prod){
                                     </div>
                                     <div class="price-block mgT32 flex-jtfspbt">
                                             <div class="crr-price flxC">
-                                                <div class="currenty-sggtion font-14">đ</div>
+                                                <div class="currenty-sggtion">đ</div>
                                                 <div class="price-sggtion">${x}</div>
                                             </div>  
                                             <div class="nbs-sggtion flex">
@@ -2794,7 +2794,7 @@ export function render_products_has_hoversameblock(prod){
                                     </div>
                                     <div class="price-block mgT32 flex-jtfspbt">
                                         <div class="crr-price flxC">
-                                            <div class="currenty-sggtion font-14">đ</div>
+                                            <div class="currenty-sggtion">đ</div>
                                             <div class="price-sggtion">${x}</div>
                                         </div>
                                     </div>
@@ -2859,7 +2859,7 @@ export function render_products_has_hoversameblock(prod){
                                     </div>
                                     <div class="price-block mgT32 flex-jtfspbt">
                                             <div class="crr-price flxC">
-                                                <div class="currenty-sggtion font-14">đ</div>
+                                                <div class="currenty-sggtion">đ</div>
                                                 <div class="price-sggtion">${x}</div>
                                             </div>  
                                             <div class="nbs-sggtion flex">
@@ -2929,7 +2929,7 @@ export function render_products_has_hoversameblock(prod){
                                     </div>
                                     <div class="price-block mgT32 flex-jtfspbt">
                                         <div class="crr-price flxC">
-                                            <div class="currenty-sggtion font-14">đ</div>
+                                            <div class="currenty-sggtion">đ</div>
                                             <div class="price-sggtion">${x}</div>
                                         </div>  
                                     </div>
@@ -2992,7 +2992,7 @@ export function render_products_has_hoversameblock(prod){
                                     </div>
                                     <div class="price-block mgT32 flex-jtfspbt">
                                             <div class="crr-price flxC">
-                                                <div class="currenty-sggtion font-14">đ</div>
+                                                <div class="currenty-sggtion">đ</div>
                                                 <div class="price-sggtion">${x}</div>
                                             </div>  
                                             <div class="nbs-sggtion flex">
@@ -3059,7 +3059,7 @@ export function render_products_has_hoversameblock(prod){
                                     </div>
                                     <div class="price-block mgT32 flex-jtfspbt">
                                         <div class="crr-price flxC">
-                                            <div class="currenty-sggtion font-14">đ</div>
+                                            <div class="currenty-sggtion">đ</div>
                                             <div class="price-sggtion">${x}</div>
                                         </div>  
                                     </div>
@@ -3118,7 +3118,7 @@ export function render_products_has_hoversameblock(prod){
                                     </div>
                                     <div class="price-block mgT32 flex-jtfspbt">
                                             <div class="crr-price flxC">
-                                                <div class="currenty-sggtion font-14">đ</div>
+                                                <div class="currenty-sggtion">đ</div>
                                                 <div class="price-sggtion">${x}</div>
                                             </div>  
                                             <div class="nbs-sggtion flex">
@@ -3182,7 +3182,7 @@ export function render_products_has_hoversameblock(prod){
                                     </div>
                                     <div class="price-block mgT32 flex-jtfspbt">
                                         <div class="crr-price flxC">
-                                            <div class="currenty-sggtion font-14">đ</div>
+                                            <div class="currenty-sggtion">đ</div>
                                             <div class="price-sggtion">${x}</div>
                                         </div>
                                     </div>

@@ -227,24 +227,19 @@
         height: 15px;
     }
     /* TOP SALE */
-    .pRDTOPSALE{
-        position: relative;
-        width: 100%;
-    }
+    
     #top_sales{
-        display: flex;
-        position: inherit;
+        position: relative;
+        display: inline-flex;
         flex-flow: row wrap;
-        flex-wrap: wrap;
         width: 100%;
     }
     .pRDTOPSALE #sort_result_search{
-        width: 170px;
+        width: 46.680%;
+        height: auto;
+        margin: 4px 5px;
     }
     .favorite-shop{
-        font-size: 13px;
-    }
-    .ft-sggtion-block {
         font-size: 13px;
     }
     .nbs-sggtion {
@@ -252,6 +247,36 @@
     }
     .footer{
         display: none;
+    }
+    .dell-price{
+        width: 40px; 
+        overflow: hidden;
+    }
+    .dell-price .price-sggtion{
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+    }
+    .dell-price>.price-sggtion{
+        font-size: 10px;
+    }
+    #top_sales .crr-price{
+        font-size: 11px;
+    }
+    #top_sales .crr-price .price-sggtion{
+        font-size: 12px;
+    }
+    .item-rating-star{
+       width: auto;
+       height: auto;
+    }
+    .item-rating-star svg{
+        width: 10px;
+        height: 10px;
+    }
+    .prc> .icon-free-shipping{
+        height: 12px;
+        width: 12px;
     }
     /* ALL PRODUCTS IN SHOP AND SORT */
     .lft-nav-Stctn{
@@ -270,12 +295,19 @@
         width: 100%;
     }
     #all-products #sort_result_search{
-        width: 183px;
+        width: 46.680%;
         height: auto;
-        margin: 0 2px 4px 2px;;
+        margin: 4px 5px;
+        /* margin: 0 2px 4px 2px; */
     }
     .tdsgt-ftt-ctn{
         display: none;
+    }
+    #tdsgtion-relative-product .crr-price{
+        font-size: 11px;
+    }
+    #tdsgtion-relative-product .price-sggtion{
+        font-size: 12px;
     }
 }
 @media only screen and (min-width: 1280px) {
@@ -340,5 +372,15 @@
     }
     .CDpmt-wrapper::-webkit-scrollbar{
         display: none;
+    }
+    /* top sales */
+    #top_sales{
+        position: relative;
+        display: inline-flex;
+        width: 100%;
+    }
+    .pRDTOPSALE #sort_result_search{
+        width: calc(100%/6);
+        height: auto;
     }
 }

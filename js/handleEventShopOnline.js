@@ -1,9 +1,11 @@
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
-let htmls, clickAmount=0, clicked = 1, products_paging_after_filter = new Array;
 const h4txts=$$('.h4txt');
 import { pagination, maximum_numbers_item_on_per_page, totalPages, setOpacity, create_header_pagination, create_footer_pagination, add_animation_btns_controller_pagination} from "./paging.js";
 import {render_products} from "./condition_render_products.js";
+import { calculator_promotion_price } from "./condition_render_products.js";
+let htmls, clickAmount=0, clicked = 1, products_paging_after_filter = new Array, maximumitem;
+// maximumitem = maximum_numbers_item_on_per_page;
 export const btns = $$('.bl1Sb-btn');
 const conditions_sort_links = $$(".hv-prcx a");
 export function moveArrowInCatagories(h4txt){
@@ -39,7 +41,7 @@ export function moveArrowInCatagories(h4txt){
         for(let i in products ){
             if(i< maximum_numbers_item_on_per_page){
                 htmls = render_products(products[i]);
-                $('#tdsgtion-relative-product').insertAdjacentHTML("beforeend", htmls)
+                $('#tdsgtion-relative-product').innerHTML += htmls;
             }
         }
    }
@@ -50,18 +52,23 @@ export function moveArrowInCatagories(h4txt){
         })
         $('#tdsgtion-relative-product').innerHTML = htmls.join("");
    }
+   function render_products_sort_links(products){
+        htmls = products.map(prod=>{
+            return render_products(prod);
+        })
+        $('#tdsgtion-relative-product').innerHTML = htmls.join("");
+   }
    // Catagories in shop
        //Filter products follow keyword of catagories
        export function filter(products){
            const ctPRDs =  $$('.ctPRD'),h4txts=$$('.h4txt');
-           const nw_Arr = new Array;
+           const nw_Arr = new Array, nwArr_sortlinks = new Array;
            let index =0;
            //handle ctPRDs are clicked (Header Catagories)
            for(let i=1;i<ctPRDs.length;i++){
                ctPRDs[i].onclick =()=>{
-                   products_paging_after_filter.length = 0;
+                   $(".pRCX span").innerHTML = `Giá`;
                    $('#tdsgtion-relative-product').innerHTML = "";
-                   //nw_Arr.length =0;
                    moveArrowInCatagories(h4txts[i]);
                    btns[0].classList.add('active');
                    btns.forEach((btn,ind)=>{
@@ -71,6 +78,7 @@ export function moveArrowInCatagories(h4txt){
                    })
                    if(i!=1){
                        index = i-1; 
+                       products_paging_after_filter.length =0;
                        products.map(prod=>{
                            if(ctPRDs[i].getAttribute("data-catagory") == prod.catagories_inshop.toLowerCase()){
                                 $('.number-page').innerHTML = " ";
@@ -79,35 +87,125 @@ export function moveArrowInCatagories(h4txt){
                        })
                        pagination(products_paging_after_filter);
                        setOpacity($("#start-number").innerHTML, totalPages(products_paging_after_filter), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
+                       
                        //sort follow pressing btns
                        btns.forEach((btn,ind)=>{
                            btn.onclick = ()=>{
-                                $('#tdsgtion-relative-product').innerHTML = "";
+                                nw_Arr.length =0;
+                                // remove text link
                                 if(ind==0){
+                                    $('#tdsgtion-relative-product').innerHTML = "";
+                                    $(".pRCX span").innerHTML = `Giá`
                                     btn.classList.add('active');
                                     btns.forEach((btn,index_btn)=>{
                                         if(index_btn!=0){
                                             btn.classList.remove('active');
                                         }
                                     })
-                                    products.map(prod=>{
-                                        if(ctPRDs[i].getAttribute("data-catagories-inshop") == prod.catagories_inshop.toLowerCase()){
-                                            $('.number-page').innerHTML = "";
-                                            return products_paging_after_filter.push(prod);
-                                        }
-                                    })
                                     pagination(products_paging_after_filter);
                                     setOpacity($("#start-number").innerHTML, totalPages(products_paging_after_filter), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
                                 }
-                               if(ind==1){
-                                   btn.classList.add('active');
-                                   btns.forEach((btn,ind)=>{
-                                       if(ind!=1){
-                                           btn.classList.remove('active');
-                                       }
-                                   })
+                                if(ind==1){
+                                    btn.classList.add('active');
+                                    btns.forEach((btn,ind)=>{
+                                        if(ind!=1){
+                                            btn.classList.remove('active');
+                                        }
+                                    })
+                                }
+                                if(ind==2){
+                                    // nw_Arr.length = 0;
+                                    btns[2].classList.add('active');
+                                    btns.forEach((btn,index_btn)=>{
+                                        if(index_btn!=2){
+                                            btn.classList.remove('active');
+                                        }
+                                    })
+                                    $(".pRCX span").innerHTML = "";
+                                    $(".pRCX span").innerHTML = `Giá`;
+                                    pagination(products_paging_after_filter);
+                                    setOpacity($("#start-number").innerHTML, totalPages(products_paging_after_filter), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
+                                    $('#tdsgtion-relative-product').innerHTML = "";
+                                    products_paging_after_filter.map((prod,indx)=>{
+                                        if(indx< maximum_numbers_item_on_per_page){
+                                            nw_Arr.push(prod);
+                                        }
+                                    })
+                                    render_after_press_btns_sort(nw_Arr);
+                                }
+                           }
+                       })
+
+                       //sort low to high & reverse
+                       conditions_sort_links.forEach((link,ind)=>{
+                           link.onclick = ()=>{
+                                $('#tdsgtion-relative-product').innerHTML = " ";
+                                nwArr_sortlinks.length =0;
+                                products_paging_after_filter.map((prod, indx)=>{
+                                    if(indx <= maximum_numbers_item_on_per_page){
+                                        return nwArr_sortlinks.push(prod);
+                                    }
+                                })
+                                // remover active class on btns
+                                btns.forEach((btn,ind)=>{
+                                    btn.classList.remove("active");
+                                })
+                               if(ind ==0){
+                                   $(".pRCX span").innerHTML = link.innerText;
+                                   sort_AscendingPriceSold(nwArr_sortlinks);
+                                   //render_products_sort_links(nwArr_sortlinks);
+                                   pagination(nwArr_sortlinks);
+                                //    create_products(nwArr_sortlinks)
+                                   setOpacity($("#start-number").innerHTML, totalPages(products_paging_after_filter), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
                                }
-                               if(ind==2){
+                               if(ind == 1){
+                                    $(".pRCX span").innerHTML = link.innerText;
+                                    sort_DescendingPriceSold(nwArr_sortlinks);
+                                    //render_products_sort_links(nwArr_sortlinks);
+                                    pagination(nwArr_sortlinks);
+                                    setOpacity($("#start-number").innerHTML, totalPages(products_paging_after_filter), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
+                                }
+                           }
+                       })
+                   }
+                   if(i==1){
+                       nw_Arr.length =0;
+                       products_paging_after_filter.length =0;
+                       index = 0;
+                       htmls = products.map((prod,indx)=>{
+                           if(indx < maximum_numbers_item_on_per_page)
+                                return render_products(prod);
+                       })
+                       $('#tdsgtion-relative-product').innerHTML = htmls.join("");
+                       //sort follow pressing btns
+                       btns.forEach((btn,ind)=>{
+                           btn.onclick = ()=>{
+                                if(ind==0){
+                                    products_paging_after_filter.length =0;
+                                    btn.classList.add('active');
+                                    $(".pRCX span").innerHTML = `Giá`;
+                                    btns.forEach((btn,ind)=>{
+                                        if(ind!=0){
+                                            btn.classList.remove('active');
+                                        }
+                                    })
+                                    htmls = products.map((prod,indx)=>{
+                                            if(indx < maximum_numbers_item_on_per_page)
+                                                return render_products(prod);
+                                        })
+                                    $('#tdsgtion-relative-product').innerHTML = htmls.join('');
+                                }
+                                if(ind==1){
+                                    $(".pRCX span").innerHTML = `Giá`;
+                                    btn.classList.add('active');
+                                    btns.forEach((btn,ind)=>{
+                                        if(ind!=1){
+                                            btn.classList.remove('active');
+                                        }
+                                    })
+                                }
+                                if(ind==2){
+                                    $(".pRCX span").innerHTML = `Giá`;
                                     nw_Arr.length = 0;
                                     btns[2].classList.add('active');
                                     btns.forEach((btn,index_btn)=>{
@@ -116,10 +214,8 @@ export function moveArrowInCatagories(h4txt){
                                         }
                                     })
                                     products.map(prod=>{
-                                        if(ctPRDs[i].getAttribute("data-catagories-inshop") == prod.catagories_inshop.toLowerCase()){
-                                            $('.number-page').innerHTML = " ";
-                                            return products_paging_after_filter.push(prod);
-                                        }
+                                        $('.number-page').innerHTML = " ";
+                                        return products_paging_after_filter.push(prod);
                                     });
                                     pagination(products_paging_after_filter);
                                     setOpacity($("#start-number").innerHTML, totalPages(products_paging_after_filter), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
@@ -131,94 +227,31 @@ export function moveArrowInCatagories(h4txt){
                                     })
                                     render_after_press_btns_sort(nw_Arr);
                                 }
-                           }
-                       })
-                       //sort low to high & reverse
-                       conditions_sort_links.forEach((link,ind)=>{
-                           link.onclick = ()=>{
-                               if(ind ==0){
-                                   sort_AscendingPriceSold(newArrayAscendingSort);
-                                   htmls = newArrayAscendingSort.map(prod=>{
-                                       if(ctPRDs[i].getAttribute("data-catagory") == prod.catagories_inshop.toLowerCase()){
-                                           return render_products(prod);
-                                       }
-                                   })
-                                   $('#tdsgtion-relative-product').innerHTML = htmls.join('')
-                               }
-                               if(ind == 1){
-                                   sort_DescendingPriceSold(newArrayDescendingSort);
-                                   htmls = newArrayDescendingSort.map(prod=>{
-                                       if(ctPRDs[i].getAttribute("data-catagory") == prod.catagories_inshop.toLowerCase()){
-                                           return render_products(prod);
-                                       }
-                                   })
-                                   $('#tdsgtion-relative-product').innerHTML = htmls.join('')
-                               }
-                           }
-                       })
-                   }
-                   if(i==1){
-                       index = 0;
-                       htmls = products.map((prod,indx)=>{
-                           if(indx < maximum_numbers_item_on_per_page)
-                                return render_products(prod);
-                       })
-                       $('#tdsgtion-relative-product').innerHTML = htmls.join('');
-                       //sort follow pressing btns
-                       btns.forEach((btn,ind)=>{
-                           btn.onclick = ()=>{
-                               if(ind==0){
-                                   btn.classList.add('active');
-                                   btns.forEach((btn,ind)=>{
-                                       if(ind!=0){
-                                           btn.classList.remove('active');
-                                       }
-                                   })
-                                   htmls = products.map((prod,indx)=>{
-                                        if(indx < maximum_numbers_item_on_per_page)
-                                            return render_products(prod);
-                                    })
-                                   $('#tdsgtion-relative-product').innerHTML = htmls.join('');
-                               }
-                               if(ind==1){
-                                   btn.classList.add('active');
-                                   btns.forEach((btn,ind)=>{
-                                       if(ind!=1){
-                                           btn.classList.remove('active');
-                                       }
-                                   })
-                               }
-                               if(ind==2){
-                                   btns[2].classList.add('active');
-                                   btns.forEach((btn,ind)=>{
-                                       if(ind!=2){
-                                           btn.classList.remove('active');
-                                       }
-                                   })
-                                   htmls = newOriginalProductsArray.map((prod,indx)=>{
-                                        return render_products(prod);
-                                   })
-                                   $('#tdsgtion-relative-product').innerHTML = htmls.join('');
-                               }
-                           }
+                            }
                        })
                        //sort low-hight & reverse
                        conditions_sort_links.forEach((link,ind)=>{
                            link.onclick = ()=>{
-                               if(ind ==0){
-                                   sort_AscendingPriceSold(newArrayAscendingSort);
-                                   htmls = newArrayAscendingSort.map(prod=>{
-                                       return render_products(prod);
-                                   })
-                                   $('#tdsgtion-relative-product').innerHTML = htmls.join('')
-                               }
-                               if(ind == 1){
-                                   sort_DescendingPriceSold(newArrayDescendingSort);
-                                   htmls = newArrayDescendingSort.map(prod=>{
-                                       return render_products(prod)
-                                   })
-                                   $('#tdsgtion-relative-product').innerHTML = htmls.join('')
-                               }
+                                nwArr_sortlinks.length =0;
+                                products.map((prod,indx)=>{
+                                   if(indx < maximum_numbers_item_on_per_page){
+                                       return nwArr_sortlinks.push(prod);
+                                   }
+                                })
+                                // remover active class on btns
+                                btns.forEach((btn,ind)=>{
+                                    btn.classList.remove("active")
+                                })
+                            if(ind ==0){
+                                $(".pRCX span").innerHTML = link.innerText;
+                                sort_AscendingPriceSold(nwArr_sortlinks);
+                                render_products_sort_links(nwArr_sortlinks);
+                            }
+                            if(ind == 1){
+                                    $(".pRCX span").innerHTML = link.innerText;
+                                    sort_DescendingPriceSold(nwArr_sortlinks);
+                                    render_products_sort_links(nwArr_sortlinks);
+                                }
                            }
                        })
                    }
@@ -449,9 +482,11 @@ export function moveArrowInCatagories(h4txt){
                btn.onclick = ()=>{
                    products_paging_after_filter = new Array;
                    if(i<=2){
-                       $('.bl1Sb-btn.active').classList.remove('active');
-                       btn.classList.add('active');
+                    //    btn.classList.add("active")
+                       $(".pRCX span").innerHTML = `Giá`;
+                       $(".bl1Sb-btn.active").classList.remove("active");
                        if(i==0){
+                           btn.classList.add("active");
                            htmls = products.map((prod,ind)=>{
                                 if(ind < maximum_numbers_item_on_per_page){
                                     return render_products(prod);
@@ -459,7 +494,12 @@ export function moveArrowInCatagories(h4txt){
                            })
                            $('#tdsgtion-relative-product').innerHTML = htmls.join('')
                        }
+                       if(i==1){
+                           btn.classList.add("active")
+
+                       }
                        if(i==2){
+                           btn.classList.add("active")
                            clickAmount++;
                            const products2 = new Array;
                            products.map((prod,ind)=>{
@@ -478,30 +518,29 @@ export function moveArrowInCatagories(h4txt){
            })
        }
        export function sortFollowPrice(products){
-           const newArrayAscendingSort_soonAfterLoadingWeb = new Array;
+           const nw_Arr = new Array;
            products.map((prod,ind)=>{
                 if(ind<maximum_numbers_item_on_per_page){
-                return newArrayAscendingSort_soonAfterLoadingWeb.push(prod);
+                    return nw_Arr.push(prod);
                 }
-           })
-           const newArrayDescendingSort_soonAfterLoadingWeb = new Array;
-           products.map((prod,ind)=>{
-               if(ind< maximum_numbers_item_on_per_page){
-                return newArrayDescendingSort_soonAfterLoadingWeb.push(prod);
-               }
            })
            conditions_sort_links.forEach((link,ind)=>{
                link.onclick = ()=>{
+                   // remover active class on btns
+                   $(".bl1Sb-btn.active").classList.remove("active");
+                   $$(".bl1Sb-btn")[3].classList.add("active");
                    if(ind ==0){
-                       sort_AscendingPriceSold(newArrayAscendingSort_soonAfterLoadingWeb);
-                       htmls = newArrayAscendingSort_soonAfterLoadingWeb.map((prod,ind)=>{
+                       $(".pRCX span").innerHTML = link.textContent;
+                       sort_AscendingPriceSold(nw_Arr);
+                       htmls = nw_Arr.map(prod=>{
                             return render_products(prod);
                        })
-                       $('#tdsgtion-relative-product').innerHTML = htmls.join('')
+                       $('#tdsgtion-relative-product').innerHTML = htmls.join('');
                    }
                    if(ind == 1){
-                       sort_DescendingPriceSold(newArrayDescendingSort_soonAfterLoadingWeb);
-                       htmls = newArrayDescendingSort_soonAfterLoadingWeb.map((prod,ind)=>{
+                       $(".pRCX span").innerHTML = link.textContent;
+                       sort_DescendingPriceSold(nw_Arr);
+                       htmls = nw_Arr.map((prod,ind)=>{
                             return render_products(prod);
                        })
                        $('#tdsgtion-relative-product').innerHTML = htmls.join('')

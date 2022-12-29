@@ -182,7 +182,7 @@ export function add_animation_btns_controller_pagination(products){
 }
 //const paginationController = document.querySelector(".number-page");
 let currentPage =1, beforePage, afterPage, totalpages = 10;
-$(".number-page").innerHTML = create_pagination_controller(currentPage,totalpages)
+// $(".number-page").innerHTML = create_pagination_controller(currentPage,totalpages);
 function create_pagination_controller(currentPage,totalpages){
     let ui = "";
     var active;
@@ -201,21 +201,21 @@ function create_pagination_controller(currentPage,totalpages){
         else{
             active = "";
         }
-        ui += `<button class = "nbP flex ${active}" onclick = "create_pagination_controller(${i},totalpages)">${i}</button>`
+        ui += `<button class = "nbP flex ${active} none-change-opacity" onclick = "create_pagination_controller(${i},totalpages)">${i}</button>`
     }
     if(currentPage<totalpages-1){
         if(currentPage<totalpages-2){
                 ui += `<button class="nbP nbp--none-click flex color-gray font16" disabled>...</button>`
         }
-        ui += `<button class = "nbP flex ${active}" onclick = "create_pagination_controller(${totalpages},totalpages)">${totalpages}</button>`
+        ui += `<button class = "nbP flex ${active} none-change-opacity" onclick = "create_pagination_controller(${totalpages},totalpages)">${totalpages}</button>`
     }
     $(".number-page").innerHTML = ui;
     return ui;
 }
 export function pagination(products){
-    // create_pagination_controller(currentPage, totalPages(products))
-    // document.querySelector(".number-page").innerHTML = create_pagination_controller(currentPage,totalPages(products));
+    //create_pagination_controller(currentPage, totalPages(products))
     create_products(products);
     create_header_pagination(products);
-    // add_animation_btns_controller_pagination(products);
+    create_footer_pagination(products)
+    add_animation_btns_controller_pagination(products);
 }

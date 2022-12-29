@@ -144,7 +144,7 @@ ul li{
     height: 13px;
 }
 .psTiOn{
-    width: 150px;
+    width: 200px;
 }
 .sort-By-price{
     position: relative;
@@ -172,6 +172,9 @@ ul li{
     width: 100%;
     height: 50%;
     padding: 8px;
+}
+.hv-prcx a:hover{
+ color: var(--primary-color);
 }
 .sortBy_right{
     position: relative;
@@ -213,9 +216,10 @@ ul li{
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 .dell-price .currentcy,
 .dell-price .price-sggtion{
-    font-size:0.95rem !important;
+    font-size:0.75rem !important;
 }
 .icon-arrow-down-small{
     width: 12px;
