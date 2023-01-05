@@ -23,7 +23,7 @@ function handleProducts(){
             if(window.innerWidth <= 480){
                 render_Catagory_homePage_mobile(data.catagories)
             }
-            footerBanner(data.catagories)
+            footerBanner(data.footerBanner)
             render_FlashSale_homePage(data.flash_sale)
             renderProduct_ShopeeMall(data.shopee_mall)
             renderProduct_TrenddingSearch(data.trendding_search)
@@ -231,11 +231,11 @@ function footerBanner(data){
                 <div class="Z04TX">
                     <div class="z04tx-div">
                         <div class="z04tx-div-ic">
-                            <img src="${data.catagory_img}" alt="" class="z04tx-icon"></img>
+                            <img src="${data.cata_ft_img_link}" alt="" class="z04tx-icon"></img>
                         </div>
                         
                     </div>
-                    <div class="z04tx-txt">${data.catagory_name}</div>
+                    <div class="z04tx-txt">${data.cata_ft_name}</div>
                 </div>
             </a>
         `

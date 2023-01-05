@@ -29,44 +29,49 @@
     ],
     "footerBanner":[
         {
-            "cata-ft-link": "",
-            "cata-ft-img-link": "https://cf.shopee.vn/file/46a2a2c810622f314d78455da5e5d926_xhdpi",
-            "cata-ft-name": "Khung giờ săn sale"
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/46a2a2c810622f314d78455da5e5d926_xhdpi",
+            "cata_ft_name": "Khung giờ săn sale"
         },
         {
-            "cata-ft-link": "",
-            "cata-ft-img-link": "https://cf.shopee.vn/file/b3535d7e56c58c4ebe9a87672d38cc5e_xhdpi",
-            "cata-ft-name": "Gì cũng rẻ - Mua là Freeship"
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/b3535d7e56c58c4ebe9a87672d38cc5e_xhdpi",
+            "cata_ft_name": "Gì cũng rẻ - Mua là Freeship"
         },
         {
-            "cata-ft-link": "",
-            "cata-ft-img-link": "https://cf.shopee.vn/file/a8d76bca057ba0b117dcf8e1ef068d16_xhdpi",
-            "cata-ft-name": "Miễn phí vận chuyển"
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/a8d76bca057ba0b117dcf8e1ef068d16_xhdpi",
+            "cata_ft_name": "Miễn phí vận chuyển"
         },
         {
-            "cata-ft-link": "",
-            "cata-ft-img-link": "https://cf.shopee.vn/file/9da9a3acb5520d601f86a90434f455a5_xhdpi",
-            "cata-ft-name": "Hoàn xu 10% - Lên đến  200k"
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/9da9a3acb5520d601f86a90434f455a5_xhdpi",
+            "cata_ft-name": "Hoàn xu 10% - Lên đến  200k"
         },
         {
-            "cata-ft-link": "",
-            "cata-ft-img-link": "https://cf.shopee.vn/file/8d6d5ee795e7675fed39d31ba04c3b92_xhdpi",
-            "cata-ft-name": "Hàng hiệu giá tốt"
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/8d6d5ee795e7675fed39d31ba04c3b92_xhdpi",
+            "cata_ft_name": "Hàng hiệu giá tốt"
         },
         {
-            "cata-ft-link": "",
-            "cata-ft-img-link": "https://cf.shopee.vn/file/a08ab28962514a626195ef0415411585_xhdpi",
-            "cata-ft-name": "Hàng quốc tế"
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/a08ab28962514a626195ef0415411585_xhdpi",
+            "cata_ft_name": "Hàng quốc tế"
         },
         {
-            "cata-ft-link": "",
-            "cata-ft-img-link": "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi",
-            "cata-ft-name": "Nạp thẻ, Hoá đơn & Phim"
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi",
+            "cata_ft_name": "Nạp thẻ, Hoá đơn & Phim"
         },
         {
-            "cata-ft-link": "",
-            "cata-ft-img-link": "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi",
-            "cata-ft-name": "Nạp thẻ, Hoá đơn & Phim"
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/96385a65fa50800e096bb790fa5c1dba_xhdpi",
+            "cata_ft_name": "Deal sốc từ 1k"
+        },
+        {
+            "cata_ft_link": "",
+            "cata_ft_img_link": "https://cf.shopee.vn/file/ed849a82e8c66bbff8ec0f2869c6fbb7_xhdpi",
+            "cata_ft_name": "Chọn 5 số trúng tiền triệu"
         }
     ],
     "catagories":[
