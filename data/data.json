@@ -27,6 +27,48 @@
             "right_img": "https://cf.shopee.vn/file/eeb1944f62a948d04a30aa58a4c42e3b_xhdpi"
         }
     ],
+    "footerBanner":[
+        {
+            "cata-ft-link": "",
+            "cata-ft-img-link": "https://cf.shopee.vn/file/46a2a2c810622f314d78455da5e5d926_xhdpi",
+            "cata-ft-name": "Khung giờ săn sale"
+        },
+        {
+            "cata-ft-link": "",
+            "cata-ft-img-link": "https://cf.shopee.vn/file/b3535d7e56c58c4ebe9a87672d38cc5e_xhdpi",
+            "cata-ft-name": "Gì cũng rẻ - Mua là Freeship"
+        },
+        {
+            "cata-ft-link": "",
+            "cata-ft-img-link": "https://cf.shopee.vn/file/a8d76bca057ba0b117dcf8e1ef068d16_xhdpi",
+            "cata-ft-name": "Miễn phí vận chuyển"
+        },
+        {
+            "cata-ft-link": "",
+            "cata-ft-img-link": "https://cf.shopee.vn/file/9da9a3acb5520d601f86a90434f455a5_xhdpi",
+            "cata-ft-name": "Hoàn xu 10% - Lên đến  200k"
+        },
+        {
+            "cata-ft-link": "",
+            "cata-ft-img-link": "https://cf.shopee.vn/file/8d6d5ee795e7675fed39d31ba04c3b92_xhdpi",
+            "cata-ft-name": "Hàng hiệu giá tốt"
+        },
+        {
+            "cata-ft-link": "",
+            "cata-ft-img-link": "https://cf.shopee.vn/file/a08ab28962514a626195ef0415411585_xhdpi",
+            "cata-ft-name": "Hàng quốc tế"
+        },
+        {
+            "cata-ft-link": "",
+            "cata-ft-img-link": "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi",
+            "cata-ft-name": "Nạp thẻ, Hoá đơn & Phim"
+        },
+        {
+            "cata-ft-link": "",
+            "cata-ft-img-link": "https://cf.shopee.vn/file/9df57ba80ca225e67c08a8a0d8cc7b85_xhdpi",
+            "cata-ft-name": "Nạp thẻ, Hoá đơn & Phim"
+        }
+    ],
     "catagories":[
         {
             "id_catagory":1,

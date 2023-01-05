@@ -1,7 +1,6 @@
 $ = document.querySelector.bind(document)
 const top_search_link_ctn = $('.top_search_link_ctn')
 const spM_product_list = $('.spM-product-list')
-const section_grid_layout_container = $('.section-grid-layout-container')
 const trennding_linkCTN = $('.grid-ctn-body-trendding')
 const tdsgtion = $('#tdsgtion-relative-product');
 let htmls,new_Array = new Array;
@@ -9,22 +8,28 @@ import {renderHeaderNav} from "./header.js"
 import {keysearch} from "./keyword_search.js"
 renderHeaderNav();
 function handleProducts(){
-    fetch("../data/product.json")
+    fetch("../data/data.json")
         .then(res=>{
             return res.json()
         })
         .then(data=>{      
             render_slide_leftSlide_homeBanner(data.slider)
-            render_slide_rightSlide_homeBanner(data.right_banner)
-            render_Catagory_homePage(data.catagories)
+            if(window.innerWidth >= 1280){
+                
+                render_slide_rightSlide_homeBanner(data.right_banner);
+                render_Catagory_homePage(data.catagories);
+                keysearch(data.key_search)
+            }
+            if(window.innerWidth <= 480){
+                render_Catagory_homePage_mobile(data.catagories)
+            }
+            footerBanner(data.catagories)
             render_FlashSale_homePage(data.flash_sale)
             renderProduct_ShopeeMall(data.shopee_mall)
             renderProduct_TrenddingSearch(data.trendding_search)
             renderProduct_topSearch(data.products)
             renderProduct_Relative_HomePage(data.products);
-            if(window.innerWidth>= 1280){
-                keysearch(data.key_search)
-            }
+            setgrid()
         })
 } 
 handleProducts()
@@ -34,6 +39,19 @@ var currentIndex =0;
 const nextCircleAnimationHomeBanner = $$('.list-next-circle-animation')
 const prev_btn = $('.left-btn')
 const next_btn = $('.right-btn')
+// Set grid
+function setgrid(){
+    if(window.innerWidth >= 1280){
+        $$(".grid").forEach(grid=>{
+            grid.style.width = "1200px";
+        })
+    }
+    else{
+        $$(".grid").forEach(grid=>{
+            grid.style.width = "100%";
+        })
+    }
+}
 // HOME BANNER
 function render_slide_leftSlide_homeBanner(sliders){
     sliders.forEach(slide=>{
@@ -43,7 +61,7 @@ function render_slide_leftSlide_homeBanner(sliders){
                     <img src="${slide.silde_img_link}" alt="">
                 </li>
             `
-            $('.letf-slider-img-list').insertAdjacentHTML('beforeend',htmls)
+            $('.letf-slider-img-list').innerHTML  += htmls;
     })
     imgSliders = $('.letf-slider-img-list').querySelectorAll('.sld-img-item');
     autoshow();
@@ -118,19 +136,22 @@ function render_slide_rightSlide_homeBanner(imgs){
                 </div>
             </a>
         `
-        $('.right-slider').insertAdjacentHTML("beforeend", htmls)
+        $('.right-slider').innerHTML += htmls;
     })
 }
 
 // CATAGORIES
-function render_Catagory_homePage(products){
+function render_Catagory_homePage(data){
+    $(".section-grid-layout-heading").innerHTML = `
+        <div class="section-heading-title">Danh mục</div>
+    `
     var x=[], y=[];
-    for(let i =0; i<products.length;++i){
-        if(products[i].id_catagory%2>0){
-            x.push(products[i])
+    for(let i =0; i<data.length;++i){
+        if(data[i].id_catagory%2>0){
+            x.push(data[i])
         }
-        if(products[i].id_catagory%2==0){
-            y.push(products[i])
+        if(data[i].id_catagory%2==0){
+            y.push(data[i])
         }
     }
     x.forEach((item,index)=>{
@@ -161,11 +182,65 @@ function render_Catagory_homePage(products){
                     </div>
                 </li>
             `
-        section_grid_layout_container.insertAdjacentHTML('beforeend',htmls)
+        $(".section-grid-layout-container").innerHTML += htmls;
     })
     
 }
-
+function render_Catagory_homePage_mobile(data){
+    $(".section-grid-layout-heading").innerHTML = `
+        <div class="flex-jtfspbt">
+            <div class="section-heading-title">Danh mục</div>
+            <div class="btn-ic-see-all">
+                <a class="see-all-flash-sale-btn font075 none-change-opacity">Xem tất cả </a>
+                <div class="flex">
+                    <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" x="0" y="0" class="shopee-svg-icon icon-arrow-right-see_more"><path d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z"></path></svg>
+                </div>
+            </div>
+        </div>
+    `
+    data.forEach((item, index)=>{
+        if(index<5){
+            htmls =
+            `
+                <li class="list-item-section" style="">
+                    <div class="section-link-group none-border">
+                        <a class="section-grid-layout-item">
+                            <div class="section-z04-div" style="height: 80px">
+                                <div class="section-z04-img">
+                                    <div class="stc-im">
+                                        <div id="above" class="img-bgr-section" style="background-image:url('${item.catagory_img}'); background-size:"100% 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="z04tx-txt txt-Capitalize" style="font-size:0.65rem">${item.catagory_name}</div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            `
+            $(".section-grid-layout-container").innerHTML += htmls;
+        }
+        }
+    )
+    $(".small-btn").style.display = "none"
+}
+//CATAGORIES AT FOOTER BANNER
+function footerBanner(data){
+    data.forEach(data=>{
+        $(".footer-banner-container").innerHTML += `
+            <a>
+                <div class="Z04TX">
+                    <div class="z04tx-div">
+                        <div class="z04tx-div-ic">
+                            <img src="${data.catagory_img}" alt="" class="z04tx-icon"></img>
+                        </div>
+                        
+                    </div>
+                    <div class="z04tx-txt">${data.catagory_name}</div>
+                </div>
+            </a>
+        `
+    })
+}
 // FLASH SALE
 import handleEvent_next_prevBtn from "./handleEvent.js"
 export function render_FlashSale_homePage(products){
@@ -314,25 +389,35 @@ import { render_products_has_hoversameblock } from "./condition_render_products.
 export function renderProduct_Relative_HomePage(products){
     let loadmore = $('.ft-sggtion-btn');
     var maxResult = 6;
-    if(products.length<= maxResult){
-        for( let i in products){
-            htmls = render_products_has_hoversameblock(products[i]);
-            tdsgtion.innerHTML += htmls;
-        }
-    }
-    else{
-        for(let i =0; i<maxResult;++i) {
-            htmls = render_products_has_hoversameblock(products[i]);
-            tdsgtion.innerHTML += htmls;
-        }
-        loadmore.onclick = ()=>{
-            for(let i =maxResult;i<maxResult+6;++i){
+    if(window.innerWidth >= 1280){
+        if(products.length<= maxResult){
+            for( let i in products){
                 htmls = render_products_has_hoversameblock(products[i]);
                 tdsgtion.innerHTML += htmls;
             }
-            maxResult+=6;
-            if(maxResult>= products.length){
-                $('.footer-sggtion-see-more').style.display ='none'
+        }
+        else{
+            for(let i =0; i<maxResult;++i) {
+                htmls = render_products_has_hoversameblock(products[i]);
+                tdsgtion.innerHTML += htmls;
+            }
+            loadmore.onclick = ()=>{
+                for(let i =maxResult;i<maxResult+6;++i){
+                    htmls = render_products_has_hoversameblock(products[i]);
+                    tdsgtion.innerHTML += htmls;
+                }
+                maxResult+=6;
+                if(maxResult>= products.length){
+                    $('.footer-sggtion-see-more').style.display ='none'
+                }
+            }
+        }
+    }
+    if(window.innerWidth <= 480){
+        if(products.length<= maxResult){
+            for( let i in products){
+                htmls = render_products_has_hoversameblock(products[i]);
+                tdsgtion.innerHTML += htmls;
             }
         }
     }

@@ -1,4 +1,4 @@
-@import url("./resposive_index_page.css");
+/* @import url("./resposive_index_page.css"); */
 :root{
     --primary-color: #ee4d2d;
     --primary-color-rgba:rgb(238, 77, 45,0.07) ;
@@ -22,12 +22,11 @@
     line-height: 1.2;
 }
 html{
-    /* font-size: 0.875rem;  */
     line-height: 1.6rem;/*=100%*/
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     font-weight: normal;
-}
+} 
 body{
     background-color: var(--container-color);
 }
@@ -48,6 +47,9 @@ ul{
 }
 h3{
     color:var(--black-color);
+}
+input::placeholder{
+    color: var(--primary-color);
 }
 /* change opacity */
 .grid-item-trendding:hover,
@@ -85,7 +87,7 @@ h3{
     position: relative;
 }
 .header-nav-bar{
-    min-width: inherit;
+    width: inherit;
     height: var(--header-nav-heigh);
     margin: 0px auto;
 }
@@ -382,9 +384,16 @@ h3{
     color: var(--primary-color);
 }
 /*Nav header with search*/
+.search-logo-cart{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .nav-header-container-with-search{
     display: flex;
     position: relative;
+    width: 100%;
     justify-content: space-between;
     align-items: center; 
     height: var(--header-nav-search-heigh);
@@ -419,7 +428,7 @@ h3{
     left: 60px;
 }
 .nav-header-with-search{
-    min-width: 50%;
+    width: 50%;
     margin:0 8px;
 }
 .box-search{
@@ -429,10 +438,11 @@ h3{
     display: flex;
     position: relative;
     padding-left: 4px;
-    background-color: var(--white-color);
     height: 32px;
     width: 100%;
+    background-color: var(--white-color);
     left: 0;
+    /* margin-left: 20px; */
     border-radius: 3px;
 }
 .container-input-history-search{
@@ -546,11 +556,6 @@ h3{
     display: block;
     padding: 4px 8px;
     align-items: center;
-}
-.shopping-cart i{
-    padding: 4px 16px 0 16px;
-    font-size: 24px;
-    width: 50px;
 }
 .shopping-cart-link:hover{
     opacity: 1;
@@ -700,7 +705,6 @@ h3{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    flex: 2 1 0; 
 }
 .left-slider:hover .left-slider-arrow{
     display: block;
@@ -710,22 +714,24 @@ h3{
     position: relative;
 }
 .letf-slider-img-list{
-    width: 1000%;
+    /* width: 1000%; */
     height: 100%;
     position: relative;
     float: left;
     overflow: hidden;
-    /* transition: all 10s easea; */
+    transition: all 10s easea;
 }
 .sld-img-item{
     display: none;
-    width:100%;
+    /* width:100%; */
+    width: 100%;
     float: left;
     position:relative;
     height: 100%;
     transition: all 0.2s;
     animation: slideGoFromRight 0.2s forwards;
     box-shadow: 0 10px 10px 20px rgba(128, 126, 126, 0.05);
+    background-color: #000;
 }
 .sld-img-item img{
     width: 800px;
@@ -847,13 +853,11 @@ h3{
     min-height: 50rem;
 }
 /* Catagories */
-.home-body-section{
-    min-width: 1200px;
-    min-height: 300px;
-}
+
 .section-grid-layout-heading{   
-    height: 3.75rem;
-    align-items: center;
+    /* height: 3.75rem; */
+    width: 100%;
+    /* align-items: center; */
     background-color: var(--white-color);
     border-bottom: 1px solid var(--border-color-line);
     padding: 0 0.125rem;
@@ -868,15 +872,14 @@ h3{
 /* body section */
 .img-carousel{
     position: relative;
-    height: 100%;
 }
 .img-carousel_item_list_wrapper{
-    width: 100%;
-    height: 100%;
     overflow: hidden;
 }
 .section-grid-layout-container{
+    position: relative;
     width: 130%;
+    height: 100%;
     transition: 500ms;
     transform: translate(0px,0px);
     display:flex;
@@ -890,17 +893,16 @@ h3{
 .list-item-section{
     display: block;
     box-sizing: border-box;
-    width: 200px;
-    height: 100%;
+    width:200px;
+    /* width: calc(100%/10); */
     font-size: 30px;
     text-align: center;
-    overflow-x: unset !important;
+    /* overflow-x: unset !important; */
     float: left;
-    touch-action: pan-y;
+    touch-action: pan-x;
 }
 .section-link-group{
     width: 100%;
-    height: 100%;
     box-sizing: border-box;
     border: 1px solid var(--border-color-line);
     border-top: 0px;
@@ -933,8 +935,8 @@ h3{
     height: 200px;
 }
 .section-z04-img{
-    width: 100px;
-    height: 70%;
+    width: 100%;
+    height: 100%;
     margin-top: 10%;
 }
 .stc-im{
@@ -947,12 +949,16 @@ h3{
 }
 /* Flash Sale */
 .flash-sale-container{
-    min-width: 1200px;
+    /* min-width: 1200px; */
+    width: 100%;
+    height: fit-content;
 }
 .flash{
+    width: 100%;
     position: relative;
 }
 .header-flash-sale{
+    width: 100%;
     display: flex;
     height: 60px;
     justify-items: center;
@@ -963,19 +969,21 @@ h3{
 }
 .right-header-flash-sale,
 .left-header-flash-sale{
+    width: 100%;
     display: flex;
-    padding:16px;
+    padding: 16px;
     align-items: center;
 }
 .header-flash-sale-img{
-    width: 114px;
+    /* width: 114px; */
+    width: 50%;
     height: 30px;
     background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/flashsale/fb1088de81e42c4e538967ec12cb5caa.png") 50% no-repeat;
     background-size: contain;
     margin-right: 32px;
 }
 .countdown-timer{
-    width: 114px;
+    width: 50%;
     height: 30px;
     background-color: var(--primary-color);
 }
@@ -983,7 +991,8 @@ h3{
     display: inline-flex;
     align-items: center;
     justify-content:flex-end;
-    width:100px;
+    /* width:100px; */
+    width: 50%;
     padding-right: 8px;
 }
 .see-all-flash-sale-btn{
@@ -996,12 +1005,13 @@ h3{
     overflow: hidden;
 }
 .grid-containter-flash-sale{
-    width: 100%;
     display: flex;
     align-items: center;
     background-color: var(--white-color);
     scroll-behavior: smooth;
+    width: 100%;
 }
+
 .grid-item-link-product-saleoff{
     background-color: var(--white-color);
     width: 200px;
@@ -1668,7 +1678,8 @@ h3{
 }
 /*Footer Shopee */
 .footer{
-    min-width: 1200px;
+    /* min-width: 1200px; */
+    width: 100%;
     margin-top: 60px;
     border-top: 4px solid var(--primary-color);
     background-color: var(--white-color);
@@ -1676,6 +1687,9 @@ h3{
 .footer-container-shopee{
     margin-top: 60px;
     color:var(--footer-color-text);
+}
+.footer-mobile{
+    
 }
 .heading-footer-item{
     text-transform: uppercase;

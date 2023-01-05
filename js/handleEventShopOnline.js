@@ -155,7 +155,7 @@ export function moveArrowInCatagories(h4txt){
                                    sort_AscendingPriceSold(nwArr_sortlinks);
                                    //render_products_sort_links(nwArr_sortlinks);
                                    pagination(nwArr_sortlinks);
-                                //    create_products(nwArr_sortlinks)
+                                    //create_products(nwArr_sortlinks)
                                    setOpacity($("#start-number").innerHTML, totalPages(products_paging_after_filter), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
                                }
                                if(ind == 1){
@@ -262,6 +262,7 @@ export function moveArrowInCatagories(h4txt){
            for(let i =0; i<h4txts.length;++i){
                h4txts[i].onclick = ()=>{
                    //products_paging_after_filter.length =0;
+                   $(".pRCX span").innerHTML = `Giá`;
                    jQuery('#tdsgtion-relative-product').empty();
                    moveArrowInCatagories(h4txts[i]);
                    btns[0].classList.add('active');
@@ -281,7 +282,6 @@ export function moveArrowInCatagories(h4txt){
                        })
                        products.map(prod=>{
                             if(h4txts[i].getAttribute("data-catagories-inshop") == prod.catagories_inshop.toLowerCase()){
-                                //$('.number-page').innerHTML = " ";
                                 jQuery('.number-page').empty();
                                 return products_paging_after_filter.push(prod);
                             }
@@ -292,6 +292,7 @@ export function moveArrowInCatagories(h4txt){
                        btns.forEach((btn,index_btn)=>{
                            btn.onclick = ()=>{
                                products_paging_after_filter.length =0;
+                               $(".pRCX span").innerHTML = `Giá`;
                                if(index_btn==0){
                                    nw_Arr.length = 0;
                                    jQuery('#tdsgtion-relative-product').empty();
@@ -304,7 +305,6 @@ export function moveArrowInCatagories(h4txt){
                                    })
                                     products.map(prod=>{
                                         if(h4txts[i].getAttribute("data-catagories-inshop") == prod.catagories_inshop.toLowerCase()){
-                                            //$('.number-page').innerHTML = "";
                                             jQuery('.number-page').empty();
                                             return products_paging_after_filter.push(prod);
                                         }
@@ -323,6 +323,8 @@ export function moveArrowInCatagories(h4txt){
                                if(index_btn==2){
                                     nw_Arr.length = 0;
                                     jQuery('#tdsgtion-relative-product').empty();
+                                    $(".pRCX span").innerHTML = "";
+                                    $(".pRCX span").innerHTML = `Giá`;
                                     btns[2].classList.add('active');
                                     btns.forEach((btn,index_btn)=>{
                                         if(index_btn!=2){
@@ -402,6 +404,7 @@ export function moveArrowInCatagories(h4txt){
                    }
                    if(i==0){
                        jQuery('#tdsgtion-relative-product').empty();
+                       $(".pRCX span").innerHTML = `Giá`;
                        products_paging_after_filter.length = 0;
                        btns[0].classList.add('active');
                        btns.forEach((btn,index_btn)=>{
@@ -529,7 +532,7 @@ export function moveArrowInCatagories(h4txt){
                    // remover active class on btns
                    $(".bl1Sb-btn.active").classList.remove("active");
                    $$(".bl1Sb-btn")[3].classList.add("active");
-                   if(ind ==0){
+                   if(ind == 0){
                        $(".pRCX span").innerHTML = link.textContent;
                        sort_AscendingPriceSold(nw_Arr);
                        htmls = nw_Arr.map(prod=>{
@@ -540,7 +543,7 @@ export function moveArrowInCatagories(h4txt){
                    if(ind == 1){
                        $(".pRCX span").innerHTML = link.textContent;
                        sort_DescendingPriceSold(nw_Arr);
-                       htmls = nw_Arr.map((prod,ind)=>{
+                       htmls = nw_Arr.map(prod=>{
                             return render_products(prod);
                        })
                        $('#tdsgtion-relative-product').innerHTML = htmls.join('')
