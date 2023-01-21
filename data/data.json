@@ -2,19 +2,19 @@
     "slider":[
         {
             "slide_id": 1,
-            "silde_img_link": "https://cf.shopee.vn/file/f77fa025d079ae928a764488a07ea636_xxhdpi"
+            "slide_img_link": "https://cf.shopee.vn/file/f77fa025d079ae928a764488a07ea636_xxhdpi"
         },
         {
             "slide_id": 2,
-            "silde_img_link": "https://cf.shopee.vn/file/7916193bf55a497cdc58f367a98904e2_xxhdpi"
+            "slide_img_link": "https://cf.shopee.vn/file/e1faf544d19d8d4fc8b112ff721f1835_xxhdpi"
         },
         {
             "slide_id": 3,
-            "silde_img_link": "https://cf.shopee.vn/file/950c1b1ec053c7809338d025dc42439f_xxhdpi"
+            "slide_img_link": "https://cf.shopee.vn/file/950c1b1ec053c7809338d025dc42439f_xxhdpi"
         },
         {
             "slide_id": 4,
-            "silde_img_link": "https://cf.shopee.vn/file/1d88e6f26bf7d7cecf9418c5a76a6770_xxhdpi"
+            "slide_img_link": "https://cf.shopee.vn/file/1d88e6f26bf7d7cecf9418c5a76a6770_xxhdpi"
         }
     ],
     "right_banner":[
@@ -45,8 +45,8 @@
         },
         {
             "cata_ft_link": "",
-            "cata_ft_img_link": "https://cf.shopee.vn/file/9da9a3acb5520d601f86a90434f455a5_xhdpi",
-            "cata_ft-name": "Hoàn xu 10% - Lên đến  200k"
+            "cata_ft_img_link": "https://cf.shopee.vn/file/bfe29fba44c0cd8083730e58d0efcbb1_xhdpi",
+            "cata_ft_name": "ShopeeFood - Freeship 0Đ"
         },
         {
             "cata_ft_link": "",
@@ -262,6 +262,7 @@
             "quantity_rating": 773,
             "quantity_sold": 0,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Sữa rửa mặt",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -279,6 +280,7 @@
             "quantity_rating": 77,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Sữa rửa mặt",
             "catagories_inshop": "Sản phẩm bán chạy",
             "shop_adress": "Ninh Bình"
         },
@@ -296,6 +298,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Sữa rửa mặt",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -313,6 +316,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Thiết bị điện tử",
+            "catagory_TopSearch": "Găng tay",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -330,6 +334,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Găng tay",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -347,6 +352,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Áo dài tay",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -364,6 +370,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Áo dài tay",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -381,6 +388,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Găng tay",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -398,6 +406,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Găng tay",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -415,6 +424,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Áo thun Brand",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -432,6 +442,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Áo thun Brand",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         },
@@ -449,6 +460,7 @@
             "quantity_rating": 773,
             "quantity_sold": 10,
             "catagory": "Sắc đẹp",
+            "catagory_TopSearch": "Áo thun Brand",
             "catagories_inshop": "Hàng hot đầu thu - Nghe nhạc êm ru - Mua ngay kẻo lỡ kèo ngon",
             "shop_adress": "Ninh Bình"
         }

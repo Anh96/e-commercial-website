@@ -20,6 +20,8 @@
     box-sizing: inherit;
     margin: 0px 0px;
     line-height: 1.2;
+    touch-action: pan-x;
+    touch-action: pan-y;
 }
 html{
     line-height: 1.6rem;/*=100%*/
@@ -698,7 +700,6 @@ input::placeholder{
     display: flex;
     flex: auto;
     width: 100%;
-    height: 300px;
 }
 .left-slider{
     position: relative;
@@ -714,7 +715,7 @@ input::placeholder{
     position: relative;
 }
 .letf-slider-img-list{
-    /* width: 1000%; */
+    width: 400%;
     height: 100%;
     position: relative;
     float: left;
@@ -722,21 +723,17 @@ input::placeholder{
     transition: all 10s easea;
 }
 .sld-img-item{
-    display: none;
-    /* width:100%; */
-    width: 100%;
+    display: block;
+    width:100%;
     float: left;
     position:relative;
     height: 100%;
     transition: all 0.2s;
     animation: slideGoFromRight 0.2s forwards;
     box-shadow: 0 10px 10px 20px rgba(128, 126, 126, 0.05);
-    background-color: #000;
+    background-repeat: no-repeat no-repeat;
 }
-.sld-img-item img{
-    width: 800px;
-    height: 300px;
-}
+
 @keyframes slideGoFromRight{
     0%{
         transform: translateX(50px);
@@ -811,15 +808,21 @@ input::placeholder{
 .footer-banner-container{
     display:flex;
     justify-content: space-between;
-    width: 1200px;
     margin: 10px auto;
 }
-.footer-banner-container a:hover{
-    opacity: 1;
+.coll{
+    flex: calc(100%/12);
+    max-width: calc(100%/12);
+    position: relative;
+}
+.coll a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .Z04TX{
     align-items: center;
-    width: 50x;
+    width: 75px;
     text-align: left;
 }
 .Z04TX:hover{
@@ -848,12 +851,23 @@ input::placeholder{
 .space{
     margin: 32px 0;
 }
+/* promotion group links bellow footer home-banner */
+.promotion-group-links{
+    width: 100%;
+    height: 85px;
+    top: 0px;
+}
+.promotion-group-links a{
+    display: block;
+    width: 100%;
+    height: 85px;
+    margin: 4px;
+}
 /* section */
 .container{
     min-height: 50rem;
 }
 /* Catagories */
-
 .section-grid-layout-heading{   
     /* height: 3.75rem; */
     width: 100%;
@@ -932,24 +946,29 @@ input::placeholder{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    height: 170px;
 }
 .section-z04-img{
+    align-items: center;
     width: 100%;
     height: 100%;
     margin-top: 10%;
 }
 .stc-im{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
     height: 100%;
 }
 .img-bgr-section{
-    height: inherit;
-    background-size: contain;
+    width: inherit;
+    height: 100%;
+    /* background-size: cover; */
     background-repeat: no-repeat no-repeat;
 }
 /* Flash Sale */
 .flash-sale-container{
-    /* min-width: 1200px; */
     width: 100%;
     height: fit-content;
 }
@@ -969,33 +988,36 @@ input::placeholder{
 }
 .right-header-flash-sale,
 .left-header-flash-sale{
-    width: 100%;
+    /* position: relative; */
+    width: 50%;
     display: flex;
     padding: 16px;
     align-items: center;
 }
 .header-flash-sale-img{
-    /* width: 114px; */
-    width: 50%;
+    width: 114px;
+    /* width: 50%; */
     height: 30px;
     background: url("https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/flashsale/fb1088de81e42c4e538967ec12cb5caa.png") 50% no-repeat;
     background-size: contain;
     margin-right: 32px;
 }
 .countdown-timer{
-    width: 50%;
+    width: 30%;
     height: 30px;
     background-color: var(--primary-color);
 }
 .btn-ic-see-all{
+    /* width: 100%; */
+    /* width: 50%; */
+    height: inherit;
+    position: absolute;
     display: inline-flex;
     align-items: center;
-    justify-content:flex-end;
-    /* width:100px; */
-    width: 50%;
-    padding-right: 8px;
+    right: 0px;
 }
 .see-all-flash-sale-btn{
+    font-size: 10px;
     border: 0px;
     background-color: inherit;
     color: var(--primary-color);
@@ -1005,6 +1027,7 @@ input::placeholder{
     overflow: hidden;
 }
 .grid-containter-flash-sale{
+    position: relative;
     display: flex;
     align-items: center;
     background-color: var(--white-color);
@@ -1013,6 +1036,7 @@ input::placeholder{
 }
 
 .grid-item-link-product-saleoff{
+    position: relative;
     background-color: var(--white-color);
     width: 200px;
 }
@@ -1147,17 +1171,18 @@ input::placeholder{
     right: -10px;
 }
 /* promotion container */
-.promotion-container{
-    min-width: 1200px;
-    height: 100px;
-    overflow: hidden;
+.prmo{
+    width: 100%;
+    /* height: 110px; */
+    background-color: #000;
     position: relative;
 }
 .img-banner{
     display: block;
-    width: 100%;
-    height: 100px;
-    overflow: hidden;
+    height: inherit;
+    background-image: url("https://cf.shopee.vn/file/d153f5b3fef1b489b0f9507c61da56aa");
+    background-repeat: no-repeat no-repeat;
+    background-size: contain;
 }
 .item-promotion-link{
     display:flex;
@@ -1168,19 +1193,27 @@ input::placeholder{
     left: 0;
 }
 .promotion-item-link{
-    flex-grow: 33.33333336;
+    display: flex;
+    width: calc(100%/3);
     height: 100%;
 }
 /* Shopee Mall */
 .shopee-mall-container{
+    height: fit-content;
     margin-top: 32px;
     color: (--primary-color);
     width: 100%;
 }
+.sml-div-container{
+    position: relative;
+    width: 100%;
+}
 .header-smll-container{
-    min-width: 1200px;
+    /* min-width: 1200px; */
+    width: 100%;
     color: var(--red-color);
     background-color: var(--white-color);
+    border: 2px solid var(--container-color);
 }
 .left-smll-item{
     margin:0 8px;
@@ -1189,49 +1222,54 @@ input::placeholder{
     display: inline-flex;
 }
 .heading-smll{
-    width: 140px;
+    /* width: 140px; */
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
 }
 .item-header-smll-container{
-    display: inline-flex;
-    width: 230px;
+    display: flex;
+    /* width: 230px; */
+    /* width: calc(100%/3); */
     align-items: center;
     font-size: 18px;
     color: var(--text-color);
-    margin-left: 16px;
+    /* margin-left: 16px; */
 }
 .item-header-smll-container img{
     width: 16px;
     height: 16px;
     margin-right: 4px;
 }
+.right-header-smll-container{
+    width: 50%;
+    position: relative;
+}
 .right-header-smll-container .right-header-flash-sale{
     height: 50px;
     padding: 0;
-    margin-right: 8px;
-    background-color: var(--white-color);
+}
+.right-header-flash-sale{
+    position: relative;
 }
 .right-header-smll-container .btn-ic-see-all{
     background-color: var(--white-color);
 }
 /* SHOPEEMALL BODY */
 .shopeeMall-body-container{
-    min-width: 1200px;
-    height: 540px;
+    width: 100%;
+    /* height: 540px; */
     position: relative;
     /* overflow: hidden; */
-    margin-top: 16px;
+    margin-top: 8px;
     background-color: var(--white-color)
 }
 .spM-left-body-ctn{
     /* min-width: 380px; */
-    width: 25%;
+    /* width: 25%; */
     height: 100%;
     position: relative;
     overflow: hidden;
-    background-color: var(--black-color)
 }
 .spM-left-body-ctn:hover .left-slider-arrow{
     display: block;
@@ -1250,8 +1288,8 @@ input::placeholder{
 }
 .spM-right-overflow{
     width: 100%;
-    overflow: hidden;
 }
+
 .spM-product-list{
     width: 1000%;
     height: 100%;
@@ -1261,7 +1299,7 @@ input::placeholder{
     width: 198px;
     height: 100%;
     /* height: fit-content; */
-    margin: 8px;
+    /* margin: 8px; */
 }
 .spM-item-link-product{
     display: block;
@@ -1273,11 +1311,13 @@ input::placeholder{
 }
 #spM_content{
     height: 25px;
-    overflow: hidden; 
+    overflow: hidden;
+    /* white-space: normal; */
     text-align: center;
     text-overflow: ellipsis;
 }
 #spM_content div{
+    white-space: normal;
     word-wrap: break-word;
     display: -webkit-box;
     text-overflow: ellipsis;
@@ -1303,7 +1343,6 @@ input::placeholder{
 }
 /* Trendding Search*/
 .container-trendding-search{
-    width: fit-content;
     margin-top: 32px;
 }
 .header-ctn-trendding-search{
@@ -1318,36 +1357,53 @@ input::placeholder{
     border-bottom: 0.05px solid var(--line-color);
     padding-left: 16px;
     align-items: center;
+    width: 100%;
 }
-.ctn-grid{
+.header-ctn-trendding-search .right-header-flash-sale{
     width: 100%;
     position: relative;
 }
+.header-ctn-trendding-search .btn-ic-see-all {
+    position: absolute;
+    right: 0px;
+}
+.ctn-grid{
+    width: 100%;
+    position: relative;;
+}
 .ctn-body-trendding{
+    width: 100%;
     height:fit-content;
 }
 .header-ctn-text{
     color: var(--footer-color-text);
 }
-.grid-ctn-body-trendding{
-    display: grid;
+.flex-ctn-body-trendding{
+    display: flex;
     background-color: var(--white-color);
-    grid-template-columns: auto auto auto auto auto;
     padding: 0;
+    overflow: hidden;
 }
-.grid-item-trendding{
+.scroll-ctn-body-trendding{
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+}
+.scroll-ctn-body-trendding::-webkit-scrollbar{
+    display: none;
+}
+.flex-item-trendding{
     width: 240px;
     display: flex;
     position: relative;
     align-items:center;
     border-right: 0.05px solid var(--line-color);
-    background-color: var(--white-color);
     padding: 0;
 }
-.grid-item-trendding:last-child{
+.flex-item-trendding:last-child{
     border-right: 0;
 }
-.grid-item-text{
+.flex-item-text{
     padding: 8px;
 }
 .name-product-trendding{
@@ -1378,13 +1434,19 @@ input::placeholder{
     width: 100%;
     overflow: hidden;
 }
-
+.top-search-wrapper{
+    overflow-x: scroll;
+}
+.top-search-wrapper::-webkit-scrollbar{
+    display: none;
+}
 .top-search-item-link{
     display: block;
     width: 200px;
 }
 .top_search_link_ctn{
-    width: 1000%;
+    /* width: 1000%; */
+    width: fit-content;
     height: fit-content;
 }
 
@@ -1449,7 +1511,8 @@ input::placeholder{
 }
 /* Today Suggesstion */
 .sggtion-container{
-    min-width: 1200px;
+    /* min-width: 1200px; */
+    width: 100%;
     position: relative;
     min-height: 300px;
     z-index: 0;

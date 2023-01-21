@@ -4,7 +4,7 @@ import {render_products, render_header_catagMobile} from './condition_render_pro
 import { totalPages, pagination } from './paging.js';
 import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
 import {render_info_shop_online } from './shop_information.js';
-import { renderHeaderNav } from './header.js';
+import { renderHeaderNav_base_desktop } from './header.js';
 import {keysearch} from "./keyword_search.js"
 // import { responsive_shop_page } from './responsive.js';
 // change position for check-icon when click on each element namethod name
@@ -55,8 +55,9 @@ import {keysearch} from "./keyword_search.js"
         return res.json();
     })
     .then(data=>{
-        renderHeaderNav();
+        
         if(window.innerWidth>=1367){
+            renderHeaderNav_base_desktop()
             catagories_desktop(data.products_inshop);
         }
         if(window.innerWidth <= 480){
