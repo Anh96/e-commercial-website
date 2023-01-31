@@ -1,12 +1,13 @@
-$ = document.querySelector.bind(document)
-// const $$ = document.querySelectorAll.bind(document);
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
 const top_search_link_ctn = $('.top_search_link_ctn')
 const trennding_linkCTN = $('.grid-ctn-body-trendding')
 const tdsgtion = $('#tdsgtion-relative-product');
 let htmls,new_Array = new Array;
 import {renderHeaderNav_base_desktop, renderHeaderNav_homepage_mobile,} from "./header.js";
 import {keysearch} from "./keyword_search.js";
-import {renderFooter, footerTodaySuggestionMobile} from "./footer.js"
+import {footerHomepage, footerTodaySuggestionMobile, renderFooter_mobile} from "./footer.js"
 import {handleEvent_next_prevBtn, handleEventBtnsSliderShopeeMall, handle_sliders_shopeemall, handleEventClick_NexPrevBtns_PC, handleEventClick_NextPrevBtns_Mobile} from "./handleEvent.js"
 function fetchData(){
     fetch("../data/data.json")
@@ -29,7 +30,9 @@ function fetchData(){
                 render_Catagory_homePage_mobile(data.catagories);
                 renderLayout_ShopeeMall_mobile(data.shopee_mall);
                 handleEventClick_NextPrevBtns_Mobile();
-                footerTodaySuggestionMobile();
+                render_TodaySuggesstionLayout_Mobile(data.products);
+                // footerTodaySuggestionMobile();
+
             }
             footerBanner(data.footerBanner)
             render_FlashSale_homePage(data.flash_sale)
@@ -55,8 +58,9 @@ function setproperties_when_window_widthchanges(){
         // banner
         $(".full-home-banner").style.height = "300px"
         document.querySelectorAll(".sld-img-item").forEach(bgimg=>{
-            bgimg.style.backgroundSize = "contain"
+            bgimg.style.backgroundSize = "contain";
         })
+        $(".left-slider").style.flex = "2 1 0";
     }
     else{
         let x = window.outerWidth;
@@ -76,6 +80,43 @@ function setproperties_when_window_widthchanges(){
         document.querySelectorAll(".top-search-item-link").forEach(item=>{
             item.style.width = "150px";
         })
+        // Today Suggesstion
+        // document.querySelector(".header-ctn-today-sggtion").style.marginTop = "0px";
+        window.addEventListener("scroll", ()=>{
+            if(window.scrollY>=2000){
+                // console.log(window.scrollY);
+                document.querySelector(".header-ctn-today-sggtion").style.top = "0px";
+            }
+        })
+        $$(".b4etd").forEach(item=>{
+            item.style.width = "47.3%";
+            item.style.height = "auto";
+        })
+        $$(".hover-looking-same-product").forEach(item=>{
+            item.style.display = "none"
+        })
+        $$(".nbs-sggtion").forEach(item=>{
+            item.style.fontSize = "10px"
+        })
+        $$(".crr-price").forEach(item=>{
+            item.style.fontSize = "13px"
+        })
+        // footer-sggtion-see-more
+        $(".footer-sggtion-see-more").style.marginBottom = "16px";
+        $(".ft-sggtion-btn").style.border = "1px solid var(--primary-color)";
+        // footer
+        $(".footer").style.margin = "0px";
+        $(".footer").style.borderTop = "none";
+
+        $(".block-5").style.padding = "0px";
+        $(".b5top").style.padding = "10px 0px";
+
+        $$(".block5-top .right-link-block").forEach(item=>{
+            item.style.width = "50%";
+        })
+        // $$(".rc5b-mobile").forEach(item=>{
+        //     item.style.marginBottom = "10px"
+        // })
     }
 }
 // HOME BANNER
@@ -578,9 +619,9 @@ function renderProduct_topSearch(products){
     })
 }
 // TODAY SUGGESSTIONS
-import { render_products_has_hoversameblock } from "./condition_render_products.js"
+import { render_products_has_hoversameblock } from "./condition_render_products.js";
 export function renderProduct_Relative_HomePage(products){
-    renderFooter();
+    footerHomepage();
     let loadmore = document.querySelector('.ft-sggtion-btn');
     var maxResult = 6;
     if(products.length<= maxResult){
@@ -595,17 +636,20 @@ export function renderProduct_Relative_HomePage(products){
             tdsgtion.innerHTML += htmls;
         }
         loadmore.onclick = ()=>{
-            for(let i =maxResult;i<maxResult+6;++i){
+            for(let i = maxResult;i<maxResult+6;++i){
                 htmls = render_products_has_hoversameblock(products[i]);
                 tdsgtion.innerHTML += htmls;
             }
             maxResult+=6;
-            if(maxResult>= products.length){
+            if(maxResult >= products.length){
                 $('.footer-sggtion-see-more').style.display ='none'
             }
         }
     }
 }
 function render_TodaySuggesstionLayout_Mobile(data){
-
+   for(let i of data){
+        $(".tdsgtion").innerHTML += render_products_has_hoversameblock(i);
+   }
+   renderFooter_mobile();
 }

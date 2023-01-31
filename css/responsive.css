@@ -5,9 +5,9 @@
         width: 100%;
         margin: 0px auto;
     }
-    .header{
+    /* .header{
         display: none;
-    }
+    } */
     .mobile-search-controller{
         display: block;
     }
@@ -315,14 +315,14 @@
         width: 1200px;
         margin: 0px auto;
     }
+    .header{
+        background-color: var(--primary-color);
+    }
     .lft-rltSk .mobile-search-box{
         display: none;
     }
     .sortResult-main{
         width: 100%;
-    }
-    .header{
-        display: block;
     }
     .sOhome-ctn .xCAO3k{
         margin-top: 130px;

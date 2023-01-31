@@ -1,10 +1,11 @@
 $ = document.querySelector.bind(document);
-$$ = document.querySelectorAll.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 import {render_products, render_header_catagMobile} from './condition_render_products.js'
-import { totalPages, pagination } from './paging.js';
+import {pagination } from './paging.js';
 import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
 import {render_info_shop_online } from './shop_information.js';
-import { renderHeaderNav_base_desktop } from './header.js';
+import {renderHeaderNav_base_desktop} from './header.js';
+import {footerBase} from "./footer.js"
 import {keysearch} from "./keyword_search.js"
 // import { responsive_shop_page } from './responsive.js';
 // change position for check-icon when click on each element namethod name
@@ -56,9 +57,11 @@ import {keysearch} from "./keyword_search.js"
     })
     .then(data=>{
         
-        if(window.innerWidth>=1367){
+        if(window.innerWidth>=1280){
             renderHeaderNav_base_desktop()
             catagories_desktop(data.products_inshop);
+            keysearch(data.key_search);
+            footerBase();
         }
         if(window.innerWidth <= 480){
             render_header_catagMobile();
@@ -70,9 +73,15 @@ import {keysearch} from "./keyword_search.js"
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop);
         render_info_shop_online(data.shop_onlines);
-        keysearch(data.key_search)
+        setproperties_when_window_widthchanges();
     })
-    
+function setproperties_when_window_widthchanges(){
+    if(window.innerWidth >= 1280){
+        document.querySelectorAll(".grid").forEach(grid=>{
+            grid.style.width = "1200px";
+        });
+    }
+}
 //Catagories in shop
    let catas = new Array;
    function check_lengthCatagories(catagories){

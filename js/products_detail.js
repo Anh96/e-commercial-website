@@ -1,11 +1,19 @@
-import {render_products} from "./condition_render_products"
+import {render_products} from "./condition_render_products.js";
+import {renderHeaderNav_base_desktop, renderHeaderNav_homepage_mobile} from "./header.js";
+import {footerBase} from "./footer.js"
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelector.bind(document);
 let htmls;
 function handleProducts(){
-    fetch("../data/product.json")
+    fetch("../data/data.json")
         .then(res=>{
             return res.json()
         })
         .then(data=>{
+            if(window.innerWidth >=1280){
+                renderHeaderNav_base_desktop();
+                footerBase();
+            }
             render_product_inshop(data.products_inshop)
             renderProduct_Relative_HomePage(data.products);
         })
@@ -182,7 +190,7 @@ function render_product_inshop(products){
                         </div>
                     `
             }
-            $('.top_search_link_ctn').insertAdjacentHTML("beforeend", htmls);
+            $('.top_search_link_ctn').innerHTML += htmls;
         }
     }
     if(amount_prods_available % 6 > 0){
@@ -352,7 +360,7 @@ function render_product_inshop(products){
                         </div>
                     `
             }
-            $('.top_search_link_ctn').insertAdjacentHTML("beforeend", htmls);
+            $('.top_search_link_ctn').innerHTML += htmls;
         }
     }
     const b4etd = $$('.b4etd')

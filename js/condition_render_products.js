@@ -1,7 +1,8 @@
 const $$ = document.querySelectorAll.bind(document)
 //Caculate price promotion
 export let calculator_promotion_price = (product)=>{
-    return product.price - (product.price *product.percent_saleoff/100);
+    // return product.price - (product.price *product.percent_saleoff/100);
+    return new Intl.NumberFormat('vi-VN').format(product.price - (product.price *product.percent_saleoff/100));
 }
 let htmls;
 export function render_products(prod){
@@ -54,7 +55,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -164,7 +165,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -263,7 +264,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -345,7 +346,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -452,7 +453,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -523,7 +524,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -619,7 +620,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -698,7 +699,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -762,7 +763,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -869,7 +870,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -965,7 +966,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -1044,7 +1045,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -1148,7 +1149,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -1216,7 +1217,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -1309,7 +1310,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -1385,7 +1386,7 @@ export function render_products(prod){
                                                 <div class="prc flx">
                                                     <del class="dell-price flxC color-gray">
                                                         <div class="currenty-sggtion font075">đ</div>
-                                                        <div class="price-sggtion">${prod.price}</div>
+                                                        <div class="price-sggtion">${new Intl.NumberFormat('vi-VN').format(prod.price)}</div>
                                                     </del>
                                                     <div class="crr-price flxC mgl-8">
                                                         <div class="currenty-sggtion">đ</div>
@@ -2725,7 +2726,7 @@ export function render_products_has_hoversameblock(prod){
                                                 <div class="price-sggtion">${x}</div>
                                             </div>  
                                             <div class="nbs-sggtion flex">
-                                                <div class="mgl-8 font-14">Đã bán
+                                                <div class="mgl-8">Đã bán
                                                     <span class="number-sld">${prod.quantity_sold}</span>
                                                 </div>
                                             </div>

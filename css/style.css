@@ -31,6 +31,8 @@ html{
 } 
 body{
     background-color: var(--container-color);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 a{
     text-decoration: none;
@@ -71,7 +73,7 @@ input::placeholder{
     opacity: 0.8;
     cursor: pointer;
 }
-.header{
+/* .header{
     position: fixed;
     top: 0;
     left: 0;
@@ -82,7 +84,7 @@ input::placeholder{
     background-image: linear-gradient(0, #fe6433, #f53e28);
     color: var(--white-color);
     padding-top: 4px;
-}
+} */
 .nav-bar-wrap-container{
     height: 2.125rem;
     z-index: 400;
@@ -1514,7 +1516,7 @@ input::placeholder{
     /* min-width: 1200px; */
     width: 100%;
     position: relative;
-    min-height: 300px;
+    /* min-height: 300px; */
     z-index: 0;
 }
 .today-sggtion-wrapper .header-ctn-trendding-search{
@@ -1690,10 +1692,10 @@ input::placeholder{
     align-items: center;
 }
 .price-block div:first-child{
-    font-family: 13px;
+    font-size: 13px;
 }
 .price-block div:nth-child(2){
-    font-size: 18px;
+    font-size: 15px;
 }
 .nbs-sggtion{
     height: 20px;
@@ -1750,9 +1752,6 @@ input::placeholder{
 .footer-container-shopee{
     margin-top: 60px;
     color:var(--footer-color-text);
-}
-.footer-mobile{
-    
 }
 .heading-footer-item{
     text-transform: uppercase;

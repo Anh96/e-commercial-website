@@ -1,5 +1,5 @@
 $ = document.querySelector.bind(document);
-$$ = document.querySelectorAll.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 let htmls;
 export function create_htmls_frame_infoshop(){
     const li = document.createElement("div");
@@ -90,7 +90,7 @@ export function create_htmls_frame_infoshop(){
     li.innerHTML = htmls;
 }
 export function render_info_shop_online(shop_onlines){
-    if(window.innerWidth >=1367){
+    if(window.innerWidth >=1280){
         create_htmls_frame_infoshop();
         shop_onlines.forEach((shop,index) => {
             if(index==0){

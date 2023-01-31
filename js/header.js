@@ -1,8 +1,9 @@
-$ = document.querySelector.bind(document);
-let $$ = document.querySelectorAll.bind(document);
+const $ = document.querySelector.bind(document);
 let htmls;
 export function renderHeaderNav_base_desktop(){
-    document.querySelector("header").innerHTML += `<div class="header"></div>`
+    document.querySelector("header").innerHTML += `<div class="header" style="position: fixed; top: 0; left: 0; right: 0;
+    transform: translateZ(0); z-index: 100; height:var(--header-heigh); background-image: linear-gradient(0, #fe6433, #f53e28);color: var(--white-color); padding-top: 4px;">
+    </div>`
     $(".header").innerHTML += `<div class="grid nav-bar-wrap-container header_resp_desktop"></div>`
     $(".header_resp_desktop").innerHTML += `
         <nav class="header-nav-bar flex-jtfspbt"></nav>
@@ -128,7 +129,7 @@ export function renderHeaderNav_base_desktop(){
     `
     $(".header_resp_desktop").innerHTML += `<div class="search-logo-cart"></div>`
 
-    htmls = 
+    $(".search-logo-cart").innerHTML  += 
     `
         <div id= "mainSctn" class="nav-header-container-with-search">
             <a href="index.html" class="header-logo">
@@ -221,8 +222,6 @@ export function renderHeaderNav_base_desktop(){
             </div>
         </div>
     `
-    $(".search-logo-cart").innerHTML = htmls;
-    $(".left-slider").style.flex = "2 1 0"
 
 }
 export function renderHeaderNav_homepage_mobile(){
