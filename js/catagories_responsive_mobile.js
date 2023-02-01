@@ -1,7 +1,7 @@
 $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 let htmls;
-import {catagories_res_mobile, counting_frequencies_item_catagories_inshop} from "./condition_render_products.js";
+import {catagories_res_mobile, counting_frequencies_item_catagories_inshop} from "./condition_render_data.js";
 import { handle_header_catagories_mobile } from "./responsive.js";
 handle_header_catagories_mobile();
 const arr = [10,3, 1 ,1, 4,3, 10, 10]
@@ -10,14 +10,9 @@ fetch("../data/data.json")
         return res.json()
     })
     .then(data=>{
-        // handle_headerCatag_event()
         render_info_shop_online(data.shop_onlines);
-        //counting_frequencies_item_catagories_inshop(data.products_inshop);
         catagories_res_mobile(data.products_inshop);
     })
-    // .catch(er=> {
-    //     alert("Error fetching data")
-    // })
     function render_info_shop_online(shops){
         shops.forEach(shop=>{
             if(shop.shop_id == 1){
@@ -45,7 +40,6 @@ fetch("../data/data.json")
                 }
                 $(".data-rating").innerHTML = `${shop.rating_shop}`;
                 $(".followers div").innerHTML = `${shop.quantity_pages_follow}`;
-
             }
         })
     }

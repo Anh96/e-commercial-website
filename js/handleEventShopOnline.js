@@ -1,13 +1,13 @@
-$ = document.querySelector.bind(document);
+const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const h4txts=$$('.h4txt');
 export const btns = $$('.bl1Sb-btn');
 const conditions_sort_links = $$(".hv-prcx a");
 import { 
-    pagination, maximum_numbers_item_on_per_page, totalPages, setOpacity, prevRange, currRange, reset_currentPage
+    pagination,totalPages, setOpacity, prevRange, currRange, reset_currentPage
 } from "./paging.js";
 
-import {render_products} from "./condition_render_products.js";
+import {render_products} from "./condition_render_data.js";
 
 let htmls, products_paging_after_filter = new Array;
 export function moveArrowInCatagories(h4txt){
@@ -179,18 +179,20 @@ export function moveArrowInCatagories(h4txt){
            btns.forEach((btn,i)=>{
                btn.onclick = ()=>{
                    products_paging_after_filter.length =0;
+                //    $('#tdsgtion-relative-product').innerHTML = "";
                    if(i<=2){
                        $(".pRCX span").innerHTML = `Giá`;
                        $(".pRCX span").style.color = "black";
                        $(".bl1Sb-btn.active").classList.remove("active");
                        if(i==0){
+                           $('#tdsgtion-relative-product').innerHTML = "";
                            btn.classList.add("active");
                            products.map((prod,ind)=>{
-                                if(ind >= prevRange && ind < currRange){
-                                    return render_products(prod);
+                               if(ind >= prevRange && ind < currRange){
+                                   htmls = render_products(prod);
+                                   $('#tdsgtion-relative-product').innerHTML += htmls;
                                 }
                            })
-                           $('#tdsgtion-relative-product').innerHTML = htmls.join('')
                        }
                        if(i==1){
                            btn.classList.add("active")
@@ -199,7 +201,7 @@ export function moveArrowInCatagories(h4txt){
                            btn.classList.add("active")
                            products.map((prod,ind)=>{
                                 if(ind >= prevRange && ind < currRange){
-                                    products_paging_after_filter.push(prod);
+                                    return products_paging_after_filter.push(prod);
                                 }
                            })
                            render_after_press_btns_sort(products_paging_after_filter);

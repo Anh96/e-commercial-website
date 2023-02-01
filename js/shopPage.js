@@ -1,7 +1,7 @@
-$ = document.querySelector.bind(document);
+const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-import {render_products, render_header_catagMobile} from './condition_render_products.js'
-import {pagination } from './paging.js';
+import {render_products, render_header_catagMobile} from './condition_render_data.js'
+import {pagination} from './paging.js';
 import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
 import {render_info_shop_online } from './shop_information.js';
 import {renderHeaderNav_base_desktop} from './header.js';
@@ -56,16 +56,18 @@ import {keysearch} from "./keyword_search.js"
         return res.json();
     })
     .then(data=>{
-        
-        if(window.innerWidth>=1280){
+        if(window.innerWidth <= 480){
+            render_header_catagMobile();
+        }
+        if(window.innerWidth >= 758 && window.innerWidth < 1240){
+            render_header_catagMobile();
+        }
+        if(window.innerWidth>=1240){
             renderHeaderNav_base_desktop()
             catagories_desktop(data.products_inshop);
             keysearch(data.key_search);
             footerBase();
-        }
-        if(window.innerWidth <= 480){
-            render_header_catagMobile();
-        }
+        }   
         renderPromotionItem(data.shop_promotion_codes)
         check(data.shop_promotion_codes)
         suggestion_products_ShopOnline(data.products_inshop)
@@ -76,10 +78,15 @@ import {keysearch} from "./keyword_search.js"
         setproperties_when_window_widthchanges();
     })
 function setproperties_when_window_widthchanges(){
-    if(window.innerWidth >= 1280){
+    if(window.innerWidth >= 1240){
         document.querySelectorAll(".grid").forEach(grid=>{
             grid.style.width = "1200px";
         });
+    }
+    if(window.innerWidth <= 480){
+        $$(".b4etd").forEach(item=>{
+            item.style.width = "46.7%"
+        })
     }
 }
 //Catagories in shop
@@ -412,9 +419,9 @@ function setproperties_when_window_widthchanges(){
        }
    }
 //ALL Products
-function allproducts_inshop(products){
-    pagination(products);
+export function allproducts_inshop(products){
     filter(products);
     sortFollowBtn(products);
     sortFollowPrice(products);
+    pagination(products);
 }

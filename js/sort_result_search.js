@@ -1,13 +1,24 @@
-import {calculator_promotion_price, render_products} from "./condition_render_products.js";
-$ = document.querySelector.bind(document)
+import {render_products} from "./condition_render_data.js";
+import {renderHeaderNav_base_desktop} from "./header.js";
+import {keysearch} from "./keyword_search.js"
+import {footerBase} from "./footer.js";
+import {pagination} from "./paging.js"
+import {sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 let htmls;
 fetch('../data/data.json')
     .then(res=>{
         return res.json()
     })
     .then(data=>{
+        if(window.innerWidth>=1240){
+            renderHeaderNav_base_desktop();
+            keysearch(data.key_search);
+            relative_products(data.products_inshop)
+            footerBase();
+        }
         shopInfo(data.shop_onlines)
-        relative_products(data.products)
     })
 //Shop Info
     function shopInfo(infos){
@@ -99,8 +110,7 @@ fetch('../data/data.json')
     }
 //Relative Products
     function relative_products(products){
-        products.map(prod=>{
-            htmls = render_products(prod);
-            $(".tdsgtion").innerHTML += htmls;
-        })
+        pagination(products);
+        sortFollowBtn(products);
+        sortFollowPrice(products);
     }

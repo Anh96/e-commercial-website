@@ -90,7 +90,7 @@ export function create_htmls_frame_infoshop(){
     li.innerHTML = htmls;
 }
 export function render_info_shop_online(shop_onlines){
-    if(window.innerWidth >=1280){
+    if(window.innerWidth >=758){
         create_htmls_frame_infoshop();
         shop_onlines.forEach((shop,index) => {
             if(index==0){
@@ -154,7 +154,8 @@ export function render_info_shop_online(shop_onlines){
     if(window.innerWidth<=480){
         shop_onlines.forEach(shop=>{
              if(shop.shop_id == 1){
-                 $('.ltf-img').innerHTML = `<div class="logo_shop_img" style="background-image:url('${shop.logo_shop}')"></div>`
+                 $('.ltf-img').innerHTML = `<div class="logo_shop_img" style="background-image:url('${shop.logo_shop}')"></div>`;
+                 $("#search-input-mobile").placeholder = `${shop.shop_name}`;
                  if(shop.favorite_shop==true){
                      $('.fvr-shop').style.display = "block";
                  }
@@ -179,7 +180,26 @@ export function render_info_shop_online(shop_onlines){
                  $(".data-rating").innerHTML = `${shop.rating_shop}`;
                  $(".followers div").innerHTML = `${shop.quantity_pages_follow}`;
                  $('.shop-bgr').innerHTML = `<div class="shopBGR-img" style = "background-image:url('${shop.shop_background_image}')"></div>`
-             }
+                 window.addEventListener("scroll", ()=>{
+                    if(window.scrollY>=22){
+                        $(".mobile-search-controller").style.top = "0px";
+                        $(".shop-bgr").style.backgroundImage = "linear-gradient(0, #fe6433, #f53e28)";
+                        $(".shop-bgr").style.zIndex = "50";
+                        $(".shop-bgr").style.height = "60px";
+                        $(".shop-bgr").style.position = "fixed";
+                    }
+                    if(window.scrollY<22){
+                        $(".mobile-search-controller").style.backgroundImage = "none";
+                        $(".mobile-search-controller").style.top = "10px";
+                        $(".shop-bgr").style.zIndex = "10";
+                        $(".shop-bgr").style.height = "100%";
+                        $(".shop-bgr").style.width = "100%";
+                        $(".shop-bgr").style.position = "absolute";
+                        $(".shop-bgr").style.backgroundImage = "none";
+                        $('.shop-bgr').innerHTML = `<div class="shopBGR-img" style = "background-image:url('${shop.shop_background_image}')"></div>`
+                    }
+                })
+             };
          })
      }
 }

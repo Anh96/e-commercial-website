@@ -1,8 +1,8 @@
-let htmls = "", clicked_nbP =0;
+let clicked_nbP =0;
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-export let maximum_numbers_item_on_per_page = 5, currentPage =1, prevRange, currRange, numberPage = $(".number-page");
-import {render_products} from "./condition_render_products.js";
+export let maximum_numbers_item_on_per_page = 10, currentPage =1, prevRange, currRange, numberPage = $(".number-page");
+import {render_products} from "./condition_render_data.js";
 function moveStateActiveBtns(nbp){
     $('.nbP.active').classList.remove("active");
     nbp.classList.add("active");
@@ -104,7 +104,6 @@ export function create_header_pagination(products){
 export function create_footer_pagination(products){
     //Pagination btns on the footer all-products views.
     totalPages(products);
-    // $('.number-page').innerHTML = "";
     if(totalPages(products)<=6){
         for(let i  = 1; i <= totalPages(products); ++i){
             $('.number-page').innerHTML += `
@@ -118,10 +117,11 @@ export function create_footer_pagination(products){
                 <button class="nbP flex">${i}</button>
             `
         }
-        $(".number-page-wrapper").style.width = getWidthBtnPaginationController($(".nbP"))*products.length;
-        // $(".number-page-wrapper").insertAdjacentHTML("afterend",dots);
-        // create_pagination_controller(currentPage, totalPages(products), products)
     }
+    // set postion of prev-next btns
+    $(".nav-btn.prev-btn").style.left = $$(".nbP")[0].offsetLeft - 30 +'px';
+    $(".nav-btn.nExt-btn").style.left = $$(".nbP")[totalPages(products)-1].offsetLeft + 30 + 'px';
+
     // active or disabled next-prev btns
     if(totalPages(products)==1){
         $(".tdsgt-SortResult .nExt-btn").disabled = true;

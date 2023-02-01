@@ -5,11 +5,17 @@
         width: 100%;
         margin: 0px auto;
     }
-    /* .header{
-        display: none;
-    } */
+    .mobile-header{
+        width: 100%;
+        position: relative;
+    }
     .mobile-search-controller{
         display: block;
+        z-index: 100;
+        position : fixed;
+        width: 100%;
+        height: 60px;
+        top: 10px;
     }
     .sOhome-ctn .xCAO3k{
         margin-top: 0px;

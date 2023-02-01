@@ -619,7 +619,7 @@ function renderProduct_topSearch(products){
     })
 }
 // TODAY SUGGESSTIONS
-import { render_products_has_hoversameblock } from "./condition_render_products.js";
+import { render_products_has_hoversameblock } from "./condition_render_data.js";
 export function renderProduct_Relative_HomePage(products){
     footerHomepage();
     let loadmore = document.querySelector('.ft-sggtion-btn');

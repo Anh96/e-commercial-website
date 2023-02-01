@@ -1,4 +1,4 @@
-import {render_products} from "./condition_render_products.js";
+import {render_products} from "./condition_render_data.js";
 import {renderHeaderNav_base_desktop, renderHeaderNav_homepage_mobile} from "./header.js";
 import {footerBase} from "./footer.js"
 const $ = document.querySelector.bind(document);

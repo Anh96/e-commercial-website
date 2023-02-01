@@ -1,4 +1,6 @@
-$ = document.querySelector.bind(document)
+const $ = document.querySelector.bind(document)
+import {footerBase} from "./footer.js"
+footerBase();
 $('#qrcode-ic').onclick = ()=>{
     $('#login_with_QRcode_layout').style.display = "block";
     $('#login_with_password_layout').style.display ="none";

@@ -1,8 +1,14 @@
 @import url('../css/style.css');
 @import url('../css/sellerpage.css');
-#register-login-form{
+/* #register-login-form{
     min-width: 1200px;
     max-width: 100%;
+} */
+@media only screen and (min-width:1280px) {
+    .grid{
+        width: 1200px;
+        margin: auto;
+    }
 }
 .header-form{
     background-color: var(--white-color);

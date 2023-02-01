@@ -1,4 +1,10 @@
 @import "./style.css";
+@media only screen and (min-width:1040px) {
+    .grid{
+        width: 1200px;
+        margin: auto;
+    }
+}
 .sortResult-main{
     /* min-width: 1200px;
     max-width: 100%; */
@@ -283,24 +289,22 @@ ul li{
     height: 100%;
 }
 .pre-next-btn{
+    width: 100%;
+    height: 50px;
     position: relative;
     height: inherit;
 }
 .nav-btn{
     position: absolute;
     height: 100%;
-    margin: 0 30px;
+    margin: 0 0px;
     z-index: 2;
 }
-.nav-btn.prev-btn{
-    left: 300px;
-}
-.nav-btn.nExt-btn{
-    right: 300px;
-}
+
 .number-page-wrapper{
     position: relative;
-    width: 265px;
+    /* width: 265px; */
+    width: 100%;
     height: 100%;
     /* overflow-x: hidden; */
 }
@@ -309,7 +313,7 @@ ul li{
     width: 100%;
     height: 100%;
     /* position: absolute; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .number-page button{
     /* position: absolute; */
