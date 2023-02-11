@@ -190,45 +190,6 @@ export function add_animation_btns_controller_pagination(currentPage, products){
     })
 }
 
-//const paginationController = document.querySelector(".number-page");
-function create_pagination_controller(currentPage, totalpages, products){
-    let ui = "";
-    var active;
-    let beforePage = currentPage - 1;
-    let afterPage = currentPage + 1;
-    totalpages = totalPages(products);
-    if (currentPage > 2) {
-        //if page value is less than 2 then add 1 after the previous button
-        ui += `<button class="first numb" onclick=""><span>1</span></button>`;
-        if (page > 3) {
-          //if page value is greater than 3 then add this (...) after the first li or page
-          ui += `<button class="nbp--none-click flex color-gray font16" disabled>...</button>`;
-        }
-      }
-    for(let i = beforePage; i<= afterPage;i++){
-        if(i>totalpages){
-            continue;
-        }
-        if(i==0){
-            i= i+1;
-        }
-        if(currentPage == i){
-            active = "active";
-        }
-        else{
-            active = "";
-        }
-        ui += `<button class = "nbP flex ${active} none-change-opacity" onclick="create_pagination_controller(${i}, totalPages(products), products)">${i}</button>`
-    }
-    if(currentPage<totalpages-1){
-        if(currentPage<totalpages-2){
-            ui += `<button class="nbp--none-click flex color-gray font16" disabled>...</button>`
-        }
-        ui += `<button class = "nbP flex ${active} none-change-opacity">${totalpages}</button>`
-    }
-    numberPage.innerHTML = ui;
-    return ui;
-}
 // reset current page;
 export function reset_currentPage(){
     return currentPage =1;

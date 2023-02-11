@@ -21,28 +21,39 @@ a:hover{
     position: relative;
     margin: 0 8px;
 }
+/* Left Header */
+.left-header-nav{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+}
 .logo-header{
+    width: 100%;
     height: 100%;
 }
 .left-name-page{
+    position: absolute;
     display: flex;
-    width: 200px;
+    width: 100%;
     height: 100%;
-    margin-left: 4px;
-    transform: translateY(2px);
+    transform: translateX(33%)  translateY(10%);
 }
 .left-header-text{
     color: var(--text-color);
 }
 /* Right Header */
 .nav-header-link{
+    width: 100%;
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
 }
 .first{
-    width: 200px;
+
+    position: absolute;
+    width: 50%;
+    left: 0px;
     border-right: 2px solid var(--line-color);
 }
 .home-page-link{
@@ -56,7 +67,8 @@ a:hover{
     height: 15px;
     background-color: var(--primary-color);
     border-radius: 10px;
-    transform: translateY(-8px);
+    transform: translateX(40px) translateY(-8px);
+    
 }
 .above-new span{
     text-transform: uppercase;
@@ -77,6 +89,12 @@ a:hover{
     position: absolute;
     top: 5.5px;
     right: 6.5px;
+}
+.social{
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    margin-left: 20px;
 }
 .social>a{
     position: relative;

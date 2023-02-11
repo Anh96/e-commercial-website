@@ -1,21 +1,79 @@
+@import url("./registerform.css");
 @media only screen and (min-width:1280px) {
     .grid{
         width: 1200px;
         margin: auto;
     }
+    .header-form-onMobile{
+        display: none ;
+    }
 }
-.padding-bottom-10{
-    padding-bottom: 10px;
+@media only screen and (max-width: 480px){
+    .grid{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .header-form-onPC{
+        display: none;
+    }
+    #login_with_QRcode_layout{
+        display: none;
+    }
+    .heading-form{
+        display: none;
+    }
+    .social-media-group-onPC{
+        display: none;
+    }
+    .header-form{
+        z-index: 10;
+        width: 100%;
+        height: fit-content;
+        border-bottom: 1px solid var(--primary-color);
+    }
+    .social-media-link-group{
+        width: 100%;
+        display: block;
+    }
+    .social-media-link{
+        display: inline-flex;
+        padding: 8px;
+        width: 100%;
+        height: 40px;
+        border: 1px solid var(--container-color);
+    }
+    .social-media-link:nth-child(2){
+        margin: 10px 0px;
+    }
+    .social-media-link div:first-child{
+        width: 20%;
+    }
+    .social-media-link div:nth-child(2){
+        display: flex;
+        align-items: center;
+        align-content: center;
+        width: 80%;
+        text-align: center;
+    }
+    .hasnot-acc:first-child>div:nth-child(2)>a{
+        font-size: 12px;
+    }
+    .fgPw{
+        padding: 0px;
+        text-align: center;
+        width: 50%;
+    }
+    .footer{
+        display: none;
+    }
 }
-.padding-bottom-14{
-    padding-bottom: 14px;
+.right-body{
+    background-color: var(--white-color);
 }
 h1{
     color: var(--white-color);
 }
-.login-form{
-    padding: 32px;
-}
+
 .header-btn-login-register{
     display: flex;
     align-items: center;
@@ -25,25 +83,31 @@ h1{
 }
 
 .signin-withQRCODE-btn{
-
     background-color: #fefaec;
     border: 2px solid;
     border-color: #ffbf00 #fefaec #ffbf00 #ffbf00;
     color: #ffbf00;
     font-weight: 700;
     position: relative;
-    
 }
-.auth-form-input-group{
+.inpAcc,
+.inpPw{
+    border: 1.5px solid var(--container-color);
+}
+#user-acc,
+#password{
+    /* width: 80%; */
+    border: 0px;
+}
+/* .auth-form-input-group{
     display: block;
 }
 .auth-form-input-group input{
     width: 100%;
     height: 40px;
     margin: 16px 0;
-}
-
-.login-btn{
+} */
+/* .login-btn{
     width: 100%;
     height: 40px;
     background-color: var(--primary-color);
@@ -59,16 +123,16 @@ h1{
 .login-btn:disabled .disabled-statement{
     opacity: 0.7;
     cursor: not-allowed;
-}
+} */
 
 .another-login{
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
 }
-.another-login a{
+/* .another-login a{
     color:rgb(62, 120, 235);
-}
+} */
 .line-or-line{
     display: flex;
     justify-content: space-between;
@@ -84,7 +148,7 @@ h1{
     padding: 0 16px;
     color: var(--line-color);
 }
-.social-media{
+/* .social-media{
     display: flex;
     justify-content: space-between;
     height: 40px;
@@ -98,8 +162,8 @@ h1{
     font-size: 15px;
    
 
-}
-.social-media-btn{
+} */
+/* .social-media-btn{
     display: inline-flex;
     align-items: center;
     width: 130px;
@@ -111,18 +175,19 @@ h1{
 }
 .social-media-btn:hover{
     background: var(--hover-color);
-}
-.social-media h5{
+} */
+/* .social-media h5{
     padding-left: 8px;
-}
-.icon-img{
+} */
+/* .icon-img{
     padding-top: 4px;
     align-items: center;
 }
 .icon-img img{
     width: 22px;
     height: 22px;
-}
+} */
+
 .social-media-links{
     display:flex;
     color: var(--black-color);
@@ -138,7 +203,6 @@ h1{
     padding-top: 16px ;
     justify-content:center;
     align-items: center;
-
 }
 .auth-form-new-user p{
     color: var(--line-color);

@@ -12,7 +12,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == true && prod.rating >0 && prod.quantity_sold>0 && prod.footer_img_url != ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -122,7 +122,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == false && prod.rating >0 && prod.quantity_sold>0 && prod.footer_img_url!= ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -221,7 +221,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == true && prod.rating ==0 && prod.quantity_sold>0 && prod.footer_img_url != ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -303,7 +303,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == true && prod.rating >0 && prod.quantity_sold==0 && prod.footer_img_url!= ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -410,7 +410,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == false && prod.rating ==0 && prod.quantity_sold>0 && prod.footer_img_url!= ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div  class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -481,7 +481,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship ==false && prod.rating >0 && prod.quantity_sold==0 && prod.footer_img_url != ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -577,7 +577,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == true && prod.rating ==0 && prod.quantity_sold==0 && prod.footer_img_url != ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -656,7 +656,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == false && prod.rating == 0 && prod.quantity_sold == 0 && prod.footer_img_url != ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -723,7 +723,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == true && prod.rating >0 && prod.quantity_sold>0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -830,7 +830,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == false && prod.rating >0 && prod.quantity_sold>0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -926,7 +926,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == true && prod.rating ==0 && prod.quantity_sold>0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1005,7 +1005,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == true && prod.rating >0 && prod.quantity_sold==0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1109,7 +1109,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == false && prod.rating ==0 && prod.quantity_sold>0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1177,7 +1177,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship ==false && prod.rating >0 && prod.quantity_sold==0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1270,7 +1270,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == true && prod.rating ==0 && prod.quantity_sold==0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1346,7 +1346,7 @@ export function render_products(prod){
             if(prod.percent_saleoff>0 && prod.freeship == false && prod.rating == 0 && prod.quantity_sold == 0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1410,7 +1410,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == false && prod.rating ==0 && prod.quantity_sold==0){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1468,7 +1468,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == true && prod.rating >0 && prod.quantity_sold>0){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1568,7 +1568,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == true && prod.rating == 0 && prod.quantity_sold>0){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1640,7 +1640,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == true && prod.rating > 0 && prod.quantity_sold==0){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1737,7 +1737,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == true && prod.rating == 0 && prod.quantity_sold==0){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1806,7 +1806,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == false && prod.rating > 0 && prod.quantity_sold>0){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1895,7 +1895,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == false && prod.rating == 0 && prod.quantity_sold>0){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -1956,7 +1956,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == false && prod.rating > 0 && prod.quantity_sold==0){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2054,7 +2054,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == false && prod.rating ==0 && prod.quantity_sold==0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2109,7 +2109,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == true && prod.rating >0 && prod.quantity_sold>0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2206,7 +2206,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == true && prod.rating == 0 && prod.quantity_sold>0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2275,7 +2275,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == true && prod.rating > 0 && prod.quantity_sold==0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2369,7 +2369,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == true && prod.rating == 0 && prod.quantity_sold==0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2435,7 +2435,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == false && prod.rating > 0 && prod.quantity_sold>0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2521,7 +2521,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == false && prod.rating == 0 && prod.quantity_sold>0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2579,7 +2579,7 @@ export function render_products(prod){
             if(prod.percent_saleoff==0 && prod.freeship == false && prod.rating > 0 && prod.quantity_sold==0 && prod.footer_img_url == ""){
                 htmls= 
                     `
-                        <div id="sort_result_search" class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
+                        <div class="b4etd" data-catagories-inshop = "${prod.catagories_inshop.toLowerCase()}">
                             <a href="#" class="grid-item-link-product box_shadow">
                                 <div class="bellow-grid-item-link">
                                     <div class="body-container">
@@ -2671,7 +2671,460 @@ export function render_products(prod){
             }
             return htmls;
 }
-
+export function render_products_none_hoversameblock(prod){
+    var x = calculator_promotion_price(prod)
+    //Case: prod.percent_saleoff>0
+        //Case: prod.percent_saleoff>0 && prod.quantity_sold>0 && footer_img_url != ""
+        if(prod.percent_saleoff > 0 && prod.quantity_sold > 0 && prod.footer_img_url != ""){
+            htmls =
+            `
+                <div class="b4etd none-change-opacity">
+                    <a class="grid-item-link-product none-change-opacity box_shadow">
+                        <div class="bellow-grid-item-link">
+                            <div class="body-container">
+                                <div class="favorite-shop">
+                                    <div class="header-block-favorite-shop">
+                                        <span class="fvr-text">Yêu thích</span>
+                                    </div>
+                                </div>
+                                <div class="header-link-sale-off-container">
+                                    <div class="header-block-sale-off">
+                                        <span class="percent-sale-off">${prod.percent_saleoff}%</span>
+                                        <span class="sale-text">Giảm</span>
+                                    </div>
+                                </div>
+                                <div class="product-img-body">
+                                    <img src="${prod.body_img_url}" class="img-body" alt="">
+                                </div>
+                                <div class="product-img-footer">
+                                    <img src="${prod.footer_img_url}" class="img-footer">    
+                                </div>
+                            </div>
+                            <div class="footer-sggtion">  
+                                <div class="description-sggtion">
+                                    <div class="descrp-txt-overflow">
+                                        <div class="dcrs0">
+                                            <div class="dcrs00">
+                                            ${prod.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="ft-sggtion-block ">
+                                    <div class="sticker-brand-ctn mgTB-4 flxC">
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
+                                        </div>
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-block mgT32 flex-jtfspbt">
+                                            <div class="crr-price flxC">
+                                                <div class="currenty-sggtion">đ</div>
+                                                <div class="price-sggtion">${x}</div>
+                                            </div>  
+                                            <div class="nbs-sggtion flex">
+                                                <div class="mgl-8">Đã bán
+                                                    <span class="number-sld">${prod.quantity_sold}</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `
+        }
+        //Case: prod.percent_saleoff>0 && prod.quantity_sold==0 && footer_img_url != ""
+        if(prod.percent_saleoff > 0 && prod.quantity_sold == 0 && prod.footer_img_url != ""){
+            htmls =
+            `
+                <div class="b4etd none-change-opacity">
+                    <a class="grid-item-link-product none-change-opacity box_shadow">
+                        <div class="bellow-grid-item-link">
+                            <div class="body-container">
+                                <div class="favorite-shop">
+                                    <div class="header-block-favorite-shop">
+                                        <span class="fvr-text">Yêu thích</span>
+                                    </div>
+                                </div>
+                                <div class="header-link-sale-off-container">
+                                    <div class="header-block-sale-off">
+                                        <span class="percent-sale-off">${prod.percent_saleoff}%</span>
+                                        <span class="sale-text">Giảm</span>
+                                    </div>
+                                </div>
+                                <div class="product-img-body">
+                                    <img src="${prod.body_img_url}" class="img-body" alt="">
+                                </div>
+                                <div class="product-img-footer">
+                                    <img src="${prod.footer_img_url}" class="img-footer">    
+                                </div>
+                            </div>
+                            <div class="footer-sggtion">  
+                                <div class="description-sggtion">
+                                    <div class="descrp-txt-overflow">
+                                        <div class="dcrs0">
+                                            <div class="dcrs00">
+                                            ${prod.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="ft-sggtion-block ">
+                                    <div class="sticker-brand-ctn mgTB-4 flxC">
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
+                                        </div>
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-block mgT32 flex-jtfspbt">
+                                        <div class="crr-price flxC">
+                                            <div class="currenty-sggtion">đ</div>
+                                            <div class="price-sggtion">${x}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `
+        }
+        //Case: prod.percent_saleoff>0 && prod.quantity_sold>0 && footer_img_url == ""
+        if(prod.percent_saleoff > 0 && prod.quantity_sold > 0 && prod.footer_img_url == ""){
+            htmls =
+            `
+                <div class="b4etd none-change-opacity">
+                    <a class="grid-item-link-product none-change-opacity box_shadow">
+                        <div class="bellow-grid-item-link">
+                            <div class="body-container">
+                                <div class="favorite-shop">
+                                    <div class="header-block-favorite-shop">
+                                        <span class="fvr-text">Yêu thích</span>
+                                    </div>
+                                </div>
+                                <div class="header-link-sale-off-container">
+                                    <div class="header-block-sale-off">
+                                        <span class="percent-sale-off">${prod.percent_saleoff}%</span>
+                                        <span class="sale-text">Giảm</span>
+                                    </div>
+                                </div>
+                                <div class="product-img-body">
+                                    <img src="${prod.body_img_url}" class="img-body" alt="">
+                                </div>
+                            </div>
+                            <div class="footer-sggtion">  
+                                <div class="description-sggtion">
+                                    <div class="descrp-txt-overflow">
+                                        <div class="dcrs0">
+                                            <div class="dcrs00">
+                                            ${prod.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="ft-sggtion-block ">
+                                    <div class="sticker-brand-ctn mgTB-4 flxC">
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
+                                        </div>
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-block mgT32 flex-jtfspbt">
+                                            <div class="crr-price flxC">
+                                                <div class="currenty-sggtion">đ</div>
+                                                <div class="price-sggtion">${x}</div>
+                                            </div>  
+                                            <div class="nbs-sggtion flex">
+                                                <div class="mgl-8 font-14">Đã bán
+                                                    <span class="number-sld">${prod.quantity_sold}</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `
+        }
+        //Case: prod.percent_saleoff>0 && prod.quantity_sold==0 && footer_img_url == ""
+        if(prod.percent_saleoff > 0 && prod.quantity_sold == 0 && prod.footer_img_url == ""){
+            htmls =
+            `
+                <div class="b4etd none-change-opacity">
+                    <a class="grid-item-link-product none-change-opacity box_shadow">
+                        <div class="bellow-grid-item-link">
+                            <div class="body-container">
+                                <div class="favorite-shop">
+                                    <div class="header-block-favorite-shop">
+                                        <span class="fvr-text">Yêu thích</span>
+                                    </div>
+                                </div>
+                                <div class="header-link-sale-off-container">
+                                    <div class="header-block-sale-off">
+                                        <span class="percent-sale-off">${prod.percent_saleoff}%</span>
+                                        <span class="sale-text">Giảm</span>
+                                    </div>
+                                </div>
+                                <div class="product-img-body">
+                                    <img src="${prod.body_img_url}" class="img-body" alt="">
+                                </div>
+                            </div>
+                            <div class="footer-sggtion">  
+                                <div class="description-sggtion">
+                                    <div class="descrp-txt-overflow">
+                                        <div class="dcrs0">
+                                            <div class="dcrs00">
+                                            ${prod.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="ft-sggtion-block ">
+                                    <div class="sticker-brand-ctn mgTB-4 flxC">
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
+                                        </div>
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-block mgT32 flex-jtfspbt">
+                                        <div class="crr-price flxC">
+                                            <div class="currenty-sggtion">đ</div>
+                                            <div class="price-sggtion">${x}</div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `
+        }
+    //Case: prod.percent_saleoff == 0
+        //Case: prod.percent_saleoff == 0 && prod.quantity_sold>0 && footer_img_url != ""
+        if(prod.percent_saleoff == 0 && prod.quantity_sold > 0 && prod.footer_img_url != ""){
+            htmls =
+            `
+                <div class="b4etd none-change-opacity">
+                    <a class="grid-item-link-product none-change-opacity box_shadow">
+                        <div class="bellow-grid-item-link">
+                            <div class="body-container">
+                                <div class="favorite-shop">
+                                    <div class="header-block-favorite-shop">
+                                        <span class="fvr-text">Yêu thích</span>
+                                    </div>
+                                </div>
+                                <div class="product-img-body">
+                                    <img src="${prod.body_img_url}" class="img-body" alt="">
+                                </div>
+                                <div class="product-img-footer">
+                                    <img src="${prod.footer_img_url}" class="img-footer">    
+                                </div>
+                            </div>
+                            <div class="footer-sggtion">  
+                                <div class="description-sggtion">
+                                    <div class="descrp-txt-overflow">
+                                        <div class="dcrs0">
+                                            <div class="dcrs00">
+                                            ${prod.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="ft-sggtion-block ">
+                                    <div class="sticker-brand-ctn mgTB-4 flxC">
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
+                                        </div>
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-block mgT32 flex-jtfspbt">
+                                            <div class="crr-price flxC">
+                                                <div class="currenty-sggtion">đ</div>
+                                                <div class="price-sggtion">${x}</div>
+                                            </div>  
+                                            <div class="nbs-sggtion flex">
+                                                <div class="mgl-8 font-14">Đã bán
+                                                    <span class="number-sld">${prod.quantity_sold}</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `
+        }
+        //Case: prod.percent_saleoff == 0 && prod.quantity_sold==0 && footer_img_url != ""
+        if(prod.percent_saleoff == 0 && prod.quantity_sold == 0 && prod.footer_img_url != ""){
+            htmls =
+            `
+                <div class="b4etd none-change-opacity">
+                    <a class="grid-item-link-product none-change-opacity box_shadow">
+                        <div class="bellow-grid-item-link">
+                            <div class="body-container">
+                                <div class="favorite-shop">
+                                    <div class="header-block-favorite-shop">
+                                        <span class="fvr-text">Yêu thích</span>
+                                    </div>
+                                </div>
+                                <div class="product-img-body">
+                                    <img src="${prod.body_img_url}" class="img-body" alt="">
+                                </div>
+                                <div class="product-img-footer">
+                                    <img src="${prod.footer_img_url}" class="img-footer">    
+                                </div>
+                            </div>
+                            <div class="footer-sggtion">  
+                                <div class="description-sggtion">
+                                    <div class="descrp-txt-overflow">
+                                        <div class="dcrs0">
+                                            <div class="dcrs00">
+                                            ${prod.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="ft-sggtion-block ">
+                                    <div class="sticker-brand-ctn mgTB-4 flxC">
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
+                                        </div>
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-block mgT32 flex-jtfspbt">
+                                        <div class="crr-price flxC">
+                                            <div class="currenty-sggtion">đ</div>
+                                            <div class="price-sggtion">${x}</div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `
+        }
+        //Case: prod.percent_saleoff == 0 && prod.quantity_sold>0 && footer_img_url == ""
+        if(prod.percent_saleoff == 0 && prod.quantity_sold > 0 && prod.footer_img_url == ""){
+            htmls =
+            `
+                <div class="b4etd none-change-opacity">
+                    <a class="grid-item-link-product none-change-opacity box_shadow">
+                        <div class="bellow-grid-item-link">
+                            <div class="body-container">
+                                <div class="favorite-shop">
+                                    <div class="header-block-favorite-shop">
+                                        <span class="fvr-text">Yêu thích</span>
+                                    </div>
+                                </div>
+                                <div class="product-img-body">
+                                    <img src="${prod.body_img_url}" class="img-body" alt="">
+                                </div>
+                            </div>
+                            <div class="footer-sggtion">  
+                                <div class="description-sggtion">
+                                    <div class="descrp-txt-overflow">
+                                        <div class="dcrs0">
+                                            <div class="dcrs00">
+                                            ${prod.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="ft-sggtion-block ">
+                                    <div class="sticker-brand-ctn mgTB-4 flxC">
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
+                                        </div>
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-block mgT32 flex-jtfspbt">
+                                            <div class="crr-price flxC">
+                                                <div class="currenty-sggtion">đ</div>
+                                                <div class="price-sggtion">${x}</div>
+                                            </div>  
+                                            <div class="nbs-sggtion flex">
+                                                <div class="mgl-8 font-14">Đã bán
+                                                    <span class="number-sld">${prod.quantity_sold}</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `
+        }
+        //Case: prod.percent_saleoff == 0 && prod.quantity_sold==0 && footer_img_url == ""
+        if(prod.percent_saleoff == 0 && prod.quantity_sold == 0 && prod.footer_img_url == ""){
+            htmls =
+            `
+                <div class="b4etd none-change-opacity">
+                    <a class="grid-item-link-product none-change-opacity box_shadow">
+                        <div class="bellow-grid-item-link">
+                            <div class="body-container">
+                                <div class="favorite-shop">
+                                    <div class="header-block-favorite-shop">
+                                        <span class="fvr-text">Yêu thích</span>
+                                    </div>
+                                </div>
+                                <div class="product-img-body">
+                                    <img src="${prod.body_img_url}" class="img-body" alt="">
+                                </div>
+                            </div>
+                            <div class="footer-sggtion">  
+                                <div class="description-sggtion">
+                                    <div class="descrp-txt-overflow">
+                                        <div class="dcrs0">
+                                            <div class="dcrs00">
+                                            ${prod.title}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>          
+                                <div class="ft-sggtion-block ">
+                                    <div class="sticker-brand-ctn mgTB-4 flxC">
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopXuHuong</div>
+                                        </div>
+                                        <div class="stkBr flex">
+                                            <div class="txtBr color-primary-text font075">#ShopDacBiet</div>
+                                        </div>
+                                    </div>
+                                    <div class="price-block mgT32 flex-jtfspbt">
+                                        <div class="crr-price flxC">
+                                            <div class="currenty-sggtion">đ</div>
+                                            <div class="price-sggtion">${x}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `
+        }
+    return htmls;
+}
 export function render_products_has_hoversameblock(prod){
     var x = calculator_promotion_price(prod)
     //Case: prod.percent_saleoff>0

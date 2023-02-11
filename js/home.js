@@ -25,13 +25,12 @@ function fetchData(){
                 handleEventClick_NexPrevBtns_PC();
                 renderProduct_Relative_HomePage(data.products);
             }
-            if(window.innerWidth <= 480){
+            if(window.innerWidth <= 570){
                 renderHeaderNav_homepage_mobile();
                 render_Catagory_homePage_mobile(data.catagories);
                 renderLayout_ShopeeMall_mobile(data.shopee_mall);
                 handleEventClick_NextPrevBtns_Mobile();
                 render_TodaySuggesstionLayout_Mobile(data.products);
-                // footerTodaySuggestionMobile();
 
             }
             footerBanner(data.footerBanner)

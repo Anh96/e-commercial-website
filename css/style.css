@@ -28,7 +28,7 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     font-weight: normal;
-} 
+}
 body{
     background-color: var(--container-color);
     overflow-x: hidden;
@@ -45,15 +45,24 @@ a:hover{
     opacity: 0.8;
     cursor: pointer;
     text-decoration: none;
+    color: var(--white-color);
 }
 ul{
     list-style: none;
+    margin-bottom: 0px;
 }
+
 h3{
     color:var(--black-color);
 }
 input::placeholder{
     color: var(--primary-color);
+}
+@media only screen and (min-width:1240px) {
+    .grid{
+        width: 1200px;
+        margin: 0px auto;
+    }
 }
 /* change opacity */
 .grid-item-trendding:hover,
@@ -73,27 +82,16 @@ input::placeholder{
     opacity: 0.8;
     cursor: pointer;
 }
-/* .header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: translateZ(0);
-    z-index: 100;
-    height:var(--header-heigh);
-    background-image: linear-gradient(0, #fe6433, #f53e28);
-    color: var(--white-color);
-    padding-top: 4px;
-} */
 .nav-bar-wrap-container{
     height: 2.125rem;
     z-index: 400;
     position: relative;
 }
 .header-nav-bar{
+    position: relative;
     width: inherit;
     height: var(--header-nav-heigh);
-    margin: 0px auto;
+    /* margin: 0px auto; */
 }
 .nav-bar .nav-bar-list .font-weigh-bold{
     font-weight: bold;
@@ -105,6 +103,14 @@ input::placeholder{
     margin: 4px 4px;
     position: relative;
 }
+.left-nav-bar-list,
+.right-nav-bar-list{
+    width: 50%;
+}
+/* .left-nav-bar-list{
+    position: absolute;
+    left: 0px;
+} */
 .left-nav-bar-list .header-navbar-item:last-child{
     margin-left: 8px;
 }
@@ -119,12 +125,23 @@ input::placeholder{
     top: 5px;
     transform: translateY(10%);
 }
-.right-nav-bar-list .header-navbar-item:first-child, 
+/* .right-nav-bar-list{
+    position: absolute;
+    right: 0px;
+    top: 0.5px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+} */
+.right-nav-bar-list li{
+    height: 100%;
+}
+/* .right-nav-bar-list .header-navbar-item:first-child, 
 .right-nav-bar-list .header-navbar-item:nth-child(2),
 .right-nav-bar-list .languagues-ic{
-    display: inline-flex;
+    display: flex;
     align-items: center;
-} 
+}  */
 
 /*header QR CODE*/
 .qrcode-download{
@@ -280,7 +297,6 @@ input::placeholder{
     padding: 0;
     width: 100%;
 }
-
 .detail-list-notify{
     background: var(--primary-color-rgba);
     
@@ -288,15 +304,8 @@ input::placeholder{
 .detail-list-notify:hover{
     background:rgb(236, 237, 233);
 }
-/* Đổi màu BG của thông báo đã đọc */
-.change-bgcolor-viewed{
-    
-}
-/**/
-
 .notification-link{
    display: flex;
-    
 }
 .description-notify{
     margin-left: 12px;
@@ -1569,7 +1578,7 @@ input::placeholder{
 }
 .b4etd{
     position: relative;
-    width: 15.96667%;
+    width: 15.8%;
     margin: 0 4px 4px 4px;
     transition: transform .1s cubic-bezier(.4,0,.6,1),box-shadow .1s cubic-bezier(.4,0,.6,1);
 }

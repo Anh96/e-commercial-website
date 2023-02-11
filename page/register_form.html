@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/registerform.css">
     <title>Đăng ký tài khoản</title>
 </head>
 <body>
     <div id="register-login-form">
-        <header class="header-form">
+        <!-- header form on PC -->
+        <header class="header-form header-form-onPC">
             <div class="grid">
                 <div class="flex-jtfspbt" style="padding: 12px 0px">
                     <div class="left-header flex">
@@ -30,46 +30,94 @@
                 </div>
             </div>
         </header>
+        <!-- header form on Mobile -->
+        <header class="header-form header-form-onMobile">
+            <div class="grid">
+                <div class="flex-jtfspbt" style="padding: 12px 0px">
+                    <div class="left-header flex">
+                        <a href="/index.html" target="_self">
+                            <svg viewBox="0 0 22 17" class="y-6AjV" fill = "var(--primary-color)" width="20px" height="20px">
+                                <g stroke="none" stroke-width="1" fill-rule="evenodd" transform="translate(-3, -6)">
+                                    <path d="M5.78416545,15.2727801 L12.9866648,21.7122915 C13.286114,22.0067577 13.286114,22.4841029 12.9866648,22.7785691 C12.6864297,23.0738103 12.200709,23.0738103 11.9004739,22.7785691 L3.29347136,15.0837018 C3.27067864,15.0651039 3.23845445,15.072853 3.21723364,15.0519304 C3.06240034,14.899273 2.99480814,14.7001208 3.00030983,14.5001937 C2.99480814,14.3002667 3.06240034,14.1003396 3.21723364,13.9476821 C3.23845445,13.9275344 3.2714646,13.9345086 3.29425732,13.9166857 L11.9004739,6.22026848 C12.200709,5.92657717 12.6864297,5.92657717 12.9866648,6.22026848 C13.286114,6.51628453 13.286114,6.99362977 12.9866648,7.288096 L5.78416545,13.7276073 L24.2140442,13.7276073 C24.6478918,13.7276073 25,14.0739926 25,14.5001937 C25,14.9263948 24.6478918,15.2727801 24.2140442,15.2727801 L5.78416545,15.2727801 Z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <div class="mgl-8 flex" style="font-size: 20px ;">Đăng ký</div>
+                    </div>
+                    <div class="right-header">
+                        <a href="./support.html" target="_blank" class="color-primary-text">
+                            <svg viewBox="0 0 24 24" fill="none" width="24" height="24" color="#ee4d2d"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5 12a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0zm1.5 0c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-10.783 1.02c-.16.379-.24.888-.24 1.526h1.65c.01-.691.175-1.217.494-1.577l.894-.871c.737-.759 1.105-1.53 1.105-2.312 0-.878-.274-1.562-.821-2.052-.543-.49-1.301-.734-2.275-.734-.945 0-1.705.247-2.282.741-.572.495-.862 1.167-.872 2.017h1.766c0-.399.126-.713.378-.944.257-.235.593-.352 1.01-.352.436 0 .766.12.988.36.228.235.342.578.342 1.03 0 .34-.097.657-.29.95-.127.192-.427.516-.902.972-.47.451-.785.866-.945 1.245zm-.094 3.081c-.18.173-.269.401-.269.684 0 .264.085.485.254.663.175.177.422.266.742.266s.566-.089.74-.266a.908.908 0 00.263-.663.912.912 0 00-.27-.677c-.179-.182-.423-.273-.733-.273-.306 0-.548.089-.727.266z" fill="var(--primary-color)"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- body Register Form -->
         <div class="body-form">
             <div class="bodyBGR grid">
-                <div class="right-body mgl-16 mgr-16 margin-tb32 box_shadow">
+                <div class="right-body box_shadow">
                     <div class="heading-form flex margin-tb32">
                         <h1 class="txt-Black-color">Đăng ký</h1>
                     </div>
                     <div class="ctn-form margin-auto">
                         <form action="">
-                            <div class="inpAcc margin-tb32">
+                            <div class="inpAcc margin-tb32 flex-jtfspbt">
+                                <div style="margin: 0px 5px; height: 100%;">
+                                    <svg viewBox="0 0 24 24" fill="none" width="24" height="24" color="rgba(0, 0, 0, 0.65)" class="aDKDCX">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.906 2.075c.367.123.659.377.862.646.674.895 1.647 2.315 2.242 3.567.404.85.178 1.739-.151 2.381-.338.659-.459 1.265-.205 1.738.367.685 1.077 1.689 1.838 2.594.377.449.756.861 1.099 1.188.355.34.625.541.786.621.142.07.37.052.9-.253.065-.037.144-.085.23-.137a9.6 9.6 0 01.51-.294 2.19 2.19 0 01.455-.182c.17-.044.398-.073.645-.005.386.108.875.41 1.32.725.476.336 1.002.76 1.486 1.2.48.438.942.91 1.272 1.344.164.215.316.447.418.678.09.205.206.554.086.923-.209.642-.648 1.524-1.372 2.201-.749.7-1.815 1.184-3.171.918-1.947-.383-3.693-1.57-5.13-2.852-1.335-1.193-2.467-2.525-3.29-3.494l-.191-.225c-1.08-1.268-2.434-3.251-3.327-5.239-.446-.993-.792-2.022-.917-2.983-.124-.955-.041-1.931.481-2.73.73-1.116 1.362-1.78 1.876-2.146a1.366 1.366 0 011.248-.184zm-.434 1.448c-.31.236-.8.734-1.434 1.703-.25.381-.35.945-.25 1.715.1.763.386 1.643.799 2.563.825 1.838 2.096 3.703 3.1 4.88l.186.22c.828.975 1.897 2.232 3.153 3.352 1.357 1.212 2.86 2.194 4.42 2.5.797.157 1.391-.107 1.856-.542.449-.419.76-.988.928-1.446a2.175 2.175 0 00-.228-.35c-.254-.334-.642-.738-1.088-1.144a14.55 14.55 0 00-1.343-1.085c-.365-.259-.63-.41-.775-.474-.024.01-.054.025-.094.045a4.65 4.65 0 00-.34.197c-.094.057-.201.122-.337.2-.486.28-1.389.756-2.315.297-.373-.185-.776-.519-1.155-.88-.393-.375-.81-.83-1.211-1.308-.798-.949-1.579-2.04-2.013-2.85-.622-1.161-.194-2.377.193-3.131.226-.442.25-.802.131-1.052-.531-1.118-1.433-2.444-2.085-3.309a.529.529 0 00-.098-.101zm12.785 15.014l-.003-.011a.042.042 0 01.003.011z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
                                 <input type="text" name="" class="font16" id="user-acc" required placeholder="Email/Số điện thoại">
                             </div>
                             <div class="btn-sbmit btn-signIn flex margin-tb32">
                                 <button class="none-change-opacity txt-white-color txt-UperCase">Tiếp theo</button>
                             </div>
                             <div class="vRtc-line flex margin-tb32">OR</div>
-                            <div class="flex-jtfspbt">
-                                <a class="social-media-link none-change-opacity flex-jtfspbt">
-                                    <div id="fb" class="social-media-ic"></div>
-                                    <div class="font-14">Facebook</div>
-                                </a>
-                                <a class="social-media-link none-change-opacity flex-jtfspbt">
-                                    <div id="google" class="social-media-ic"></div>
-                                    <div class="font-14">Google</div>
-                                </a>
-                                <a class="social-media-link none-change-opacity flex-jtfspbt">
-                                    <div id="app_id" class="social-media-ic"></div>
-                                    <div class="font-14">Apple</div>
-                                </a>
+                            <!-- Social Media On PC -->
+                            <div class="social-media-group-onPC">
+                                <div class="social-media-link-group">
+                                    <a class="social-media-link none-change-opacity flex-jtfspbt">
+                                        <div id="fb" class="social-media-ic"></div>
+                                        <div class="font-14">Facebook</div>
+                                    </a>
+                                    <a class="social-media-link none-change-opacity flex-jtfspbt">
+                                        <div id="google" class="social-media-ic"></div>
+                                        <div class="font-14">Google</div>
+                                    </a>
+                                    <a class="social-media-link none-change-opacity flex-jtfspbt">
+                                        <div id="app_id" class="social-media-ic"></div>
+                                        <div class="font-14">Apple</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Social Media On Mobile -->
+                            <div class="social-media-group-onMobile">
+                                <div class="social-media-link-group">
+                                    <a class="social-media-link none-change-opacity flex-jtfspbt">
+                                        <div id="fb" class="social-media-ic"></div>
+                                        <div class="font-14">Đăng ký với Facebook</div>
+                                    </a>
+                                    <a class="social-media-link none-change-opacity flex-jtfspbt">
+                                        <div id="google" class="social-media-ic"></div>
+                                        <div class="font-14">Đăng ký với Google</div>
+                                    </a>
+                                    <a class="social-media-link none-change-opacity flex-jtfspbt">
+                                        <div id="app_id" class="social-media-ic"></div>
+                                        <div class="font-14">Đăng ký với Apple</div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="hasnot-acc margin-tb32">
                                 <div class="hsnot-txt flex">Bằng việc đăng kí, bạn đã đồng ý với Shopee về</div>
                                 <div class="flex">
                                     <a href="#" class="">Điều khoản dịch vụ</a> 
-                                    & 
+                                    <span>&</span>
                                     <a href="#" class="">Chính sách bảo mật</a>
                                 </div>
                             </div>
-                            <div class="hasnot-acc margin-tb32 flex">
+                            <div class="hasnot-acc flex">
                                 <div class="hsnot-txt">Bạn đã có tài khoản?</div>
-                                <a href="../page/loginform.html" class="">Đăng nhập</a> 
+                                <a href="../page/loginform.html" class="" >Đăng nhập</a> 
                             </div>
                         </form>
                     </div>

@@ -1,7 +1,7 @@
 .grid{
     /* width: 100%;
     width: 1200px; */
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 /* Text Transform */
 .txt-Capitalize{
@@ -157,6 +157,7 @@
 .dot_active,
 .active{
     background-color: orangered;
+    color: white;
 }
 
 /* opacity */
@@ -200,7 +201,7 @@
     height: 10px;
 }
 .shopee-svg-icon{
-    width: 13px;
+    width: 16px;
     fill: var(--white-color);
 }
 .icon-arrow-bold{

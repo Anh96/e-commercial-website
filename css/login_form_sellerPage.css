@@ -82,13 +82,10 @@ h1{
     display: block;
     align-items: center;
     font-size: 15px;
-   
-
 }
 .social-media-btn{
     display: inline-flex;
     align-items: center;
-    width: 130px;
     justify-content: center;
     background-color: inherit;
     border: 1px solid var(--line-color);

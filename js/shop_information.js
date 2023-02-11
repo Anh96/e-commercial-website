@@ -203,4 +203,64 @@ export function render_info_shop_online(shop_onlines){
          })
      }
 }
+export function render_info_shop_detailProductsPage_onPC(shop_onlines){
+    create_htmls_frame_infoshop();
+    shop_onlines.forEach((shop,index) => {
+        if(index==0){
+            $('.ltf-img').innerHTML = `<div class="logo_shop_img" style="background-image:url('${shop.logo_shop}')"></div>`
+            if(shop.favorite_shop==true){
+                $('.fvr-shop').style.display = "block";
+            }
+            if(shop.favorite_shop == false){
+                $('.fvr-shop').style.display = "none";
+            }
+            $('.shopName').innerHTML = `${shop.shop_name}`
+            if(shop.state_online==true){
+                htmls =
+                `
+                    <div class="circle-state"></div>
+                    <div class="mgl-8 font16">Đang hoạt động</div>
+                `
+            }
+            if(shop.state_online==false){
+                htmls = 
+                    `
+                        <div class="font10";">Online ${shop.hours_online_ago} giờ trước</div>
+                    `
+            }
+            // $('.time-online').insertAdjacentHTML('beforeend',htmls)
+            $(".time-online").innerHTML+= htmls;
+            //handle data > 10000
+            if(shop.quantity_products_inshop>1000){
+                $('.quantity_products_inshop').innerHTML = `${shop.quantity_products_inshop/1000}k`
+            }
+            if(shop.quantity_products_inshop<1000){
+                $('.quantity_products_inshop').innerHTML = `${shop.quantity_products_inshop}`
+            }
 
+            if(shop.quantity_pages_follow>1000){
+                $('.quantity_pages_follow').innerHTML = `${shop.quantity_pages_follow/1000}k`
+            }
+            if(shop.quantity_products_inshop<1000){
+                $('.quantity_pages_follow').innerHTML = `${shop.quantity_pages_follow}`
+            }
+            $('.percent_respons').innerHTML = `${shop.percent_respons}%`
+
+            if(shop.quantity_users_follow>1000){
+                $('.quantity_users_follow').innerHTML = `${shop.quantity_users_follow/1000}k`
+            }
+            if(shop.quantity_users_follow<1000){
+                $('.quantity_users_follow').innerHTML = `${shop.quantity_users_follow}`
+            }
+            //rating shop
+            $('.rating_shop').innerHTML = `${shop.rating_shop}`
+            if(shop.quantity_rating>1000){
+                $('.quantity_rating').innerHTML = `(${shop.quantity_rating/1000}k Đánh giá)`
+            }
+            if(shop.quantity_rating<1000){
+                $('.quantity_rating').innerHTML = `${shop.quantity_rating}`
+            }
+            $('.time_shop_joined').innerHTML = `${shop.time_shop_joined}`;
+        }
+    })
+}

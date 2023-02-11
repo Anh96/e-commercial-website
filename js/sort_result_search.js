@@ -108,9 +108,18 @@ fetch('../data/data.json')
             }
         })
     }
+// handle click top-list-data-search
+// function handle_topListDataSearch(){
+//     $$(".name-products .link-product").forEach(item=>{
+//         item.onclick = ()=>{
+//             console.log(item.innerHTML)
+//         }
+//     })
+// }
 //Relative Products
     function relative_products(products){
         pagination(products);
         sortFollowBtn(products);
         sortFollowPrice(products);
+        // handle_topListDataSearch()
     }

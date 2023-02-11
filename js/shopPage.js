@@ -16,7 +16,7 @@ import {keysearch} from "./keyword_search.js"
     var checkBtn = $('.check-btn');
 //bannner var
     const next_circle = $$('.list-next-circle-animation')
-    var current_index =0;
+    var current_index = 0;
     getNameMethod.forEach((name,index)=>{
         name.onclick=  function(){
             const html = name.innerText;
