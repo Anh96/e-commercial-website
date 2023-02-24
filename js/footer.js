@@ -342,28 +342,8 @@ export function footerBase(){
             </div>
         `
 }
-export function footerHomepage(){
-    // footer - today- suggesstion
-    $(".footer-tdsgtion-seemore-ctn").innerHTML = `
-        <div class="footer-sggtion-see-more">
-            <div class="block-ft-btn">
-                <button class="ft-sggtion-btn none-change-opacity">Xem thêm</button>
-            </div>
-        </div>
-    `
-    footerBase();
-}
-export function renderFooter_mobile(){
-    // footer - today- suggesstion
-    $(".footer-tdsgtion-seemore-ctn").innerHTML = `
-        <div class="footer-sggtion-see-more">
-            <div class="block-ft-btn">
-                <button class="ft-sggtion-btn none-change-opacity">Xem thêm</button>
-            </div>
-        </div>
-    `
-    // footer
-    footer.innerHTML = 
+export function footerBase_onMobile(){
+    return footer.innerHTML = 
     `
             <div class="footer-container-shopee" style="margin-top:0px">
                 <div class="block-5" style="background-color: white;">
@@ -422,12 +402,152 @@ export function renderFooter_mobile(){
         </div>
     `
 }
+export function footerHomepage(){
+    // footer - today- suggesstion
+    $(".footer-tdsgtion-seemore-ctn").innerHTML = `
+        <div class="footer-sggtion-see-more">
+            <div class="block-ft-btn">
+                <button class="ft-sggtion-btn none-change-opacity">Xem thêm</button>
+            </div>
+        </div>
+    `
+    footerBase();
+}
+export function renderFooter_mobile_has_watchmoreBtn(){
+    // footer - today- suggesstion
+    $(".footer-tdsgtion-seemore-ctn").innerHTML = `
+        <div class="footer-sggtion-see-more">
+            <div class="block-ft-btn">
+                <button class="ft-sggtion-btn none-change-opacity">Xem thêm</button>
+            </div>
+        </div>
+    `
+    // footer
+    footer.innerHTML = 
+    `
+            <div class="footer-container-shopee" style="margin-top:0px">
+                <div class="block-5" style="background-color: white;">
+                    <div class="right-col b5top" >
+                        <div class="flex-jtfspbt">
+                            <div class="right-link-block font10 flex" style="width: 45%">
+                                <img src="https://cf.shopee.vn/file/8ee559562d123cf132a7cec374784442" alt="">
+                                <a class="none-change-opacity">CHÍNH SÁCH BẢO MẬT</a>
+                            </div>
+                            <div class="flex" style="width: 10%">|</div>
+                            <div class="right-link-block font10 flex" style="width: 45%">
+                                <img src="https://cf.shopee.vn/file/5e2ef7014b7a5004ebc7383e115364d5" alt="">
+                                <a class="none-change-opacity">QUY CHẾ HOẠT ĐỘNG</a>
+                            </div>
+                        </div>
+                        <div class="flex-jtfspbt">
+                            <div class="right-link-block font10 flex" style="width: 45%">
+                                <img src="https://cf.shopee.vn/file/b334ced59fb923afa9f6cc41be2c2e14" alt="">
+                                <a class="none-change-opacity">CHÍNH SÁCH VẬN CHUYỂN</a>
+                            </div>
+                            <div class= "flex" style="width: 10%">|</div>
+                            <div class="right-link-block font10 flex" style="width: 45%">
+                                <img src="https://cf.shopee.vn/file/9055ca43afee3425736586fd115cb197" alt="">
+                                <a class="none-change-opacity">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-col block5-top"  style="border-top: 2px dotted var(--line-color);"></div>
+                    <div class="right-col block5-top flex">
+                        <div class="right-link-block">
+                            <div class="none-change-opacity">
+                                <div class="footer-bgr ft-registed-red"></div>
+                            </div>
+                        </div>
+                        <div class="right-link-block">
+                            <div class="none-change-opacity">
+                                <div class="footer-bgr ft-registed-red"></div>
+                            </div>
+                        </div>
+                        <div class="right-link-block">
+                            <div class="none-change-opacity flex">
+                                <div class="footer-bgr ft-none-fake"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-col rc5b">
+                        <div class="right-link-block">Công ty TNHH Shopee</div>
+                    </div>
+                    <div class="right-col rc5b font075" style="margin-bottom: 0px; padding:10px 0px">
+                        <div class="right-link-block">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn</div>
+                        <div class="right-link-block">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)</div>
+                        <div class="right-link-block">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</div>
+                        <div class="right-link-block">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</div>
+                    </div>
+                </div>
+        </div>
+    `
+}
 export function footerTodaySuggestionMobile(){
-    return footer.innerHTML = `
+    return $(".footer-tdsgtion-seemore-ctn").innerHTML = `
             <div class="grid footer-mobile">
-                <div class="flex">
-                    Không tìm thấy sản phẩm nào
+                <div class="flex txt-color-primary-color">
+                    Không tìm thấy sản phẩm nào nữa
                 </div>
             </div>
         `
+}
+export function footer_mobile_has_paginationcontroller(){
+    footer.innerHTML += 
+    `
+            <div class="footer-container-shopee" style="margin-top:0px">
+                <div class="block-5" style="background-color: white;">
+                    <div class="right-col b5top" >
+                        <div class="flex-jtfspbt">
+                            <div class="right-link-block font10 flex" style="width: 45%">
+                                <img src="https://cf.shopee.vn/file/8ee559562d123cf132a7cec374784442" alt="">
+                                <a class="none-change-opacity">CHÍNH SÁCH BẢO MẬT</a>
+                            </div>
+                            <div class="flex" style="width: 10%">|</div>
+                            <div class="right-link-block font10 flex" style="width: 45%">
+                                <img src="https://cf.shopee.vn/file/5e2ef7014b7a5004ebc7383e115364d5" alt="">
+                                <a class="none-change-opacity">QUY CHẾ HOẠT ĐỘNG</a>
+                            </div>
+                        </div>
+                        <div class="flex-jtfspbt">
+                            <div class="right-link-block font10 flex" style="width: 45%">
+                                <img src="https://cf.shopee.vn/file/b334ced59fb923afa9f6cc41be2c2e14" alt="">
+                                <a class="none-change-opacity">CHÍNH SÁCH VẬN CHUYỂN</a>
+                            </div>
+                            <div class= "flex" style="width: 10%">|</div>
+                            <div class="right-link-block font10 flex" style="width: 45%">
+                                <img src="https://cf.shopee.vn/file/9055ca43afee3425736586fd115cb197" alt="">
+                                <a class="none-change-opacity">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-col block5-top"  style="border-top: 2px dotted var(--line-color);"></div>
+                    <div class="right-col block5-top flex-jtfspbt">
+                        <div class="right-link-block">
+                            <div class="none-change-opacity">
+                                <div class="footer-bgr ft-registed-red"></div>
+                            </div>
+                        </div>
+                        <div class="right-link-block">
+                            <div class="none-change-opacity">
+                                <div class="footer-bgr ft-registed-red"></div>
+                            </div>
+                        </div>
+                        <div class="right-link-block">
+                            <div class="none-change-opacity flex">
+                                <div class="footer-bgr ft-none-fake"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-col rc5b">
+                        <div class="right-link-block">Công ty TNHH Shopee</div>
+                    </div>
+                    <div class="right-col rc5b font075" style="margin-bottom: 0px; padding:10px 0px">
+                        <div class="right-link-block">Địa chỉ: Tầng 4-5-6, Tòa nhà Capital Place, số 29 đường Liễu Giai, Phường Ngọc Khánh, Quận Ba Đình, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn</div>
+                        <div class="right-link-block">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Đức Trí - Điện thoại liên hệ: 024 73081221 (ext 4678)</div>
+                        <div class="right-link-block">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</div>
+                        <div class="right-link-block">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</div>
+                    </div>
+                </div>
+        </div>
+    `
 }

@@ -1,11 +1,9 @@
 /* Shop Page */
 @import url('./style.css');
 @import url('./sortResultSearching.css');
-@import url('./suport_center.css');
-@import url('./sellerpage.css');
-a:hover{
-    text-decoration: none;
-}
+/* @import url('./suport_center.css'); */
+/* @import url('./sellerpage.css'); */
+
 .shop-online-ctn{
     /* min-width: 1200px; */
     width: 100%;
@@ -163,7 +161,8 @@ a:hover{
 }
 .shop-online .ltf-img-ctn{
     position: relative;
-    width: 50%;
+    /* width: 23%; */
+    width: 80px;
     height: 100px;
 }
 .logo_shop_img{
@@ -190,10 +189,7 @@ a:hover{
     font-weight: 600;
 }
 /* Time Online */
-.time-online{
-    position: absolute;
-    top: 30px;
-}
+
 .circle-state{
     width: 5px;
     height: 5px;
@@ -230,6 +226,7 @@ a:hover{
 }
 .shop-online .right-rltSk-ctn{
     width: 65%;
+    margin-left: 40px;
 }
 .shop-Online-Page .icx{
     position: absolute;
@@ -263,7 +260,8 @@ a:hover{
         border-bottom: 2px solid var(--primary-color);
     }
     .ctPRD{
-        width: 165px;
+        /* width: 165px; */
+        width: 20%;
         height: 40px;
         margin-right: 8px;
     }
@@ -444,9 +442,9 @@ a:hover{
 .see-all{
     height: 35px;
 }
-.b4etd{
+/* .b4etd{
     width: 189px;
-}
+} */
 .header-block-sale-off{
     transform: translateY(15%);
 }
@@ -461,11 +459,11 @@ a:hover{
     justify-content: space-between;
 }
 /* TOP SALE */
-.pRDTOPSALE .b4etd{
+/* .pRDTOPSALE .b4etd{
     width: 196px;
     height: fit-content;
     margin: 0px 2px;
-}
+} */
 .shopeeMall-tag .header-block-favorite-shop{
     text-align: center;
     height: 20px;
@@ -490,16 +488,20 @@ a:hover{
 .slide-show-item{
     width: 100%;
     /* overflow-x:scroll; */
+    overflow: hidden;
 }
 .ul-list-shopSld{
     width: 300%;
     height: 100%;
 }
 .list-item-shopSld{
+    width: 100%;
+    position: relative;
     height: 90%;
 }
 .list-item-shopSld img{
-    width: 1180px;
+    /* width: 1180px; */
+    /* width: inherit; */
     border-radius: 8%;
 }
 .next-circle-animation{
@@ -532,12 +534,9 @@ a:hover{
 .lft-nav-Stctn{
     margin-top: 32px;
 }
-#sort_result_search{
+/* #sort_result_search{
     width: 196px;
-}
+} */
 .sortBy{
     position: relative;
-}
-#tdsgtion-relative-product .b4etd{
-    width: 194.5px;
 }

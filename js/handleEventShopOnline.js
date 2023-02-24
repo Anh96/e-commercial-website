@@ -1,7 +1,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 const h4txts=$$('.h4txt');
-export const btns = $$('.bl1Sb-btn');
+export const btns = $$('.sshopOnl .bl1Sb-btn');
 const conditions_sort_links = $$(".hv-prcx a");
 import { 
     pagination,totalPages, setOpacity, prevRange, currRange, reset_currentPage
@@ -49,11 +49,11 @@ export function moveArrowInCatagories(h4txt){
         htmls = products.map(prod=>{
             return render_products(prod);
         })
-        $('#tdsgtion-relative-product').innerHTML = htmls.join("");
+        $('.tdsgtion-sshO').innerHTML = htmls.join("");
    }
    export function render_products_sort_links(products){
        products.map(prod=>{
-            $('#tdsgtion-relative-product').innerHTML += render_products(prod);
+            $('.tdsgtion-sshO').innerHTML += render_products(prod);
         })  
    }
    // Catagories in shop
@@ -66,7 +66,7 @@ export function moveArrowInCatagories(h4txt){
            for(let i=1;i<ctPRDs.length;i++){
                ctPRDs[i].onclick =()=>{
                    $(".pRCX span").innerHTML = `Giá`;
-                   $('#tdsgtion-relative-product').innerHTML = "";
+                   $('.tdsgtion-sshO').innerHTML = "";
                    moveArrowInCatagories(h4txts[i]);
                    btns[0].classList.add('active');
                    btns.forEach((btn,ind)=>{
@@ -76,7 +76,7 @@ export function moveArrowInCatagories(h4txt){
                    })
                    if(i!=1){
                        index = i-1;
-                       jQuery('#tdsgtion-relative-product').empty();
+                       jQuery('.tdsgtion-sshO').empty();
                        products_paging_after_filter.length = 0;
                        btns[0].classList.add('active');
                        btns.forEach((btn,index_btn)=>{
@@ -125,7 +125,7 @@ export function moveArrowInCatagories(h4txt){
                    reset_currentPage();
                    $(".pRCX span").innerHTML = `Giá`;
                    $(".pRCX span").style.color = "black";
-                   jQuery('#tdsgtion-relative-product').empty();
+                   jQuery('.tdsgtion-sshO').empty();
                    moveArrowInCatagories(h4txts[i]);
                    btns[0].classList.add('active');
                    btns.forEach((btn,index_btn)=>{
@@ -134,7 +134,7 @@ export function moveArrowInCatagories(h4txt){
                        }
                    });
                    if(i!=0){
-                       jQuery('#tdsgtion-relative-product').empty();
+                       jQuery('.tdsgtion-sshO').empty();
                        products_paging_after_filter.length = 0;
                        btns[0].classList.add('active');
                        btns.forEach((btn,index_btn)=>{
@@ -178,19 +178,19 @@ export function moveArrowInCatagories(h4txt){
        export function sortFollowBtn(products){
            btns.forEach((btn,i)=>{
                btn.onclick = ()=>{
+                   console.log(i)
                    products_paging_after_filter.length =0;
-                //    $('#tdsgtion-relative-product').innerHTML = "";
                    if(i<=2){
                        $(".pRCX span").innerHTML = `Giá`;
                        $(".pRCX span").style.color = "black";
                        $(".bl1Sb-btn.active").classList.remove("active");
                        if(i==0){
-                           $('#tdsgtion-relative-product').innerHTML = "";
+                           $('.tdsgtion-sshO').innerHTML = "";
                            btn.classList.add("active");
                            products.map((prod,ind)=>{
                                if(ind >= prevRange && ind < currRange){
                                    htmls = render_products(prod);
-                                   $('#tdsgtion-relative-product').innerHTML += htmls;
+                                   $('.tdsgtion-sshO').innerHTML += htmls;
                                 }
                            })
                        }
@@ -214,7 +214,7 @@ export function moveArrowInCatagories(h4txt){
            conditions_sort_links.forEach((link,ind)=>{
                link.onclick = ()=>{
                    products_paging_after_filter.length = 0;
-                    $('#tdsgtion-relative-product').innerHTML = "";
+                    $('.tdsgtion-sshO').innerHTML = "";
                    // remove active class on btns
                    $(".bl1Sb-btn.active").classList.remove("active");
                    $$(".bl1Sb-btn")[3].classList.add("active");
@@ -254,7 +254,7 @@ export function moveArrowInCatagories(h4txt){
                        $(".pRCX span").innerHTML = `Giá`;
                        $(".pRCX span").style.color = "black";
                        $(".bl1Sb-btn.active").classList.remove("active");
-                       $('#tdsgtion-relative-product').innerHTML = '';
+                       $('.tdsgtion-sshO').innerHTML = '';
                        if(i==0){
                            btn.classList.add("active");
                            htmls = products_paging_after_filter.map((prod,ind)=>{
@@ -262,7 +262,7 @@ export function moveArrowInCatagories(h4txt){
                                    return render_products(prod);
                                 }
                             })
-                            $('#tdsgtion-relative-product').innerHTML = htmls.join('')
+                            $('.tdsgtion-sshO').innerHTML = htmls.join('')
                         }
                         if(i==1){
                             btn.classList.add("active")
@@ -285,7 +285,7 @@ export function moveArrowInCatagories(h4txt){
            conditions_sort_links.forEach((link,ind)=>{
             link.onclick = ()=>{
                 new_Arr.length = 0;
-                 $('#tdsgtion-relative-product').innerHTML = "";
+                 $('.tdsgtion-sshO').innerHTML = "";
                 // remove active class on btns
                 $(".bl1Sb-btn.active").classList.remove("active");
                 $$(".bl1Sb-btn")[3].classList.add("active");

@@ -5,6 +5,9 @@
 *{
     padding: 0px;
 }
+a:hover{
+    color: black;
+}
 .ctPRD:last-child{
     margin-right: 0px;
 }

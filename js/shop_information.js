@@ -85,12 +85,107 @@ export function create_htmls_frame_infoshop(){
                 </li>
             </ul>
     `
-    $(".rlt0Sk").append(li)
-    // $(".rlt0Sk").innerHTML = li;
+    $(".rlt0Sk").append(li);
     li.innerHTML = htmls;
 }
+function create_sortResult_frame(){
+    htmls = 
+    `
+        <a href="../page/shopPage.html" class="rlt0Sk txt-Black-color flex none-change-opacity">
+            <div class="lft-rltSk flx mgl-8">
+                <div class="ltf-img-ctn">
+                    <div class="ltf-img">
+                        <div id="logo_shop_img"></div>
+                    </div>
+                    <div class="fvr-shop txt-white-color flex">Yêu Thích</div>
+                </div>
+                <div class="rgt mgl-16">
+                    <div class="rgt-heading rgtHName mgTB-8"></div>
+                    <div class="rgt-heading rgtHPartron mgTB-8"></div>
+                    <div class="rgt-heading flxC">
+                        <div class="number-follow-data flx color-primary-text">
+                            <span></span>
+                            <div class="mgl-8 color-gray">Người theo dõi</div>
+                        </div>
+                        <div class="number-shop-follow flx mgl-8 color-primary-text">
+                            <span></span>
+                            <div class="mgl-8 color-gray">Đang theo</div>
+                        </div>
+                        <div class="total-prodInshop-mobile flx color-primary-text">
+                            <span></span>
+                            <div class="mgl-8 color-gray">Sản phẩm</div>
+                        </div>
+                        <div class="rating-mobile flx mgl-8 color-primary-text">
+                            <span></span>
+                            <div class="mgl-8 color-gray">Đánh giá</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="last mgl-8 bd-left">
+                <div>
+                    <div class="txt-color-primary-color font10">Xem thêm</div>
+                </div>
+            </div>
+            <div class="right-rltSk-ctn flex">
+                <ul class="nav-Right-ctn flex">
+                    <li class="rgt-item-nav bd-left bd-right pd-LR-4">
+                        <div class="item-nav-link txt-Black-color">
+                            <div class="ctn flex">
+                                <div>
+                                    <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" stroke="var(--primary-color)" class="shopee-svg-icon icon-products">
+                                        <g>
+                                            <path d="m10 1 4.5 2.5-.5 3h-2v7.5h-9v-7.5h-2l-.5-3 4.6-2.5c.3 1.1 1.3 1.9 2.4 1.9s2.1-.8 2.5-1.9z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></path>
+                                            <line fill="none" stroke-linecap="round" stroke-miterlimit="10" x1="3" x2="12" y1="11.5" y2="11.5"></line>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="color-primary-text qPInf font-14 mgl-8"></div>
+                            </div>
+                            <div class="txt-Black-color flex color-gray">Sản Phẩm</div>
+                        </div>
+                    </li>
+                    <li class="rgt-item-nav pd-LR-4 bd-right">
+                        <div class="item-nav-link txt-Black-color">
+                            <div class="ctn flex">
+                                <div>
+                                    <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" stroke="var(--primary-color)" class="shopee-svg-icon icon-rating"><polygon fill="none" points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></polygon></svg>
+                                </div>
+                                <div class="color-primary-text rInfo font-14 mgl-8"></div>
+                            </div>
+                            <div class="txt-Black-color flex color-gray">Đánh Giá</div>
+                        </div>
+                    </li>
+                    <li class="rgt-item-nav pd-LR-4 bd-right">
+                        <div class="item-nav-link txt-Black-color">
+                            <div class="ctn flex">
+                                <div>
+                                    <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" stroke="var(--primary-color)" class="shopee-svg-icon"><g><polygon fill="none" points="14 10.8 7 10.8 3 13.8 3 10.8 1 10.8 1 1.2 14 1.2" stroke-linejoin="round" stroke-miterlimit="10"></polygon><circle cx="4" cy="5.8" r="1" stroke="none"></circle><circle cx="7.5" cy="5.8" r="1" stroke="none"></circle><circle cx="11" cy="5.8" r="1" stroke="none"></circle></g></svg>
+                                </div>
+                                <div class="color-primary-text pInfo font-14 mgl-8"></div>
+                            </div>
+                            <div class="txt-Black-color flex color-gray">Tỉ Lệ Phản Hồi</div>
+                        </div>
+                    </li>
+                    <li class="rgt-item-nav pd-LR-4 bd-right">
+                        <div class="item-nav-link txt-Black-color">
+                            <div class="ctn flex">
+                                <div>
+                                    <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" stroke="var(--primary-color)" class="shopee-svg-icon"><g><polyline fill="none" points="7.2 3.5 7.2 7.8 10.5 7.8" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></polyline><circle cx="7.5" cy="7.5" fill="none" r="6.5" stroke-miterlimit="10"></circle></g></svg>
+                                </div>
+                                <div class="color-primary-text font-14 mgl-8">trong vài giờ</div>
+                            </div>
+                            <div class="txt-Black-color flex color-gray">Thời Gian Phản Hồi</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </a>
+    `
+    $('.rlt0Sk').innerHTML = htmls;
+}
 export function render_info_shop_online(shop_onlines){
-    if(window.innerWidth >=758){
+    if(window.innerWidth >=1008){
         create_htmls_frame_infoshop();
         shop_onlines.forEach((shop,index) => {
             if(index==0){
@@ -151,7 +246,7 @@ export function render_info_shop_online(shop_onlines){
             }
         })
     }
-    if(window.innerWidth<=480){
+    if(window.innerWidth<=834){
         shop_onlines.forEach(shop=>{
              if(shop.shop_id == 1){
                  $('.ltf-img').innerHTML = `<div class="logo_shop_img" style="background-image:url('${shop.logo_shop}')"></div>`;
@@ -187,6 +282,7 @@ export function render_info_shop_online(shop_onlines){
                         $(".shop-bgr").style.zIndex = "50";
                         $(".shop-bgr").style.height = "60px";
                         $(".shop-bgr").style.position = "fixed";
+                        $(".btn-back svg").setAttribute("fill", "white")
                     }
                     if(window.scrollY<22){
                         $(".mobile-search-controller").style.backgroundImage = "none";
@@ -197,6 +293,8 @@ export function render_info_shop_online(shop_onlines){
                         $(".shop-bgr").style.position = "absolute";
                         $(".shop-bgr").style.backgroundImage = "none";
                         $('.shop-bgr').innerHTML = `<div class="shopBGR-img" style = "background-image:url('${shop.shop_background_image}')"></div>`
+                        $(".btn-back svg").setAttribute("fill", "var(--primary-color)")
+
                     }
                 })
              };
@@ -263,4 +361,34 @@ export function render_info_shop_detailProductsPage_onPC(shop_onlines){
             $('.time_shop_joined').innerHTML = `${shop.time_shop_joined}`;
         }
     })
+}
+export function render_info_sortResultPage(infos){
+    create_sortResult_frame();
+    if(window.innerWidth>=1008){
+        infos.forEach(info=>{
+            if(info.shop_id==1){
+                $("#logo_shop_img").setAttribute("style", "background-image");
+                $("#logo_shop_img").style.backgroundImage = `url('${info.logo_shop}')`
+                $(".rgtHName").innerHTML = `<h3>${info.shop_name}</h3>`;
+                $(".rgtHPartron").innerHTML = `Tài trợ bởi ${info.shop_patron}`;
+                $(".number-follow-data span").innerHTML += `${info.quantity_users_follow/1000}k`;
+                $(".number-shop-follow span").innerHTML = `${info.quantity_pages_follow}`;
+                $(".qPInf").innerHTML = `${info.quantity_products_inshop}`;
+                $(".rInfo").innerHTML = `${info.rating_shop}`;
+                $(".pInfo").innerHTML = `${info.percent_respons}%`
+            }
+        })
+    }
+    if(window.innerWidth <= 819){
+        infos.forEach(info=>{
+            if(info.shop_id==1){
+                $("#logo_shop_img").setAttribute("style", "background-image");
+                $("#logo_shop_img").style.backgroundImage = `url('${info.logo_shop}')`
+                $(".rgtHName").innerHTML = `<h3>${info.shop_name}</h3>`;
+                $(".rgtHPartron").innerHTML = `Tài trợ bởi ${info.shop_patron}`;
+                $(".rating-mobile span").innerHTML = `${info.rating_shop}`;
+                $(".total-prodInshop-mobile span").innerHTML = `${info.quantity_products_inshop}`
+            }
+        })
+    }
 }

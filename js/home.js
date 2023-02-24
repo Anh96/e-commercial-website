@@ -1,43 +1,46 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-
 const top_search_link_ctn = $('.top_search_link_ctn')
 const trennding_linkCTN = $('.grid-ctn-body-trendding')
 const tdsgtion = $('#tdsgtion-relative-product');
 let htmls,new_Array = new Array;
 import {renderHeaderNav_base_desktop, renderHeaderNav_homepage_mobile,} from "./header.js";
 import {keysearch} from "./keyword_search.js";
-import {footerHomepage, footerTodaySuggestionMobile, renderFooter_mobile} from "./footer.js"
-import {handleEvent_next_prevBtn, handleEventBtnsSliderShopeeMall, handle_sliders_shopeemall, handleEventClick_NexPrevBtns_PC, handleEventClick_NextPrevBtns_Mobile} from "./handleEvent.js"
+import {footerHomepage, renderFooter_mobile_has_watchmoreBtn, footerTodaySuggestionMobile} from "./footer.js"
+import {
+    handleEvent_next_prevBtn, handleEventBtnsSliderShopeeMall, 
+    handle_sliders_shopeemall, handleEventClick_NexPrevBtns_PC, handleEventClick_NextPrevBtns_Mobile
+} from "./handleEvent.js"
 function fetchData(){
     fetch("../data/data.json")
         .then(res=>{
             return res.json()
         })
         .then(data=>{      
-            render_slide_leftSlide_homeBanner(data.slider)
-            if(window.innerWidth >= 1280){
+            render_slide_leftSlide_homeBanner(data.slider);
+            setproperties_when_window_widthchanges();
+            if(window.innerWidth <= 834){
+                renderHeaderNav_homepage_mobile();
+                render_Catagory_homePage_mobile(data.catagories);
+                renderLayout_ShopeeMall_mobile(data.shopee_mall);
+                handleEventClick_NextPrevBtns_Mobile();
+                renderFooter_mobile_has_watchmoreBtn();
+            }
+            if(window.innerWidth >= 1008){
                 renderHeaderNav_base_desktop()
                 render_slide_rightSlide_homeBanner(data.right_banner);
                 render_Catagory_homePage(data.catagories);
                 keysearch(data.key_search);
                 renderLayout_ShopeeMall_desktop(data.shopee_mall);
                 handleEventClick_NexPrevBtns_PC();
-                renderProduct_Relative_HomePage(data.products);
+                footerHomepage();
             }
-            if(window.innerWidth <= 570){
-                renderHeaderNav_homepage_mobile();
-                render_Catagory_homePage_mobile(data.catagories);
-                renderLayout_ShopeeMall_mobile(data.shopee_mall);
-                handleEventClick_NextPrevBtns_Mobile();
-                render_TodaySuggesstionLayout_Mobile(data.products);
-
-            }
-            footerBanner(data.footerBanner)
+            footerBanner(data.footerBanner);
             render_FlashSale_homePage(data.flash_sale)
             renderProduct_TrenddingSearch(data.trendding_search)
             renderProduct_topSearch(data.products)
-            setproperties_when_window_widthchanges()
+            renderProduct_Relative_HomePage(data.products);
+
         })
 } 
 fetchData()
@@ -50,49 +53,32 @@ const prev_btn = $('.left-btn')
 const next_btn = $('.right-btn')
 // Set grid
 function setproperties_when_window_widthchanges(){
-    if(window.innerWidth >= 1280){
-        document.querySelectorAll(".grid").forEach(grid=>{
-            grid.style.width = "1200px";
-        });
+    
+    if(window.innerWidth >= 1008){
+        
         // banner
-        $(".full-home-banner").style.height = "300px"
+        $(".full-home-banner").style.height = "300px";
         document.querySelectorAll(".sld-img-item").forEach(bgimg=>{
             bgimg.style.backgroundSize = "contain";
         })
         $(".left-slider").style.flex = "2 1 0";
     }
-    else{
-        let x = window.outerWidth;
-        document.querySelectorAll(".grid").forEach(grid=>{
-            grid.style.width = "100%";
-        });
-        // banner
-        $(".full-home-banner").style.height = "200px"
-        document.querySelectorAll(".sld-img-item").forEach(bgimg=>{
-            bgimg.style.backgroundSize = "400px 200px"
-        });
-        document.querySelectorAll(".header-ctn-text").forEach(item=>{
-            item.style.fontSize = "13px";
-        });
-        // Trendding search
+    if(window.innerWidth <= 834){
         // Top search
         document.querySelectorAll(".top-search-item-link").forEach(item=>{
             item.style.width = "150px";
         })
         // Today Suggesstion
-        // document.querySelector(".header-ctn-today-sggtion").style.marginTop = "0px";
-        window.addEventListener("scroll", ()=>{
-            if(window.scrollY>=2000){
-                // console.log(window.scrollY);
-                document.querySelector(".header-ctn-today-sggtion").style.top = "0px";
-            }
-        })
-        $$(".b4etd").forEach(item=>{
-            item.style.width = "47.3%";
-            item.style.height = "auto";
-        })
-        $$(".hover-looking-same-product").forEach(item=>{
-            item.style.display = "none"
+        // window.addEventListener("scroll", (event)=>{
+        //     // today sugestion
+
+        //     console.log(this.scrollY)
+        //     // if(window.scrollY>=2000){
+        //     //     document.querySelector(".header-ctn-today-sggtion").style.top = "130px";
+        //     // }
+        // })
+        $$(".home-page .hover-looking-same-product").forEach(item=>{
+            item.style.display = "none";
         })
         $$(".nbs-sggtion").forEach(item=>{
             item.style.fontSize = "10px"
@@ -100,22 +86,6 @@ function setproperties_when_window_widthchanges(){
         $$(".crr-price").forEach(item=>{
             item.style.fontSize = "13px"
         })
-        // footer-sggtion-see-more
-        $(".footer-sggtion-see-more").style.marginBottom = "16px";
-        $(".ft-sggtion-btn").style.border = "1px solid var(--primary-color)";
-        // footer
-        $(".footer").style.margin = "0px";
-        $(".footer").style.borderTop = "none";
-
-        $(".block-5").style.padding = "0px";
-        $(".b5top").style.padding = "10px 0px";
-
-        $$(".block5-top .right-link-block").forEach(item=>{
-            item.style.width = "50%";
-        })
-        // $$(".rc5b-mobile").forEach(item=>{
-        //     item.style.marginBottom = "10px"
-        // })
     }
 }
 // HOME BANNER
@@ -206,8 +176,9 @@ function render_slide_rightSlide_homeBanner(imgs){
 // CATAGORIES
 function render_Catagory_homePage(data){
     $(".section-grid-layout-heading").innerHTML = `
-        <div class="section-heading-title">Danh mục</div>
+        <div class="section-heading-title shtPC">Danh mục</div>
     `
+    $(".section-grid-layout-container").innerHTML = `<div class="sGLC sGlC-PC"></div>`
     var x=[], y=[];
     for(let i =0; i<data.length;++i){
         if(data[i].id_catagory%2>0){
@@ -236,7 +207,7 @@ function render_Catagory_homePage(data){
                             <div class="section-z04-div">
                                 <div class="section-z04-img">
                                     <div class="stc-im">
-                                        <div id="bellow" class="img-bgr-section" style="background-image:url('${y[index].catagory_img}'); background-size:contain "></div>
+                                        <div id="bellow" class="img-bgr-section" style="background-image:url('${y[index].catagory_img}');"></div>
                                     </div>
                                 </div>
                                 <div class="z04tx-txt txt-Capitalize">${y[index].catagory_name}</div>
@@ -245,12 +216,12 @@ function render_Catagory_homePage(data){
                     </div>
                 </li>
             `
-        $(".section-grid-layout-container").innerHTML += htmls;
+        $(".sGlC-PC").innerHTML += htmls;
     });
 }
 function render_Catagory_homePage_mobile(data){
     $(".section-grid-layout-heading").innerHTML = `
-        <div class="flex-jtfspbt">
+        <div class="flex-jtfspbt section-grid-layout-heading-mobile">
             <div class="section-heading-title">Danh mục</div>
             <div class="btn-ic-see-all">
                 <a class="see-all-flash-sale-btn font075 none-change-opacity">Xem tất cả </a>
@@ -261,7 +232,7 @@ function render_Catagory_homePage_mobile(data){
         </div>
     `
     data.forEach((item, index)=>{
-        if(index<5){
+        if(index<8){
             htmls =
             `
                 <li class="list-item-section" style="">
@@ -270,7 +241,7 @@ function render_Catagory_homePage_mobile(data){
                             <div class="section-z04-div" style="height: 110px">
                                 <div class="section-z04-img">
                                     <div class="stc-im">
-                                        <div id="above" class="img-bgr-section" style="background-image:url('${item.catagory_img}'); background-size: cover; "></div>
+                                        <div id="above" class="img-bgr-section" style="background-image:url('${item.catagory_img}');"></div>
                                     </div>
                                 </div>
                                 <div class="z04tx-txt txt-Capitalize" style="font-size:0.65rem">${item.catagory_name}</div>
@@ -316,15 +287,6 @@ function footerBanner(data){
             </div>
         `
     })
-    if(window.innerWidth <=480){
-        $(".footer-banner-container").style.flexWrap = "wrap";
-        $(".footer-banner-container").style.flexDirection = "collum";
-        document.querySelectorAll(".coll").forEach(coll=>{
-            coll.style.flex = "25%";
-            coll.style.maxWidth = "25%";
-            coll.querySelector(".z04tx-txt").style.fontSize = "0.65rem"
-        })
-    }
     
 }
 // FLASH SALE
@@ -568,7 +530,6 @@ function renderLayout_ShopeeMall_mobile(data){
         `
     });
 }
-
 // TRENDDING SEARCH
 function renderProduct_TrenddingSearch(products){
     products.forEach(prod=>{
@@ -590,7 +551,6 @@ function renderProduct_TrenddingSearch(products){
         $(".scroll-ctn-body-trendding").style.touchAction = "pan-x";
     }
 }
-
 // TOP SEARCH
 function renderProduct_topSearch(products){
     products.forEach(prod =>{
@@ -618,9 +578,8 @@ function renderProduct_topSearch(products){
     })
 }
 // TODAY SUGGESSTIONS
-import { render_products_has_hoversameblock } from "./condition_render_data.js";
+import { render_products_none_hoversameblock, render_products_has_hoversameblock } from "./condition_render_data.js";
 export function renderProduct_Relative_HomePage(products){
-    footerHomepage();
     let loadmore = document.querySelector('.ft-sggtion-btn');
     var maxResult = 6;
     if(products.length<= maxResult){
@@ -641,14 +600,10 @@ export function renderProduct_Relative_HomePage(products){
             }
             maxResult+=6;
             if(maxResult >= products.length){
-                $('.footer-sggtion-see-more').style.display ='none'
+                $('.footer-sggtion-see-more').style.display ='none';
+                footerTodaySuggestionMobile();
+
             }
         }
     }
-}
-function render_TodaySuggesstionLayout_Mobile(data){
-   for(let i of data){
-        $(".tdsgtion").innerHTML += render_products_has_hoversameblock(i);
-   }
-   renderFooter_mobile();
 }

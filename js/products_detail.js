@@ -2,7 +2,7 @@ import {render_products_none_hoversameblock, render_products} from "./condition_
 import {renderHeaderNav_base_desktop, renderHeaderNav_homepage_mobile} from "./header.js";
 import {keysearch} from "./keyword_search.js";
 import {render_info_shop_detailProductsPage_onPC} from "./shop_information.js";
-import {footerHomepage, footerTodaySuggestionMobile} from "./footer.js";
+import {footerHomepage, renderFooter_mobile_has_watchmoreBtn} from "./footer.js";
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 function fetchData(){
@@ -17,9 +17,11 @@ function fetchData(){
                 render_info_shop_detailProductsPage_onPC(data.shop_onlines);
                 topsales_sidebar_onPC(data.products_inshop);
                 create_pagination_controller(1,10);
+                footerHomepage()
             }
             if(window.innerWidth<= 834){
                 topsales_sidebar_onMobile(data.products_inshop);
+                renderFooter_mobile_has_watchmoreBtn();
             }
             same_products(data.products_inshop);
             recommend_products(data.products);
@@ -28,30 +30,21 @@ function fetchData(){
         })
 } 
 fetchData()
-function same_products(data){
-    for(let i in data){
-        if(i<4){
-            $(".suggestion_products_ShopOnline").innerHTML += render_products_none_hoversameblock(i);
-        }
-    }
-}
-function recommend_products(data){
-    let max_item_load = 6;
-    footerHomepage();
-    for(let i in data){
-        if(i< max_item_load){
-            $('.tdsgtion').innerHTML += render_products_none_hoversameblock(i);
-        }
-    }
-    $('.footer-tdsgtion-seemore-ctn').onclick = ()=>{
-        for(let i =max_item_load; i< max_item_load+6;++i){
-            $('.tdsgtion').innerHTML += render_products_none_hoversameblock(i);
-        }
-        max_item_load+=6;
-        if(max_item_load>=data.length){
-            $('.footer-sggtion-see-more').style.display ='none';
-            // footerTodaySuggestionMobile();
-        }
+function changeProperties(){
+    if(window.innerWidth<=844){
+        window.addEventListener("scroll", ()=>{
+            if(window.scrollY >0){
+                $(".mobile-search-controller").style.backgroundColor = "var(--container-color)";
+                $(".mobile-search-controller").style.top= "0px";
+                $(".products-inner-header div").innerHTML = $(".product-name-mobile").innerHTML;
+            }
+            if(window.scrollY==0){
+                $(".mobile-search-controller").style.backgroundColor = "";
+                $(".mobile-search-controller").style.top= "0px";
+                $(".products-inner-header div").innerHTML = "";
+
+            }
+        })
     }
 }
 function topsales_sidebar_onPC(data){
@@ -79,6 +72,30 @@ function topsales_sidebar_onMobile(data){
             return $(".top-sales-container").innerHTML += render_products_none_hoversameblock(item);
         }
     })
+}
+function same_products(data){
+    for(let i in data){
+        if(i<6){
+            $(".suggestion_products_ShopOnline").innerHTML += render_products_none_hoversameblock(i);
+        }
+    }
+}
+function recommend_products(data){
+    let max_item_load = 6;
+    for(let i in data){
+        if(i< max_item_load){
+            $('.tdsgtion').innerHTML += render_products_none_hoversameblock(i);
+        }
+    }
+    $('.footer-tdsgtion-seemore-ctn').onclick = ()=>{
+        for(let i =max_item_load; i< max_item_load+6;++i){
+            $('.tdsgtion').innerHTML += render_products_none_hoversameblock(i);
+        }
+        max_item_load+=6;
+        if(max_item_load>=data.length){
+            $('.footer-sggtion-see-more').style.display ='none';
+        }
+    }
 }
 // Paging User's Feedback
 let paginationController = $(".pagination-controller")
@@ -122,26 +139,6 @@ export function create_pagination_controller(currentPage, totalpages){
     paginationController.innerHTML += ui;
     return ui;
 }
-function changeProperties(){
-    if(window.innerWidth>=1024){
-    
-    }
-    if(window.innerWidth<=844){
-        window.addEventListener("scroll", ()=>{
-            if(window.scrollY >0){
-                $(".mobile-search-controller").style.backgroundColor = "var(--container-color)";
-                $(".mobile-search-controller").style.top= "0px";
-                $(".products-inner-header div").innerHTML = $(".product-name-mobile").innerHTML;
-            }
-            if(window.scrollY==0){
-                $(".mobile-search-controller").style.backgroundColor = "";
-                $(".mobile-search-controller").style.top= "0px";
-                $(".products-inner-header div").innerHTML = "";
-
-            }
-        })
-    }
-}
 function handle_IMGsDetail_group(){
     let srcItem;
     document.querySelectorAll(".detailImg-product-item img").forEach((item,ind)=>{
@@ -154,4 +151,5 @@ function handle_IMGsDetail_group(){
             $(".mainImg-product").setAttribute("src", srcItem);
         }
     })
+    
 }

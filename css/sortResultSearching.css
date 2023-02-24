@@ -1,13 +1,6 @@
 @import "./style.css";
 @import "./responsive.css";
-@media only screen and (min-width:1040px) {
-    .grid{
-        width: 1200px;
-        margin: auto;
-    }
-}
 .sortResult-main{
-   
     overflow: hidden;
     background-color: var(--container-color);
 }
@@ -68,6 +61,7 @@ ul li{
     width: 50%;
 }
 .ltf-img-ctn{
+    width: fit-content;
     position:relative;
 }
 .ltf-img{
@@ -100,9 +94,9 @@ ul li{
     background-color: var(--footer-color-text);
     right: -5px;
 }
-.rgt{
+/* .rgt{
    transform: translateY(8px);
-}
+} */
 .right-rltSk-ctn{
     width: 50%;
     height: 100%;
@@ -158,6 +152,9 @@ ul li{
     width: 100%;
     height: 100%;
 }
+.sort-By-price .relBtn{
+    padding: 5px;
+}
 .sort-By-price:hover .hv-prcx{
     display: block;
 }
@@ -187,6 +184,10 @@ ul li{
     position: relative;
     width: 20%;
     height: inherit;
+}
+#pre-next-btn-header{
+    position: absolute;
+    right: 0px;
 }
 .numberOfdata{
     position: absolute;
@@ -243,22 +244,12 @@ ul li{
     width: 12px;
     fill: var(--footer-color-text);
 }
-#pre-next-btn-header{
-    position: absolute;
-    right: 0px;
-}
 .sortBy_right .prev-btn,
 .sortBy_right .nExt-btn{
     border: 0.05px solid var(--container-color);
     background-color: var(--white-color);
     margin: 0px;
 }
-#sort_result_search{
-    position: relative;
-    width: 191px;
-    height: 360px;
-}
-
 .hvsPr{
     width: inherit;
     height: 100%;
@@ -337,7 +328,4 @@ ul li{
     width: 100%;
     height: 30px;
     border-radius: 2px;
-}
-.tdsgtion-sortResultSearch .b4ted{
-    width: 23%;
 }

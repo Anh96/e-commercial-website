@@ -5,9 +5,9 @@ import {pagination} from './paging.js';
 import {getWidth_promotion_code,moveArrowInCatagories, filter, sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
 import {render_info_shop_online } from './shop_information.js';
 import {renderHeaderNav_base_desktop} from './header.js';
-import {footerBase} from "./footer.js"
+import {footerBase, footer_mobile_has_paginationcontroller} from "./footer.js"
 import {keysearch} from "./keyword_search.js"
-// import { responsive_shop_page } from './responsive.js';
+
 // change position for check-icon when click on each element namethod name
     // js for change the key of search Method
     var get_Value_input  = $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input')
@@ -17,38 +17,6 @@ import {keysearch} from "./keyword_search.js"
 //bannner var
     const next_circle = $$('.list-next-circle-animation')
     var current_index = 0;
-    getNameMethod.forEach((name,index)=>{
-        name.onclick=  function(){
-            const html = name.innerText;
-            getName.innerHTML = html;
-    
-        // change position of check button
-        $('.cekTXT.prd-active').classList.remove('prd-active')
-        this.classList.add('prd-active')
-        checkBtn.style.top = this.offsetTop + 10 +'px'
-        $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input').placeholder = 'Tìm trong shop này'
-            // change placeholder value
-        if(index==0){
-            $('.search-inShop-history').style.display = 'block'
-            $('.search_in-shope-ctn').style.display = 'none'
-        }
-        else{
-            //active search in shop
-            $('.agency-saleOff').style.display = 'block'
-            //off search in shopee
-            $('.search-inShop-history').style.display = 'none'
-            $('.search-shop-inShopee').style.display ='none'
-        
-            var placeHolder = $('.search_in-shope-ctn .agency-saleOff span')
-            $('.shopOnline-nav-search-ctn .shopOnline-inputCTN input').placeholder = placeHolder.innerText
-            get_Value_input.onkeydown = function(){
-                $('.agency-saleOff').style.display = 'none'
-                $('.search-shop-inShopee').style.display= 'block'
-            }
-        }
-            //get compatible history method search
-        }
-    })
 // Call API uses FETCH
     let htmls;
     fetch('../data/data.json')
@@ -56,13 +24,11 @@ import {keysearch} from "./keyword_search.js"
         return res.json();
     })
     .then(data=>{
-        if(window.innerWidth <= 480){
+        if(window.innerWidth <= 834){
             render_header_catagMobile();
+            footer_mobile_has_paginationcontroller();
         }
-        if(window.innerWidth >= 758 && window.innerWidth < 1240){
-            render_header_catagMobile();
-        }
-        if(window.innerWidth>=1240){
+        if(window.innerWidth>=1008){
             renderHeaderNav_base_desktop()
             catagories_desktop(data.products_inshop);
             keysearch(data.key_search);
@@ -75,20 +41,7 @@ import {keysearch} from "./keyword_search.js"
         topsales(data.products_inshop)
         allproducts_inshop(data.products_inshop);
         render_info_shop_online(data.shop_onlines);
-        setproperties_when_window_widthchanges();
     })
-function setproperties_when_window_widthchanges(){
-    if(window.innerWidth >= 1240){
-        document.querySelectorAll(".grid").forEach(grid=>{
-            grid.style.width = "1200px";
-        });
-    }
-    if(window.innerWidth <= 480){
-        $$(".b4etd").forEach(item=>{
-            item.style.width = "46.7%"
-        })
-    }
-}
 //Catagories in shop
    let catas = new Array;
    function check_lengthCatagories(catagories){
@@ -115,7 +68,7 @@ function setproperties_when_window_widthchanges(){
                            <div class="txt-Capitalize">${cata}</div>
                        </a>
                    `
-                   $('.ctalist').insertAdjacentHTML('beforeend',htmls)
+                   $('.ctalist').innerHTML += htmls;
                }
                if(index>=4){
                   
@@ -124,13 +77,13 @@ function setproperties_when_window_widthchanges(){
                            <div class="txt-Capitalize">${cata}</div>
                        </a>
                    `
-                   $('.choose-prd').insertAdjacentHTML('beforeend',htmls)
+                   $('.choose-prd').innerHTML += htmls
  
                }
            })
        }
        if(!check_lengthCatagories(catas)){
-               $('.show-more-ctn').style.display = "block";
+               $('.show-more-ctn').style.display = "none";
                catas.forEach(cata=>{
                    htmls = `
                        <a href="" class="ctPRD flex none-change-opacity txt-Black-color">
@@ -148,7 +101,7 @@ function setproperties_when_window_widthchanges(){
                    <div class="txt-Capitalize h4txt" data-catagories-inshop="${fil.toLowerCase()}">${fil}</div>
                </div>
            `
-           $('#shTxt-group').insertAdjacentHTML('beforeend',htmls)
+           $('#shTxt-group').innerHTML += htmls;
        })
        const h4txts = $$('.h4txt');
        h4txts.forEach(h4txt=>{
@@ -338,7 +291,7 @@ function setproperties_when_window_widthchanges(){
                    <a href="${banner.banner_link}" class="lIt-link none-padding none-change-opacity">
                        <div class="lIt-item-BGR">
                            <div>
-                               <img  class="LIRqnE _1KQ1MG" style="object-fit:cover" src="${banner.banner_img_link}">
+                               <img  class="LIRqnE _1KQ1MG" style="object-fit:contain" src="${banner.banner_img_link}">
                            </div>
                        </div>
                    </a>
@@ -409,13 +362,13 @@ function setproperties_when_window_widthchanges(){
    function topsales(products){
        let amount= new Array;
        products.forEach(prod=>{
-           if(prod.quantity_sold>=500){
+           if(prod.quantity_sold>=400){
                amount.push(prod)
            }
        })
        for(var i =0 ; i < 6;++i){
           const result = render_products(amount[i]);
-           $('#top_sales').insertAdjacentHTML('beforeend',result);
+           $('.top_sales').innerHTML += result;
        }
    }
 //ALL Products

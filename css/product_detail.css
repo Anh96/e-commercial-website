@@ -1,7 +1,4 @@
 @import url("./base.css");
-/* @import url("./style.css"); */
-/* @import url("./sortResultSearching.css"); */
-/* @import url("./shop_online.css"); */
 .a{
     color: rgb(68, 126, 244);
 }
@@ -37,6 +34,9 @@
     }
     .rgt{
         transform: translateY(20%);
+    }
+    .rgtctnn{
+        transform: translateY(85%);
     }
     .brief-information-onMobile,
     .more-desc{
@@ -343,7 +343,7 @@
         display: none;
     }
     .top-sales-container .b4etd{
-        width: 210px;
+        width: 220px;
         margin-top: 16px;
         border: 1px sollid gray;
         margin-left: 0px;
@@ -405,6 +405,7 @@
     /* .tdsgtion .b4etd{
         width: calc(100%/6 - 8px);
     } */
+
 } 
 /* Base of Responsive on Vertical mobile -  Vertical tablet maximum 10.5inch */
 @media only screen and (max-width:819px){
@@ -421,7 +422,7 @@
     .products-inner-header>div{
         width: 100%;
     }
-    .btns-back{
+    .btn-back{
         position: relative;
     }
     .products-inner-header{
@@ -442,7 +443,7 @@
         text-transform: capitalize;
     }
     
-    .btns-back,
+    .btn-back,
     .popover,
     .shopping-cart{
         width: 50px;
@@ -583,7 +584,6 @@
     }
     .shopName{
         width: inherit;
-        height: 20px;
         display: -webkit-box;
         white-space: normal;
         word-wrap: break-word;
@@ -617,7 +617,7 @@
         flex-flow: row;
     }
     .topsales-onMobile .b4etd{
-        width: calc(100%/3 - 8px);
+        width: 100%;
         height: fit-content;
     }
     .user_feedback,
@@ -693,7 +693,7 @@
 }
 /* Vertical Mobile */
 @media only screen and (max-width:568px) {
-    .btns-back,
+    .btn-back,
     .popover,
     .shopping-cart{
         width: 30px;
@@ -710,11 +710,10 @@
 /* base */
 .mainImg-product{
     width: 100%;
-    max-height: 550px;
+    max-height: 450px;
     object-fit: contain;
 }
 .detailImg-product-list{
-    height: 150px;
     padding-left: 0px;
 }
 .detailImg-product-item{
@@ -803,7 +802,6 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    /* width: 100%; */
 }
 .img-fedb img{
     margin-right: 4px;

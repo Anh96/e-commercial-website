@@ -3689,7 +3689,7 @@ let shops_ID = (shops)=>{
     let new_arrr = new Array;
     shops.map(shop=>{
        if(shop.shop_id == 1){
-           new_arrr.push(shop);
+           return new_arrr.push(shop);
        }
     })
     return new_arrr;

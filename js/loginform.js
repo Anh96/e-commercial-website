@@ -1,6 +1,14 @@
 const $ = document.querySelector.bind(document)
-import {footerBase} from "./footer.js"
-footerBase();
+import {footerBase, footerBase_onMobile} from "./footer.js"
+function fetchData(data){
+    if(window.innerWidth <= 834){
+        footerBase_onMobile();
+    }
+    if(window.innerWidth >= 1024){
+        footerBase()
+    }
+}
+fetchData();
 $('#qrcode-ic').onclick = ()=>{
     $('#login_with_QRcode_layout').style.display = "block";
     $('#login_with_password_layout').style.display ="none";

@@ -5,7 +5,7 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <link rel="stylesheet" href="../css/base.css">
-       <link rel="stylesheet" href="../css/sellerpage.css">
+       <!-- <link rel="stylesheet" href="../css/sellerpage.css"> -->
        <link rel="stylesheet" href="../css/shop_online.css">
        <link rel="stylesheet" href="../css/responsive.css">
        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
@@ -15,7 +15,7 @@
            <!-- Header -->
            <header></header>
            <!-- Content Body -->
-           <div class="sOhome-ctn">
+           <div class="sOhome-ctn sshOp sshopOnl">
                <div class="xCAO3k">
                    <div class="lCAO shop-Online-Page">
                        <div class="shop-online-ctn">
@@ -26,9 +26,9 @@
                                            <!-- Mobile Screen SEARCH FIELD -->
                                            <div class="mobile-search-controller" >
                                                 <div class="mobile-search-box">
-                                                    <div class="mobile-search-input-iconback flex">
-                                                        <div class="btns-back flex">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="var(--white-color)" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                                    <div class="mobile-search-input-iconback flex-jtfspbt">
+                                                        <div class="btn-back flex">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--primary-color)" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
                                                             </svg>
                                                         </div>
@@ -36,23 +36,25 @@
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                                                             </svg>
-                                                            <input type="search" name="" id="search-input-mobile" placeholder="" style="width:100%; height: 100%; border: 0px; font-size: 15px;">
+                                                            <input type="search" name="" id="search-input-mobile" placeholder="" style="width:inherit; height: 100%; border: 0px; font-size: 15px;">
                                                         </div>
                                                     </div>
                                                 </div>
                                            </div>
                                            <!-- END MOBILE SCREEN SEARCH FIELD -->
                                            <div class="g0">
-                                               <div class="bgr_shop-info flxC">
-                                                   <div class="ltf-img-ctn">
-                                                       <div class="ltf-img"></div>
-                                                       <div class="fvr-shop txt-white-color">Yêu Thích</div>
-                                                   </div>
-                                                   <div class="rgt mgl-8 flex-jtfspbt">
+                                               <div class="bgr_shop-info flex-jtfspbt">
+                                                   <div class="ltf-img-ctn flex-jtfspbt">
+                                                       <div>
+                                                            <div class="ltf-img"></div>
+                                                            <div class="fvr-shop txt-white-color">Yêu Thích</div>
+                                                       </div>
                                                        <div>
                                                             <div class="rgt0 flxC" >
-                                                                <div class=" rgt00 flxC">
-                                                                    <div class="shopName txt-UperCase txt-white-color font20"></div>
+                                                                <div class="rgt00 flex-jtfspbt">
+                                                                    <div class="rt00shoN">
+                                                                        <div class="shopName txt-UperCase txt-white-color font20"></div>
+                                                                    </div>
                                                                     <!-- Mobile Arrow btn go to SHOP DETAILS -->
                                                                     <div class="arrow-gotoshopdetails flex">
                                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
@@ -63,9 +65,32 @@
                                                                 </div>
                                                             </div>
                                                             <div class="time-online flxC"></div>
-                                                       </div>
-                                                       
-                                                        <div id="followbtn_mobile">
+
+                                                            <!-- MOBILE RATING - FOLLOWERS -->
+                                                            <div class="mobile-rating-followers mgT16">
+                                                                <div class="rating-followers flex-jtfspbt">
+                                                                    <div class="rating-block flxC">
+                                                                        <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" class="shopee-svg-icon shopee-rating-stars__dark-star icon-rating-solid">
+                                                                            <polygon points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></polygon>
+                                                                        </svg>
+                                                                        <div class="flxC">
+                                                                            <div class="data-rating flxC mgLR-4"></div>
+                                                                            <div class="flxC"> / 5.0</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>|</div>
+                                                                    <div class="followers flxC">
+                                                                        <div class="mgLR-4"></div>
+                                                                        <span>Followers</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END MOBILE RATING - FOLLOWERS -->
+                                                        </div>
+                                                   </div>
+                                                   <div class="rgt mgl-8 flex-jtfspbt">
+                                                       <!-- Follow Shop btn ob Mobile -->
+                                                        <div class="followbtn_mobile">
                                                             <div class="follow-shop-btn mgTB-8 flex">
                                                                 <div class="flex">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-plus" viewBox="0 0 16 16">
@@ -76,26 +101,6 @@
                                                                 
                                                             </div>
                                                         </div>
-                                                        <!-- MOBILE RATING - FOLLOWERS -->
-                                                        <div class="mobile-rating-followers">
-                                                            <div class="rating-followers flex-jtfspbt">
-                                                                <div class="rating-block flxC">
-                                                                    <svg enable-background="new 0 0 15 15" viewBox="0 0 15 15" x="0" y="0" class="shopee-svg-icon shopee-rating-stars__dark-star icon-rating-solid">
-                                                                        <polygon points="7.5 .8 9.7 5.4 14.5 5.9 10.7 9.1 11.8 14.2 7.5 11.6 3.2 14.2 4.3 9.1 .5 5.9 5.3 5.4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"></polygon>
-                                                                    </svg>
-                                                                    <div class="flxC">
-                                                                        <div class="data-rating flxC mgLR-4"></div>
-                                                                        <div class="flxC"> / 5.0</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div>|</div>
-                                                                <div class="followers flxC">
-                                                                    <div class="mgLR-4"></div>
-                                                                    <span>Followers</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- END MOBILE RATING - FOLLOWERS -->
                                                    </div>         
                                                </div>
                                                <!-- BUTTON ON DESKTOP -->
@@ -198,7 +203,7 @@
                                         
                                     </div>
                                    <div class="sgtion-relative">
-                                        <div class="suggestion_products_ShopOnline flex"></div>
+                                        <div class="suggestion_products_ShopOnline flex-start"></div>
                                    </div>
 
                                </div>
@@ -214,7 +219,7 @@
                                <div class="slide-show-ctn">
                                    <div class="slide-show">
                                        <div class="slide-show-item">
-                                           <ul class="ul-list-shopSld flx none-padding"></ul>
+                                           <ul class="ul-list-shopSld flex none-padding"></ul>
                                        </div>
                                        <div class="next-circle-animation flex">
                                            <div class="list-next-circle-animation none-change-opacity active"></div>
@@ -239,7 +244,7 @@
                                </div>
                                <div class="pRDTOPSALE ctn margin-tb32">
                                    <div class="txt-Upercase font20 color-gray mgB-8 mgl-8">SẢN PHẨM BÁN CHẠY</div>
-                                   <div id="top_sales"></div>
+                                   <div class="top_sales prdRp"></div>
                                </div>
                            </div>
                        </div>
@@ -327,23 +332,23 @@
                                    <!-- ALL PRODUCTS -->
                                    <div class="today-sggtion-wrapper relative-wrapper">
                                        <div class="grid-containter">
-                                           <div id="tdsgtion-relative-product" class="tdsgtion tdsgtion-sshO"></div>
+                                           <div id="tdsgtion-relative-product" class="tdsgtion tdsgtion-sshO prdRp"></div>
                                            <!-- Pagination -->
-                                           <div class="tdsgt-ftt-ctn margin-tb32">
-                                               <div class="tdsgt-SortResult">
-                                                   <div class="pre-next-btn flex">
-                                                       <button class="nav-btn prev-btn flex none-change-opacity">
-                                                           <svg viewBox="0 0 7 11" class="icon-arrow-small"><path d="M4.694078 9.8185598L.2870824 5.4331785c-.1957415-.1947815-.1965198-.511363-.0017382-.7071046a.50867033.50867033 0 0 1 .000868-.0008702L4.7381375.2732784 4.73885.273991c.1411545-.127878.3284279-.205779.5338961-.205779.4393237 0 .7954659.3561422.7954659.7954659 0 .2054682-.077901.3927416-.205779.5338961l.0006632.0006632-.0226101.0226101a.80174653.80174653 0 0 1-.0105706.0105706L2.4680138 4.7933195c-.1562097.1562097-.1562097.4094757 0 .5656855a.45579485.45579485 0 0 0 .0006962.0006944l3.3930018 3.3763607-.0009482.0009529c.128869.1413647.2074484.3293723.2074484.5357331 0 .4393237-.3561422.7954659-.7954659.7954659-.2049545 0-.391805-.077512-.5328365-.2048207l-.0003877.0003896-.0097205-.0096728a.80042023.80042023 0 0 1-.0357234-.0355483z" fill-rule="nonzero"></path></svg>
-                                                       </button>
-                                                      <div class="number-page-wrapper">
-                                                          <div class="number-page flex"></div>
-                                                      </div>
-                                                       <button class="nav-btn nExt-btn flex none-change-opacity">
-                                                           <svg viewBox="0 0 7 11" class="icon-arrow-small"><path d="M2.305922 9.81856l4.4069956-4.385381c.1957415-.194782.1965198-.511364.0017382-.707105a.26384055.26384055 0 0 0-.000868-.00087L2.2618625.273278 2.26115.273991C2.1199955.146113 1.9327221.068212 1.7272539.068212c-.4393237 0-.7954659.356142-.7954659.795466 0 .205468.077901.392741.205779.533896l-.0006632.000663.0226101.02261c.0034906.003557.0070143.00708.0105706.010571L4.5319862 4.79332c.1562097.156209.1562097.409475 0 .565685-.0002318.000232-.0004639.000463-.0006962.000694L1.1382882 8.73606l.0009482.000953c-.128869.141365-.2074484.329372-.2074484.535733 0 .439324.3561422.795466.7954659.795466.2049545 0 .391805-.077512.5328365-.204821l.0003877.00039.0097205-.009673c.012278-.011471.0241922-.023327.0357234-.035548z" fill-rule="nonzero"></path></svg>
-                                                       </button>
-                                                   </div>
-                                               </div>
-                                           </div>
+                                            <div class="tdsgt-ftt-ctn margin-tb32">
+                                                <div class="tdsgt-SortResult flex">
+                                                    <div class="pre-next-btn flex">
+                                                        <button class="nav-btn prev-btn flex none-change-opacity">
+                                                            <svg viewBox="0 0 7 11" class="icon-arrow-small"><path d="M4.694078 9.8185598L.2870824 5.4331785c-.1957415-.1947815-.1965198-.511363-.0017382-.7071046a.50867033.50867033 0 0 1 .000868-.0008702L4.7381375.2732784 4.73885.273991c.1411545-.127878.3284279-.205779.5338961-.205779.4393237 0 .7954659.3561422.7954659.7954659 0 .2054682-.077901.3927416-.205779.5338961l.0006632.0006632-.0226101.0226101a.80174653.80174653 0 0 1-.0105706.0105706L2.4680138 4.7933195c-.1562097.1562097-.1562097.4094757 0 .5656855a.45579485.45579485 0 0 0 .0006962.0006944l3.3930018 3.3763607-.0009482.0009529c.128869.1413647.2074484.3293723.2074484.5357331 0 .4393237-.3561422.7954659-.7954659.7954659-.2049545 0-.391805-.077512-.5328365-.2048207l-.0003877.0003896-.0097205-.0096728a.80042023.80042023 0 0 1-.0357234-.0355483z" fill-rule="nonzero"></path></svg>
+                                                        </button>
+                                                    <div class="number-page-wrapper">
+                                                        <div class="number-page flex"></div>
+                                                    </div>
+                                                        <button class="nav-btn nExt-btn flex none-change-opacity">
+                                                            <svg viewBox="0 0 7 11" class="icon-arrow-small"><path d="M2.305922 9.81856l4.4069956-4.385381c.1957415-.194782.1965198-.511364.0017382-.707105a.26384055.26384055 0 0 0-.000868-.00087L2.2618625.273278 2.26115.273991C2.1199955.146113 1.9327221.068212 1.7272539.068212c-.4393237 0-.7954659.356142-.7954659.795466 0 .205468.077901.392741.205779.533896l-.0006632.000663.0226101.02261c.0034906.003557.0070143.00708.0105706.010571L4.5319862 4.79332c.1562097.156209.1562097.409475 0 .565685-.0002318.000232-.0004639.000463-.0006962.000694L1.1382882 8.73606l.0009482.000953c-.128869.141365-.2074484.329372-.2074484.535733 0 .439324.3561422.795466.7954659.795466.2049545 0 .391805-.077512.5328365-.204821l.0003877.00039.0097205-.009673c.012278-.011471.0241922-.023327.0357234-.035548z" fill-rule="nonzero"></path></svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                        </div>
                                    </div>
                                </div>

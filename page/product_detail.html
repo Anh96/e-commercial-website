@@ -4,13 +4,15 @@
        <title>Chi tiết sản phẩm | FastBuy Việt Nam</title>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+       <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+       <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
        <link rel="stylesheet" href="../css/base.css">
        <link rel="stylesheet" href="../css/responsive.css">
        <link rel="stylesheet" href="../css/product_detail.css">
-       <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
    </head>
    <body>
-       <div class="sortResult-main">
+       <div class=" detailProductPage">
            <!-- Header -->
            <header></header>
            <!-- Mobile Screen SEARCH FIELD -->
@@ -18,10 +20,12 @@
                 <div class="mobile-search-controller flex-jtfspbt" >
                     <div class="mobile-search-box flex-jtfspbt">
                         <div class="mobile-search-input-iconback flex-jtfspbt">
-                            <div class="btns-back flex mgLR-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="var(--white-color)" class="bi bi-arrow-left mobile-header-icon" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                </svg>
+                            <div class="btn-back flex mgLR-4">
+                                <a href="../index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="var(--white-color)" class="bi bi-arrow-left mobile-header-icon" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                                </a>
                             </div>
                             <div class="products-inner-header flex">
                                 <div></div>
@@ -371,7 +375,7 @@
                                 </div>
                                 <div  class="bl2 margin-tb16">
                                     <div class="flxC bl21">
-                                        <del class="font075 mgr-16" style="color: gray ;">
+                                        <del class="font075 mgr-16" style="color: gray;">
                                             đ<span>2500</span>
                                         </del>
                                         <div class="font20 mgr-16 txt-color-primary-color font600">
@@ -539,19 +543,21 @@
                                                     </div>
                                                     <div class="rgt mgl-8 flex-jtfspbt">
                                                         <div>
-                                                            <div class="rgt0 flxC" >
-                                                                <div class=" rgt00 flxC">
-                                                                    <div class="shopName txt-UperCase txt-Black-color font-14"></div>
-                                                                    <!-- Mobile Arrow btn go to SHOP DETAILS -->
-                                                                    <div class="arrow-gotoshopdetails flex">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                                                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                                                        </svg>
+                                                            <div class="rgtctnn">
+                                                                <div class="rgt0 flxC" >
+                                                                    <div class=" rgt00 flxC">
+                                                                        <div class="shopName txt-UperCase txt-Black-color font-14"></div>
+                                                                        <!-- Mobile Arrow btn go to SHOP DETAILS -->
+                                                                        <div class="arrow-gotoshopdetails flex">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                                                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <!-- end Arrow go to SHOP DETAILS -->
                                                                     </div>
-                                                                    <!-- end Arrow go to SHOP DETAILS -->
                                                                 </div>
+                                                                <div class="time-online flxC"></div>
                                                             </div>
-                                                            <div class="time-online flxC"></div>
                                                             <!-- BUTTON ON PC -->
                                                             <div id="desktop" class="flxC cwb-ctn margin-tb32">
                                                                 <div class="cwb chat-now mgTB-8 flex">

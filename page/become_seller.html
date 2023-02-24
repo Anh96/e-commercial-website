@@ -3,170 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/login-form.css">
-    <link rel="stylesheet" href="../css/register-form.css">
-    <link rel="stylesheet" href="../css/sortResultSearching.css">
-    <link rel="stylesheet" href="../css/shop_online.css">
-    <link rel="stylesheet" href="../css/suport_center.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/sellerpage.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <title>Đăng ký kênh bán hàng Shopee ngay thôi - Hỗ trợ miễn phí cho người mới</title>
 </head>
 <body>
-    <div id="main">  
-        <header class="header">
-            <div class="grid nav-bar-wrap-container">
-               <nav class="header-nav-bar flex-jtfspbt"></nav>
-               <!-- search container -->
-                <div class="nav-header-container-with-search">
-                <a href="/index.html" target="_self" class="header-logo">
-                    <div class="header-logo-wraper inlineFlex" href="#">
-                        <img src="../assets/imgs/logo/logoshop.png" alt="$logo-error" id="logo-img">
-                        <div id="shop-name">Fast Buy</div>
+    <div class="become-seller-page">  
+        <header></header>
+        <div class="grid">
+            <div class="mobile-search-controller">
+                <div class="mobile-search-box flxC">
+                    <div class="btn-back flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="var(--primary-color)" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                        </svg>
                     </div>
-                </a>     
-                <div class="nav-header-with-search">
-                    <div class="box-search">
-                        <div class="box-search-input-icon">
-                            <div class="container-input-history-search">
-                                <input type="text" name="search" value="" autocomplete="off" class="nav-search-input">
-                                <div class="history-search-container box_shadow">
-                                    <div class="history-search">
-                                            <a href="#" class="shopee-searchbar-hints__history-prefill">
-                                                <i class="fa-solid fa-store"></i>
-                                                <span>Tìm Shop</span>
-                                            </a>
-                                            <a href="#" class="list-history-search-link">
-                                                <div class="shopee-searchbar-hints__history-entry__text">
-                                                    <span>lọ chiết serum</span>
-                                                </div> 
-                                            </a>
-                                            <a href="#" class="list-history-search-link">
-                                                <div class="shopee-searchbar-hints__history-entry__text">
-                                                    <span>Caldium frog of blended blended blended</span>
-                                                </div> 
-                                            </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="search-btn flex">
-                                 <svg height="19" viewBox="0 0 19 19" width="19" class="shopee-svg-icon sBTN"><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z"></path></g></g></g></g></g></svg>
-                            </button>
-                        </div>
-                        <div class="box-search-follow-data">
-                            <ul class="top-list-data-search">
-                                <li class="name-products">
-                                    <a href="" class="link-product">Váy</a>
-                                </li>
-                                <li class="name-products">
-                                    <a href="#" class="link-product">Kiếm phát sáng</a>
-                                </li>
-                                <li class="name-products">
-                                    <a href="#" class="link-product">Áo phông</a>
-                                </li>
-                                <li class="name-products">
-                                    <a href="#" class="link-product">Dép nữ</a>
-                                </li>
-                                <li class="name-products">
-                                    <a href="#" class="link-product"> Túi xách nữ</a>
-                                </li>
-                                <li class="name-products">
-                                    <a href="#" class="link-product">Áp croptop</a>
-                                </li>
-                                <li class="name-products">
-                                    <a href="#" class="link-product">Áo thun</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="crRctn mgl-8 flex" >
+                        <div class="flex txt-color-primary-color txt-UperCase font-14 currt-name-page">Đăng ký và trở thành người bán thành người bán</div>
                     </div>
-                </div>
-                <div>
-                </div>
-                <div class="shopping-cart">
-                    <a href="" class="shopping-cart-link">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                    <div class="cart-view-notification box_shadow">
-                        <div class="shopping-cart-none-products">
-                            <img src="./assets/imgs/notifycation/f716952b0acbc99590da.jpg" alt="" class="img-cart-view-none-product">
-                            <p>Chưa có sản phẩm nào</p>
-                        </div>
-                        <div class="shopping-cart-has-product">
-                            <ul class="ul-cart-bag">
-                                <p class="ul-heading-txt">Sản phẩm mới thêm</p>
-                                <li class="list-product-in-bag">
-                                    <a href="#" class="product-cart-detail-link">
-                                        <div class="div-img-product-cart-view">
-                                            <img src="./assets/imgs/product imgs/jacklyn-pr-1.jpg" alt="" class="product-img-cart">
-                                        </div>
-                                        <div class="div-txt">
-                                            <p class="name-product">Cây con Jacklyn</p>
-                                            <p class="price-product">đ14.0000</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="list-product-in-bag">
-                                    <a href="#" class="product-cart-detail-link">
-                                        <div class="div-img-product-cart-view">
-                                            <img src="./assets/imgs/product imgs/jacklyn-pr-1.jpg" alt="" class="product-img-cart">
-                                        </div>
-                                        <div class="div-txt">
-                                            <p class="name-product">Cây con Jacklyn</p>
-                                            <p class="price-product">đ14.0000</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <div class="footer-cart-notification">
-                                    <div class="count-number-other-product">3 sản phẩm thêm vào giỏ hàng</div>
-                                    <div class="btn-see-cart-view">
-                                        <button>Xem giỏ hàng</button>
-                                    </div>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </div>
-       </header>
-       <div class="div-container-home ctn-home-bcSllPage">
-            <div class="xCao3k N2AB">
-                <div class="grid ctn-padding">
-                    <div id="top" class="img1 mrBt32">
-                        <img alt="" src="https://cf.shopee.vn/file/fd6f78e361cf146e38b5e62955c14a47">
+        </div>
+       <div>
+            <div class="xCAO3k N2AB">
+                <div class="grid">
+                    <div id="top" class="img1 mrBt32" style="width: 100%; position: relative;">
+                        <img alt="" src="https://cf.shopee.vn/file/fd6f78e361cf146e38b5e62955c14a47" style="width: inherit; height: 100%; object-fit: contain">
                     </div>
                     <div class="md-ctn">
-                        <div class="img1 mrBt32">
-                            <img alt="" src="https://cf.shopee.vn/file/4b2b34e42d5ce1cb75c1f68cde886e9b">
+                        <div class="img1 mrBt32" style="width: 100%; position: relative">
+                            <img alt="" src="https://cf.shopee.vn/file/4b2b34e42d5ce1cb75c1f68cde886e9b" style="width: inherit; height: 100%; object-fit: contain">
                         </div>
-                        <div class="md-link-ctn flex-jtfspbt">
+                        <div class="md-link-ctn mDl1 flex-jtfspbt">
                             <a href="#" class="md-link-item none-change-opacity"></a>
                             <a href="#" class="md-link-item none-change-opacity"></a>
                             <a href="#" class="md-link-item none-change-opacity"></a>
                         </div>
                     </div>
-                    <div class="img1 mrBt32">
-                        <img alt="" src="https://cf.shopee.vn/file/ad885bf89673d360e1e09d1480e6cf43">
+                    <div class="img1 mrBt32" style="width: 100%; position: relative">
+                        <img alt="" src="https://cf.shopee.vn/file/ad885bf89673d360e1e09d1480e6cf43" style="width: inherit; height: 100%; object-fit: contain">
                     </div>
-                    <div class="img1 mfBt32">
-                        <img alt="" src="https://cf.shopee.vn/file/bf06b0051e6d5d291f7fe2cd054689d5">
+                    <div class="img1 mfBt32" style="width: 100%; position: relative">
+                        <img alt="" src="https://cf.shopee.vn/file/bf06b0051e6d5d291f7fe2cd054689d5" style="width: inherit; height: 100%; object-fit: contain">
                     </div>
                     <div class="md-ctn mdB5 mrBt32">
-                        <div class="img1">
-                            <img alt="" src="https://cf.shopee.vn/file/6c51e28e6cfc430f368e51259d43d420">
+                        <div class="img1" style="width: 100%; position: relative">
+                            <img alt="" src="https://cf.shopee.vn/file/6c51e28e6cfc430f368e51259d43d420" style="width: inherit; height: 100%; object-fit: contain">
                         </div>
-                        <div class="md-link-ctn flex-jtfspbt">
+                        <div class="md-link-ctn mDl2 flex-jtfspbt">
                             <a href="#" class="md-link-item"></a>
                             <a href="#" class="md-link-item"></a>
                             <a href="#" class="md-link-item"></a>
                         </div>
                     </div>
                     <div class="mdB5 mdB6 mrBt32">
-                        <div class="img1 mrBt32">
-                            <img alt="" src="https://cf.shopee.vn/file/3b78a90ae5053d4837e0f09adc27853d">
+                        <div class="img1 mrBt32" style="width: 100%; position: relative">
+                            <img alt="" src="https://cf.shopee.vn/file/3b78a90ae5053d4837e0f09adc27853d" style="width: inherit; height: 100%; object-fit: contain">
                         </div>
-                        <div class="md-link-ctn flex-jtfspbt">
+                        <div class="md-link-ctn mDl3 flex-jtfspbt">
                             <a href="#" class="md-link-item"></a>
                         </div>
                     </div>
@@ -298,7 +194,6 @@
             </svg>
         </a>
     </div>
-    <script src="../js/header.js"></script>
-    <script src="../js/footer.js"></script>
 </body>
+<script type="module" src="../js/become_seller.js"></script>
 </html>

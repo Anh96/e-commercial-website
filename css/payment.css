@@ -1,0 +1,129 @@
+@import url("../css//style.css");
+.avtUsr{
+    position: relative;
+    width: 35px; 
+    height: 35px;
+}
+.avtUsr img{
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border: 1px solid gray; border-radius:50%
+}
+.more-info-acc{
+    display: none;
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    color: black;
+    background-color: white;
+    bottom: -85px;
+    right:-20px;
+}
+.more-info-acc::after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    top: -20px;
+    right: 60px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+.more-info-acc::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: -20px;
+}
+.more-info-acc div{
+    margin-left: 4px;
+    height: calc(100%/3);
+}
+.more-info-acc div:hover{
+    color: green
+}
+.acc:hover .more-info-acc{
+    display: block;
+}
+.xCAO3k{
+    display: contents;
+}
+.header-logo-name-page{
+    margin-top: 51px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+}
+.hLN{
+    width: 100%;
+    height: inherit;
+}
+.name-page{
+    width: 200px;
+    padding: 0 20px;
+    border-left: 1px solid var(--primary-color);
+}
+/* delivery-address-information */
+.bGRImg{
+    width: 100%;
+    height: 3px;
+    background-position-x: 0px;
+    background-size: 116px 3px;
+    background-image: repeating-linear-gradient(45deg,#6fa6d6,#6fa6d6 33px,transparent 0,transparent 41px,#f18d9b 0,#f18d9b 74px,transparent 0,transparent 82px);
+}
+.delivery-address-information{
+    min-height: 130px;
+    background-color: white;
+    padding: 10px;
+}
+.delivery-address-information.flex-jtfspbt,
+.payment .delivery-method-message.flex-jtfspbt{
+    flex-wrap: wrap;
+}
+.info-products{
+    width: 100%;
+    background-color: white;
+    padding:10px;
+}
+.hIprs{
+    position: relative;
+    width: 100%;
+}
+.hIprsc1,
+.hIprsc2,
+.bill,
+.iFP_ClassificationPrC1,
+.inSrPC{
+    width: 50%;
+}
+.hIprsc2>div,
+.bill>div{
+    width: calc(100%/3);
+}
+.inpMess{
+    position: relative;
+    width: 200px;
+    height: 30px;
+    border: 1px solid var(--line-color);
+    border-radius: 3px;
+}
+.inpMess input{
+    border: 0px;
+    width: inherit;
+    height: 100%;
+}
+.btn-submit-order{
+    color: white;
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+}

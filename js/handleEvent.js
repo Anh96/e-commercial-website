@@ -18,19 +18,18 @@ const search_Shop = $('.search-shop-inShopee');
 // Handle Catagories
     // Get variable Catagories
     const sectionContainer = $('.section-grid-layout-container')
-    // const listItemSection = $$('.list-item-section')
     const leftArrowBtn = $('.left-arr')
     const rightArrowBtn = $('.right-arr')
 
     rightArrowBtn.onclick = function(){
-        sectionContainer.style.transform = 'translateX(-360px)'
-        leftArrowBtn.style.display ='block'
-        this.style.display ='none'
+        sectionContainer.style.transform = 'translateX(-360px)';
+        leftArrowBtn.style.display ='block';
+        this.style.display ='none';
     }
     leftArrowBtn.onclick = function(){
-        sectionContainer.style.transform = 'translateX(0px)'
-        rightArrowBtn.style.display ='block'
-        this.style.display ='none'
+        sectionContainer.style.transform = 'translateX(0px)';
+        rightArrowBtn.style.display ='block';
+        this.style.display ='none';
     }
 
 // Handle Flash sale

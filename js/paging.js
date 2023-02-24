@@ -1,7 +1,7 @@
-let clicked_nbP =0;
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-export let maximum_numbers_item_on_per_page = 10, currentPage =1, prevRange, currRange, numberPage = $(".number-page");
+let clicked_nbP =0;
+export let maximum_numbers_item_on_per_page = 10, maximum_itemp_per_page_onCartpage = 5, currentPage =1, prevRange, currRange;
 import {render_products} from "./condition_render_data.js";
 function moveStateActiveBtns(nbp){
     $('.nbP.active').classList.remove("active");
@@ -40,10 +40,8 @@ export let setCurrentPage = (pageNum, products)=>{
     })
 }
 
-//Render item on perpage follow click-btn-header
-
-//Render header pagination controller
-export function create_header_pagination(products){
+function create_pagination_controller(currentPage, products){
+    // Handle header pagination
     $('#start-number').innerHTML = currentPage;
     //change opacity of btns
     if( $('#start-number').innerHTML == 1){
@@ -97,11 +95,11 @@ export function create_header_pagination(products){
             })
             setOpacity($("#start-number").innerHTML, totalPages(products), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
             setCurrentPage(currentPage, products);
+            console.log(currentPage, clicked_nbP)
+
         }
     }
-}
-//Render footer pagination controller
-export function create_footer_pagination(products){
+    // Handle footer pagination
     //Pagination btns on the footer all-products views.
     totalPages(products);
     if(totalPages(products)<=6){
@@ -135,8 +133,6 @@ export function create_footer_pagination(products){
         $(".tdsgt-SortResult .prev-btn").disabled = false;
         $(".tdsgt-SortResult .prev-btn").style.opacity = 1;
     }
-
-    //handle when clicked on $(".tdsgt-SortResult .prev-next btns")
     $(".tdsgt-SortResult .nExt-btn").onclick = () =>{
         clicked_nbP++;
         if(clicked_nbP < totalPages(products)){
@@ -152,6 +148,7 @@ export function create_footer_pagination(products){
         $("#start-number").innerHTML = currentPage;
         setOpacity($("#start-number").innerHTML, totalPages(products),$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
         setCurrentPage(currentPage,products);
+
     }
     $(".tdsgt-SortResult .prev-btn").onclick = ()=>{
         clicked_nbP--;
@@ -168,10 +165,9 @@ export function create_footer_pagination(products){
         $("#start-number").innerHTML = currentPage;
         setOpacity($("#start-number").innerHTML, totalPages(products),$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
         setCurrentPage(currentPage, products);
+
     }
-}
-//Add animation for nbP btns
-export function add_animation_btns_controller_pagination(currentPage, products){
+    // Handle nbP btns
     $$('.nbP').forEach((btn,ind)=>{
         if(ind==0){
             btn.classList.add("active");
@@ -180,7 +176,7 @@ export function add_animation_btns_controller_pagination(currentPage, products){
             clicked_nbP = ind;
             currentPage = ind+1;
             moveStateActiveBtns(btn);
-            $("#start-number").innerHTML = ind+1;
+            $("#start-number").innerHTML = currentPage;
             setOpacity($("#start-number").innerHTML, totalPages(products),$(".sortBy_right .prev-btn"),$(".sortBy_right .nExt-btn"));
             setCurrentPage(currentPage, products);
             $(".pRCX span").innerHTML = "Giá";
@@ -189,7 +185,6 @@ export function add_animation_btns_controller_pagination(currentPage, products){
         }
     })
 }
-
 // reset current page;
 export function reset_currentPage(){
     return currentPage =1;
@@ -202,8 +197,110 @@ export function reset_bl1SbBtn(){
     $(".pRCX span").style.color = "black";
 }
 export function pagination(products){
-    setCurrentPage(1,products)
-    create_header_pagination(products);
-    create_footer_pagination(products);
-    add_animation_btns_controller_pagination(currentPage, products);
+    setCurrentPage(1,products);
+    create_pagination_controller(currentPage, products);
+}
+// ======================================================
+// ================== Paging Cart Page ==================
+// set current page
+export let setCurrentPage_CartPage = (pageNum, products)=>{
+    prevRange = (pageNum-1)*maximum_itemp_per_page_onCartpage;
+    currRange = pageNum*maximum_itemp_per_page_onCartpage;
+    $(".tdsgtion").innerHTML = "";
+    products.forEach((item,ind)=>{
+        if(ind>=prevRange && ind <currRange){
+            $(".tdsgtion").innerHTML += render_products(products[ind]);
+        }
+    })
+}
+// Total Pages
+export function totalPages_CartPage(products){
+    // Làm tròn số bằng hàm Math.ceil()
+    return Math.ceil(products.length/maximum_itemp_per_page_onCartpage);
+}
+//Render footer pagination controller
+export function create_footer_pagination_CartPage(products){
+    //Pagination btns on the footer all-products views.
+    totalPages_CartPage(products);
+    // next - prev button
+    if(totalPages_CartPage(products)<=6){
+        for(let i  = 1; i <= totalPages_CartPage(products); ++i){
+            $('.number-page').innerHTML += `
+                <button class="nbP flex none-change-opacity">${i}</button>
+            `
+        }
+    }
+    if(totalPages_CartPage(products)> 6){
+        for(let i  = 1; i <= totalPages_CartPage(products); ++i){
+            $('.number-page').innerHTML += `
+                <button class="nbP flex none-change-opacity">${i}</button>
+            `
+        }
+    }
+    // set postion of prev-next btns
+    // $(".nav-btn.prev-btn").style.left = $$(".nbP")[0].offsetLeft - 30 +'px';
+    // $(".nav-btn.nExt-btn").style.left = $$(".nbP")[totalPages_CartPage(products)-1].offsetLeft + 30 + 'px';
+
+    // active or disabled next-prev btns
+    if(totalPages_CartPage(products)==1){
+        // $(".tdsgt-SortResult .nExt-btn").disabled = true;
+        // $(".tdsgt-SortResult .nExt-btn").style.opacity = 0.5;
+        // $(".tdsgt-SortResult .prev-btn").disabled = true;
+        // $(".tdsgt-SortResult .prev-btn").style.opacity = 0.5;
+    }
+    if(totalPages_CartPage(products)>= 2){
+        // $(".tdsgt-SortResult .nExt-btn").disabled = false;
+        // $(".tdsgt-SortResult .nExt-btn").style.opacity = 1;
+        // $(".tdsgt-SortResult .prev-btn").disabled = false;
+        // $(".tdsgt-SortResult .prev-btn").style.opacity = 1;
+    }
+
+    //handle when clicked on $(".tdsgt-SortResult .prev-next btns")
+    // $(".tdsgt-SortResult .nExt-btn").onclick = () =>{
+    //     clicked_nbP++;
+    //     if(clicked_nbP < totalPages_CartPage(products)){
+    //         $$(".nbP").forEach((btn,ind)=>{
+    //             ind = clicked_nbP;
+    //             moveStateActiveBtns($$(".nbP")[ind]);
+    //         })
+    //     }
+    //     if(clicked_nbP >= totalPages_CartPage(products)){
+    //         clicked_nbP = totalPages_CartPage(products)-1;
+    //     }
+    //     currentPage = clicked_nbP+1;
+    //     setCurrentPage_CartPage(currentPage,products);
+    // }
+    // $(".tdsgt-SortResult .prev-btn").onclick = ()=>{
+    //     clicked_nbP--;
+    //     if(clicked_nbP >= 0){
+    //         $$(".nbP").forEach((btn,ind)=>{
+    //             ind = clicked_nbP;
+    //             moveStateActiveBtns($$(".nbP")[ind]);
+    //         })
+    //     }
+    //     if(clicked_nbP<0){
+    //         clicked_nbP = 0;
+    //     }
+    //     currentPage = clicked_nbP+1;
+    //     setCurrentPage_CartPage(currentPage, products);
+    // }
+}
+// 
+export function add_animation_btns_controller_pagination_CartPage(currentPage, products){
+    $$('.nbP').forEach((btn,ind)=>{
+        if(ind==0){
+            btn.classList.add("active");
+        }
+        btn.onclick = ()=>{
+            clicked_nbP = ind;
+            currentPage = ind+1;
+            moveStateActiveBtns(btn);
+            setCurrentPage_CartPage(currentPage, products);
+        }
+    })
+}
+export function pagination_none_headerPagination(data){
+    setCurrentPage_CartPage(1,data);
+    create_footer_pagination_CartPage(data);
+    add_animation_btns_controller_pagination_CartPage(currentPage, data);
 }

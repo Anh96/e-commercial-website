@@ -1,9 +1,93 @@
+@import url("./style.css");
 @import url("./shop_online.css");
-
-@media only screen and (max-width:834px) {
+/* Responsive on Vertical Mobile - Horizontal Mobile - Veritcal Tablet */
+@media only screen and (max-width:835px) {
     .grid{
         width: 100%;
         margin: 0px auto;
+    }
+    .sOhome-ctn .xCAO3k{
+        margin-top: 0px;
+    }
+    /* link hover */
+    .home-page .see-all-flash-sale-btn:hover{
+        color: var(--primary-color);
+    }
+/* --------------------------------------------------------- */
+/*------------- Home Page ------------------ */
+    /*------ Search Input on header -----  */
+    .header_resp_onmobile{
+        position: relative;
+        top:0px; 
+        width: 100%;
+        height: fit-content;
+        z-index:200;
+        background-color: antiquewhite;
+    }
+    .header_resp_onmobile .nav-search-input::placeholder{
+        font-size: 11px;
+    }
+    /*------ Home Page Banner ----- */
+    .home-page .right-homeBanner{
+        display: none;
+    }
+    .home-page .header-ctn-text{
+        font-size: 13px;
+    }
+    .home-page .full-home-banner .letf-slider-img-list{
+        position: relative;
+        width: 400%;
+        height: 250px;
+    }
+    .home-page .left-homeBanner .sld-img-item{
+        width: 100%;
+        height: inherit;
+        background-size: contain;
+        margin-right: 0px;
+        background-size: contain;
+    }
+    .home-page .left-slider-arrow{
+        display: none;
+    }
+    /*-----Home page Footer Banner Catagory -------- */
+    .home-page .footer-banner-container{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    /* Catagories in footer banner */
+    .home-page .footer-banner-container .coll{
+        display: flex;
+        align-items: center;
+        width: 25%;
+    }
+    /*----- Main Catagories ------ */
+    .home-page .list-item-section{
+        width: calc(100%/4);
+    }
+    
+/*================================================ */
+/*------------- Shop Online Responsive ---------- */
+    .shop-online-ctn{
+        width: 100%;
+        overflow: unset;
+    }
+    .shop-online{
+        padding: 0px;
+    }
+    /*----- Info Shop: sort-result-page && shop online page ----- */
+    .sshOp .rlt0Sk{
+        position: relative;
+        height: 180px;
+        background-color: var(--primary-color);
+    }
+    .sshOp .lft-rltSk {
+        width: 100%;
+        height: 160px;
+        position: absolute;
+        bottom: 0px;
+        border-radius: 0px;
     }
     .mobile-header{
         width: 100%;
@@ -11,55 +95,31 @@
     }
     .mobile-search-controller{
         display: block;
-        z-index: 100;
+        z-index: 10;
         position : fixed;
         width: 100%;
-        height: 60px;
+        height: fit-content;
         top: 10px;
+        left: 0px;
+        /* z-index: 5; */
     }
-    .sOhome-ctn .xCAO3k{
-        margin-top: 0px;
-    }
-    .shop-online-ctn{
-        width: 100%;
-        /* overflow: unset; */
-    }
-    .shop-online{
-        padding: 0px;
-    }
-    /* .rlt0Sk{
-        position: relative;
-        height: 180px;
-        background-color: var(--primary-color);
-    } */
-    /* .shop-online .lft-rltSk {
-        width: 100%;
-        height: 160px;
-        position: absolute;
-        bottom: 0px;
-        border-radius: 0px;
-    } */
     .mobile-search-box{
-        position: absolute;
         width: 100%;
         height: 45px;
-        top: 5px;
-        z-index: 5;
     }
     .mobile-search-input-iconback{
         height: 100%;
-    }
-    .btns-back{
-        position: absolute;
-        left: 0px;
+        padding: 0px 10px;
+        margin-right: 8px;
     }
     .input-icon-box {
         position: relative;
-        width: 80%;
+        width: 85%;
         height: 70%;
         color: var(--white-color);
         border-radius: 5px;
         background-color: rgb(112, 118, 122);
+        margin-right: 8px;
     }
     .input-icon-box svg{
         margin-left: 8px;
@@ -74,35 +134,78 @@
         color: rgb(223, 217, 217);
         font-size: 13px;
     }
-    .g0{
+/* --------------------------------------------------- */
+    /* ---- Shop Online - Sort Result Page -----*/
+    .sshOp .g0{
         position: absolute;
         height: 70%;
         bottom: 10px;
         margin-top: 30px;
+        left:0px;
+        padding: 10px;
     }
-    .rgt{
+    .sshOp .bgr_shop-info{
+        height: 100%;
+    }
+    .sshOp .ltf-img-ctn{
         position: relative;
-        width: 70%;
-        height: 70px;
+        width: 85%;
     }
-    .rgt0{
-        position: absolute; 
+    .sshOp .ltf-img-ctn>div:first-child{
+        width: 23%;
+        height: inherit;
+    }
+    .sshOp .ltf-img-ctn>div:nth-child(2){
+        width: 76%;
+        height: inherit;
+        padding: 20px 10px;
+    }
+    .sshOp .rgt{
+        position: relative;
+        width: 18%;
+        height: inherit;
+    }
+    .sshOp .rgt>div:first-child{
+        width: 100%;
+    }
+    .sshOp .rgt0{
+        display: -webkit-box;
+        word-wrap: break-word;
+        white-space: normal;
+        text-overflow:ellipsis;
         width: 100%; 
         height: 30px; 
-        top: 0px;
     }
-    .rgt00{
+    .sshOp .rgt00{
         position:relative; 
         height: inherit; 
         width:100%;
     }
+    .rt00shoN{
+        position: relative;
+        width: 75%;
+        overflow: hidden;
+    }
+    .sshOp .shopName{
+        width: 80%;
+        display: -webkit-box;
+        white-space: normal;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+    .sshOp .arrow-gotoshopdetails{
+        width: 15%;
+        margin: 0px 4px;
+    }
     .bgr_shop-info{
         position: relative;
     }
-    .right-rltSk-ctn{
+    .sshOp .right-rltSk-ctn{
         display: none;
     }
-    .shop-online .ltf-img-ctn{
+    .shop-online .sshOp .ltf-img-ctn{
         width: 20%;
     }
     .ltf-img{
@@ -120,7 +223,12 @@
         height: 12px;
         font-size: 10px;
     }
-    .shopName.font20{
+    .shopName,
+    .time-online div,
+    .sshOp .mobile-rating-followers{
+        font-size: 13px;
+    }
+    .sshOp .shopName{
         font-size: 11px;
     }
     .arrow-gotoshopdetails{
@@ -131,42 +239,30 @@
         margin-right: 4px ;
         z-index: 15;
     }
-    .time-online{
-        position: absolute;
-        top:35px;
-    }
-    .time-online div{
-        font-size: 12px;
-    }
-    .mobile-rating-followers{  
+    .sshOp .mobile-rating-followers{  
         display: flex;
         align-items: center;
-        position: absolute;
+        justify-content: space-between;
         width: 100%;
         height: 20px;
         color: white;
-        font-size: 13px;
-        bottom: -6.5px;
     }
-    .rating-followers{
-        width: 55%;
-        height: 100%;
-    }
-    .rating-block{
+    .sshOp .rating-block,
+    .sshOp .followers{
         width: 50%;
     }
-    .followers{
-        width: 50%;
+    .sshOp .followbtn_mobile{
+        width: 100%;
+        height: 30px;
     }
-    #desktop{
-        display: none;
-    }
-    .follow-shop-btn{
+    .sshOp .follow-shop-btn{
         width: auto;
         height: 100%;
         bottom: 0px;
     }
+/* ---------------------------------------------------------- */
     /* CATAGORIES RESPONSIVE */
+    #desktop,
     #catagories-desktop{
         display: none;
     }
@@ -176,6 +272,7 @@
     .ctPRD{
         width: calc(100%/3);
     }
+/* ---------------------------------------------------------- */
     /* PROMOTION CODE */
         /* hiddend next - previous btns */
     .small-btn {
@@ -195,22 +292,15 @@
     .PMTcode{
         width: 90%;
     }
+/* -------------------------------------------------- */
     /* SUGESSTION */
-    /* .sgtion-relative{
-        position: relative;
-        width: 100%;
-        height: 410px;
-        overflow-y: hidden;
-        overflow-x: scroll;
-    }
-    .suggestion_products_ShopOnline{
-        position: absolute;
-    }
-    .suggestion_products_ShopOnline #sort_result_search{
-        width: 16.6666666%;
+    .suggestion_products_ShopOnline .b4etd{
+        width: calc(100%/2);
         height: inherit;
-    } */
-    /* BANNER SHOP ONLINE RESPONSIVE */
+        margin-right: 0px;
+    }
+/* -------------------------------------------------- */
+    /* BANNER SHOP ONLINE RESPONSIVE*/
     .ul-list-shopSld{
         position: relative;
         width: 100%;
@@ -232,19 +322,22 @@
         width: 15px;
         height: 15px;
     }
-    /* TOP SALE */
-    
-    #top_sales{
+/* -------------------------------------------*/
+    /* TOP SALE Detail Product Page */
+    .top_sales{
         position: relative;
-        display: inline-flex;
+        display: flex;
         flex-flow: row wrap;
         width: 100%;
     }
-    .pRDTOPSALE #sort_result_search{
-        width: 46.680%;
-        height: auto;
-        margin: 4px 5px;
+    .prdRp .b4etd{
+        width: calc(100%/2 - 4px);
+        margin-top: 4px;
+        margin-left: 4px;
+        margin-right: 0px;
     }
+/* -------------------------------------------- */
+    /* Info Shop Base */
     .favorite-shop{
         font-size: 13px;
     }
@@ -252,7 +345,7 @@
         font-size: 11px;
     }
     .footer-container-shopee{
-        display: none;
+        display: block;
     }
     .dell-price{
         width: 40px; 
@@ -266,10 +359,10 @@
     .dell-price>.price-sggtion{
         font-size: 10px;
     }
-    #top_sales .crr-price{
+    .top_sales .crr-price{
         font-size: 11px;
     }
-    #top_sales .crr-price .price-sggtion{
+    .top_sales .crr-price .price-sggtion{
         font-size: 12px;
     }
     .item-rating-star{
@@ -288,25 +381,12 @@
     .lft-nav-Stctn{
         position: relative;
         width: 100%;
+        height: fit-content;
     }
-    .left-sort{
-        display: none;
-    }
-    .sortBy-ctn{
-        display: none;
-    }
-    #all-products{
-        display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-    }
-    #all-products #sort_result_search{
-        width: 46.680%;
-        height: auto;
-        margin: 4px 5px;
-        /* margin: 0 2px 4px 2px; */
-    }
-    .tdsgt-ftt-ctn{
+    .left-sort,
+    .shop-Online-Page .sortBy-ctn,
+    .nav-btn,
+    .sortBy_left_PC{
         display: none;
     }
     #tdsgtion-relative-product .crr-price{
@@ -315,13 +395,415 @@
     #tdsgtion-relative-product .price-sggtion{
         font-size: 12px;
     }
-}
+    .ft-sggtion-btn{
+        border: 1px solid var(--primary-color);
+    }
+    .home-page .footer-mobile{
+        margin-top: 32px;
+    }
+    /* footer */
+    .footer{
+        margin-top: 0px;
+    }
+    .block-5 .right-link-block{
+        border-width: 0px;
+    }
+    /* ==================================================== */
+    /* ------------------ Support Center ----------------- */
+    .spCt .headersll{
+        padding: 0px 10px;
+    }
+    .spCt .slla3a-onPC{
+        display: none;
+    }    
+    .spCt .btn-back{
+        display: flex;
+        align-items: flex-start;
+        width: 20%;
+    }
+    
+    .spCt .left-name-page{
+        display: flex;
+        align-content: flex-start;
+        border: 0px;
+        width: 75%;
+        margin-left: 3px;
+        margin: 0px;
+    }
+    .spCt .left-header-nav{
+        display: block;
+        width: 100%;
+    }
+    .spCt .sll-body .nav-header-container-with-search,
+    .spCt .sll-body .nav-header-container-with-search>div{
+        position: relative;
+        width: 100%;
 
+    }
+    .spCt .hello{
+        display: none;
+    }
+    .spCt .sll-body .nav-header-with-search{
+        width: 90%;
+    }
+    .spCt .nav-search-input::placeholder{
+        font-size: 12px;
+    }
+    .spCt .cata-list{
+        margin-right: 0px;
+    }
+    .spCt .cata-list:hover,
+    .spCt .ctT-link:hover{
+        opacity: 1;
+        color: black;
+    }
+    /* contact support */
+    .spCt .ftSp{
+        padding: 0 10px;
+    }
+    .spCt .ft-top-ctn,
+    .spCt .ft-top{
+        padding: 0px;
+    }
+    .spCt{
+        padding: 0px;
+    }
+    .spCt .ft-top-txt{
+        margin-top: 10px 0px;
+        text-align: center;
+        height: 70px;
+        font-size: 17px;
+    }
+    .spCt .contact-sp-ctn,
+    .spCt .ftFt{
+        margin-top: 0px;
+    }
+    .spCt .contact-sp-ctn.flex{
+        flex-wrap: wrap;
+    }
+    .spCt .contact-sp-ctn .contact-item{
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .spCt .bi-envelope,
+    .spCt .bi-telephone-inbound{
+        display: none;
+    }
+    .spCt .contact-ic{
+        width: fit-content;
+    }
+    .spCt .contact-txt{
+        margin: 10px;
+    }
+
+    /* ftFt */
+    .spCt .ftFt .grid .flex{
+        flex-wrap: wrap;
+    }
+    .spCt .ftFt-item.cpright{
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    /* ----------------------------------------- */
+    /* ------------- Sort result page -------- */
+    .sOrt >a:hover{
+        color:black
+    }
+    .sOrt .kWoDCtn,
+    .sOrt .xAB
+    {
+        display: none;
+    }
+    .sOrt .right-sort{
+        margin-left: 0px;
+    }
+    .sOrt .input-icon-box{
+        width: 70%;
+        background-color: rgb(223, 220, 220);
+    }
+    .sOrt .lft-rltSk{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .sOrt .mobile-search-controller{
+        top:0px;
+        background-color: white;
+    }
+    /* sort by btns */
+    .sOrt .sortBy-Left{
+        width: 100%;
+        margin-right: 0px;
+        /* margin-top: 16px; */
+        background-color: white;
+    }
+    .sOrt .hv-prcx a{
+        font-size: 10px;
+        background-color: aliceblue;
+    }
+    /* shop Info */
+    .sOrt .rlt0Sk{
+        width: 100%;
+        background-color: white;
+        height: fit-content;
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+    .sOrt .ltf-img-ctn{
+        width: 20%;
+    }
+    .sOrt .ltf-img-ctn>div:first-child{
+        width: 50px;
+        height: 50px;
+        
+    }
+    .sOrt .ltf-img-ctn>div:nth-child(2){
+        width: 50px;
+        height: 10px;
+        font-size: 0.55rem;
+        padding: 2px;
+    }
+    .sOrt .rgt{
+        width: fit-content;
+        font-size: 11px;
+        margin-left: 8px;
+    }
+    /* right info */
+    .sOrt .rgt-item-nav,
+    .sOrt .number-shop-follow,
+    .sOrt .number-follow-data{
+        display: none;
+    }
+    /* last */
+    .sOrt .last{
+        width: 20%;
+        height: inherit;
+        padding: 4px;
+    }
+    /* all products */
+    .sOrt .today-sggtion-wrapper{
+        margin-top: 10px;
+    }
+    .sOrt .b4etd{
+        width: calc(100%/2 - 4px);
+        margin-right: 0px;
+    }
+    /* ---------------------------------------------- */
+    /* -------- Regiter Form seller page ------- */
+    .main-chanel .left-header-nav{
+        height: 100%;
+    }
+    .main-chanel .left-header{
+        padding: 15px;
+    }
+    .main-chanel .logo-header,
+    .main-chanel .left-name-page{
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+    .main-chanel .left-header-text,
+    .main-chanel .home-page-link{
+        font-size: 12px;
+    }
+    .main-chanel .left-name-page{
+        position: relative;
+    }
+    .main-chanel .left-body{
+        display: none;
+    }
+    .main-chanel .right-body{
+        width: 100%;
+        margin: 10px;
+    }
+    /* Social */
+    .main-chanel .inst svg, 
+    .main-chanel .fb  svg{
+        width: 15px;
+        height: 15px;
+    }
+    /* btnFt */
+    .main-chanel .btnFt{
+        font-size: 14px;
+    }
+    /* ---------------------------------------------- */
+    /* -------- Payment Page ------- */
+    .payment .headerPC,
+    .payment .header-logo-name-page,
+    .payment .hIprs,
+    .payment .bill_PC,
+    .payment .profit-txt,
+    .payment  .cLsFcS,
+    .payment .inSrPC,
+    .payment .tsc1,
+    .payment .totalbill_PC,
+    .payment .btSPC,
+    .payment .footer{
+        display: none;
+    }
+    .payment .delivery-address-information-container{
+        margin-top: 70px;
+    }
+    .payment .iFP_ClassificationPr.flex-jtfspbt{
+        flex-wrap: wrap;
+    }
+    .payment .iFP_ClassificationPrC1{
+        width:100%;
+    }
+    .payment .iFP_ClassificationPr img{
+        width:30px; height:30px; 
+        object-fit:cover; 
+        border-radius:0%;
+    }
+    .payment .LsFcS-txt{
+        display: block;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+    }
+    .payment .bill_Mobile{
+        color: gray;
+    }
+    .payment .bill>div{
+        width: calc(100%/2);
+    }
+    .payment .mess{
+        margin-top:16px;
+    }
+    .payment .dlvrMthd,
+    accept-privacy{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .payment .btn-submit-order,
+    accept-privacy{
+        font-size: 12px;
+    }
+    /* ftMB */
+    .payment .ftMB{
+        position: sticky;
+        height: 60px;
+        width: 100%;
+        background-color: white;
+        bottom:0px;
+        z-index: 10;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .payment .btn-submit-order-Mobile{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    /* Become Seller Page */
+    .become-seller-page{
+        width: 100%;
+        overflow: hidden;
+    }
+    .become-seller-page .xCAO3k{
+        margin-top: 44px;
+    }
+    .become-seller-page .mobile-search-controller{
+        width:100%;
+        top: 0px;
+        background-color: white;
+        z-index: 2;
+        padding: 0 5px;
+    }
+    .become-seller-page .crRctn {
+        width: 80%;
+        overflow: hidden;
+    }
+    .become-seller-page .currt-name-page{
+        display: -webkit-box;
+        white-space: normal;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+   .become-seller-page .md-link-ctn{
+       height: 30px;
+   }
+   .become-seller-page .mDl1{
+       bottom: 25px;
+   }
+   .become-seller-page .mDl2,
+   .become-seller-page .mDl3 {
+        bottom: 15px;
+   }
+   .become-seller-page .description-chanel-container{
+       padding: 0 10px;
+   }
+   .become-seller-page .heading-des margin-tb16 h1{
+       font-size: 14px;
+   }
+}
+/* Responsive on Vertical Mobile */
+@media only screen and (max-width:398px){
+    /*------------------------------ HOME PAGE  ------------------------------------*/
+    /* ------------ Catagories on Footer Bannner -------------*/
+    .home-page .coll{
+        width: calc(100%/3);
+    }
+    /* ------------ Today Sugestion ----------- */
+    .home-page .b4etd{
+        width: calc(100%/2 - 4px);
+        margin-right: 0px;
+    }
+    /* -----------------------------Register - Login Form -------------------------- */
+    .register-login-form #user-acc::placeholder,
+    .register-login-form #password::placeholder{
+        font-size: 8px;
+    }
+    .register-login-form .footer{
+        display: none;
+    }
+    /* ----------------------------- Support Center ------------------------------ */
+    .spCt .cata-list{
+        margin-right: 0px;
+    }
+
+}
+/*============ Horizontal Mobile  - Vertical Tablet======================== */
+@media only screen and(min-width: 553px) and (max-width: 835px){
+/*------------------------------ HOME PAGE  ------------------------------------*/
+    /* ------------ Today Sugestion ----------- */
+    .home-page .tdsgtion .b4etd{
+        width: calc(100%/4);
+    }
+/* ------------------------------------------------------------------------------------------------------------ */
+/*----------- Shop Online ----------------------*/
+    .sshOp .suggestion_products_ShopOnline .b4etd{
+        width: calc(100%/6);
+    }
+    .sshOp .ltf-img-ctn>div:first-child{
+        width: 50%;
+        height: inherit;
+    }
+    .sshOp .ltf-img-ctn>div:nth-child(2){
+        width: 50%;
+        height: inherit;
+        padding: 20px 10px;
+    }
+    .arrow-gotoshopdetails{
+        display: none;
+    }
+
+}
+/* Horizontal Tablet - PC  */
 @media only screen and (min-width: 1008px) {
+    /* ----------- Home Page ---------------- */
+    .home-page .nav-search-input::placeholder{
+        color: var(--container-color);
+        font-size: 12px;
+    }
+    /* ======================================= */
     .header{
         background-color: var(--primary-color);
     }
-    .lft-rltSk .mobile-search-box{
+    .sshOp .lft-rltSk .mobile-search-box{
         display: none;
     }
     .sortResult-main{
@@ -343,7 +825,7 @@
     .mobile-rating-followers{
         display: none;
     }
-    #followbtn_mobile{
+    .followbtn_mobile{
         display: none;
     }
     .follow-shop-btn{
@@ -356,7 +838,10 @@
         display: none;
     }
     .footer-container-shopee{
-        display: none;
+        display: block;
+    }
+    .sshOp .ltf-img-ctn>div:nth-child(2){
+        margin-left: 15px;
     }
     /* CATAGORIES RESPONSIVE */
     #catagories-desktop{
@@ -365,7 +850,7 @@
     #all-catagories_resp_mobile{
         display: none;
     }
-    /* PROMOTION CODE */
+    /*------ PROMOTION CODE-------- */
     #scroll_ctn{
         overflow: hidden;
     }
@@ -376,25 +861,201 @@
     .CDpmt-wrapper::-webkit-scrollbar{
         display: none;
     }
-    /* top sales */
-    #top_sales{
+    /*-------top sales ------ */
+    .top_sales{
         position: relative;
-        display: inline-flex;
+        display: flex;
         width: 100%;
     }
-    .pRDTOPSALE #sort_result_search{
-        width: calc(100%/6);
-        height: auto;
+    .left-sort{
+        width: 20%;
+    }
+    .right-sort{
+        width: 80%;
+    }
+    /* ----------------------------------------------- */
+    /* ------------- Support Center ------------- */
+    .spCt .catagories{
+        grid-template-columns: repeat(auto-fill, calc(100%/5));
+    }
+    .left-slla3a>div,
+    .left-name-page{
+        width: 50%;
+    }
+    .icon___FOJtN{
+        display: none
+    }
+    /* ---------------------------------------------- */
+    /* --------- Sort Result Search -----------------*/
+    /* --- Info Shop ----*/
+    .sOrt .ltf-img-ctn>div:nth-child(2){
+        margin-left: 0px;
+    }
+    .sOrt .rating-mobile span,
+    .sOrt .total-prodInshop-mobile,
+    .sOrt .last{
+        display: none;
+    }
+    
+    /* ---------------------------------------------- */
+    /* -------- Payment Page ------- */
+    .payment .header-mobile,
+    .payment .bill_Mobile,
+    .payment .inSrMb,
+    .payment .ftMB{
+        display: none;
+    }
+    .payment .iFP_ClassificationPr img{
+        width:30px; 
+        height:30px; 
+        object-fit:cover; 
+        border-radius:50%;
+    }
+    .payment .wUXH{
+        width: 12%;
+    }
+    .payment .ftMB{
+        height: 100px;
+        width: 100%;
+        margin-top: 32px;
+    }
+    /* ================================= */
+    /*-------- Become Seller  ----  */
+    .become-seller-page .mobile-search-controller{
+        display: none;
     }
 }
-/* ipad prod 12.5inch - PC */
+
+/*=========== IPAD PRO 10.5inch - IPAD PRO 12.5 inch ===========================*/
+@media only screen and (min-width:1008px) and (max-width: 1120px) {
+    .grid{
+        width: 980px;
+        margin: 0 auto;
+    }
+    /* ------------------------------------------------ */
+    /* ---------- Home Page --------------- */
+    .home-page .hover-looking-same-product{
+        display: none;
+    }
+    /*-------------------------------------------------*/
+    /*------------Detai Product Page---------------*/
+    /* top sales */
+    .top-sales-container .b4etd{
+        width: 100%;
+    }
+    /* recommended products */
+    .sshOp .tdsgtion .b4etd{
+        width: calc(100%/3 - 8px);
+    }
+    /* shop online b4etd */
+    .sshOp.tdsgtion-sshO .b4etd{
+        width: calc(100%/4 - 8px);
+    }
+    /* -------------------------------------------------- */
+    /* ------------ Register Form ------------------- */
+    .register-login-form{
+        overflow: hidden;
+    }
+    .register-login-form .footer{
+        margin-top: 0px;
+    }
+    /* ----------------------------------------------- */
+    /* ------ Shop Online Page ------ */
+    /* --- Info ------- */
+    .sshopOnl .shopName{
+        font-size: 15px;
+    }
+    /* --- Catagories ---- */
+     .sshopOnl .ctPRD{
+        width: 140px;
+        font-size: 13px;
+    }
+    /*--- Banner ---- */
+    .sshopOnl .list-item-shopSld img{
+        width: 960px;
+    }
+    /* ----------------------------------------------- */
+    /* ------------- Support Center ------------- */
+    .slla3a-onMobile{
+        display: none;
+    }
+
+}
+/* ========== Screen <= 1112 ======================================= */
+@media only screen and (max-width: 1120px) {
+    /*--------- Home Page ------------- */
+    .home-page .header-ctn-today-sggtion{
+        position: relative;
+        top: 0rem;
+    }
+    /* ================================ */
+    /* -------- Shop Online Page ------ */
+    .sshopOnl .rec-top-ban-ctn{
+        overflow: hidden;
+    }
+    /* ================================= */
+    /* -------- Cart Page ------------- */
+    
+}
+
+/*================ Responsive on PC ================================ */
 @media only screen and (min-width:1240px){
     .grid{
         width: 1200px;
         margin: 0 auto;
     }
+    /* ==================================================== */
+    /* ----------HOme Page ------------------ */
+    /* Home Page */
+    .home-page .tdsgtion .b4etd{
+        width: calc(100%/6 - 4px);
+        margin-right: 0px;
+    }
+    /* ==================================================== */
+    /* ----------Detail Product  Page------------- */
     /* recommended products */
-    .tdsgtion .b4etd{
+    .detailProductPage .tdsgtion .b4etd{
+        width: calc(100%/6 - 4px);
+        margin-right: 0px;
+    }
+    /* ==================================================== */
+    /* -------- Sort Result Page ------------------ */
+    .sOrt .rlt0Sk:hover .rgtHPartron{
+        color: black;
+    }
+    /* ==================================================== */
+    /* -------- Shop Online Page ---------------------*/
+    /* Suggestion */
+    /* Top Sales */
+    .sortResult-main .suggestion_products_ShopOnline .b4etd,
+    .sortResult-main .prdRp .b4etd{
         width: calc(100%/6 - 8px);
+    }
+    .sortResult-main .tdsgtion .b4etd{
+        width: calc(100%/5 - 4px);
+        margin-right: 0px;
+    }
+    /* Banner */
+    .sshopOnl .list-item-shopSld img{
+        width: 1180px;
+    }
+    /* ==================================================== */
+    /* ------------- Shop Online Page ----------- */
+     .sshopOnl .ctPRD{
+        width: 165px;
+    }
+    /* ==================================================== */
+    /* ------------- Support Center ------------- */
+    .spCt .slla3a-onMobile{
+        display: none;
+    }
+    .spCt .left-name-page{
+        padding-left: 8px;
+        border-left: 1px solid var(--primary-color);
+    }
+    /* ================================= */
+    /* -------- Cart Page ------------- */
+    .cart .tdsgtion .b4etd{
+        width: calc(100%/5 - 8px);
     }
 }

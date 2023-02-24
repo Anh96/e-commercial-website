@@ -3,6 +3,13 @@
 a{
     text-decoration: none;
 }
+a:hover{
+    opacity: 1;
+    color: currentColor;
+}
+body{
+    overflow-y: hidden;
+}
 .header-logo:hover{
     opacity: 1!important;
 }
@@ -12,11 +19,6 @@ a{
     width: 100%;
     font-size: 10px;
 }
-.main-spCt{
-    position: relative;
-    min-width: 1200px;
-    max-width: 100%;
-}
 
 .spCt .sll-header-ctn{
     position: fixed;
@@ -25,19 +27,16 @@ a{
     z-index: 900;
     background-color: var(--white-color);
 }
-.prd-active{
-    color: var(--primary-color);
-}
 .slldb-header .nav-header-container-with-search,
 .slldb-header .header-nav-bar,
 .spCt .slla3a{
     width: 100%;
     position: relative;
 }
-.slla3a div:nth-child(2){
-    position: absolute;
-    right: 120px;
+.hello{
+    text-align: center;
 }
+/* HAS DATA SEARCH */
 .has-data{
     display: block;
     width: 100%;
@@ -45,12 +44,15 @@ a{
     overflow-y: scroll;
 }
 .spCt .sll-header-ctn{
-    padding: 5px 0;
+    padding: 5px 10px;
+}
+
+.left-header-nav:first-child{
+    width: 25%;
 }
 .spCt .left-name-page{
-    width: fit-content;
-    padding-left: 8px;
-    border-left: 1px solid var(--primary-color);
+    display: block;
+    margin-right: 32px;
 }
 .spCt .left-header-text{
     color: var(--primary-color);
@@ -60,7 +62,7 @@ a{
 }
 /* Center SP body */
 .headersll{
-    height: 820px;
+    /* height: 820px; */
     background-color: var(--white-color);
 }
 .sll-body .nav-bar-wrap-container{
@@ -140,6 +142,7 @@ a{
     position: absolute;
     width: 100%;
     height: 100%;
+    left:-5%;
     transform: translateY(-40px);
 }
 .popup-ctn .next-circle-animation .list-next-circle-animation{
@@ -165,22 +168,22 @@ a{
 .catagories{
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
     align-items: center;
-    /* overflow: hidden; */
 }
 .cata-link{
     width: 100%;
     margin-bottom: 8px;
 }
 .cata-list{
-    width:280px;
     position: relative;
     height: 80px;
     padding:10px;
     border: 0.5px solid var(--line-color);
     color: var(--text-color);
     margin-right: 16px;
+}
+.cata-list:hover{
+    color: black;
 }
 .cata-list-item{
     position: absolute;
