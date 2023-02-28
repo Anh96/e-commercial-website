@@ -39,7 +39,18 @@ export let setCurrentPage = (pageNum, products)=>{
         }
     })
 }
-
+// reset current page;
+export function reset_currentPage(){
+    return currentPage =1;
+}
+// reset bl1Sb-btn;
+export function reset_bl1SbBtn(){
+    $('.bl1Sb-btn.active').classList.remove("active");
+    $$(".bl1Sb-btn")[0].classList.add("active");
+    
+    $(".pRCX span").innerHTML = "Giá";
+    $(".pRCX span").style.color = "black";
+}
 function create_pagination_controller(currentPage, products){
     // Handle header pagination
     $('#start-number').innerHTML = currentPage;
@@ -79,7 +90,7 @@ function create_pagination_controller(currentPage, products){
         }
         $('.sortBy_right .nExt-btn').onclick = ()=>{
             currentPage++;
-            reset_bl1SbBtn()
+            reset_bl1SbBtn();
             if(currentPage <= totalPages(products) ){
                     $('#start-number').innerHTML = currentPage;
                     $(".sortBy_right .nExt-btn").removeAttribute("disabled");
@@ -95,7 +106,6 @@ function create_pagination_controller(currentPage, products){
             })
             setOpacity($("#start-number").innerHTML, totalPages(products), $(".sortBy_right .prev-btn"), $(".sortBy_right .nExt-btn"));
             setCurrentPage(currentPage, products);
-            console.log(currentPage, clicked_nbP)
 
         }
     }
@@ -184,17 +194,6 @@ function create_pagination_controller(currentPage, products){
             reset_bl1SbBtn();
         }
     })
-}
-// reset current page;
-export function reset_currentPage(){
-    return currentPage =1;
-}
-// reset bl1Sb-btn;
-export function reset_bl1SbBtn(){
-    $('.bl1Sb-btn.active').classList.remove("active");
-    $$(".bl1Sb-btn")[0].classList.add("active");
-    $(".pRCX span").innerHTML = "Giá";
-    $(".pRCX span").style.color = "black";
 }
 export function pagination(products){
     setCurrentPage(1,products);

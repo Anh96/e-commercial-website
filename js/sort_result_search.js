@@ -1,86 +1,164 @@
-import {render_products} from "./condition_render_data.js";
+import {render_products, calculator_promotion_price} from "./condition_render_data.js";
 import {renderHeaderNav_base_desktop} from "./header.js";
 import {keysearch} from "./keyword_search.js"
 import {footerBase, footerBase_onMobile} from "./footer.js";
-import {pagination} from "./paging.js"
+import {pagination, prevRange, currRange,reset_bl1SbBtn} from "./paging.js";
 import {render_info_sortResultPage } from './shop_information.js';
-// import {sortFollowBtn, sortFollowPrice} from "./handleEventShopOnline.js"
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+import { sort_quantitySold, sort_AscendingPriceSold, sort_DescendingPriceSold} from "./handleEventShopOnline.js";
 let htmls, products_paging_after_filter = new Array;
-const btns = $$('.sOrt .bl1Sb-btn');
-fetch('../data/data.json')
+fetch("../data/data.json")
     .then(res=>{
-        return res.json()
+        return res.json();
     })
     .then(data=>{
         if(window.innerWidth>=1008){
             renderHeaderNav_base_desktop();
-            keysearch(data.key_search);
             footerBase();
+            keysearch(data.key_search)
         }
         if(window.innerWidth<=834){
             footerBase_onMobile();
         }
+        filter_with_rangePrice();
         relative_products(data.products_inshop);
         render_info_sortResultPage(data.shop_onlines);
     })
-
 //Relative Products
+    // Sort
+
+    function sortFollowBtn(products){
+        jQuery(".bl1Sb-btn").each(function(){
+            jQuery(this).click(function(){
+                products_paging_after_filter.length = 0;
+                reset_bl1SbBtn();
+                jQuery(".bl1Sb-btn.active").removeClass("active");
+                jQuery(this).addClass("active");
+                jQuery(".tdsgtion").empty();
+                jQuery(".pRCX span").html(`Giá:`);
+                jQuery(".pRCX span").css("color", "black");
+                jQuery(".icon-arrow-down-small").css("fill", "black");
+
+                if(jQuery(this).index()==1){
+                    jQuery.ajax({
+                        type: "get",
+                        url: "../data/data.json",
+                        data: "data",
+                        dataType: "json",
+                        success: function (data) {
+                            products_paging_after_filter.length = 0;
+                            jQuery(data.products_inshop).each(function(index, value){
+                                if(index >= prevRange && index < currRange){
+                                    jQuery(".tdsgtion").append(render_products(value));
+                                }
+                            })
+                        }
+                    });
+                }
+                if(jQuery(this).index()==3){
+                    jQuery.ajax({
+                        type: "get",
+                        url: "../data/data.json",
+                        data: "data",
+                        dataType: "json",
+                        success: function (data) {
+                            
+                            jQuery(data.products_inshop).each(function(index, value){
+                                if(index >= prevRange && index < currRange){
+                                    products_paging_after_filter.push(value);
+                                }
+                            })
+                            sort_quantitySold(products_paging_after_filter);
+                            jQuery(products_paging_after_filter).each(function(index,value){
+                                jQuery(".tdsgtion").append(render_products(value));
+                            })
+                        }
+                    });
+                }
+            });
+        })
+    }
+    function sortFollowPrice(products){
+        jQuery(".hv-prcx").children().each(function(){
+            jQuery(this).click(function(){
+                if(jQuery(this).index()==0){
+                    jQuery(".pRCX span").html(jQuery(this).text());
+                    jQuery(".pRCX span").css("color", "white");
+                    jQuery(".icon-arrow-down-small").css("fill", "white");
+                    jQuery.ajax({
+                        type: "get",
+                        url: "../data/data.json",
+                        data: "data",
+                        dataType: "json",
+                        success: function (data) {
+                            products_paging_after_filter.length = 0;
+                            jQuery(data.products_inshop).each(function(index, value){
+                                if(index >= prevRange && index < currRange){
+                                    return products_paging_after_filter.push(value);
+                                }
+                            })
+                            sort_AscendingPriceSold(products_paging_after_filter)
+                            jQuery(products_paging_after_filter).each(function(index, value){
+                                jQuery(".tdsgtion").append(render_products(value));
+                            })
+                        }
+                    });
+                }
+                if(jQuery(this).index()== 1){
+                    jQuery(".pRCX span").html(jQuery(this).text());
+                    jQuery(".pRCX span").css("color", "white");
+                    jQuery(".icon-arrow-down-small").css("fill", "white");
+                    jQuery.ajax({
+                        type: "get",
+                        url: "../data/data.json",
+                        data: "data",
+                        dataType: "json",
+                        success: function (data) {
+                            products_paging_after_filter.length = 0;
+                            jQuery(data.products_inshop).each(function(index, value){
+                                if(index >= prevRange && index < currRange){
+                                    return products_paging_after_filter.push(value);
+                                }
+                            })
+                            sort_DescendingPriceSold(products_paging_after_filter)
+                            jQuery(products_paging_after_filter).each(function(index, value){
+                                jQuery(".tdsgtion").append(render_products(value));
+                            })
+                        }
+                    });
+                }
+            })
+        })
+    }
+    // filter: 
+    function filter_with_rangePrice(){
+        jQuery(".range-price .round-btn").click(function(){
+            let rpF_value = parseFloat(jQuery(".rpF").val());
+            let rpT_value = parseFloat(jQuery(".rpT").val());
+            products_paging_after_filter.length =0;
+            jQuery.ajax({
+                type: "get",
+                url: "../data/data.json",
+                data: "data",
+                dataType: "json",
+                success: function (data) {
+                    jQuery(".tdsgtion").empty();
+                    products_paging_after_filter.length =0;
+                    jQuery(".number-page").empty();
+                    jQuery(data.products_inshop).each(function(){
+                        if(parseFloat(calculator_promotion_price(this).replaceAll(".", "")) >= 100000 && parseFloat(calculator_promotion_price(this).replaceAll(".", "")) <= 2800000){
+                            products_paging_after_filter.push(this);
+                        }
+                    })
+
+                    sortFollowBtn(products_paging_after_filter);
+                    sortFollowPrice(products_paging_after_filter);
+                    pagination(products_paging_after_filter);
+                }
+            });
+        })
+    }
     function relative_products(products){
         sortFollowBtn(products);
-        // sortFollowPrice(products);
-        // pagination(products);
-    }
-    // Sort
-    function sort_quantitySold(products){
-        products.sort(function(a,b){
-            return b.quantity_sold - a.quantity_sold;
-        })
-    }
-    function render_after_press_btns_sort(products){
-        sort_quantitySold(products);
-        htmls = products.map(prod=>{
-            return render_products(prod);
-        })
-        $('.tdsgtion-sshO').innerHTML = htmls.join("");
-   }
-    export function sortFollowBtn(products){
-        btns.forEach((btn,i)=>{
-            btn.onclick = ()=>{
-                // products_paging_after_filter.length =0;
-                // if(i<=2){
-                //     // $(".pRCX span").innerHTML = `Giá`;
-                //     // $(".pRCX span").style.color = "black";
-                // $('.bl1Sb-btn.active').classList.remove("active");
-                //     if(i==0){
-                //         $('.tdsgtion-sshO').innerHTML = "";
-                //         this.classList.add("active");
-                //         // products.map((prod,ind)=>{
-                //         //     if(ind >= prevRange && ind < currRange){
-                //         //         htmls = render_products(prod);
-                //         //         $('.tdsgtion-sshO').innerHTML += htmls;
-                //         //      }
-                //         // })
-                //     }
-                //     if(i==1){
-                //         this.classList.add("active")
-                //     }
-                //     if(i==2){
-                //         this.classList.add("active")
-                //         // products.map((prod,ind)=>{
-                //         //      if(ind >= prevRange && ind < currRange){
-                //         //          return products_paging_after_filter.push(prod);
-                //         //      }
-                //         // })
-                //         // render_after_press_btns_sort(products_paging_after_filter);
-                //     }
-                // }
-                console.log(i)
-                // if(!i){
-                //     $('.bl1Sb-btn.active').classList.remove("active")
-                // }
-                // btn.classList.add("active");
-            }
-        })
+        sortFollowPrice(products);
+        pagination(products);
     }

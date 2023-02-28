@@ -178,7 +178,6 @@ export function moveArrowInCatagories(h4txt){
        export function sortFollowBtn(products){
            btns.forEach((btn,i)=>{
                btn.onclick = ()=>{
-                   console.log(i)
                    products_paging_after_filter.length =0;
                    if(i<=2){
                        $(".pRCX span").innerHTML = `Giá`;
