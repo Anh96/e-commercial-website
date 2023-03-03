@@ -66,6 +66,9 @@
     .social-media-group-onMobile{
         display: none;
     }
+    .right-body{
+        width: 600px;
+    }
 }
 @media only screen and (min-width:1240px) {
     .grid{
@@ -101,6 +104,7 @@ a:hover,
 .right-body{
     padding: 20px;
     background-color: var(--white-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .ctn-check{
     display: flex;
@@ -296,7 +300,4 @@ h1{
     color: var(--primary-color);
     font-size: 18px;
     padding-left: 8px;
-}
-.footer{
-    margin-top: 0px;
 }

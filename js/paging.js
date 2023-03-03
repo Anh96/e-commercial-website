@@ -35,7 +35,7 @@ export let setCurrentPage = (pageNum, products)=>{
     $(".tdsgtion").innerHTML = "";
     products.forEach((item,ind)=>{
         if(ind>=prevRange && ind <currRange){
-            $(".tdsgtion").innerHTML += render_products(products[ind]);
+            $(".tdsgtion").innerHTML += render_products(item);
         }
     })
 }

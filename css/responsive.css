@@ -896,7 +896,9 @@
     .sOrt .last{
         display: none;
     }
-    
+    .sOrt .rating-mobile{
+        display: none;
+    }
     /* ---------------------------------------------- */
     /* -------- Payment Page ------- */
     .payment .header-mobile,
