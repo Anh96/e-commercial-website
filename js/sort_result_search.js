@@ -109,6 +109,8 @@ fetch("../data/data.json")
                     // $('#start-number').innerHTML = currentPage;
                     $(".sortBy_right .prev-btn").setAttribute("disabled","disabled");
                     $(".sortBy_right .prev-btn").style.opacity = 0.5;
+                    $(".sortBy_right .nExt-btn").removeAttribute("disabled");
+                    $(".sortBy_right .nExt-btn").style.opacity = 1;
                 }
                 if(currentPage >1){
                     // $('#start-number').innerHTML = currentPage;
